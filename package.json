@@ -2,7 +2,7 @@
   "name": "your_project_name",
   "version": "1.0.0",
   "description": "A brief description of your project",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +10,6 @@
   "author": "Your Name",
   "license": "ISC",
   "dependencies": {
-    // Add your project dependencies here
+    "tiposkripto": "^0.0.1"
   }
 }
