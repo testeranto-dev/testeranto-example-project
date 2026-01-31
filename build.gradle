@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'com.yourprojectname'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Add your project dependencies here
+    testImplementation 'junit:junit:4.13.2'
+}
+
+test {
+    useJUnitPlatform()
+}
