@@ -1,5 +1,5 @@
 # For npm
-npm install
+yarn install
 
 # For Python
 pip install -r requirements.txt
