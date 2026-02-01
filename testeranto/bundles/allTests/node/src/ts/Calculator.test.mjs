@@ -1,7 +1,9 @@
 // src/ts/Calculator.ts
 var Calculator = class {
-  display = "";
-  values = {};
+  constructor() {
+    this.display = "";
+    this.values = {};
+  }
   enter() {
     try {
       const result = eval(this.display);

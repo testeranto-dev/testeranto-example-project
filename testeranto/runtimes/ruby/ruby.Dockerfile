@@ -1,8 +1,8 @@
 # syntax=docker/dockerfile:1
+
 FROM ruby:3.2-alpine
 WORKDIR /workspace
 
-# Install system dependencies needed for building/testing
 RUN apk add --no-cache \
     build-base \
     git \
@@ -13,6 +13,6 @@ RUN apk add --no-cache \
     g++ \
     && rm -rf /var/cache/apk/*
 
-# Install Ruby gems including rubocop
-# RUN bundle install --jobs 4 --retry 3
+COPY Gemfile /workspace
+RUN bundle install
 

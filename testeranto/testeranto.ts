@@ -6,6 +6,20 @@ const config: ITestconfigV2 = {
   },
 
   runtimes: {
+
+    rubytests: (
+      {
+        runtime: "ruby",
+        tests: ["src/ruby/Calculator-test.rb"],
+        checks: [
+          // (x) => `yarn eslint`,
+          // (x) => `yarn tsc --noEmit`,
+        ],
+        dockerfile: `testeranto/runtimes/ruby/ruby.Dockerfile`,
+        buildOptions: `testeranto/runtimes/ruby/ruby.rb`
+      }
+    ),
+    
     nodetests: (
       {
         runtime: "node",
@@ -71,18 +85,7 @@ const config: ITestconfigV2 = {
     //   }
     // ),
 
-    // rubytests: (
-    //   {
-    //     runtime: "ruby",
-    //     tests: ["src/Calculator.test.rb"],
-    //     checks: [
-    //       (x) => `yarn eslint`,
-    //       (x) => `yarn tsc --noEmit`,
-    //     ],
-    //     dockerfile: `testeranto/runtimes/ruby/ruby.Dockerfile`,
-    //     buildOptions: `testeranto/runtimes/ruby/ruby.ts`
-    //   }
-    // ),
+    
   },
 
 };

@@ -5701,10 +5701,10 @@ test-exclude@^6.0.0:
     glob "^7.1.4"
     minimatch "^3.0.4"
 
-testeranto@0.219.17:
-  version "0.219.17"
-  resolved "https://registry.yarnpkg.com/testeranto/-/testeranto-0.219.17.tgz#4a564458f3b89c57b8d226a44af6741496c15d01"
-  integrity sha512-jGgcPz5giHIdio4fIM1Jpk1cSPQdGSTPbAjkmvtYeBf72Ymo7kZC/GANBc7kuw4P6BTq2z0h6SsH4RftORMuGw==
+testeranto@0.219.20:
+  version "0.219.20"
+  resolved "https://registry.yarnpkg.com/testeranto/-/testeranto-0.219.20.tgz#b9acb37f3d7d77faecab84628fd0bd7496a74848"
+  integrity sha512-FsD93KuaKE1Ye6/tq3tB90NP/+0YJICKsrCGRh/GcGncWOu/cXKuhHg1hcAIl84dvJJ3Sf2eQpO2R4fS2RqMFg==
   dependencies:
     "@bscotch/debounce-watch" "^1.1.0"
     "@humanwhocodes/config-array" "^0.13.0"

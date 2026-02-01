@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
 gem 'rake'
-# Add other dependencies here
+gem 'rubeno', '0.0.4'

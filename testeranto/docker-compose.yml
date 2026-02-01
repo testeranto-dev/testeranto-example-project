@@ -1,4 +1,44 @@
 services:
+  ruby-builder:
+    build:
+      context: /Users/adam/Code/testeranto-example-project
+      dockerfile: testeranto/runtimes/ruby/ruby.Dockerfile
+    container_name: ruby-builder
+    environment: {}
+    working_dir: /workspace
+    volumes:
+      - /Users/adam/Code/testeranto-example-project/src:/workspace/src
+      - /Users/adam/Code/testeranto-example-project/example:/workspace/example
+      - /Users/adam/Code/testeranto-example-project/dist:/workspace/dist
+      - /Users/adam/Code/testeranto-example-project/testeranto:/workspace/testeranto
+    command: bundle exec rubeno /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/ruby/ruby.rb rubytests
+    networks:
+      - allTests_network
+  rubytests-src_ruby_calculator-test-rb-bdd:
+    build:
+      context: /Users/adam/Code/testeranto-example-project
+      dockerfile: testeranto/runtimes/ruby/ruby.Dockerfile
+    container_name: rubytests-src_ruby_calculator-test-rb-bdd
+    environment: {}
+    working_dir: /workspace
+    volumes:
+      - /Users/adam/Code/testeranto-example-project/src:/workspace/src
+      - /Users/adam/Code/testeranto-example-project/example:/workspace/example
+      - /Users/adam/Code/testeranto-example-project/dist:/workspace/dist
+      - /Users/adam/Code/testeranto-example-project/testeranto:/workspace/testeranto
+    command: ruby testeranto/bundles/allTests/ruby/src/ruby/Calculator-test.rb '{"ports":[1111]}'
+    networks:
+      - allTests_network
+  rubytests-src_ruby_calculator-test-rb-aider:
+    build:
+      context: /Users/adam/Code/testeranto-example-project
+      dockerfile: aider.Dockerfile
+    container_name: rubytests-src_ruby_calculator-test-rb-aider
+    environment: {}
+    working_dir: /workspace
+    command: aider
+    networks:
+      - allTests_network
   node-builder:
     build:
       context: /Users/adam/Code/testeranto-example-project
