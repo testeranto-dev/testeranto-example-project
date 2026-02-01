@@ -1,6 +1,5 @@
-import { Ibdd_in, Ibdd_out } from "tiposkripto/CoreTypes";
-// import Tiposkripto from "tiposkripto";
-import { Calculator } from "./Calculator";
+import { Ibdd_in, Ibdd_out } from "tiposkripto/types";
+import { Calculator } from "./Calculator.js";
 
 export type I = Ibdd_in<
   typeof Calculator, // iinput

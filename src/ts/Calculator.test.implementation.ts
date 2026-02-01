@@ -1,9 +1,8 @@
 import { assert } from "chai";
-import { ITestImplementation } from "tiposkripto/CoreTypes";
-import { I, O, M } from "./Calculator.test.types";
-import { Calculator } from "./Calculator";
 
-
+import { ITestImplementation } from "tiposkripto/types";
+import { I, O, M } from "./Calculator.test.types.js";
+import { Calculator } from "./Calculator.js";
 
 
 export const implementation: ITestImplementation<I, O, M> = {

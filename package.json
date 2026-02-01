@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "chai": "^6.2.2",
-    "tiposkripto": "^0.0.2"
-  }
+    "testeranto": "0.219.17",
+    "tiposkripto": "0.0.21"
+  },
+  "type": "module"
 }

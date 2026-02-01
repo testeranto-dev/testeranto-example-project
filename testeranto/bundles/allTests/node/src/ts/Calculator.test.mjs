@@ -1,12 +1,9 @@
-export class Calculator {
-  private display: string = "";
-  private values: { [key: string]: any } = {};
-
-  enter(): void {
+// src/ts/Calculator.ts
+var Calculator = class {
+  display = "";
+  values = {};
+  enter() {
     try {
-      // Simple expression evaluation
-      // Note: Using eval is not recommended for production code
-      // This is just for testing purposes
       const result = eval(this.display);
       this.display = result.toString();
     } catch (error) {
@@ -14,29 +11,24 @@ export class Calculator {
       throw error;
     }
   }
-
-  memoryStore(): void {
+  memoryStore() {
     this.setValue("memory", parseFloat(this.display) || 0);
     this.clear();
   }
-
-  memoryRecall(): void {
+  memoryRecall() {
     const memoryValue = this.getValue("meemory") || 0;
     this.display = memoryValue.toString();
   }
-
-  memoryClear(): void {
+  memoryClear() {
     this.setValue("memory", 0);
   }
-
-  memoryAdd(): void {
+  memoryAdd() {
     const currentValue = parseFloat(this.display) || 0;
     const memoryValue = this.getValue("memory") || 0;
     this.setValue("memory", memoryValue + currentValue);
     this.clear();
   }
-
-  handleSpecialButton(button: string): boolean {
+  handleSpecialButton(button) {
     switch (button) {
       case "C":
         this.clear();
@@ -57,51 +49,45 @@ export class Calculator {
         return false;
     }
   }
-
-  press(button: string): Calculator {
-    // Handle special buttons first
+  press(button) {
     if (this.handleSpecialButton(button)) {
       return this;
     }
-
-    // For regular buttons, append to display
     this.display = this.display + button;
     return this;
   }
-
-  getDisplay(): string {
+  getDisplay() {
     return this.display;
   }
-
-  clear(): void {
+  clear() {
     this.display = "";
   }
-
   // Keep these methods for backward compatibility if needed
-  add(a: number, b: number): number {
+  add(a, b) {
     return a + b;
   }
-
-  subtract(a: number, b: number): number {
+  subtract(a, b) {
     return a - b;
   }
-
-  multiply(a: number, b: number): number {
+  multiply(a, b) {
     return a * b;
   }
-
-  divide(a: number, b: number): number {
+  divide(a, b) {
     if (b === 0) {
       throw new Error("Cannot divide by zero");
     }
     return a / b;
   }
-
-  setValue(identifier: string, value: any): void {
+  setValue(identifier, value) {
     this.values[identifier] = value;
   }
-
-  getValue(identifier: string): any {
+  getValue(identifier) {
     return this.values[identifier] ?? null;
   }
-}
+};
+
+// src/ts/Calculator.test.ts
+import Tiposkripto from "tiposkripto";
+console.log("hello calcualtor test");
+console.log("hello Calculator", Calculator);
+console.log("hello Tiposkripto", Tiposkripto);

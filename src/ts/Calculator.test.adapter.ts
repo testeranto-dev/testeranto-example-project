@@ -1,5 +1,5 @@
-import { ITestAdapter } from "tiposkripto/CoreTypes";
-import { I } from "./Calculator.test.types";
+import { ITestAdapter } from "tiposkripto";
+import { I } from "./Calculator.test.types.js";
 
 export const adapter: ITestAdapter<I> = {
   beforeAll: async (input, testResource) => {

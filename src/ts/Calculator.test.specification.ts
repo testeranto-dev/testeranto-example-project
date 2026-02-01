@@ -1,6 +1,6 @@
-import { ITestSpecification } from "tiposkripto/CoreTypes";
+import { ITestSpecification } from "tiposkripto/types";
 
-import { I, O } from "./Calculator.test.types";
+import { I, O } from "./Calculator.test.types.js";
 
 export const specification: ITestSpecification<I, O> = (
   Suite,
