@@ -1,0 +1,9 @@
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+=== Log started at 2026-02-03T17:52:34.401Z for service ruby-builder ===
+
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+[Kruby-builder exited with code 127
+
+=== Log ended at 2026-02-03T17:52:34.806Z, process exited with code 0 ===

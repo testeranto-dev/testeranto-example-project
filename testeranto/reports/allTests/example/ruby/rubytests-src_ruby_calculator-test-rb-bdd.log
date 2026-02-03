@@ -1,0 +1,4 @@
+rubytests-src_ruby_calculator-test-rb-bdd  | ruby: No such file or directory -- testeranto/bundles/allTests/ruby/src/ruby/Calculator-test.rb (LoadError)
+=== Log started at 2026-02-03T17:52:36.373Z for service rubytests-src_ruby_calculator-test-rb-bdd ===
+
+rubytests-src_ruby_calculator-test-rb-bdd  | ruby: No such file or directory -- testeranto/bundles/allTests/ruby/src/ruby/Calculator-test.rb (LoadError)

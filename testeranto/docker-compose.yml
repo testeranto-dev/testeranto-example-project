@@ -1,37 +1,37 @@
 services:
   ruby-builder:
     build:
-      context: /Users/adam/Code/testeranto-example-project
+      context: /Users/adam/Code/am2/projects/testeranto/testeranto-example-project
       dockerfile: testeranto/runtimes/ruby/ruby.Dockerfile
     container_name: ruby-builder
     environment: {}
     working_dir: /workspace
     volumes:
-      - /Users/adam/Code/testeranto-example-project/src:/workspace/src
-      - /Users/adam/Code/testeranto-example-project/example:/workspace/example
-      - /Users/adam/Code/testeranto-example-project/dist:/workspace/dist
-      - /Users/adam/Code/testeranto-example-project/testeranto:/workspace/testeranto
+      - /Users/adam/Code/am2/projects/testeranto/testeranto-example-project/src:/workspace/src
+      - /Users/adam/Code/am2/projects/testeranto/testeranto-example-project/example:/workspace/example
+      - /Users/adam/Code/am2/projects/testeranto/testeranto-example-project/dist:/workspace/dist
+      - /Users/adam/Code/am2/projects/testeranto/testeranto-example-project/testeranto:/workspace/testeranto
     command: bundle exec rubeno /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/ruby/ruby.rb rubytests
     networks:
       - allTests_network
   rubytests-src_ruby_calculator-test-rb-bdd:
     build:
-      context: /Users/adam/Code/testeranto-example-project
+      context: /Users/adam/Code/am2/projects/testeranto/testeranto-example-project
       dockerfile: testeranto/runtimes/ruby/ruby.Dockerfile
     container_name: rubytests-src_ruby_calculator-test-rb-bdd
     environment: {}
     working_dir: /workspace
     volumes:
-      - /Users/adam/Code/testeranto-example-project/src:/workspace/src
-      - /Users/adam/Code/testeranto-example-project/example:/workspace/example
-      - /Users/adam/Code/testeranto-example-project/dist:/workspace/dist
-      - /Users/adam/Code/testeranto-example-project/testeranto:/workspace/testeranto
+      - /Users/adam/Code/am2/projects/testeranto/testeranto-example-project/src:/workspace/src
+      - /Users/adam/Code/am2/projects/testeranto/testeranto-example-project/example:/workspace/example
+      - /Users/adam/Code/am2/projects/testeranto/testeranto-example-project/dist:/workspace/dist
+      - /Users/adam/Code/am2/projects/testeranto/testeranto-example-project/testeranto:/workspace/testeranto
     command: ruby testeranto/bundles/allTests/ruby/src/ruby/Calculator-test.rb '{"ports":[1111]}'
     networks:
       - allTests_network
   rubytests-src_ruby_calculator-test-rb-aider:
     build:
-      context: /Users/adam/Code/testeranto-example-project
+      context: /Users/adam/Code/am2/projects/testeranto/testeranto-example-project
       dockerfile: aider.Dockerfile
     container_name: rubytests-src_ruby_calculator-test-rb-aider
     environment: {}
@@ -41,37 +41,37 @@ services:
       - allTests_network
   node-builder:
     build:
-      context: /Users/adam/Code/testeranto-example-project
+      context: /Users/adam/Code/am2/projects/testeranto/testeranto-example-project
       dockerfile: testeranto/runtimes/node/node.Dockerfile
     container_name: node-builder
     environment: {}
     working_dir: /workspace
     volumes:
-      - /Users/adam/Code/testeranto-example-project/src:/workspace/src
-      - /Users/adam/Code/testeranto-example-project/example:/workspace/example
-      - /Users/adam/Code/testeranto-example-project/dist:/workspace/dist
-      - /Users/adam/Code/testeranto-example-project/testeranto:/workspace/testeranto
+      - /Users/adam/Code/am2/projects/testeranto/testeranto-example-project/src:/workspace/src
+      - /Users/adam/Code/am2/projects/testeranto/testeranto-example-project/example:/workspace/example
+      - /Users/adam/Code/am2/projects/testeranto/testeranto-example-project/dist:/workspace/dist
+      - /Users/adam/Code/am2/projects/testeranto/testeranto-example-project/testeranto:/workspace/testeranto
     command: yarn tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
     networks:
       - allTests_network
   nodetests-src_ts_calculator-test-ts-bdd:
     build:
-      context: /Users/adam/Code/testeranto-example-project
+      context: /Users/adam/Code/am2/projects/testeranto/testeranto-example-project
       dockerfile: testeranto/runtimes/node/node.Dockerfile
     container_name: nodetests-src_ts_calculator-test-ts-bdd
     environment: {}
     working_dir: /workspace
     volumes:
-      - /Users/adam/Code/testeranto-example-project/src:/workspace/src
-      - /Users/adam/Code/testeranto-example-project/example:/workspace/example
-      - /Users/adam/Code/testeranto-example-project/dist:/workspace/dist
-      - /Users/adam/Code/testeranto-example-project/testeranto:/workspace/testeranto
-    command: cat tsconfig.json
+      - /Users/adam/Code/am2/projects/testeranto/testeranto-example-project/src:/workspace/src
+      - /Users/adam/Code/am2/projects/testeranto/testeranto-example-project/example:/workspace/example
+      - /Users/adam/Code/am2/projects/testeranto/testeranto-example-project/dist:/workspace/dist
+      - /Users/adam/Code/am2/projects/testeranto/testeranto-example-project/testeranto:/workspace/testeranto
+    command: yarn tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
     networks:
       - allTests_network
   nodetests-src_ts_calculator-test-ts-aider:
     build:
-      context: /Users/adam/Code/testeranto-example-project
+      context: /Users/adam/Code/am2/projects/testeranto/testeranto-example-project
       dockerfile: aider.Dockerfile
     container_name: nodetests-src_ts_calculator-test-ts-aider
     environment: {}

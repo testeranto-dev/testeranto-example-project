@@ -1,0 +1,11 @@
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+=== Log started at 2026-02-03T17:52:37.151Z for service nodetests-src_ts_calculator-test-ts-bdd ===
+
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+nodetests-src_ts_calculator-test-ts-bdd  | error Command failed with exit code 13.
+[Knodetests-src_ts_calculator-test-ts-bdd exited with code 13
+
+=== Log ended at 2026-02-03T17:52:37.844Z, process exited with code 0 ===
