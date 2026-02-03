@@ -1,6 +1,6 @@
 {
-  "name": "your_project_name",
-  "version": "1.0.0",
+  "name": "testeranto-example",
+  "version": "0.0.1",
   "description": "A brief description of your project",
   "main": "src/index.js",
   "scripts": {
@@ -11,8 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "chai": "^6.2.2",
-    "testeranto": "0.219.20",
-    "tiposkripto": "0.0.21"
+    "testeranto": "0.220.4",
+    "tiposkripto": "0.0.22"
   },
   "type": "module"
 }

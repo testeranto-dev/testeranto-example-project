@@ -5701,10 +5701,10 @@ test-exclude@^6.0.0:
     glob "^7.1.4"
     minimatch "^3.0.4"
 
-testeranto@0.219.20:
-  version "0.219.20"
-  resolved "https://registry.yarnpkg.com/testeranto/-/testeranto-0.219.20.tgz#b9acb37f3d7d77faecab84628fd0bd7496a74848"
-  integrity sha512-FsD93KuaKE1Ye6/tq3tB90NP/+0YJICKsrCGRh/GcGncWOu/cXKuhHg1hcAIl84dvJJ3Sf2eQpO2R4fS2RqMFg==
+testeranto@0.220.4:
+  version "0.220.4"
+  resolved "https://registry.yarnpkg.com/testeranto/-/testeranto-0.220.4.tgz#ae332509651337e368a8d396090ff78a443a1e9f"
+  integrity sha512-opwlI1tE9JmRKE2hKY+VwyROQhyzUy8s6UVcnWLEsQe1GAog1NxJ15TWHNg2DfEQ/Vr1jE/Y4zRcckIq4gkCwQ==
   dependencies:
     "@bscotch/debounce-watch" "^1.1.0"
     "@humanwhocodes/config-array" "^0.13.0"
@@ -5805,10 +5805,10 @@ tinyglobby@^0.2.15:
     fdir "^6.5.0"
     picomatch "^4.0.3"
 
-tiposkripto@0.0.21:
-  version "0.0.21"
-  resolved "https://registry.yarnpkg.com/tiposkripto/-/tiposkripto-0.0.21.tgz#dcb45afc2036cd14263c14a941c604117f685334"
-  integrity sha512-wUpcSX8qsUiQfwaFl/zoLyfHMwG/iJ4NKDcV9eSJ51PGP2mqfSMLESg/WG3pV3UdLjlEIjldmuPRpxVQZ7d7JA==
+tiposkripto@0.0.22:
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/tiposkripto/-/tiposkripto-0.0.22.tgz#5decb62c2c0083558ef24a9e7c1021336732e0a4"
+  integrity sha512-BpTJ85z6+N/QIwmJVuTuKGTSYY1lAZUFghnP09Sdbm6YACpxVoYec9Ko1qtVnX3oDTaJTpfZK1lFbHta59vyvg==
   dependencies:
     typescript "^5.9.3"
 
