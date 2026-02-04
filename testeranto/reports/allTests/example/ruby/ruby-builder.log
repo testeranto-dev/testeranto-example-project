@@ -7,3 +7,943 @@ ruby-builder  | Install missing gem executables with `bundle install`
 [Kruby-builder exited with code 127
 
 === Log ended at 2026-02-03T17:52:34.806Z, process exited with code 0 ===
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+=== Log started at 2026-02-03T19:32:08.996Z for service ruby-builder ===
+
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+[Kruby-builder exited with code 127
+
+=== Log ended at 2026-02-03T19:32:09.365Z, process exited with code 0 ===
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+=== Log started at 2026-02-03T19:36:16.699Z for service ruby-builder ===
+
+[Kruby-builder exited with code 127
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+
+=== Log ended at 2026-02-03T19:36:17.046Z, process exited with code 0 ===
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+=== Log started at 2026-02-03T19:37:04.960Z for service ruby-builder ===
+
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+[Kruby-builder exited with code 127
+
+=== Log ended at 2026-02-03T19:37:05.370Z, process exited with code 0 ===
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+=== Log started at 2026-02-03T19:38:17.924Z for service ruby-builder ===
+
+[Kruby-builder exited with code 127
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+
+=== Log ended at 2026-02-03T19:38:18.328Z, process exited with code 0 ===
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+=== Log started at 2026-02-03T19:41:08.621Z for service ruby-builder ===
+
+[Kruby-builder exited with code 127
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+
+=== Log ended at 2026-02-03T19:41:08.947Z, process exited with code 0 ===
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+=== Log started at 2026-02-03T19:42:00.000Z for service ruby-builder ===
+
+[Kruby-builder exited with code 127
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+
+=== Log ended at 2026-02-03T19:42:00.347Z, process exited with code 0 ===
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+=== Log started at 2026-02-03T19:44:09.228Z for service ruby-builder ===
+
+[Kruby-builder exited with code 127
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+
+=== Log ended at 2026-02-03T19:44:09.578Z, process exited with code 0 ===
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+=== Log started at 2026-02-03T19:50:30.312Z for service ruby-builder ===
+
+[Kruby-builder exited with code 127
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+
+=== Log ended at 2026-02-03T19:50:30.729Z, process exited with code 0 ===
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+=== Log started at 2026-02-03T19:54:10.759Z for service ruby-builder ===
+
+[Kruby-builder exited with code 127
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+
+=== Log ended at 2026-02-03T19:54:11.268Z, process exited with code 0 ===
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+=== Log started at 2026-02-03T19:54:46.091Z for service ruby-builder ===
+
+[Kruby-builder exited with code 127
+ruby-builder  | bundler: command not found: rubeno
+ruby-builder  | Install missing gem executables with `bundle install`
+
+=== Log ended at 2026-02-03T19:54:46.443Z, process exited with code 0 ===
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+=== Log started at 2026-02-03T19:56:43.086Z for service ruby-builder ===
+
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+[Kruby-builder exited with code 1
+
+=== Log ended at 2026-02-03T19:56:43.429Z, process exited with code 0 ===
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+=== Log started at 2026-02-03T20:03:19.861Z for service ruby-builder ===
+
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+[Kruby-builder exited with code 1
+
+=== Log ended at 2026-02-03T20:03:20.332Z, process exited with code 0 ===
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+=== Log started at 2026-02-03T20:04:48.041Z for service ruby-builder ===
+
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+[Kruby-builder exited with code 1
+
+=== Log ended at 2026-02-03T20:04:48.384Z, process exited with code 0 ===
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+=== Log started at 2026-02-03T20:56:59.403Z for service ruby-builder ===
+
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+[Kruby-builder exited with code 1
+
+=== Log ended at 2026-02-03T20:56:59.795Z, process exited with code 0 ===
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+=== Log started at 2026-02-03T21:01:04.451Z for service ruby-builder ===
+
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+[Kruby-builder exited with code 1
+
+=== Log ended at 2026-02-03T21:01:04.819Z, process exited with code 0 ===
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+=== Log started at 2026-02-03T21:03:21.211Z for service ruby-builder ===
+
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+[Kruby-builder exited with code 1
+
+=== Log ended at 2026-02-03T21:03:21.553Z, process exited with code 0 ===
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+=== Log started at 2026-02-03T22:39:56.253Z for service ruby-builder ===
+
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+[Kruby-builder exited with code 1
+
+=== Log ended at 2026-02-03T22:39:56.629Z, process exited with code 0 ===
+=== Log started at 2026-02-03T23:02:20.290Z for service ruby-builder ===
+
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+[Kruby-builder exited with code 1
+
+=== Log ended at 2026-02-03T23:02:20.665Z, process exited with code 0 ===
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+=== Log started at 2026-02-03T23:04:22.281Z for service ruby-builder ===
+
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+[Kruby-builder exited with code 1
+
+=== Log ended at 2026-02-03T23:04:22.708Z, process exited with code 0 ===
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+=== Log started at 2026-02-03T23:10:43.390Z for service ruby-builder ===
+
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+[Kruby-builder exited with code 1
+
+=== Log ended at 2026-02-03T23:10:43.740Z, process exited with code 0 ===
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+=== Log started at 2026-02-03T23:21:13.364Z for service ruby-builder ===
+
+[Kruby-builder exited with code 1
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+
+=== Log ended at 2026-02-03T23:21:13.869Z, process exited with code 0 ===
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+=== Log started at 2026-02-03T23:22:19.126Z for service ruby-builder ===
+
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+[Kruby-builder exited with code 1
+
+=== Log ended at 2026-02-03T23:22:19.664Z, process exited with code 0 ===
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+=== Log started at 2026-02-03T23:24:44.299Z for service ruby-builder ===
+
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+[Kruby-builder exited with code 1
+
+=== Log ended at 2026-02-03T23:24:44.635Z, process exited with code 0 ===
+=== Log started at 2026-02-03T23:55:16.472Z for service ruby-builder ===
+
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+[Kruby-builder exited with code 1
+
+=== Log ended at 2026-02-03T23:55:16.822Z, process exited with code 0 ===
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+=== Log started at 2026-02-04T00:02:29.084Z for service ruby-builder ===
+
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+[Kruby-builder exited with code 1
+
+=== Log ended at 2026-02-04T00:02:29.565Z, process exited with code 0 ===
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+=== Log started at 2026-02-04T00:07:02.140Z for service ruby-builder ===
+
+[Kruby-builder exited with code 1
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+
+=== Log ended at 2026-02-04T00:07:02.506Z, process exited with code 0 ===
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+=== Log started at 2026-02-04T00:08:00.385Z for service ruby-builder ===
+
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+[Kruby-builder exited with code 1
+
+=== Log ended at 2026-02-04T00:08:00.688Z, process exited with code 0 ===
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+=== Log started at 2026-02-04T00:11:55.293Z for service ruby-builder ===
+
+[Kruby-builder exited with code 1
+ruby-builder  | bundler: failed to load command: rubeno (/usr/local/bundle/bin/rubeno)
+ruby-builder  | /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `require_relative': cannot load such file -- /usr/local/bundle/gems/rubeno-0.0.4/lib/base_suite (LoadError)
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/lib/rubeno.rb:2:in `<top (required)>'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+ruby-builder  | 	from /usr/local/bundle/gems/rubeno-0.0.4/bin/rubeno:3:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `load'
+ruby-builder  | 	from /usr/local/bundle/bin/rubeno:25:in `<top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:58:in `kernel_load'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli/exec.rb:23:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:492:in `exec'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:34:in `dispatch'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/cli.rb:28:in `start'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:37:in `block in <top (required)>'
+ruby-builder  | 	from /usr/local/lib/ruby/3.2.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+ruby-builder  | 	from /usr/local/lib/ruby/gems/3.2.0/gems/bundler-2.4.19/libexec/bundle:29:in `<top (required)>'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `load'
+ruby-builder  | 	from /usr/local/bin/bundle:25:in `<main>'
+
+=== Log ended at 2026-02-04T00:11:55.672Z, process exited with code 0 ===

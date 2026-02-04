@@ -40,3 +40,1107 @@ node-builder  | Done in 0.47s.
 [Knode-builder exited with code 0
 
 === Log ended at 2026-02-03T17:52:34.226Z, process exited with code 0 ===
+=== Log started at 2026-02-03T19:32:07.523Z for service node-builder ===
+
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+node-builder  | [NODE BUILDER] hello:  /usr/local/bin/node,/workspace/node_modules/testeranto/src/server/runtimes/node/node.ts,/workspace/testeranto/testeranto.ts,/workspace/testeranto/runtimes/node/node.mjs,nodetests
+node-builder  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+node-builder  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+node-builder  | [NODE BUILDER] testName:  nodetests
+node-builder  | [NODE BUILDER] is now bundling:  nodetests
+node-builder  | esbuild nodetests {
+node-builder  |   featureIngestor: [Function: featureIngestor],
+node-builder  |   runtimes: {
+node-builder  |     rubytests: {
+node-builder  |       runtime: 'ruby',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [],
+node-builder  |       dockerfile: 'testeranto/runtimes/ruby/ruby.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/ruby/ruby.rb'
+node-builder  |     },
+node-builder  |     nodetests: {
+node-builder  |       runtime: 'node',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [Array],
+node-builder  |       dockerfile: 'testeranto/runtimes/node/node.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/node/node.mjs'
+node-builder  |     }
+node-builder  |   }
+node-builder  | }
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors
+node-builder  | [node Builder] Wrote 2 input files to testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs-inputFiles.json
+node-builder  | Done in 0.69s.
+[Knode-builder exited with code 0
+
+=== Log ended at 2026-02-03T19:32:08.855Z, process exited with code 0 ===
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+=== Log started at 2026-02-03T19:36:15.642Z for service node-builder ===
+
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+node-builder  | [NODE BUILDER] hello:  /usr/local/bin/node,/workspace/node_modules/testeranto/src/server/runtimes/node/node.ts,/workspace/testeranto/testeranto.ts,/workspace/testeranto/runtimes/node/node.mjs,nodetests
+node-builder  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+node-builder  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+node-builder  | [NODE BUILDER] testName:  nodetests
+node-builder  | [NODE BUILDER] is now bundling:  nodetests
+node-builder  | esbuild nodetests {
+node-builder  |   featureIngestor: [Function: featureIngestor],
+node-builder  |   runtimes: {
+node-builder  |     rubytests: {
+node-builder  |       runtime: 'ruby',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [],
+node-builder  |       dockerfile: 'testeranto/runtimes/ruby/ruby.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/ruby/ruby.rb'
+node-builder  |     },
+node-builder  |     nodetests: {
+node-builder  |       runtime: 'node',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [Array],
+node-builder  |       dockerfile: 'testeranto/runtimes/node/node.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/node/node.mjs'
+node-builder  |     }
+node-builder  |   }
+node-builder  | }
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors
+node-builder  | [node Builder] Wrote 2 input files to testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs-inputFiles.json
+node-builder  | Done in 0.33s.
+[Knode-builder exited with code 0
+
+=== Log ended at 2026-02-03T19:36:16.343Z, process exited with code 0 ===
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+=== Log started at 2026-02-03T19:37:03.657Z for service node-builder ===
+
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+node-builder  | [NODE BUILDER] hello:  /usr/local/bin/node,/workspace/node_modules/testeranto/src/server/runtimes/node/node.ts,/workspace/testeranto/testeranto.ts,/workspace/testeranto/runtimes/node/node.mjs,nodetests
+node-builder  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+node-builder  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+node-builder  | [NODE BUILDER] testName:  nodetests
+node-builder  | [NODE BUILDER] is now bundling:  nodetests
+node-builder  | esbuild nodetests {
+node-builder  |   featureIngestor: [Function: featureIngestor],
+node-builder  |   runtimes: {
+node-builder  |     rubytests: {
+node-builder  |       runtime: 'ruby',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [],
+node-builder  |       dockerfile: 'testeranto/runtimes/ruby/ruby.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/ruby/ruby.rb'
+node-builder  |     },
+node-builder  |     nodetests: {
+node-builder  |       runtime: 'node',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [Array],
+node-builder  |       dockerfile: 'testeranto/runtimes/node/node.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/node/node.mjs'
+node-builder  |     }
+node-builder  |   }
+node-builder  | }
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors
+node-builder  | [node Builder] Wrote 2 input files to testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs-inputFiles.json
+node-builder  | Done in 0.32s.
+[Knode-builder exited with code 0
+
+=== Log ended at 2026-02-03T19:37:04.470Z, process exited with code 0 ===
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+=== Log started at 2026-02-03T19:38:16.911Z for service node-builder ===
+
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+node-builder  | [NODE BUILDER] hello:  /usr/local/bin/node,/workspace/node_modules/testeranto/src/server/runtimes/node/node.ts,/workspace/testeranto/testeranto.ts,/workspace/testeranto/runtimes/node/node.mjs,nodetests
+node-builder  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+node-builder  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+node-builder  | [NODE BUILDER] testName:  nodetests
+node-builder  | [NODE BUILDER] is now bundling:  nodetests
+node-builder  | esbuild nodetests {
+node-builder  |   featureIngestor: [Function: featureIngestor],
+node-builder  |   runtimes: {
+node-builder  |     rubytests: {
+node-builder  |       runtime: 'ruby',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [],
+node-builder  |       dockerfile: 'testeranto/runtimes/ruby/ruby.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/ruby/ruby.rb'
+node-builder  |     },
+node-builder  |     nodetests: {
+node-builder  |       runtime: 'node',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [Array],
+node-builder  |       dockerfile: 'testeranto/runtimes/node/node.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/node/node.mjs'
+node-builder  |     }
+node-builder  |   }
+node-builder  | }
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors
+node-builder  | [node Builder] Wrote 2 input files to testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs-inputFiles.json
+node-builder  | Done in 0.33s.
+[Knode-builder exited with code 0
+
+=== Log ended at 2026-02-03T19:38:17.492Z, process exited with code 0 ===
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+=== Log started at 2026-02-03T19:41:07.377Z for service node-builder ===
+
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+node-builder  | [NODE BUILDER] hello:  /usr/local/bin/node,/workspace/node_modules/testeranto/src/server/runtimes/node/node.ts,/workspace/testeranto/testeranto.ts,/workspace/testeranto/runtimes/node/node.mjs,nodetests
+node-builder  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+node-builder  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+node-builder  | [NODE BUILDER] testName:  nodetests
+node-builder  | [NODE BUILDER] is now bundling:  nodetests
+node-builder  | esbuild nodetests {
+node-builder  |   featureIngestor: [Function: featureIngestor],
+node-builder  |   runtimes: {
+node-builder  |     rubytests: {
+node-builder  |       runtime: 'ruby',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [],
+node-builder  |       dockerfile: 'testeranto/runtimes/ruby/ruby.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/ruby/ruby.rb'
+node-builder  |     },
+node-builder  |     nodetests: {
+node-builder  |       runtime: 'node',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [Array],
+node-builder  |       dockerfile: 'testeranto/runtimes/node/node.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/node/node.mjs'
+node-builder  |     }
+node-builder  |   }
+node-builder  | }
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors
+node-builder  | [node Builder] Wrote 2 input files to testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs-inputFiles.json
+node-builder  | Done in 0.45s.
+[Knode-builder exited with code 0
+
+=== Log ended at 2026-02-03T19:41:08.245Z, process exited with code 0 ===
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+=== Log started at 2026-02-03T19:41:59.056Z for service node-builder ===
+
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+node-builder  | [NODE BUILDER] hello:  /usr/local/bin/node,/workspace/node_modules/testeranto/src/server/runtimes/node/node.ts,/workspace/testeranto/testeranto.ts,/workspace/testeranto/runtimes/node/node.mjs,nodetests
+node-builder  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+node-builder  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+node-builder  | [NODE BUILDER] testName:  nodetests
+node-builder  | [NODE BUILDER] is now bundling:  nodetests
+node-builder  | esbuild nodetests {
+node-builder  |   featureIngestor: [Function: featureIngestor],
+node-builder  |   runtimes: {
+node-builder  |     rubytests: {
+node-builder  |       runtime: 'ruby',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [],
+node-builder  |       dockerfile: 'testeranto/runtimes/ruby/ruby.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/ruby/ruby.rb'
+node-builder  |     },
+node-builder  |     nodetests: {
+node-builder  |       runtime: 'node',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [Array],
+node-builder  |       dockerfile: 'testeranto/runtimes/node/node.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/node/node.mjs'
+node-builder  |     }
+node-builder  |   }
+node-builder  | }
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors
+node-builder  | [node Builder] Wrote 2 input files to testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs-inputFiles.json
+node-builder  | [node Builder] Skipping non-test entryPoint: src/ts/Calculator.ts
+node-builder  | [node Builder] Skipping output without entryPoint: testeranto/bundles/allTests/node/chunk-Y6FXYEAI.mjs
+node-builder  | Done in 0.32s.
+[Knode-builder exited with code 0
+
+=== Log ended at 2026-02-03T19:41:59.661Z, process exited with code 0 ===
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+=== Log started at 2026-02-03T19:44:08.346Z for service node-builder ===
+
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+node-builder  | [NODE BUILDER] hello:  /usr/local/bin/node,/workspace/node_modules/testeranto/src/server/runtimes/node/node.ts,/workspace/testeranto/testeranto.ts,/workspace/testeranto/runtimes/node/node.mjs,nodetests
+node-builder  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+node-builder  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+node-builder  | [NODE BUILDER] testName:  nodetests
+node-builder  | [NODE BUILDER] is now bundling:  nodetests
+node-builder  | esbuild nodetests {
+node-builder  |   featureIngestor: [Function: featureIngestor],
+node-builder  |   runtimes: {
+node-builder  |     rubytests: {
+node-builder  |       runtime: 'ruby',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [],
+node-builder  |       dockerfile: 'testeranto/runtimes/ruby/ruby.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/ruby/ruby.rb'
+node-builder  |     },
+node-builder  |     nodetests: {
+node-builder  |       runtime: 'node',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [Array],
+node-builder  |       dockerfile: 'testeranto/runtimes/node/node.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/node/node.mjs'
+node-builder  |     }
+node-builder  |   }
+node-builder  | }
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors
+node-builder  | [node Builder] Wrote 2 input files to testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs-inputFiles.json
+node-builder  | [node Builder] Skipping non-test entryPoint: src/ts/Calculator.ts
+node-builder  | Done in 0.32s.
+[Knode-builder exited with code 0
+
+=== Log ended at 2026-02-03T19:44:08.893Z, process exited with code 0 ===
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+=== Log started at 2026-02-03T19:50:29.368Z for service node-builder ===
+
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+node-builder  | [NODE BUILDER] hello:  /usr/local/bin/node,/workspace/node_modules/testeranto/src/server/runtimes/node/node.ts,/workspace/testeranto/testeranto.ts,/workspace/testeranto/runtimes/node/node.mjs,nodetests
+node-builder  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+node-builder  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+node-builder  | [NODE BUILDER] testName:  nodetests
+node-builder  | [NODE BUILDER] is now bundling:  nodetests
+node-builder  | esbuild nodetests {
+node-builder  |   featureIngestor: [Function: featureIngestor],
+node-builder  |   runtimes: {
+node-builder  |     rubytests: {
+node-builder  |       runtime: 'ruby',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [],
+node-builder  |       dockerfile: 'testeranto/runtimes/ruby/ruby.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/ruby/ruby.rb'
+node-builder  |     },
+node-builder  |     nodetests: {
+node-builder  |       runtime: 'node',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [Array],
+node-builder  |       dockerfile: 'testeranto/runtimes/node/node.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/node/node.mjs'
+node-builder  |     }
+node-builder  |   }
+node-builder  | }
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors
+node-builder  | [node Builder] Wrote 2 input files to testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs-inputFiles.json
+node-builder  | [node Builder] Skipping non-test entryPoint: src/ts/Calculator.ts
+node-builder  | Done in 0.33s.
+[Knode-builder exited with code 0
+
+=== Log ended at 2026-02-03T19:50:29.973Z, process exited with code 0 ===
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+=== Log started at 2026-02-03T19:54:09.864Z for service node-builder ===
+
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+node-builder  | [NODE BUILDER] hello:  /usr/local/bin/node,/workspace/node_modules/testeranto/src/server/runtimes/node/node.ts,/workspace/testeranto/testeranto.ts,/workspace/testeranto/runtimes/node/node.mjs,nodetests
+node-builder  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+node-builder  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+node-builder  | [NODE BUILDER] testName:  nodetests
+node-builder  | [NODE BUILDER] is now bundling:  nodetests
+node-builder  | esbuild nodetests {
+node-builder  |   featureIngestor: [Function: featureIngestor],
+node-builder  |   runtimes: {
+node-builder  |     rubytests: {
+node-builder  |       runtime: 'ruby',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [],
+node-builder  |       dockerfile: 'testeranto/runtimes/ruby/ruby.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/ruby/ruby.rb'
+node-builder  |     },
+node-builder  |     nodetests: {
+node-builder  |       runtime: 'node',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [Array],
+node-builder  |       dockerfile: 'testeranto/runtimes/node/node.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/node/node.mjs'
+node-builder  |     }
+node-builder  |   }
+node-builder  | }
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors
+node-builder  | [node Builder] Wrote 2 input files to testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs-inputFiles.json
+node-builder  | [node Builder] Skipping non-test entryPoint: src/ts/Calculator.ts
+node-builder  | Done in 0.31s.
+[Knode-builder exited with code 0
+
+=== Log ended at 2026-02-03T19:54:10.423Z, process exited with code 0 ===
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+=== Log started at 2026-02-03T19:54:45.170Z for service node-builder ===
+
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+node-builder  | [NODE BUILDER] hello:  /usr/local/bin/node,/workspace/node_modules/testeranto/src/server/runtimes/node/node.ts,/workspace/testeranto/testeranto.ts,/workspace/testeranto/runtimes/node/node.mjs,nodetests
+node-builder  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+node-builder  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+node-builder  | [NODE BUILDER] testName:  nodetests
+node-builder  | [NODE BUILDER] is now bundling:  nodetests
+node-builder  | esbuild nodetests {
+node-builder  |   featureIngestor: [Function: featureIngestor],
+node-builder  |   runtimes: {
+node-builder  |     rubytests: {
+node-builder  |       runtime: 'ruby',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [],
+node-builder  |       dockerfile: 'testeranto/runtimes/ruby/ruby.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/ruby/ruby.rb'
+node-builder  |     },
+node-builder  |     nodetests: {
+node-builder  |       runtime: 'node',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [Array],
+node-builder  |       dockerfile: 'testeranto/runtimes/node/node.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/node/node.mjs'
+node-builder  |     }
+node-builder  |   }
+node-builder  | }
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors
+node-builder  | [node Builder] Wrote 2 input files to testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs-inputFiles.json
+node-builder  | [node Builder] Skipping non-test entryPoint: src/ts/Calculator.ts
+node-builder  | Done in 0.31s.
+[Knode-builder exited with code 0
+
+=== Log ended at 2026-02-03T19:54:45.747Z, process exited with code 0 ===
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+=== Log started at 2026-02-03T19:56:37.742Z for service node-builder ===
+
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+node-builder  | [NODE BUILDER] hello:  /usr/local/bin/node,/workspace/node_modules/testeranto/src/server/runtimes/node/node.ts,/workspace/testeranto/testeranto.ts,/workspace/testeranto/runtimes/node/node.mjs,nodetests
+node-builder  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+node-builder  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+node-builder  | [NODE BUILDER] testName:  nodetests
+node-builder  | [NODE BUILDER] is now bundling:  nodetests
+node-builder  | esbuild nodetests {
+node-builder  |   featureIngestor: [Function: featureIngestor],
+node-builder  |   runtimes: {
+node-builder  |     rubytests: {
+node-builder  |       runtime: 'ruby',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [],
+node-builder  |       dockerfile: 'testeranto/runtimes/ruby/ruby.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/ruby/ruby.rb'
+node-builder  |     },
+node-builder  |     nodetests: {
+node-builder  |       runtime: 'node',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [Array],
+node-builder  |       dockerfile: 'testeranto/runtimes/node/node.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/node/node.mjs'
+node-builder  |     }
+node-builder  |   }
+node-builder  | }
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors
+node-builder  | [node Builder] Wrote 2 input files to testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs-inputFiles.json
+node-builder  | [node Builder] Skipping non-test entryPoint: src/ts/Calculator.ts
+node-builder  | Done in 0.41s.
+[Knode-builder exited with code 0
+
+=== Log ended at 2026-02-03T19:56:38.489Z, process exited with code 0 ===
+node-builder  | yarn run v1.22.22
+=== Log started at 2026-02-03T20:03:18.936Z for service node-builder ===
+
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+node-builder  | [NODE BUILDER] hello:  /usr/local/bin/node,/workspace/node_modules/testeranto/src/server/runtimes/node/node.ts,/workspace/testeranto/testeranto.ts,/workspace/testeranto/runtimes/node/node.mjs,nodetests
+node-builder  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+node-builder  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+node-builder  | [NODE BUILDER] testName:  nodetests
+node-builder  | [NODE BUILDER] is now bundling:  nodetests
+node-builder  | esbuild nodetests {
+node-builder  |   featureIngestor: [Function: featureIngestor],
+node-builder  |   runtimes: {
+node-builder  |     rubytests: {
+node-builder  |       runtime: 'ruby',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [],
+node-builder  |       dockerfile: 'testeranto/runtimes/ruby/ruby.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/ruby/ruby.rb'
+node-builder  |     },
+node-builder  |     nodetests: {
+node-builder  |       runtime: 'node',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [Array],
+node-builder  |       dockerfile: 'testeranto/runtimes/node/node.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/node/node.mjs'
+node-builder  |     }
+node-builder  |   }
+node-builder  | }
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors
+node-builder  | [node Builder] Wrote 2 input files to testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs-inputFiles.json
+node-builder  | [node Builder] Skipping non-test entryPoint: src/ts/Calculator.ts
+node-builder  | Done in 0.36s.
+[Knode-builder exited with code 0
+
+=== Log ended at 2026-02-03T20:03:19.663Z, process exited with code 0 ===
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+=== Log started at 2026-02-03T20:04:47.185Z for service node-builder ===
+
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+node-builder  | [NODE BUILDER] hello:  /usr/local/bin/node,/workspace/node_modules/testeranto/src/server/runtimes/node/node.ts,/workspace/testeranto/testeranto.ts,/workspace/testeranto/runtimes/node/node.mjs,nodetests
+node-builder  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+node-builder  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+node-builder  | [NODE BUILDER] testName:  nodetests
+node-builder  | [NODE BUILDER] is now bundling:  nodetests
+node-builder  | esbuild nodetests {
+node-builder  |   featureIngestor: [Function: featureIngestor],
+node-builder  |   runtimes: {
+node-builder  |     rubytests: {
+node-builder  |       runtime: 'ruby',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [],
+node-builder  |       dockerfile: 'testeranto/runtimes/ruby/ruby.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/ruby/ruby.rb'
+node-builder  |     },
+node-builder  |     nodetests: {
+node-builder  |       runtime: 'node',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [Array],
+node-builder  |       dockerfile: 'testeranto/runtimes/node/node.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/node/node.mjs'
+node-builder  |     }
+node-builder  |   }
+node-builder  | }
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors
+node-builder  | [node Builder] Wrote 2 input files to testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs-inputFiles.json
+node-builder  | [node Builder] Skipping non-test entryPoint: src/ts/Calculator.ts
+node-builder  | Done in 0.38s.
+[Knode-builder exited with code 0
+
+=== Log ended at 2026-02-03T20:04:47.841Z, process exited with code 0 ===
+=== Log started at 2026-02-03T20:56:58.341Z for service node-builder ===
+
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+node-builder  | [NODE BUILDER] hello:  /usr/local/bin/node,/workspace/node_modules/testeranto/src/server/runtimes/node/node.ts,/workspace/testeranto/testeranto.ts,/workspace/testeranto/runtimes/node/node.mjs,nodetests
+node-builder  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+node-builder  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+node-builder  | [NODE BUILDER] testName:  nodetests
+node-builder  | [NODE BUILDER] is now bundling:  nodetests
+node-builder  | esbuild nodetests {
+node-builder  |   featureIngestor: [Function: featureIngestor],
+node-builder  |   runtimes: {
+node-builder  |     rubytests: {
+node-builder  |       runtime: 'ruby',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [],
+node-builder  |       dockerfile: 'testeranto/runtimes/ruby/ruby.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/ruby/ruby.rb'
+node-builder  |     },
+node-builder  |     nodetests: {
+node-builder  |       runtime: 'node',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [Array],
+node-builder  |       dockerfile: 'testeranto/runtimes/node/node.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/node/node.mjs'
+node-builder  |     }
+node-builder  |   }
+node-builder  | }
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors
+node-builder  | [node Builder] Wrote 2 input files to testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs-inputFiles.json
+node-builder  | [node Builder] Skipping non-test entryPoint: src/ts/Calculator.ts
+node-builder  | Done in 0.38s.
+[Knode-builder exited with code 0
+
+=== Log ended at 2026-02-03T20:56:59.294Z, process exited with code 0 ===
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+=== Log started at 2026-02-03T21:01:03.473Z for service node-builder ===
+
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+node-builder  | [NODE BUILDER] hello:  /usr/local/bin/node,/workspace/node_modules/testeranto/src/server/runtimes/node/node.ts,/workspace/testeranto/testeranto.ts,/workspace/testeranto/runtimes/node/node.mjs,nodetests
+node-builder  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+node-builder  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+node-builder  | [NODE BUILDER] testName:  nodetests
+node-builder  | [NODE BUILDER] is now bundling:  nodetests
+node-builder  | esbuild nodetests {
+node-builder  |   featureIngestor: [Function: featureIngestor],
+node-builder  |   runtimes: {
+node-builder  |     rubytests: {
+node-builder  |       runtime: 'ruby',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [],
+node-builder  |       dockerfile: 'testeranto/runtimes/ruby/ruby.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/ruby/ruby.rb'
+node-builder  |     },
+node-builder  |     nodetests: {
+node-builder  |       runtime: 'node',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [Array],
+node-builder  |       dockerfile: 'testeranto/runtimes/node/node.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/node/node.mjs'
+node-builder  |     }
+node-builder  |   }
+node-builder  | }
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors
+node-builder  | [node Builder] Wrote 2 input files to testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs-inputFiles.json
+node-builder  | [node Builder] Skipping non-test entryPoint: src/ts/Calculator.ts
+node-builder  | Done in 0.31s.
+[Knode-builder exited with code 0
+
+=== Log ended at 2026-02-03T21:01:04.027Z, process exited with code 0 ===
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+=== Log started at 2026-02-03T21:03:20.187Z for service node-builder ===
+
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+node-builder  | [NODE BUILDER] hello:  /usr/local/bin/node,/workspace/node_modules/testeranto/src/server/runtimes/node/node.ts,/workspace/testeranto/testeranto.ts,/workspace/testeranto/runtimes/node/node.mjs,nodetests
+node-builder  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+node-builder  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+node-builder  | [NODE BUILDER] testName:  nodetests
+node-builder  | [NODE BUILDER] is now bundling:  nodetests
+node-builder  | esbuild nodetests {
+node-builder  |   featureIngestor: [Function: featureIngestor],
+node-builder  |   runtimes: {
+node-builder  |     rubytests: {
+node-builder  |       runtime: 'ruby',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [],
+node-builder  |       dockerfile: 'testeranto/runtimes/ruby/ruby.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/ruby/ruby.rb'
+node-builder  |     },
+node-builder  |     nodetests: {
+node-builder  |       runtime: 'node',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [Array],
+node-builder  |       dockerfile: 'testeranto/runtimes/node/node.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/node/node.mjs'
+node-builder  |     }
+node-builder  |   }
+node-builder  | }
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors
+node-builder  | [node Builder] Wrote 2 input files to testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs-inputFiles.json
+node-builder  | [node Builder] Skipping non-test entryPoint: src/ts/Calculator.ts
+node-builder  | Done in 0.36s.
+[Knode-builder exited with code 0
+
+=== Log ended at 2026-02-03T21:03:20.802Z, process exited with code 0 ===
+=== Log started at 2026-02-03T22:39:55.069Z for service node-builder ===
+
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+node-builder  | [NODE BUILDER] hello:  /usr/local/bin/node,/workspace/node_modules/testeranto/src/server/runtimes/node/node.ts,/workspace/testeranto/testeranto.ts,/workspace/testeranto/runtimes/node/node.mjs,nodetests
+node-builder  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+node-builder  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+node-builder  | [NODE BUILDER] testName:  nodetests
+node-builder  | [NODE BUILDER] is now bundling:  nodetests
+node-builder  | esbuild nodetests {
+node-builder  |   featureIngestor: [Function: featureIngestor],
+node-builder  |   runtimes: {
+node-builder  |     rubytests: {
+node-builder  |       runtime: 'ruby',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [],
+node-builder  |       dockerfile: 'testeranto/runtimes/ruby/ruby.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/ruby/ruby.rb'
+node-builder  |     },
+node-builder  |     nodetests: {
+node-builder  |       runtime: 'node',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [Array],
+node-builder  |       dockerfile: 'testeranto/runtimes/node/node.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/node/node.mjs'
+node-builder  |     }
+node-builder  |   }
+node-builder  | }
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors
+node-builder  | [node Builder] Wrote 2 input files to testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs-inputFiles.json
+node-builder  | [node Builder] Skipping non-test entryPoint: src/ts/Calculator.ts
+node-builder  | Done in 0.49s.
+[Knode-builder exited with code 0
+
+=== Log ended at 2026-02-03T22:39:56.133Z, process exited with code 0 ===
+node-builder  | node:internal/modules/cjs/loader:1215
+node-builder  |   throw err;
+node-builder  |   ^
+node-builder  | 
+node-builder  | Error: Cannot find module '/workspace/ENV=node'
+node-builder  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+node-builder  |     at Module._load (node:internal/modules/cjs/loader:1043:27)
+node-builder  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+node-builder  |     at node:internal/main/run_main_module:28:49 {
+node-builder  |   code: 'MODULE_NOT_FOUND',
+node-builder  |   requireStack: []
+node-builder  | }
+node-builder  | 
+node-builder  | Node.js v20.19.4
+=== Log started at 2026-02-03T23:02:19.358Z for service node-builder ===
+
+node-builder  | node:internal/modules/cjs/loader:1215
+node-builder  |   throw err;
+node-builder  |   ^
+node-builder  | 
+node-builder  | Error: Cannot find module '/workspace/ENV=node'
+node-builder  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+node-builder  |     at Module._load (node:internal/modules/cjs/loader:1043:27)
+node-builder  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+node-builder  |     at node:internal/main/run_main_module:28:49 {
+node-builder  |   code: 'MODULE_NOT_FOUND',
+node-builder  |   requireStack: []
+node-builder  | }
+node-builder  | 
+node-builder  | Node.js v20.19.4
+[Knode-builder exited with code 1
+
+=== Log ended at 2026-02-03T23:02:19.742Z, process exited with code 0 ===
+node-builder  | node:internal/modules/cjs/loader:1215
+node-builder  |   throw err;
+node-builder  |   ^
+node-builder  | 
+node-builder  | Error: Cannot find module '/workspace/ENV=node'
+node-builder  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+node-builder  |     at Module._load (node:internal/modules/cjs/loader:1043:27)
+node-builder  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+node-builder  |     at node:internal/main/run_main_module:28:49 {
+node-builder  |   code: 'MODULE_NOT_FOUND',
+node-builder  |   requireStack: []
+node-builder  | }
+node-builder  | 
+node-builder  | Node.js v20.19.4
+=== Log started at 2026-02-03T23:04:21.353Z for service node-builder ===
+
+node-builder  | node:internal/modules/cjs/loader:1215
+node-builder  |   throw err;
+node-builder  |   ^
+node-builder  | 
+node-builder  | Error: Cannot find module '/workspace/ENV=node'
+node-builder  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+node-builder  |     at Module._load (node:internal/modules/cjs/loader:1043:27)
+node-builder  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+node-builder  |     at node:internal/main/run_main_module:28:49 {
+node-builder  |   code: 'MODULE_NOT_FOUND',
+node-builder  |   requireStack: []
+node-builder  | }
+node-builder  | 
+node-builder  | Node.js v20.19.4
+node-builder  | node:internal/modules/cjs/loader:1215
+node-builder  |   throw err;
+node-builder  |   ^
+node-builder  | 
+node-builder  | Error: Cannot find module '/workspace/ENV=node'
+node-builder  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+node-builder  |     at Module._load (node:internal/modules/cjs/loader:1043:27)
+node-builder  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+node-builder  |     at node:internal/main/run_main_module:28:49 {
+node-builder  |   code: 'MODULE_NOT_FOUND',
+node-builder  |   requireStack: []
+node-builder  | }
+node-builder  | 
+node-builder  | Node.js v20.19.4
+=== Log started at 2026-02-03T23:10:42.552Z for service node-builder ===
+
+node-builder  | node:internal/modules/cjs/loader:1215
+node-builder  |   throw err;
+node-builder  |   ^
+node-builder  | 
+node-builder  | Error: Cannot find module '/workspace/ENV=node'
+node-builder  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+node-builder  |     at Module._load (node:internal/modules/cjs/loader:1043:27)
+node-builder  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+node-builder  |     at node:internal/main/run_main_module:28:49 {
+node-builder  |   code: 'MODULE_NOT_FOUND',
+node-builder  |   requireStack: []
+node-builder  | }
+node-builder  | 
+node-builder  | Node.js v20.19.4
+node-builder  | node:internal/modules/cjs/loader:1215
+node-builder  |   throw err;
+node-builder  |   ^
+node-builder  | 
+node-builder  | Error: Cannot find module '/workspace/ENV=node'
+node-builder  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+node-builder  |     at Module._load (node:internal/modules/cjs/loader:1043:27)
+node-builder  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+node-builder  |     at node:internal/main/run_main_module:28:49 {
+node-builder  |   code: 'MODULE_NOT_FOUND',
+node-builder  |   requireStack: []
+node-builder  | }
+node-builder  | 
+node-builder  | Node.js v20.19.4
+=== Log started at 2026-02-03T23:21:12.299Z for service node-builder ===
+
+node-builder  | node:internal/modules/cjs/loader:1215
+node-builder  |   throw err;
+node-builder  |   ^
+node-builder  | 
+node-builder  | Error: Cannot find module '/workspace/ENV=node'
+node-builder  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+node-builder  |     at Module._load (node:internal/modules/cjs/loader:1043:27)
+node-builder  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+node-builder  |     at node:internal/main/run_main_module:28:49 {
+node-builder  |   code: 'MODULE_NOT_FOUND',
+node-builder  |   requireStack: []
+node-builder  | }
+node-builder  | 
+node-builder  | Node.js v20.19.4
+node-builder  | node:internal/modules/cjs/loader:1215
+node-builder  |   throw err;
+node-builder  |   ^
+node-builder  | 
+node-builder  | Error: Cannot find module '/workspace/ENV=node'
+node-builder  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+node-builder  |     at Module._load (node:internal/modules/cjs/loader:1043:27)
+node-builder  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+node-builder  |     at node:internal/main/run_main_module:28:49 {
+node-builder  |   code: 'MODULE_NOT_FOUND',
+node-builder  |   requireStack: []
+node-builder  | }
+node-builder  | 
+node-builder  | Node.js v20.19.4
+=== Log started at 2026-02-03T23:22:18.014Z for service node-builder ===
+
+node-builder  | node:internal/modules/cjs/loader:1215
+node-builder  |   throw err;
+node-builder  |   ^
+node-builder  | 
+node-builder  | Error: Cannot find module '/workspace/ENV=node'
+node-builder  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+node-builder  |     at Module._load (node:internal/modules/cjs/loader:1043:27)
+node-builder  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+node-builder  |     at node:internal/main/run_main_module:28:49 {
+node-builder  |   code: 'MODULE_NOT_FOUND',
+node-builder  |   requireStack: []
+node-builder  | }
+node-builder  | 
+node-builder  | Node.js v20.19.4
+node-builder  | node:internal/modules/cjs/loader:1215
+node-builder  |   throw err;
+node-builder  |   ^
+node-builder  | 
+node-builder  | Error: Cannot find module '/workspace/ENV=node'
+node-builder  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+node-builder  |     at Module._load (node:internal/modules/cjs/loader:1043:27)
+node-builder  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+node-builder  |     at node:internal/main/run_main_module:28:49 {
+node-builder  |   code: 'MODULE_NOT_FOUND',
+node-builder  |   requireStack: []
+node-builder  | }
+node-builder  | 
+node-builder  | Node.js v20.19.4
+=== Log started at 2026-02-03T23:24:43.481Z for service node-builder ===
+
+node-builder  | node:internal/modules/cjs/loader:1215
+node-builder  |   throw err;
+node-builder  |   ^
+node-builder  | 
+node-builder  | Error: Cannot find module '/workspace/ENV=node'
+node-builder  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+node-builder  |     at Module._load (node:internal/modules/cjs/loader:1043:27)
+node-builder  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+node-builder  |     at node:internal/main/run_main_module:28:49 {
+node-builder  |   code: 'MODULE_NOT_FOUND',
+node-builder  |   requireStack: []
+node-builder  | }
+node-builder  | 
+node-builder  | Node.js v20.19.4
+node-builder  | node:internal/modules/cjs/loader:1215
+node-builder  |   throw err;
+node-builder  |   ^
+node-builder  | 
+node-builder  | Error: Cannot find module '/workspace/ENV=node'
+node-builder  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+node-builder  |     at Module._load (node:internal/modules/cjs/loader:1043:27)
+node-builder  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+node-builder  |     at node:internal/main/run_main_module:28:49 {
+node-builder  |   code: 'MODULE_NOT_FOUND',
+node-builder  |   requireStack: []
+node-builder  | }
+node-builder  | 
+node-builder  | Node.js v20.19.4
+=== Log started at 2026-02-03T23:55:15.603Z for service node-builder ===
+
+node-builder  | node:internal/modules/cjs/loader:1215
+node-builder  |   throw err;
+node-builder  |   ^
+node-builder  | 
+node-builder  | Error: Cannot find module '/workspace/ENV=node'
+node-builder  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+node-builder  |     at Module._load (node:internal/modules/cjs/loader:1043:27)
+node-builder  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+node-builder  |     at node:internal/main/run_main_module:28:49 {
+node-builder  |   code: 'MODULE_NOT_FOUND',
+node-builder  |   requireStack: []
+node-builder  | }
+node-builder  | 
+node-builder  | Node.js v20.19.4
+[Knode-builder exited with code 1
+
+=== Log ended at 2026-02-03T23:55:15.956Z, process exited with code 0 ===
+node-builder  | node:internal/modules/cjs/loader:1215
+node-builder  |   throw err;
+node-builder  |   ^
+node-builder  | 
+node-builder  | Error: Cannot find module '/workspace/ENV=node'
+node-builder  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+node-builder  |     at Module._load (node:internal/modules/cjs/loader:1043:27)
+node-builder  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+node-builder  |     at node:internal/main/run_main_module:28:49 {
+node-builder  |   code: 'MODULE_NOT_FOUND',
+node-builder  |   requireStack: []
+node-builder  | }
+node-builder  | 
+node-builder  | Node.js v20.19.4
+=== Log started at 2026-02-04T00:02:28.092Z for service node-builder ===
+
+node-builder  | node:internal/modules/cjs/loader:1215
+node-builder  |   throw err;
+node-builder  |   ^
+node-builder  | 
+node-builder  | Error: Cannot find module '/workspace/ENV=node'
+node-builder  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+node-builder  |     at Module._load (node:internal/modules/cjs/loader:1043:27)
+node-builder  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+node-builder  |     at node:internal/main/run_main_module:28:49 {
+node-builder  |   code: 'MODULE_NOT_FOUND',
+node-builder  |   requireStack: []
+node-builder  | }
+node-builder  | 
+node-builder  | Node.js v20.19.4
+node-builder  | node:internal/modules/cjs/loader:1215
+node-builder  |   throw err;
+node-builder  |   ^
+node-builder  | 
+node-builder  | Error: Cannot find module '/workspace/ENV=node'
+node-builder  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+node-builder  |     at Module._load (node:internal/modules/cjs/loader:1043:27)
+node-builder  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+node-builder  |     at node:internal/main/run_main_module:28:49 {
+node-builder  |   code: 'MODULE_NOT_FOUND',
+node-builder  |   requireStack: []
+node-builder  | }
+node-builder  | 
+node-builder  | Node.js v20.19.4
+=== Log started at 2026-02-04T00:07:01.296Z for service node-builder ===
+
+node-builder  | node:internal/modules/cjs/loader:1215
+node-builder  |   throw err;
+node-builder  |   ^
+node-builder  | 
+node-builder  | Error: Cannot find module '/workspace/ENV=node'
+node-builder  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+node-builder  |     at Module._load (node:internal/modules/cjs/loader:1043:27)
+node-builder  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+node-builder  |     at node:internal/main/run_main_module:28:49 {
+node-builder  |   code: 'MODULE_NOT_FOUND',
+node-builder  |   requireStack: []
+node-builder  | }
+node-builder  | 
+node-builder  | Node.js v20.19.4
+node-builder  | node:internal/modules/cjs/loader:1215
+node-builder  |   throw err;
+node-builder  |   ^
+node-builder  | 
+node-builder  | Error: Cannot find module '/workspace/ENV=node'
+node-builder  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+node-builder  |     at Module._load (node:internal/modules/cjs/loader:1043:27)
+node-builder  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+node-builder  |     at node:internal/main/run_main_module:28:49 {
+node-builder  |   code: 'MODULE_NOT_FOUND',
+node-builder  |   requireStack: []
+node-builder  | }
+node-builder  | 
+node-builder  | Node.js v20.19.4
+=== Log started at 2026-02-04T00:07:59.369Z for service node-builder ===
+
+node-builder  | node:internal/modules/cjs/loader:1215
+node-builder  |   throw err;
+node-builder  |   ^
+node-builder  | 
+node-builder  | Error: Cannot find module '/workspace/ENV=node'
+node-builder  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+node-builder  |     at Module._load (node:internal/modules/cjs/loader:1043:27)
+node-builder  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+node-builder  |     at node:internal/main/run_main_module:28:49 {
+node-builder  |   code: 'MODULE_NOT_FOUND',
+node-builder  |   requireStack: []
+node-builder  | }
+node-builder  | 
+node-builder  | Node.js v20.19.4
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+=== Log started at 2026-02-04T00:11:54.406Z for service node-builder ===
+
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+node-builder  | [NODE BUILDER] hello:  /usr/local/bin/node,/workspace/node_modules/testeranto/src/server/runtimes/node/node.ts,/workspace/testeranto/testeranto.ts,/workspace/testeranto/runtimes/node/node.mjs,nodetests
+node-builder  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+node-builder  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+node-builder  | [NODE BUILDER] testName:  nodetests
+node-builder  | [NODE BUILDER] is now bundling:  nodetests
+node-builder  | esbuild nodetests {
+node-builder  |   featureIngestor: [Function: featureIngestor],
+node-builder  |   runtimes: {
+node-builder  |     rubytests: {
+node-builder  |       runtime: 'ruby',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [],
+node-builder  |       dockerfile: 'testeranto/runtimes/ruby/ruby.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/ruby/ruby.rb'
+node-builder  |     },
+node-builder  |     nodetests: {
+node-builder  |       runtime: 'node',
+node-builder  |       tests: [Array],
+node-builder  |       checks: [Array],
+node-builder  |       dockerfile: 'testeranto/runtimes/node/node.Dockerfile',
+node-builder  |       buildOptions: 'testeranto/runtimes/node/node.mjs'
+node-builder  |     }
+node-builder  |   }
+node-builder  | }
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors
+node-builder  | [node Builder] Wrote 5 input files to testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs-inputFiles.json
+node-builder  | Done in 0.36s.
+[Knode-builder exited with code 0
+
+=== Log ended at 2026-02-04T00:11:55.010Z, process exited with code 0 ===

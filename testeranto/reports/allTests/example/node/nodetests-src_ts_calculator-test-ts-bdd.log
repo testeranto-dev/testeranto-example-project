@@ -1,11 +1,1298 @@
 nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
 nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
-=== Log started at 2026-02-03T17:52:37.151Z for service nodetests-src_ts_calculator-test-ts-bdd ===
+=== Log started at 2026-02-03T20:57:01.677Z for service nodetests-src_ts_calculator-test-ts-bdd ===
 
 nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
 nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] starting
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] node v20.19.4
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] platform linux arm64
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] cwd /workspace
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] argv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '/usr/local/bin/node',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/runtimes/node/node.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] execArgv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '--require',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/node_modules/tsx/dist/preflight.cjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '--import',
+nodetests-src_ts_calculator-test-ts-bdd  |   'file:///workspace/node_modules/tsx/dist/loader.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.NODE_OPTIONS undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.TSX_TSCONFIG_PATH undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import.meta.url file:///workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import local Calculator
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] Calculator imported OK: function
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] attempting to resolve tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/index.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto/types") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/CoreTypes.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | /workspace/node_modules/tiposkripto/package.json {
+nodetests-src_ts_calculator-test-ts-bdd  |   "name": "tiposkripto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "version": "0.0.25",
+nodetests-src_ts_calculator-test-ts-bdd  |   "description": "the typescript implementation of testeranto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "author": "adamwong246@gmail.com",
+nodetests-src_ts_calculator-test-ts-bdd  |   "license": "MIT",
+nodetests-src_ts_calculator-test-ts-bdd  |   "type": "module",
+nodetests-src_ts_calculator-test-ts-bdd  |   "scripts": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-module": "tsc -p tsconfig.module.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-common": "tsc -p tsconfig.common.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-types": "tsc -p tsconfig.types.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build": "sh prebuild.sh; cp ./cjs-shim.js ./cjs-shim.js; tsc -p tsconfig.module.json; tsc -p tsconfig.common.json; tsc -p tsconfig.types.json; sh postBuild.sh; node bundle.js",
+nodetests-src_ts_calculator-test-ts-bdd  |     "prepack": "yarn run build"
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "files": [
+nodetests-src_ts_calculator-test-ts-bdd  |     "dist/**",
+nodetests-src_ts_calculator-test-ts-bdd  |     "package.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "README*",
+nodetests-src_ts_calculator-test-ts-bdd  |     "LICENSE*"
+nodetests-src_ts_calculator-test-ts-bdd  |   ],
+nodetests-src_ts_calculator-test-ts-bdd  |   "main": "./dist/common/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "module": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |   "exports": {
+nodetests-src_ts_calculator-test-ts-bdd  |     ".": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/index.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     },
+nodetests-src_ts_calculator-test-ts-bdd  |     "./types": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/CoreTypes.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/CoreTypes.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/CoreTypes.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     }
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "dependencies": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "typescript": "^5.9.3"
+nodetests-src_ts_calculator-test-ts-bdd  |   }
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | 
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] importing tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] top-level main() failed: Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspace/node_modules/tiposkripto/dist/module/index.js' imported from /workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeResolution (node:internal/modules/esm/resolve:283:11)
+nodetests-src_ts_calculator-test-ts-bdd  |     at moduleResolve (node:internal/modules/esm/resolve:952:10)
+nodetests-src_ts_calculator-test-ts-bdd  |     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolve (node:internal/modules/esm/hooks:864:28)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveBase (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1770152222160:2:3744)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveDirectory (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1770152222160:2:4243)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1770152222160:2:4984)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolve (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1770152222160:2:5361)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolve (node:internal/modules/esm/hooks:864:28)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Hooks.resolve (node:internal/modules/esm/hooks:306:30) {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'ERR_MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   url: 'file:///workspace/node_modules/tiposkripto/dist/module/index.js'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] process exit code: 1
 nodetests-src_ts_calculator-test-ts-bdd  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-nodetests-src_ts_calculator-test-ts-bdd  | error Command failed with exit code 13.
-[Knodetests-src_ts_calculator-test-ts-bdd exited with code 13
+nodetests-src_ts_calculator-test-ts-bdd  | error Command failed with exit code 1.
+[Knodetests-src_ts_calculator-test-ts-bdd exited with code 1
 
-=== Log ended at 2026-02-03T17:52:37.844Z, process exited with code 0 ===
+=== Log ended at 2026-02-03T20:57:02.390Z, process exited with code 0 ===
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+=== Log started at 2026-02-03T21:01:07.194Z for service nodetests-src_ts_calculator-test-ts-bdd ===
+
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] starting
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] node v20.19.4
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] platform linux arm64
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] cwd /workspace
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] argv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '/usr/local/bin/node',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/runtimes/node/node.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] execArgv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '--require',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/node_modules/tsx/dist/preflight.cjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '--import',
+nodetests-src_ts_calculator-test-ts-bdd  |   'file:///workspace/node_modules/tsx/dist/loader.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.NODE_OPTIONS undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.TSX_TSCONFIG_PATH undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import.meta.url file:///workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import local Calculator
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] Calculator imported OK: function
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] attempting to resolve tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/index.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto/types") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/CoreTypes.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | /workspace/node_modules/tiposkripto/package.json {
+nodetests-src_ts_calculator-test-ts-bdd  |   "name": "tiposkripto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "version": "0.0.25",
+nodetests-src_ts_calculator-test-ts-bdd  |   "description": "the typescript implementation of testeranto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "author": "adamwong246@gmail.com",
+nodetests-src_ts_calculator-test-ts-bdd  |   "license": "MIT",
+nodetests-src_ts_calculator-test-ts-bdd  |   "type": "module",
+nodetests-src_ts_calculator-test-ts-bdd  |   "scripts": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-module": "tsc -p tsconfig.module.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-common": "tsc -p tsconfig.common.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-types": "tsc -p tsconfig.types.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build": "sh prebuild.sh; cp ./cjs-shim.js ./cjs-shim.js; tsc -p tsconfig.module.json; tsc -p tsconfig.common.json; tsc -p tsconfig.types.json; sh postBuild.sh; node bundle.js",
+nodetests-src_ts_calculator-test-ts-bdd  |     "prepack": "yarn run build"
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "files": [
+nodetests-src_ts_calculator-test-ts-bdd  |     "dist/**",
+nodetests-src_ts_calculator-test-ts-bdd  |     "package.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "README*",
+nodetests-src_ts_calculator-test-ts-bdd  |     "LICENSE*"
+nodetests-src_ts_calculator-test-ts-bdd  |   ],
+nodetests-src_ts_calculator-test-ts-bdd  |   "main": "./dist/common/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "module": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |   "exports": {
+nodetests-src_ts_calculator-test-ts-bdd  |     ".": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/index.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     },
+nodetests-src_ts_calculator-test-ts-bdd  |     "./types": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/CoreTypes.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/CoreTypes.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/CoreTypes.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     }
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "dependencies": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "typescript": "^5.9.3"
+nodetests-src_ts_calculator-test-ts-bdd  |   }
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | 
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] importing tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] top-level main() failed: Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspace/node_modules/tiposkripto/dist/module/index.js' imported from /workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeResolution (node:internal/modules/esm/resolve:283:11)
+nodetests-src_ts_calculator-test-ts-bdd  |     at moduleResolve (node:internal/modules/esm/resolve:952:10)
+nodetests-src_ts_calculator-test-ts-bdd  |     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolve (node:internal/modules/esm/hooks:864:28)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveBase (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1770152467645:2:3744)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveDirectory (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1770152467645:2:4243)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1770152467645:2:4984)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolve (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1770152467645:2:5361)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolve (node:internal/modules/esm/hooks:864:28)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Hooks.resolve (node:internal/modules/esm/hooks:306:30) {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'ERR_MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   url: 'file:///workspace/node_modules/tiposkripto/dist/module/index.js'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] process exit code: 1
+nodetests-src_ts_calculator-test-ts-bdd  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+nodetests-src_ts_calculator-test-ts-bdd  | error Command failed with exit code 1.
+[Knodetests-src_ts_calculator-test-ts-bdd exited with code 1
+
+=== Log ended at 2026-02-03T21:01:07.955Z, process exited with code 0 ===
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+=== Log started at 2026-02-03T21:03:23.548Z for service nodetests-src_ts_calculator-test-ts-bdd ===
+
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] starting
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] node v20.19.4
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] platform linux arm64
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] cwd /workspace
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] argv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '/usr/local/bin/node',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/runtimes/node/node.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] execArgv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '--require',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/node_modules/tsx/dist/preflight.cjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '--import',
+nodetests-src_ts_calculator-test-ts-bdd  |   'file:///workspace/node_modules/tsx/dist/loader.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.NODE_OPTIONS undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.TSX_TSCONFIG_PATH undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import.meta.url file:///workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import local Calculator
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] Calculator imported OK: function
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] attempting to resolve tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/index.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto/types") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/CoreTypes.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | /workspace/node_modules/tiposkripto/package.json {
+nodetests-src_ts_calculator-test-ts-bdd  |   "name": "tiposkripto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "version": "0.0.25",
+nodetests-src_ts_calculator-test-ts-bdd  |   "description": "the typescript implementation of testeranto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "author": "adamwong246@gmail.com",
+nodetests-src_ts_calculator-test-ts-bdd  |   "license": "MIT",
+nodetests-src_ts_calculator-test-ts-bdd  |   "type": "module",
+nodetests-src_ts_calculator-test-ts-bdd  |   "scripts": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-module": "tsc -p tsconfig.module.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-common": "tsc -p tsconfig.common.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-types": "tsc -p tsconfig.types.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build": "sh prebuild.sh; cp ./cjs-shim.js ./cjs-shim.js; tsc -p tsconfig.module.json; tsc -p tsconfig.common.json; tsc -p tsconfig.types.json; sh postBuild.sh; node bundle.js",
+nodetests-src_ts_calculator-test-ts-bdd  |     "prepack": "yarn run build"
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "files": [
+nodetests-src_ts_calculator-test-ts-bdd  |     "dist/**",
+nodetests-src_ts_calculator-test-ts-bdd  |     "package.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "README*",
+nodetests-src_ts_calculator-test-ts-bdd  |     "LICENSE*"
+nodetests-src_ts_calculator-test-ts-bdd  |   ],
+nodetests-src_ts_calculator-test-ts-bdd  |   "main": "./dist/common/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "module": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |   "exports": {
+nodetests-src_ts_calculator-test-ts-bdd  |     ".": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/index.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     },
+nodetests-src_ts_calculator-test-ts-bdd  |     "./types": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/CoreTypes.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/CoreTypes.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/CoreTypes.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     }
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "dependencies": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "typescript": "^5.9.3"
+nodetests-src_ts_calculator-test-ts-bdd  |   }
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | 
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] importing tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] top-level main() failed: Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspace/node_modules/tiposkripto/dist/module/index.js' imported from /workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeResolution (node:internal/modules/esm/resolve:283:11)
+nodetests-src_ts_calculator-test-ts-bdd  |     at moduleResolve (node:internal/modules/esm/resolve:952:10)
+nodetests-src_ts_calculator-test-ts-bdd  |     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolve (node:internal/modules/esm/hooks:864:28)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveBase (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1770152603980:2:3744)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveDirectory (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1770152603980:2:4243)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1770152603980:2:4984)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolve (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1770152603980:2:5361)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolve (node:internal/modules/esm/hooks:864:28)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Hooks.resolve (node:internal/modules/esm/hooks:306:30) {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'ERR_MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   url: 'file:///workspace/node_modules/tiposkripto/dist/module/index.js'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] process exit code: 1
+nodetests-src_ts_calculator-test-ts-bdd  | error Command failed with exit code 1.
+nodetests-src_ts_calculator-test-ts-bdd  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+[Knodetests-src_ts_calculator-test-ts-bdd exited with code 1
+
+=== Log ended at 2026-02-03T21:03:24.226Z, process exited with code 0 ===
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+=== Log started at 2026-02-03T22:40:00.842Z for service nodetests-src_ts_calculator-test-ts-bdd ===
+
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] starting
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] node v20.19.4
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] platform linux arm64
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] cwd /workspace
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] argv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '/usr/local/bin/node',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/runtimes/node/node.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] execArgv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '--require',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/node_modules/tsx/dist/preflight.cjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '--import',
+nodetests-src_ts_calculator-test-ts-bdd  |   'file:///workspace/node_modules/tsx/dist/loader.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.NODE_OPTIONS undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.TSX_TSCONFIG_PATH undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import.meta.url file:///workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import local Calculator
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] Calculator imported OK: function
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] attempting to resolve tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/index.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto/types") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/CoreTypes.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | /workspace/node_modules/tiposkripto/package.json {
+nodetests-src_ts_calculator-test-ts-bdd  |   "name": "tiposkripto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "version": "0.0.26",
+nodetests-src_ts_calculator-test-ts-bdd  |   "description": "the typescript implementation of testeranto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "author": "adamwong246@gmail.com",
+nodetests-src_ts_calculator-test-ts-bdd  |   "license": "MIT",
+nodetests-src_ts_calculator-test-ts-bdd  |   "type": "module",
+nodetests-src_ts_calculator-test-ts-bdd  |   "scripts": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-module": "tsc -p tsconfig.module.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-common": "tsc -p tsconfig.common.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-types": "tsc -p tsconfig.types.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build": "sh prebuild.sh; cp ./cjs-shim.js ./cjs-shim.js; tsc -p tsconfig.module.json; tsc -p tsconfig.common.json; tsc -p tsconfig.types.json; sh postBuild.sh; node bundle.js",
+nodetests-src_ts_calculator-test-ts-bdd  |     "prepack": "yarn run build"
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "files": [
+nodetests-src_ts_calculator-test-ts-bdd  |     "dist/**",
+nodetests-src_ts_calculator-test-ts-bdd  |     "package.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "README*",
+nodetests-src_ts_calculator-test-ts-bdd  |     "LICENSE*"
+nodetests-src_ts_calculator-test-ts-bdd  |   ],
+nodetests-src_ts_calculator-test-ts-bdd  |   "main": "./dist/common/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "module": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |   "exports": {
+nodetests-src_ts_calculator-test-ts-bdd  |     ".": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/index.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     },
+nodetests-src_ts_calculator-test-ts-bdd  |     "./types": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/CoreTypes.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/CoreTypes.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/CoreTypes.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     }
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "dependencies": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "typescript": "^5.9.3"
+nodetests-src_ts_calculator-test-ts-bdd  |   }
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | 
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] importing tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [NodeTiposkripto] /usr/local/bin/node,/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs,/workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] top-level main() failed: ReferenceError: ENV is not defined
+nodetests-src_ts_calculator-test-ts-bdd  |     at src/index.ts (file:///workspace/node_modules/tiposkripto/dist/module/index.js:732:5)
+nodetests-src_ts_calculator-test-ts-bdd  |     at async file:///workspace/node_modules/tiposkripto/dist/module/index.js:775:1
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] process exit code: 1
+nodetests-src_ts_calculator-test-ts-bdd  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+nodetests-src_ts_calculator-test-ts-bdd  | error Command failed with exit code 1.
+[Knodetests-src_ts_calculator-test-ts-bdd exited with code 1
+
+=== Log ended at 2026-02-03T22:40:01.370Z, process exited with code 0 ===
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+=== Log started at 2026-02-03T23:02:22.805Z for service nodetests-src_ts_calculator-test-ts-bdd ===
+
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] starting
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] node v20.19.4
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] platform linux arm64
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] cwd /workspace
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] argv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '/usr/local/bin/node',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/runtimes/node/node.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] execArgv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '--require',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/node_modules/tsx/dist/preflight.cjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '--import',
+nodetests-src_ts_calculator-test-ts-bdd  |   'file:///workspace/node_modules/tsx/dist/loader.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.NODE_OPTIONS undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.TSX_TSCONFIG_PATH undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import.meta.url file:///workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import local Calculator
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] Calculator imported OK: function
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] attempting to resolve tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/index.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto/types") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/CoreTypes.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | /workspace/node_modules/tiposkripto/package.json {
+nodetests-src_ts_calculator-test-ts-bdd  |   "name": "tiposkripto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "version": "0.0.26",
+nodetests-src_ts_calculator-test-ts-bdd  |   "description": "the typescript implementation of testeranto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "author": "adamwong246@gmail.com",
+nodetests-src_ts_calculator-test-ts-bdd  |   "license": "MIT",
+nodetests-src_ts_calculator-test-ts-bdd  |   "type": "module",
+nodetests-src_ts_calculator-test-ts-bdd  |   "scripts": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-module": "tsc -p tsconfig.module.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-common": "tsc -p tsconfig.common.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-types": "tsc -p tsconfig.types.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build": "sh prebuild.sh; cp ./cjs-shim.js ./cjs-shim.js; tsc -p tsconfig.module.json; tsc -p tsconfig.common.json; tsc -p tsconfig.types.json; sh postBuild.sh; node bundle.js",
+nodetests-src_ts_calculator-test-ts-bdd  |     "prepack": "yarn run build"
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "files": [
+nodetests-src_ts_calculator-test-ts-bdd  |     "dist/**",
+nodetests-src_ts_calculator-test-ts-bdd  |     "package.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "README*",
+nodetests-src_ts_calculator-test-ts-bdd  |     "LICENSE*"
+nodetests-src_ts_calculator-test-ts-bdd  |   ],
+nodetests-src_ts_calculator-test-ts-bdd  |   "main": "./dist/common/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "module": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |   "exports": {
+nodetests-src_ts_calculator-test-ts-bdd  |     ".": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/index.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     },
+nodetests-src_ts_calculator-test-ts-bdd  |     "./types": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/CoreTypes.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/CoreTypes.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/CoreTypes.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     }
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "dependencies": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "typescript": "^5.9.3"
+nodetests-src_ts_calculator-test-ts-bdd  |   }
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | 
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] importing tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [NodeTiposkripto] /usr/local/bin/node,/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs,/workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] top-level main() failed: ReferenceError: ENV is not defined
+nodetests-src_ts_calculator-test-ts-bdd  |     at src/index.ts (file:///workspace/node_modules/tiposkripto/dist/module/index.js:732:5)
+nodetests-src_ts_calculator-test-ts-bdd  |     at async file:///workspace/node_modules/tiposkripto/dist/module/index.js:775:1
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] process exit code: 1
+nodetests-src_ts_calculator-test-ts-bdd  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+nodetests-src_ts_calculator-test-ts-bdd  | error Command failed with exit code 1.
+[Knodetests-src_ts_calculator-test-ts-bdd exited with code 1
+
+=== Log ended at 2026-02-03T23:02:23.500Z, process exited with code 0 ===
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+=== Log started at 2026-02-03T23:04:27.773Z for service nodetests-src_ts_calculator-test-ts-bdd ===
+
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] starting
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] node v20.19.4
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] platform linux arm64
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] cwd /workspace
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] argv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '/usr/local/bin/node',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/runtimes/node/node.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] execArgv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '--require',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/node_modules/tsx/dist/preflight.cjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '--import',
+nodetests-src_ts_calculator-test-ts-bdd  |   'file:///workspace/node_modules/tsx/dist/loader.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.NODE_OPTIONS undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.TSX_TSCONFIG_PATH undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import.meta.url file:///workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import local Calculator
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] Calculator imported OK: function
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] attempting to resolve tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/index.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto/types") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/CoreTypes.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | /workspace/node_modules/tiposkripto/package.json {
+nodetests-src_ts_calculator-test-ts-bdd  |   "name": "tiposkripto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "version": "0.0.26",
+nodetests-src_ts_calculator-test-ts-bdd  |   "description": "the typescript implementation of testeranto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "author": "adamwong246@gmail.com",
+nodetests-src_ts_calculator-test-ts-bdd  |   "license": "MIT",
+nodetests-src_ts_calculator-test-ts-bdd  |   "type": "module",
+nodetests-src_ts_calculator-test-ts-bdd  |   "scripts": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-module": "tsc -p tsconfig.module.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-common": "tsc -p tsconfig.common.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-types": "tsc -p tsconfig.types.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build": "sh prebuild.sh; cp ./cjs-shim.js ./cjs-shim.js; tsc -p tsconfig.module.json; tsc -p tsconfig.common.json; tsc -p tsconfig.types.json; sh postBuild.sh; node bundle.js",
+nodetests-src_ts_calculator-test-ts-bdd  |     "prepack": "yarn run build"
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "files": [
+nodetests-src_ts_calculator-test-ts-bdd  |     "dist/**",
+nodetests-src_ts_calculator-test-ts-bdd  |     "package.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "README*",
+nodetests-src_ts_calculator-test-ts-bdd  |     "LICENSE*"
+nodetests-src_ts_calculator-test-ts-bdd  |   ],
+nodetests-src_ts_calculator-test-ts-bdd  |   "main": "./dist/common/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "module": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |   "exports": {
+nodetests-src_ts_calculator-test-ts-bdd  |     ".": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/index.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     },
+nodetests-src_ts_calculator-test-ts-bdd  |     "./types": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/CoreTypes.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/CoreTypes.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/CoreTypes.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     }
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "dependencies": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "typescript": "^5.9.3"
+nodetests-src_ts_calculator-test-ts-bdd  |   }
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | 
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] importing tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [NodeTiposkripto] /usr/local/bin/node,/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs,/workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] top-level main() failed: ReferenceError: ENV is not defined
+nodetests-src_ts_calculator-test-ts-bdd  |     at src/index.ts (file:///workspace/node_modules/tiposkripto/dist/module/index.js:732:5)
+nodetests-src_ts_calculator-test-ts-bdd  |     at async file:///workspace/node_modules/tiposkripto/dist/module/index.js:775:1
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] process exit code: 1
+nodetests-src_ts_calculator-test-ts-bdd  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+nodetests-src_ts_calculator-test-ts-bdd  | error Command failed with exit code 1.
+[Knodetests-src_ts_calculator-test-ts-bdd exited with code 1
+
+=== Log ended at 2026-02-03T23:04:28.417Z, process exited with code 0 ===
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+=== Log started at 2026-02-03T23:10:48.516Z for service nodetests-src_ts_calculator-test-ts-bdd ===
+
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] starting
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] node v20.19.4
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] platform linux arm64
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] cwd /workspace
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] argv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '/usr/local/bin/node',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/runtimes/node/node.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] execArgv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '--require',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/node_modules/tsx/dist/preflight.cjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '--import',
+nodetests-src_ts_calculator-test-ts-bdd  |   'file:///workspace/node_modules/tsx/dist/loader.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.NODE_OPTIONS undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.TSX_TSCONFIG_PATH undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import.meta.url file:///workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import local Calculator
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] Calculator imported OK: function
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] attempting to resolve tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/index.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto/types") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/CoreTypes.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | /workspace/node_modules/tiposkripto/package.json {
+nodetests-src_ts_calculator-test-ts-bdd  |   "name": "tiposkripto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "version": "0.0.27",
+nodetests-src_ts_calculator-test-ts-bdd  |   "description": "the typescript implementation of testeranto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "author": "adamwong246@gmail.com",
+nodetests-src_ts_calculator-test-ts-bdd  |   "license": "MIT",
+nodetests-src_ts_calculator-test-ts-bdd  |   "type": "module",
+nodetests-src_ts_calculator-test-ts-bdd  |   "scripts": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-module": "tsc -p tsconfig.module.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-common": "tsc -p tsconfig.common.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-types": "tsc -p tsconfig.types.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build": "sh prebuild.sh; cp ./cjs-shim.js ./cjs-shim.js; tsc -p tsconfig.module.json; tsc -p tsconfig.common.json; tsc -p tsconfig.types.json; sh postBuild.sh; node bundle.js",
+nodetests-src_ts_calculator-test-ts-bdd  |     "prepack": "yarn run build"
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "files": [
+nodetests-src_ts_calculator-test-ts-bdd  |     "dist/**",
+nodetests-src_ts_calculator-test-ts-bdd  |     "package.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "README*",
+nodetests-src_ts_calculator-test-ts-bdd  |     "LICENSE*"
+nodetests-src_ts_calculator-test-ts-bdd  |   ],
+nodetests-src_ts_calculator-test-ts-bdd  |   "main": "./dist/common/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "module": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |   "exports": {
+nodetests-src_ts_calculator-test-ts-bdd  |     ".": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/index.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     },
+nodetests-src_ts_calculator-test-ts-bdd  |     "./types": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/CoreTypes.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/CoreTypes.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/CoreTypes.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     }
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "dependencies": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "typescript": "^5.9.3"
+nodetests-src_ts_calculator-test-ts-bdd  |   }
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | 
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] importing tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [NodeTiposkripto] /usr/local/bin/node,/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs,/workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] tiposkripto module keys: [ 'BaseAdapter', 'DefaultAdapter', 'default' ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] tiposkripto default export type: function
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] done
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] process exit code: 0
+nodetests-src_ts_calculator-test-ts-bdd  | Done in 0.28s.
+[Knodetests-src_ts_calculator-test-ts-bdd exited with code 0
+
+=== Log ended at 2026-02-03T23:10:49.079Z, process exited with code 0 ===
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+=== Log started at 2026-02-03T23:21:16.000Z for service nodetests-src_ts_calculator-test-ts-bdd ===
+
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] starting
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] node v20.19.4
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] platform linux arm64
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] cwd /workspace
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] argv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '/usr/local/bin/node',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/runtimes/node/node.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] execArgv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '--require',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/node_modules/tsx/dist/preflight.cjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '--import',
+nodetests-src_ts_calculator-test-ts-bdd  |   'file:///workspace/node_modules/tsx/dist/loader.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.NODE_OPTIONS undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.TSX_TSCONFIG_PATH undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import.meta.url file:///workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import local Calculator
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] Calculator imported OK: function
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] attempting to resolve tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/index.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto/types") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/CoreTypes.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | /workspace/node_modules/tiposkripto/package.json {
+nodetests-src_ts_calculator-test-ts-bdd  |   "name": "tiposkripto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "version": "0.0.27",
+nodetests-src_ts_calculator-test-ts-bdd  |   "description": "the typescript implementation of testeranto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "author": "adamwong246@gmail.com",
+nodetests-src_ts_calculator-test-ts-bdd  |   "license": "MIT",
+nodetests-src_ts_calculator-test-ts-bdd  |   "type": "module",
+nodetests-src_ts_calculator-test-ts-bdd  |   "scripts": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-module": "tsc -p tsconfig.module.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-common": "tsc -p tsconfig.common.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-types": "tsc -p tsconfig.types.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build": "sh prebuild.sh; cp ./cjs-shim.js ./cjs-shim.js; tsc -p tsconfig.module.json; tsc -p tsconfig.common.json; tsc -p tsconfig.types.json; sh postBuild.sh; node bundle.js",
+nodetests-src_ts_calculator-test-ts-bdd  |     "prepack": "yarn run build"
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "files": [
+nodetests-src_ts_calculator-test-ts-bdd  |     "dist/**",
+nodetests-src_ts_calculator-test-ts-bdd  |     "package.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "README*",
+nodetests-src_ts_calculator-test-ts-bdd  |     "LICENSE*"
+nodetests-src_ts_calculator-test-ts-bdd  |   ],
+nodetests-src_ts_calculator-test-ts-bdd  |   "main": "./dist/common/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "module": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |   "exports": {
+nodetests-src_ts_calculator-test-ts-bdd  |     ".": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/index.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     },
+nodetests-src_ts_calculator-test-ts-bdd  |     "./types": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/CoreTypes.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/CoreTypes.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/CoreTypes.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     }
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "dependencies": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "typescript": "^5.9.3"
+nodetests-src_ts_calculator-test-ts-bdd  |   }
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | 
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] importing tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [NodeTiposkripto] /usr/local/bin/node,/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs,/workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] tiposkripto module keys: [ 'BaseAdapter', 'DefaultAdapter', 'default' ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] tiposkripto default export type: function
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] done
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] process exit code: 0
+nodetests-src_ts_calculator-test-ts-bdd  | Done in 0.40s.
+[Knodetests-src_ts_calculator-test-ts-bdd exited with code 0
+
+=== Log ended at 2026-02-03T23:21:16.662Z, process exited with code 0 ===
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+=== Log started at 2026-02-03T23:22:24.348Z for service nodetests-src_ts_calculator-test-ts-bdd ===
+
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] starting
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] node v20.19.4
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] platform linux arm64
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] cwd /workspace
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] argv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '/usr/local/bin/node',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/runtimes/node/node.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] execArgv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '--require',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/node_modules/tsx/dist/preflight.cjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '--import',
+nodetests-src_ts_calculator-test-ts-bdd  |   'file:///workspace/node_modules/tsx/dist/loader.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.NODE_OPTIONS undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.TSX_TSCONFIG_PATH undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import.meta.url file:///workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import local Calculator
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] Calculator imported OK: function
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] attempting to resolve tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/index.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto/types") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/CoreTypes.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | /workspace/node_modules/tiposkripto/package.json {
+nodetests-src_ts_calculator-test-ts-bdd  |   "name": "tiposkripto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "version": "0.0.27",
+nodetests-src_ts_calculator-test-ts-bdd  |   "description": "the typescript implementation of testeranto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "author": "adamwong246@gmail.com",
+nodetests-src_ts_calculator-test-ts-bdd  |   "license": "MIT",
+nodetests-src_ts_calculator-test-ts-bdd  |   "type": "module",
+nodetests-src_ts_calculator-test-ts-bdd  |   "scripts": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-module": "tsc -p tsconfig.module.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-common": "tsc -p tsconfig.common.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-types": "tsc -p tsconfig.types.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build": "sh prebuild.sh; cp ./cjs-shim.js ./cjs-shim.js; tsc -p tsconfig.module.json; tsc -p tsconfig.common.json; tsc -p tsconfig.types.json; sh postBuild.sh; node bundle.js",
+nodetests-src_ts_calculator-test-ts-bdd  |     "prepack": "yarn run build"
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "files": [
+nodetests-src_ts_calculator-test-ts-bdd  |     "dist/**",
+nodetests-src_ts_calculator-test-ts-bdd  |     "package.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "README*",
+nodetests-src_ts_calculator-test-ts-bdd  |     "LICENSE*"
+nodetests-src_ts_calculator-test-ts-bdd  |   ],
+nodetests-src_ts_calculator-test-ts-bdd  |   "main": "./dist/common/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "module": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |   "exports": {
+nodetests-src_ts_calculator-test-ts-bdd  |     ".": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/index.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     },
+nodetests-src_ts_calculator-test-ts-bdd  |     "./types": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/CoreTypes.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/CoreTypes.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/CoreTypes.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     }
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "dependencies": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "typescript": "^5.9.3"
+nodetests-src_ts_calculator-test-ts-bdd  |   }
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | 
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] importing tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [NodeTiposkripto] /usr/local/bin/node,/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs,/workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] tiposkripto module keys: [ 'BaseAdapter', 'DefaultAdapter', 'default' ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] tiposkripto default export type: function
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] done
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] process exit code: 0
+nodetests-src_ts_calculator-test-ts-bdd  | Done in 0.32s.
+[Knodetests-src_ts_calculator-test-ts-bdd exited with code 0
+
+=== Log ended at 2026-02-03T23:22:24.912Z, process exited with code 0 ===
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+=== Log started at 2026-02-03T23:24:50.047Z for service nodetests-src_ts_calculator-test-ts-bdd ===
+
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] starting
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] node v20.19.4
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] platform linux arm64
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] cwd /workspace
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] argv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '/usr/local/bin/node',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/runtimes/node/node.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] execArgv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '--require',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/node_modules/tsx/dist/preflight.cjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '--import',
+nodetests-src_ts_calculator-test-ts-bdd  |   'file:///workspace/node_modules/tsx/dist/loader.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.NODE_OPTIONS undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.TSX_TSCONFIG_PATH undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import.meta.url file:///workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import local Calculator
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] Calculator imported OK: function
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] attempting to resolve tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/index.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto/types") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/CoreTypes.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | /workspace/node_modules/tiposkripto/package.json {
+nodetests-src_ts_calculator-test-ts-bdd  |   "name": "tiposkripto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "version": "0.0.27",
+nodetests-src_ts_calculator-test-ts-bdd  |   "description": "the typescript implementation of testeranto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "author": "adamwong246@gmail.com",
+nodetests-src_ts_calculator-test-ts-bdd  |   "license": "MIT",
+nodetests-src_ts_calculator-test-ts-bdd  |   "type": "module",
+nodetests-src_ts_calculator-test-ts-bdd  |   "scripts": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-module": "tsc -p tsconfig.module.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-common": "tsc -p tsconfig.common.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-types": "tsc -p tsconfig.types.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build": "sh prebuild.sh; cp ./cjs-shim.js ./cjs-shim.js; tsc -p tsconfig.module.json; tsc -p tsconfig.common.json; tsc -p tsconfig.types.json; sh postBuild.sh; node bundle.js",
+nodetests-src_ts_calculator-test-ts-bdd  |     "prepack": "yarn run build"
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "files": [
+nodetests-src_ts_calculator-test-ts-bdd  |     "dist/**",
+nodetests-src_ts_calculator-test-ts-bdd  |     "package.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "README*",
+nodetests-src_ts_calculator-test-ts-bdd  |     "LICENSE*"
+nodetests-src_ts_calculator-test-ts-bdd  |   ],
+nodetests-src_ts_calculator-test-ts-bdd  |   "main": "./dist/common/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "module": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |   "exports": {
+nodetests-src_ts_calculator-test-ts-bdd  |     ".": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/index.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     },
+nodetests-src_ts_calculator-test-ts-bdd  |     "./types": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/CoreTypes.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/CoreTypes.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/CoreTypes.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     }
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "dependencies": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "typescript": "^5.9.3"
+nodetests-src_ts_calculator-test-ts-bdd  |   }
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | 
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] importing tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [NodeTiposkripto] /usr/local/bin/node,/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs,/workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] tiposkripto module keys: [ 'BaseAdapter', 'DefaultAdapter', 'default' ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] tiposkripto default export type: function
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] done
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] process exit code: 0
+nodetests-src_ts_calculator-test-ts-bdd  | Done in 0.50s.
+[Knodetests-src_ts_calculator-test-ts-bdd exited with code 0
+
+=== Log ended at 2026-02-03T23:24:51.001Z, process exited with code 0 ===
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+=== Log started at 2026-02-03T23:55:20.893Z for service nodetests-src_ts_calculator-test-ts-bdd ===
+
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] starting
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] node v20.19.4
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] platform linux arm64
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] cwd /workspace
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] argv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '/usr/local/bin/node',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/testeranto/runtimes/node/node.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] execArgv [
+nodetests-src_ts_calculator-test-ts-bdd  |   '--require',
+nodetests-src_ts_calculator-test-ts-bdd  |   '/workspace/node_modules/tsx/dist/preflight.cjs',
+nodetests-src_ts_calculator-test-ts-bdd  |   '--import',
+nodetests-src_ts_calculator-test-ts-bdd  |   'file:///workspace/node_modules/tsx/dist/loader.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.NODE_OPTIONS undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] env.TSX_TSCONFIG_PATH undefined
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import.meta.url file:///workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] import local Calculator
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] Calculator imported OK: function
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] attempting to resolve tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/index.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] resolve("tiposkripto/types") failed: Error: Cannot find module '/workspace/node_modules/tiposkripto/dist/common/CoreTypes.js'
+nodetests-src_ts_calculator-test-ts-bdd  |     at createEsmNotFoundErr (node:internal/modules/cjs/loader:1249:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeEsmResolution (node:internal/modules/cjs/loader:1237:15)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveExports (node:internal/modules/cjs/loader:636:14)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._findPath (node:internal/modules/cjs/loader:716:31)
+nodetests-src_ts_calculator-test-ts-bdd  |     at Module._resolveFilename (node:internal/modules/cjs/loader:1198:27)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolveSimple (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1004)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:2630
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:3:1542
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveTsPaths (/workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:760)
+nodetests-src_ts_calculator-test-ts-bdd  |     at /workspace/node_modules/tsx/dist/register-D46fvsV_.cjs:4:1102 {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   path: '/workspace/node_modules/tiposkripto/package.json'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | /workspace/node_modules/tiposkripto/package.json {
+nodetests-src_ts_calculator-test-ts-bdd  |   "name": "tiposkripto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "version": "0.0.27",
+nodetests-src_ts_calculator-test-ts-bdd  |   "description": "the typescript implementation of testeranto",
+nodetests-src_ts_calculator-test-ts-bdd  |   "author": "adamwong246@gmail.com",
+nodetests-src_ts_calculator-test-ts-bdd  |   "license": "MIT",
+nodetests-src_ts_calculator-test-ts-bdd  |   "type": "module",
+nodetests-src_ts_calculator-test-ts-bdd  |   "scripts": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-module": "tsc -p tsconfig.module.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-common": "tsc -p tsconfig.common.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build-types": "tsc -p tsconfig.types.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "build": "sh prebuild.sh; cp ./cjs-shim.js ./cjs-shim.js; tsc -p tsconfig.module.json; tsc -p tsconfig.common.json; tsc -p tsconfig.types.json; sh postBuild.sh; node bundle.js",
+nodetests-src_ts_calculator-test-ts-bdd  |     "prepack": "yarn run build"
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "files": [
+nodetests-src_ts_calculator-test-ts-bdd  |     "dist/**",
+nodetests-src_ts_calculator-test-ts-bdd  |     "package.json",
+nodetests-src_ts_calculator-test-ts-bdd  |     "README*",
+nodetests-src_ts_calculator-test-ts-bdd  |     "LICENSE*"
+nodetests-src_ts_calculator-test-ts-bdd  |   ],
+nodetests-src_ts_calculator-test-ts-bdd  |   "main": "./dist/common/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "module": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |   "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |   "exports": {
+nodetests-src_ts_calculator-test-ts-bdd  |     ".": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/index.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/index.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/index.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     },
+nodetests-src_ts_calculator-test-ts-bdd  |     "./types": {
+nodetests-src_ts_calculator-test-ts-bdd  |       "types": "./dist/types/CoreTypes.d.ts",
+nodetests-src_ts_calculator-test-ts-bdd  |       "import": "./dist/module/CoreTypes.js",
+nodetests-src_ts_calculator-test-ts-bdd  |       "require": "./dist/common/CoreTypes.js"
+nodetests-src_ts_calculator-test-ts-bdd  |     }
+nodetests-src_ts_calculator-test-ts-bdd  |   },
+nodetests-src_ts_calculator-test-ts-bdd  |   "dependencies": {
+nodetests-src_ts_calculator-test-ts-bdd  |     "typescript": "^5.9.3"
+nodetests-src_ts_calculator-test-ts-bdd  |   }
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | 
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] importing tiposkripto
+nodetests-src_ts_calculator-test-ts-bdd  | [NodeTiposkripto] /usr/local/bin/node,/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs,/workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] tiposkripto module keys: [ 'BaseAdapter', 'DefaultAdapter', 'default' ]
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] tiposkripto default export type: function
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] done
+nodetests-src_ts_calculator-test-ts-bdd  | [Calculator.test] process exit code: 0
+nodetests-src_ts_calculator-test-ts-bdd  | Done in 0.33s.
+[Knodetests-src_ts_calculator-test-ts-bdd exited with code 0
+
+=== Log ended at 2026-02-03T23:55:21.465Z, process exited with code 0 ===
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+=== Log started at 2026-02-04T00:02:31.744Z for service nodetests-src_ts_calculator-test-ts-bdd ===
+
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | 
+nodetests-src_ts_calculator-test-ts-bdd  | node:internal/modules/run_main:123
+nodetests-src_ts_calculator-test-ts-bdd  |     triggerUncaughtException(
+nodetests-src_ts_calculator-test-ts-bdd  |     ^
+nodetests-src_ts_calculator-test-ts-bdd  | Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs' imported from /workspace/
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeResolution (node:internal/modules/esm/resolve:283:11)
+nodetests-src_ts_calculator-test-ts-bdd  |     at moduleResolve (node:internal/modules/esm/resolve:952:10)
+nodetests-src_ts_calculator-test-ts-bdd  |     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolve (node:internal/modules/esm/hooks:864:28)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveBase (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1770163352118:2:3744)
+nodetests-src_ts_calculator-test-ts-bdd  |     at async resolveDirectory (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1770163352118:2:4237)
+nodetests-src_ts_calculator-test-ts-bdd  |     at async resolve (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1770163352118:2:5355)
+nodetests-src_ts_calculator-test-ts-bdd  |     at async nextResolve (node:internal/modules/esm/hooks:864:22)
+nodetests-src_ts_calculator-test-ts-bdd  |     at async Hooks.resolve (node:internal/modules/esm/hooks:306:24)
+nodetests-src_ts_calculator-test-ts-bdd  |     at async handleMessage (node:internal/modules/esm/worker:196:18) {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'ERR_MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   url: 'file:///workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | 
+nodetests-src_ts_calculator-test-ts-bdd  | Node.js v20.19.4
+nodetests-src_ts_calculator-test-ts-bdd  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+nodetests-src_ts_calculator-test-ts-bdd  | error Command failed with exit code 1.
+[Knodetests-src_ts_calculator-test-ts-bdd exited with code 1
+
+=== Log ended at 2026-02-04T00:02:32.307Z, process exited with code 0 ===
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+=== Log started at 2026-02-04T00:07:04.576Z for service nodetests-src_ts_calculator-test-ts-bdd ===
+
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | 
+nodetests-src_ts_calculator-test-ts-bdd  | node:internal/modules/run_main:123
+nodetests-src_ts_calculator-test-ts-bdd  |     triggerUncaughtException(
+nodetests-src_ts_calculator-test-ts-bdd  |     ^
+nodetests-src_ts_calculator-test-ts-bdd  | Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs' imported from /workspace/
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeResolution (node:internal/modules/esm/resolve:283:11)
+nodetests-src_ts_calculator-test-ts-bdd  |     at moduleResolve (node:internal/modules/esm/resolve:952:10)
+nodetests-src_ts_calculator-test-ts-bdd  |     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolve (node:internal/modules/esm/hooks:864:28)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveBase (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1770163624908:2:3744)
+nodetests-src_ts_calculator-test-ts-bdd  |     at async resolveDirectory (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1770163624908:2:4237)
+nodetests-src_ts_calculator-test-ts-bdd  |     at async resolve (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1770163624908:2:5355)
+nodetests-src_ts_calculator-test-ts-bdd  |     at async nextResolve (node:internal/modules/esm/hooks:864:22)
+nodetests-src_ts_calculator-test-ts-bdd  |     at async Hooks.resolve (node:internal/modules/esm/hooks:306:24)
+nodetests-src_ts_calculator-test-ts-bdd  |     at async handleMessage (node:internal/modules/esm/worker:196:18) {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'ERR_MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   url: 'file:///workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | 
+nodetests-src_ts_calculator-test-ts-bdd  | Node.js v20.19.4
+nodetests-src_ts_calculator-test-ts-bdd  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+nodetests-src_ts_calculator-test-ts-bdd  | error Command failed with exit code 1.
+[Knodetests-src_ts_calculator-test-ts-bdd exited with code 1
+
+=== Log ended at 2026-02-04T00:07:05.151Z, process exited with code 0 ===
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+=== Log started at 2026-02-04T00:08:02.982Z for service nodetests-src_ts_calculator-test-ts-bdd ===
+
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | 
+nodetests-src_ts_calculator-test-ts-bdd  | node:internal/modules/run_main:123
+nodetests-src_ts_calculator-test-ts-bdd  |     triggerUncaughtException(
+nodetests-src_ts_calculator-test-ts-bdd  |     ^
+nodetests-src_ts_calculator-test-ts-bdd  | Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs' imported from /workspace/
+nodetests-src_ts_calculator-test-ts-bdd  |     at finalizeResolution (node:internal/modules/esm/resolve:283:11)
+nodetests-src_ts_calculator-test-ts-bdd  |     at moduleResolve (node:internal/modules/esm/resolve:952:10)
+nodetests-src_ts_calculator-test-ts-bdd  |     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+nodetests-src_ts_calculator-test-ts-bdd  |     at nextResolve (node:internal/modules/esm/hooks:864:28)
+nodetests-src_ts_calculator-test-ts-bdd  |     at resolveBase (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1770163683240:2:3744)
+nodetests-src_ts_calculator-test-ts-bdd  |     at async resolveDirectory (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1770163683240:2:4237)
+nodetests-src_ts_calculator-test-ts-bdd  |     at async resolve (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1770163683240:2:5355)
+nodetests-src_ts_calculator-test-ts-bdd  |     at async nextResolve (node:internal/modules/esm/hooks:864:22)
+nodetests-src_ts_calculator-test-ts-bdd  |     at async Hooks.resolve (node:internal/modules/esm/hooks:306:24)
+nodetests-src_ts_calculator-test-ts-bdd  |     at async handleMessage (node:internal/modules/esm/worker:196:18) {
+nodetests-src_ts_calculator-test-ts-bdd  |   code: 'ERR_MODULE_NOT_FOUND',
+nodetests-src_ts_calculator-test-ts-bdd  |   url: 'file:///workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs'
+nodetests-src_ts_calculator-test-ts-bdd  | }
+nodetests-src_ts_calculator-test-ts-bdd  | 
+nodetests-src_ts_calculator-test-ts-bdd  | Node.js v20.19.4
+nodetests-src_ts_calculator-test-ts-bdd  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+nodetests-src_ts_calculator-test-ts-bdd  | error Command failed with exit code 1.
+[Knodetests-src_ts_calculator-test-ts-bdd exited with code 1
+
+=== Log ended at 2026-02-04T00:08:03.452Z, process exited with code 0 ===
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+=== Log started at 2026-02-04T00:11:57.836Z for service nodetests-src_ts_calculator-test-ts-bdd ===
+
+nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | [NodeTiposkripto] /usr/local/bin/node,/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs,/workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | hello calcualtor test
+nodetests-src_ts_calculator-test-ts-bdd  | hello Calculator [class Calculator]
+nodetests-src_ts_calculator-test-ts-bdd  | hello Tiposkripto [AsyncFunction: index_default]
+nodetests-src_ts_calculator-test-ts-bdd  | writeFileSync testeranto/reports/allTests/example/node/Calculator.test.ts.json
+nodetests-src_ts_calculator-test-ts-bdd  | Done in 0.30s.
+[Knodetests-src_ts_calculator-test-ts-bdd exited with code 0
+
+=== Log ended at 2026-02-04T00:11:58.511Z, process exited with code 0 ===
