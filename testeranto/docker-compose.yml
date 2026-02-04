@@ -11,7 +11,7 @@ services:
       - /Users/adam/Code/am2/projects/testeranto/testeranto-example-project/example:/workspace/example
       - /Users/adam/Code/am2/projects/testeranto/testeranto-example-project/dist:/workspace/dist
       - /Users/adam/Code/am2/projects/testeranto/testeranto-example-project/testeranto:/workspace/testeranto
-    command: bundle exec rubeno /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/ruby/ruby.rb rubytests
+    command: ruby projects/testeranto/testeranto/src/server/runtimes/ruby/ruby.rb /workspace/testeranto/runtimes/ruby/ruby.rb rubytests
     networks:
       - allTests_network
   rubytests-src_ruby_calculator-test-rb-bdd:

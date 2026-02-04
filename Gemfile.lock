@@ -2,14 +2,14 @@ GEM
   remote: https://rubygems.org/
   specs:
     rake (13.3.1)
-    rubeno (0.0.12)
+    rubeno (0.0.16)
 
 PLATFORMS
   arm64-darwin-23
 
 DEPENDENCIES
   rake
-  rubeno (= 0.0.12)
+  rubeno (= 0.0.16)
 
 BUNDLED WITH
    2.3.3

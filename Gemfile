@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
 gem 'rake'
-gem 'rubeno', '0.0.12'
+gem 'rubeno', '0.0.16'

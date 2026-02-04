@@ -1,0 +1,38 @@
+{
+  "name": "Minimal Test Suite",
+  "givens": [
+    {
+      "key": "test1",
+      "whens": [
+
+      ],
+      "thens": [
+        {
+          "name": "alwaysTrue",
+          "error": false,
+          "artifacts": [
+
+          ],
+          "status": true
+        }
+      ],
+      "error": null,
+      "failed": false,
+      "features": [
+        "minimal test"
+      ],
+      "artifacts": [
+
+      ],
+      "status": true
+    }
+  ],
+  "fails": 0,
+  "failed": false,
+  "features": [
+    "minimal test"
+  ],
+  "artifacts": [
+
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "runtimes": [
+    {
+      "key": "rubytests",
+      "runtime": "ruby",
+      "label": "Ruby",
+      "tests": [
+        "src/ruby/Calculator-test.rb"
+      ]
+    },
+    {
+      "key": "nodetests",
+      "runtime": "node",
+      "label": "Node",
+      "tests": [
+        "src/ts/Calculator.test.ts"
+      ]
+    }
+  ],
+  "timestamp": "2026-02-04T03:22:47.247Z",
+  "source": "testeranto.ts"
+}
