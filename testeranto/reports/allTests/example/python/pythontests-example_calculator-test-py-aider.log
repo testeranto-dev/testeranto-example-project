@@ -1,0 +1,104 @@
+=== Log started at 2026-02-01T02:40:10.513Z for service pythontests-example_calculator-test-py-aider ===
+
+pythontests-example_calculator-test-py-aider  | Warning: Unable to write to chat history file .aider.chat.history.md.
+pythontests-example_calculator-test-py-aider  | [Errno 13] Permission denied: '.aider.chat.history.md'
+pythontests-example_calculator-test-py-aider  | ────────────────────────────────────────────────────────────────────────────────
+pythontests-example_calculator-test-py-aider  | Warning: Input is not a terminal (fd=0).
+pythontests-example_calculator-test-py-aider  | No LLM model was specified and no API keys were provided.
+pythontests-example_calculator-test-py-aider  | OpenRouter provides free and paid access to many LLMs.
+pythontests-example_calculator-test-py-aider  | 
+pythontests-example_calculator-test-py-aider  | Please open this URL in your browser to connect Aider with OpenRouter:
+pythontests-example_calculator-test-py-aider  | 
+pythontests-example_calculator-test-py-aider  | https://openrouter.ai/auth?callback_url=http://localhost:8484/callback/aider&code_challenge=sEoDm55YUpFEwWHwB-25rF9FF5gs5A6cP4-kBi4NKzM&code_challenge_method=S256
+pythontests-example_calculator-test-py-aider  | 
+pythontests-example_calculator-test-py-aider  | Waiting up to 5 minutes for you to finish in the browser...
+pythontests-example_calculator-test-py-aider  | Use Control-C to interrupt.
+=== Log started at 2026-02-01T02:46:34.543Z for service pythontests-example_calculator-test-py-aider ===
+
+pythontests-example_calculator-test-py-aider  | Warning: Input is not a terminal (fd=0).
+pythontests-example_calculator-test-py-aider  | Warning: Unable to write to chat history file .aider.chat.history.md.
+pythontests-example_calculator-test-py-aider  | [Errno 13] Permission denied: '.aider.chat.history.md'
+pythontests-example_calculator-test-py-aider  | ────────────────────────────────────────────────────────────────────────────────
+pythontests-example_calculator-test-py-aider  | No LLM model was specified and no API keys were provided.
+pythontests-example_calculator-test-py-aider  | OpenRouter provides free and paid access to many LLMs.
+pythontests-example_calculator-test-py-aider  | 
+pythontests-example_calculator-test-py-aider  | Please open this URL in your browser to connect Aider with OpenRouter:
+pythontests-example_calculator-test-py-aider  | 
+pythontests-example_calculator-test-py-aider  | https://openrouter.ai/auth?callback_url=http://localhost:8484/callback/aider&code_challenge=BDfsKCbTRYXNKcNzzwEnb2KDTFv7p_TjHb23_xgn8r0&code_challenge_method=S256
+pythontests-example_calculator-test-py-aider  | 
+pythontests-example_calculator-test-py-aider  | Waiting up to 5 minutes for you to finish in the browser...
+pythontests-example_calculator-test-py-aider  | Use Control-C to interrupt.
+=== Log started at 2026-02-01T02:48:50.281Z for service pythontests-example_calculator-test-py-aider ===
+
+pythontests-example_calculator-test-py-aider  | Warning: Input is not a terminal (fd=0).
+pythontests-example_calculator-test-py-aider  | Warning: Unable to write to chat history file .aider.chat.history.md.
+pythontests-example_calculator-test-py-aider  | [Errno 13] Permission denied: '.aider.chat.history.md'
+pythontests-example_calculator-test-py-aider  | ────────────────────────────────────────────────────────────────────────────────
+pythontests-example_calculator-test-py-aider  | No LLM model was specified and no API keys were provided.
+pythontests-example_calculator-test-py-aider  | OpenRouter provides free and paid access to many LLMs.
+pythontests-example_calculator-test-py-aider  | 
+pythontests-example_calculator-test-py-aider  | Please open this URL in your browser to connect Aider with OpenRouter:
+pythontests-example_calculator-test-py-aider  | 
+pythontests-example_calculator-test-py-aider  | https://openrouter.ai/auth?callback_url=http://localhost:8484/callback/aider&code_challenge=Ky8-s69SsOhy3ZQFAjSjHvGgoLt4wILYgc4N5cBRmmk&code_challenge_method=S256
+pythontests-example_calculator-test-py-aider  | 
+pythontests-example_calculator-test-py-aider  | Waiting up to 5 minutes for you to finish in the browser...
+pythontests-example_calculator-test-py-aider  | Use Control-C to interrupt.
+[Kpythontests-example_calculator-test-py-aider exited with code 137
+
+=== Log ended at 2026-02-01T02:49:51.361Z, process exited with code 0 ===
+=== Log started at 2026-02-01T02:50:41.530Z for service pythontests-example_calculator-test-py-aider ===
+
+pythontests-example_calculator-test-py-aider  | Warning: Input is not a terminal (fd=0).
+pythontests-example_calculator-test-py-aider  | Warning: Unable to write to chat history file .aider.chat.history.md.
+pythontests-example_calculator-test-py-aider  | [Errno 13] Permission denied: '.aider.chat.history.md'
+pythontests-example_calculator-test-py-aider  | ────────────────────────────────────────────────────────────────────────────────
+pythontests-example_calculator-test-py-aider  | Aider respects your privacy and never collects your code, chat messages, keys or
+pythontests-example_calculator-test-py-aider  | personal info.
+pythontests-example_calculator-test-py-aider  | For more info: https://aider.chat/docs/more/analytics.html
+pythontests-example_calculator-test-py-aider  | 
+pythontests-example_calculator-test-py-aider  | No LLM model was specified and no API keys were provided.
+pythontests-example_calculator-test-py-aider  | OpenRouter provides free and paid access to many LLMs.
+pythontests-example_calculator-test-py-aider  | 
+pythontests-example_calculator-test-py-aider  | Please open this URL in your browser to connect Aider with OpenRouter:
+pythontests-example_calculator-test-py-aider  | 
+pythontests-example_calculator-test-py-aider  | https://openrouter.ai/auth?callback_url=http://localhost:8484/callback/aider&code_challenge=5LpQcpmxk_XYPpM1BM9meKecFINy2ihEvhjRWmH7m9A&code_challenge_method=S256
+pythontests-example_calculator-test-py-aider  | 
+pythontests-example_calculator-test-py-aider  | Waiting up to 5 minutes for you to finish in the browser...
+pythontests-example_calculator-test-py-aider  | Use Control-C to interrupt.
+=== Log started at 2026-02-01T02:52:44.617Z for service pythontests-example_calculator-test-py-aider ===
+
+pythontests-example_calculator-test-py-aider  | Warning: Input is not a terminal (fd=0).
+pythontests-example_calculator-test-py-aider  | Warning: Unable to write to chat history file .aider.chat.history.md.
+pythontests-example_calculator-test-py-aider  | [Errno 13] Permission denied: '.aider.chat.history.md'
+pythontests-example_calculator-test-py-aider  | ────────────────────────────────────────────────────────────────────────────────
+pythontests-example_calculator-test-py-aider  | No LLM model was specified and no API keys were provided.
+pythontests-example_calculator-test-py-aider  | OpenRouter provides free and paid access to many LLMs.
+pythontests-example_calculator-test-py-aider  | 
+pythontests-example_calculator-test-py-aider  | Please open this URL in your browser to connect Aider with OpenRouter:
+pythontests-example_calculator-test-py-aider  | 
+pythontests-example_calculator-test-py-aider  | https://openrouter.ai/auth?callback_url=http://localhost:8484/callback/aider&code_challenge=WaPkaXwFN6o6-_vy4oZpKhNS3y-2obeC2-DWtki9aeM&code_challenge_method=S256
+pythontests-example_calculator-test-py-aider  | 
+pythontests-example_calculator-test-py-aider  | Waiting up to 5 minutes for you to finish in the browser...
+pythontests-example_calculator-test-py-aider  | Use Control-C to interrupt.
+pythontests-example_calculator-test-py-aider  | Authentication with OpenRouter failed.
+pythontests-example_calculator-test-py-aider  | OpenRouter authentication did not complete successfully.
+pythontests-example_calculator-test-py-aider  | 
+pythontests-example_calculator-test-py-aider  | https://aider.chat/docs/troubleshooting/models-and-keys.html
+[Kpythontests-example_calculator-test-py-aider exited with code 1
+
+=== Log ended at 2026-02-01T02:57:49.012Z, process exited with code 0 ===
+=== Log started at 2026-02-01T02:58:17.925Z for service pythontests-example_calculator-test-py-aider ===
+
+pythontests-example_calculator-test-py-aider  | Warning: Input is not a terminal (fd=0).
+pythontests-example_calculator-test-py-aider  | Warning: Unable to write to chat history file .aider.chat.history.md.
+pythontests-example_calculator-test-py-aider  | [Errno 13] Permission denied: '.aider.chat.history.md'
+pythontests-example_calculator-test-py-aider  | ────────────────────────────────────────────────────────────────────────────────
+pythontests-example_calculator-test-py-aider  | No LLM model was specified and no API keys were provided.
+pythontests-example_calculator-test-py-aider  | OpenRouter provides free and paid access to many LLMs.
+pythontests-example_calculator-test-py-aider  | 
+pythontests-example_calculator-test-py-aider  | Please open this URL in your browser to connect Aider with OpenRouter:
+pythontests-example_calculator-test-py-aider  | 
+pythontests-example_calculator-test-py-aider  | https://openrouter.ai/auth?callback_url=http://localhost:8484/callback/aider&code_challenge=IPn5Gy0WeMpx-3L0pCrnRkKlbB18FFV61_ChDF6NEUk&code_challenge_method=S256
+pythontests-example_calculator-test-py-aider  | 
+pythontests-example_calculator-test-py-aider  | Waiting up to 5 minutes for you to finish in the browser...
+pythontests-example_calculator-test-py-aider  | Use Control-C to interrupt.

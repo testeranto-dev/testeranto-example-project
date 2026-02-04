@@ -1,0 +1,104 @@
+=== Log started at 2026-02-01T02:40:13.263Z for service rubytests-example_calculator-test-rb-aider ===
+
+rubytests-example_calculator-test-rb-aider  | Warning: Input is not a terminal (fd=0).
+rubytests-example_calculator-test-rb-aider  | Warning: Unable to write to chat history file .aider.chat.history.md.
+rubytests-example_calculator-test-rb-aider  | [Errno 13] Permission denied: '.aider.chat.history.md'
+rubytests-example_calculator-test-rb-aider  | ────────────────────────────────────────────────────────────────────────────────
+rubytests-example_calculator-test-rb-aider  | Aider respects your privacy and never collects your code, chat messages, keys or
+rubytests-example_calculator-test-rb-aider  | personal info.
+rubytests-example_calculator-test-rb-aider  | For more info: https://aider.chat/docs/more/analytics.html
+rubytests-example_calculator-test-rb-aider  | 
+rubytests-example_calculator-test-rb-aider  | No LLM model was specified and no API keys were provided.
+rubytests-example_calculator-test-rb-aider  | OpenRouter provides free and paid access to many LLMs.
+rubytests-example_calculator-test-rb-aider  | 
+rubytests-example_calculator-test-rb-aider  | Please open this URL in your browser to connect Aider with OpenRouter:
+rubytests-example_calculator-test-rb-aider  | 
+rubytests-example_calculator-test-rb-aider  | https://openrouter.ai/auth?callback_url=http://localhost:8484/callback/aider&code_challenge=PYI1WLOKx7oZDKlo0A1l2t83AcHAPVrDZ5Wm9WQaiv8&code_challenge_method=S256
+rubytests-example_calculator-test-rb-aider  | 
+rubytests-example_calculator-test-rb-aider  | Waiting up to 5 minutes for you to finish in the browser...
+rubytests-example_calculator-test-rb-aider  | Use Control-C to interrupt.
+=== Log started at 2026-02-01T02:46:37.303Z for service rubytests-example_calculator-test-rb-aider ===
+
+rubytests-example_calculator-test-rb-aider  | Warning: Input is not a terminal (fd=0).
+rubytests-example_calculator-test-rb-aider  | Warning: Unable to write to chat history file .aider.chat.history.md.
+rubytests-example_calculator-test-rb-aider  | [Errno 13] Permission denied: '.aider.chat.history.md'
+rubytests-example_calculator-test-rb-aider  | ────────────────────────────────────────────────────────────────────────────────
+rubytests-example_calculator-test-rb-aider  | No LLM model was specified and no API keys were provided.
+rubytests-example_calculator-test-rb-aider  | OpenRouter provides free and paid access to many LLMs.
+rubytests-example_calculator-test-rb-aider  | 
+rubytests-example_calculator-test-rb-aider  | Please open this URL in your browser to connect Aider with OpenRouter:
+rubytests-example_calculator-test-rb-aider  | 
+rubytests-example_calculator-test-rb-aider  | https://openrouter.ai/auth?callback_url=http://localhost:8484/callback/aider&code_challenge=I4yA6iVNFN1r2-iVfsyS7z-HL7lmuSRwB7x_lRNmsxo&code_challenge_method=S256
+rubytests-example_calculator-test-rb-aider  | 
+rubytests-example_calculator-test-rb-aider  | Waiting up to 5 minutes for you to finish in the browser...
+rubytests-example_calculator-test-rb-aider  | Use Control-C to interrupt.
+=== Log started at 2026-02-01T02:48:53.070Z for service rubytests-example_calculator-test-rb-aider ===
+
+rubytests-example_calculator-test-rb-aider  | Warning: Input is not a terminal (fd=0).
+rubytests-example_calculator-test-rb-aider  | Warning: Unable to write to chat history file .aider.chat.history.md.
+rubytests-example_calculator-test-rb-aider  | [Errno 13] Permission denied: '.aider.chat.history.md'
+rubytests-example_calculator-test-rb-aider  | ────────────────────────────────────────────────────────────────────────────────
+rubytests-example_calculator-test-rb-aider  | No LLM model was specified and no API keys were provided.
+rubytests-example_calculator-test-rb-aider  | OpenRouter provides free and paid access to many LLMs.
+rubytests-example_calculator-test-rb-aider  | 
+rubytests-example_calculator-test-rb-aider  | Please open this URL in your browser to connect Aider with OpenRouter:
+rubytests-example_calculator-test-rb-aider  | 
+rubytests-example_calculator-test-rb-aider  | https://openrouter.ai/auth?callback_url=http://localhost:8484/callback/aider&code_challenge=-NclE4zy7M62jGtCNNb7SLN8K9tE3tArUw7mm6ITqXw&code_challenge_method=S256
+rubytests-example_calculator-test-rb-aider  | 
+rubytests-example_calculator-test-rb-aider  | Waiting up to 5 minutes for you to finish in the browser...
+rubytests-example_calculator-test-rb-aider  | Use Control-C to interrupt.
+[Krubytests-example_calculator-test-rb-aider exited with code 137
+
+=== Log ended at 2026-02-01T02:49:51.581Z, process exited with code 0 ===
+=== Log started at 2026-02-01T02:50:44.567Z for service rubytests-example_calculator-test-rb-aider ===
+
+rubytests-example_calculator-test-rb-aider  | Warning: Input is not a terminal (fd=0).
+rubytests-example_calculator-test-rb-aider  | Warning: Unable to write to chat history file .aider.chat.history.md.
+rubytests-example_calculator-test-rb-aider  | [Errno 13] Permission denied: '.aider.chat.history.md'
+rubytests-example_calculator-test-rb-aider  | ────────────────────────────────────────────────────────────────────────────────
+rubytests-example_calculator-test-rb-aider  | No LLM model was specified and no API keys were provided.
+rubytests-example_calculator-test-rb-aider  | OpenRouter provides free and paid access to many LLMs.
+rubytests-example_calculator-test-rb-aider  | 
+rubytests-example_calculator-test-rb-aider  | Please open this URL in your browser to connect Aider with OpenRouter:
+rubytests-example_calculator-test-rb-aider  | 
+rubytests-example_calculator-test-rb-aider  | https://openrouter.ai/auth?callback_url=http://localhost:8484/callback/aider&code_challenge=OvXIZxEGzJWFxhI3-KXHL47kbwwncrzqBNzXqWWzLKQ&code_challenge_method=S256
+rubytests-example_calculator-test-rb-aider  | 
+rubytests-example_calculator-test-rb-aider  | Waiting up to 5 minutes for you to finish in the browser...
+rubytests-example_calculator-test-rb-aider  | Use Control-C to interrupt.
+=== Log started at 2026-02-01T02:52:47.883Z for service rubytests-example_calculator-test-rb-aider ===
+
+rubytests-example_calculator-test-rb-aider  | Warning: Input is not a terminal (fd=0).
+rubytests-example_calculator-test-rb-aider  | Warning: Unable to write to chat history file .aider.chat.history.md.
+rubytests-example_calculator-test-rb-aider  | [Errno 13] Permission denied: '.aider.chat.history.md'
+rubytests-example_calculator-test-rb-aider  | ────────────────────────────────────────────────────────────────────────────────
+rubytests-example_calculator-test-rb-aider  | No LLM model was specified and no API keys were provided.
+rubytests-example_calculator-test-rb-aider  | OpenRouter provides free and paid access to many LLMs.
+rubytests-example_calculator-test-rb-aider  | 
+rubytests-example_calculator-test-rb-aider  | Please open this URL in your browser to connect Aider with OpenRouter:
+rubytests-example_calculator-test-rb-aider  | 
+rubytests-example_calculator-test-rb-aider  | https://openrouter.ai/auth?callback_url=http://localhost:8484/callback/aider&code_challenge=bEeG5VFpt6DkFyqHy_UPAor8ICm4XImoZSl3HTLt0K8&code_challenge_method=S256
+rubytests-example_calculator-test-rb-aider  | 
+rubytests-example_calculator-test-rb-aider  | Waiting up to 5 minutes for you to finish in the browser...
+rubytests-example_calculator-test-rb-aider  | Use Control-C to interrupt.
+rubytests-example_calculator-test-rb-aider  | Authentication with OpenRouter failed.
+rubytests-example_calculator-test-rb-aider  | OpenRouter authentication did not complete successfully.
+rubytests-example_calculator-test-rb-aider  | 
+rubytests-example_calculator-test-rb-aider  | https://aider.chat/docs/troubleshooting/models-and-keys.html
+[Krubytests-example_calculator-test-rb-aider exited with code 1
+
+=== Log ended at 2026-02-01T02:57:52.068Z, process exited with code 0 ===
+=== Log started at 2026-02-01T02:58:20.533Z for service rubytests-example_calculator-test-rb-aider ===
+
+rubytests-example_calculator-test-rb-aider  | Warning: Input is not a terminal (fd=0).
+rubytests-example_calculator-test-rb-aider  | Warning: Unable to write to chat history file .aider.chat.history.md.
+rubytests-example_calculator-test-rb-aider  | [Errno 13] Permission denied: '.aider.chat.history.md'
+rubytests-example_calculator-test-rb-aider  | ────────────────────────────────────────────────────────────────────────────────
+rubytests-example_calculator-test-rb-aider  | No LLM model was specified and no API keys were provided.
+rubytests-example_calculator-test-rb-aider  | OpenRouter provides free and paid access to many LLMs.
+rubytests-example_calculator-test-rb-aider  | 
+rubytests-example_calculator-test-rb-aider  | Please open this URL in your browser to connect Aider with OpenRouter:
+rubytests-example_calculator-test-rb-aider  | 
+rubytests-example_calculator-test-rb-aider  | https://openrouter.ai/auth?callback_url=http://localhost:8484/callback/aider&code_challenge=23c6fQCX3h-2BrW9hRrh1XCIYCecHHHY1G9tZTcsMBU&code_challenge_method=S256
+rubytests-example_calculator-test-rb-aider  | 
+rubytests-example_calculator-test-rb-aider  | Waiting up to 5 minutes for you to finish in the browser...
+rubytests-example_calculator-test-rb-aider  | Use Control-C to interrupt.

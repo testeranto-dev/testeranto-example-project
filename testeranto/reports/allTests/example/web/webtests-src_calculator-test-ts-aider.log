@@ -1,0 +1,19 @@
+
+=== Log started at 2026-02-04T15:30:01.141Z for service webtests-src_calculator-test-ts-aider ===
+
+webtests-src_calculator-test-ts-aider  | Warning: Input is not a terminal (fd=0).
+webtests-src_calculator-test-ts-aider  | Warning: Unable to write to chat history file .aider.chat.history.md.
+webtests-src_calculator-test-ts-aider  | [Errno 13] Permission denied: '.aider.chat.history.md'
+webtests-src_calculator-test-ts-aider  | ────────────────────────────────────────────────────────────────────────────────
+webtests-src_calculator-test-ts-aider  | No LLM model was specified and no API keys were provided.
+webtests-src_calculator-test-ts-aider  | OpenRouter provides free and paid access to many LLMs.
+webtests-src_calculator-test-ts-aider  | 
+webtests-src_calculator-test-ts-aider  | Please open this URL in your browser to connect Aider with OpenRouter:
+webtests-src_calculator-test-ts-aider  | 
+webtests-src_calculator-test-ts-aider  | https://openrouter.ai/auth?callback_url=http://localhost:8484/callback/aider&code_challenge=YCjR5sK1YCewxUniSoEcbaDAja2ALvPJI_qaWpezpsA&code_challenge_method=S256
+webtests-src_calculator-test-ts-aider  | 
+webtests-src_calculator-test-ts-aider  | Waiting up to 5 minutes for you to finish in the browser...
+webtests-src_calculator-test-ts-aider  | Use Control-C to interrupt.
+[Kwebtests-src_calculator-test-ts-aider exited with code 137
+
+=== Log ended at 2026-02-04T15:30:51.245Z, process exited with code null ===

@@ -1,0 +1,7 @@
+rust-builder  |     Finished release [optimized] target(s) in 0.01s
+rust-builder  | sh: ./target/release/my_program: not found
+
+=== Log started at 2026-02-04T15:29:58.576Z for service rust-builder ===
+
+rust-builder  |     Finished release [optimized] target(s) in 0.01s
+rust-builder  | sh: ./target/release/my_program: not found

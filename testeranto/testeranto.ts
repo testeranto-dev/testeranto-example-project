@@ -33,57 +33,57 @@ const config: ITestconfigV2 = {
       }
     ),
 
-    // webtests: (
-    //   {
-    //     runtime: "web",
-    //     tests: ["src/Calculator.test.ts"],
-    //     checks: [
-    //       (x) => `yarn eslint`,
-    //       (x) => `yarn tsc --noEmit`,
-    //     ],
-    //     dockerfile: `testeranto/runtimes/web/web.Dockerfile`,
-    //     buildOptions: `testeranto/runtimes/web/web.ts`
-    //   }
-    // ),
+    webtests: (
+      {
+        runtime: "web",
+        tests: ["src/Calculator.test.ts"],
+        checks: [
+          (x) => `yarn eslint`,
+          (x) => `yarn tsc --noEmit`,
+        ],
+        dockerfile: `testeranto/runtimes/web/web.Dockerfile`,
+        buildOptions: `testeranto/runtimes/web/web.ts`
+      }
+    ),
 
-    // pythontests: (
-    //   {
-    //     runtime: "python",
-    //     tests: ["src/Calculator.test.py"],
-    //     checks: [
-    //       (x) => `yarn eslint`,
-    //       (x) => `yarn tsc --noEmit`,
-    //     ],
-    //     dockerfile: `testeranto/runtimes/python/python.Dockerfile`,
-    //     buildOptions: `testeranto/runtimes/python/python.ts`
-    //   }
-    // ),
+    pythontests: (
+      {
+        runtime: "python",
+        tests: ["src/Calculator.test.py"],
+        checks: [
+          (x) => `yarn eslint`,
+          (x) => `yarn tsc --noEmit`,
+        ],
+        dockerfile: `testeranto/runtimes/python/python.Dockerfile`,
+        buildOptions: `testeranto/runtimes/python/python.ts`
+      }
+    ),
 
-    // golangtests: (
-    //   {
-    //     runtime: "golang",
-    //     tests: ["src/Calculator.test.go"],
-    //     checks: [
-    //       (x) => `yarn eslint`,
-    //       (x) => `yarn tsc --noEmit`,
-    //     ],
-    //     dockerfile: `testeranto/runtimes/golang/golang.Dockerfile`,
-    //     buildOptions: `testeranto/runtimes/golang/golang.ts`
-    //   }
-    // ),
+    golangtests: (
+      {
+        runtime: "golang",
+        tests: ["src/Calculator.test.go"],
+        checks: [
+          (x) => `yarn eslint`,
+          (x) => `yarn tsc --noEmit`,
+        ],
+        dockerfile: `testeranto/runtimes/golang/golang.Dockerfile`,
+        buildOptions: `testeranto/runtimes/golang/golang.ts`
+      }
+    ),
 
-    // rusttests: (
-    //   {
-    //     runtime: "rust",
-    //     tests: ["src/Calculator.test.rs"],
-    //     checks: [
-    //       (x) => `yarn eslint`,
-    //       (x) => `yarn tsc --noEmit`,
-    //     ],
-    //     dockerfile: `testeranto/runtimes/rust/rust.Dockerfile`,
-    //     buildOptions: `testeranto/runtimes/rust/rust.ts`
-    //   }
-    // ),
+    rusttests: (
+      {
+        runtime: "rust",
+        tests: ["src/Calculator.test.rs"],
+        checks: [
+          (x) => `yarn eslint`,
+          (x) => `yarn tsc --noEmit`,
+        ],
+        dockerfile: `testeranto/runtimes/rust/rust.Dockerfile`,
+        buildOptions: `testeranto/runtimes/rust/rust.ts`
+      }
+    ),
 
     
   },

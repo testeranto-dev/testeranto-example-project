@@ -1,16 +1,9 @@
 nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
-nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+nodetests-src_ts_calculator-test-ts-bdd  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+nodetests-src_ts_calculator-test-ts-bdd  | error Command "tsx" not found. Did you mean "tsc"?
 
-=== Log started at 2026-02-04T03:22:58.689Z for service nodetests-src_ts_calculator-test-ts-bdd ===
+=== Log started at 2026-02-04T15:30:05.167Z for service nodetests-src_ts_calculator-test-ts-bdd ===
 
 nodetests-src_ts_calculator-test-ts-bdd  | yarn run v1.22.22
-nodetests-src_ts_calculator-test-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
-nodetests-src_ts_calculator-test-ts-bdd  | [NodeTiposkripto] /usr/local/bin/node,/workspace/testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs,/workspace/testeranto/runtimes/node/node.mjs
-nodetests-src_ts_calculator-test-ts-bdd  | hello calcualtor test
-nodetests-src_ts_calculator-test-ts-bdd  | hello Calculator [class Calculator]
-nodetests-src_ts_calculator-test-ts-bdd  | hello Tiposkripto [AsyncFunction: index_default]
-nodetests-src_ts_calculator-test-ts-bdd  | writeFileSync testeranto/reports/allTests/example/node/Calculator.test.ts.json
-nodetests-src_ts_calculator-test-ts-bdd  | Done in 0.40s.
-[Knodetests-src_ts_calculator-test-ts-bdd exited with code 0
-
-=== Log ended at 2026-02-04T03:22:58.965Z, process exited with code 0 ===
+nodetests-src_ts_calculator-test-ts-bdd  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+nodetests-src_ts_calculator-test-ts-bdd  | error Command "tsx" not found. Did you mean "tsc"?

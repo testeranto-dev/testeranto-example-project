@@ -1,43 +1,9 @@
+node-builder  | yarn run v1.22.22
+node-builder  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+node-builder  | error Command "tsx" not found. Did you mean "tsc"?
 
-=== Log started at 2026-02-04T03:22:55.281Z for service node-builder ===
+=== Log started at 2026-02-04T15:29:56.226Z for service node-builder ===
 
 node-builder  | yarn run v1.22.22
-node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
-node-builder  | [NODE BUILDER] hello:  /usr/local/bin/node,/workspace/node_modules/testeranto/src/server/runtimes/node/node.ts,/workspace/testeranto/testeranto.ts,/workspace/testeranto/runtimes/node/node.mjs,nodetests
-node-builder  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
-node-builder  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
-node-builder  | [NODE BUILDER] testName:  nodetests
-node-builder  | [NODE BUILDER] is now bundling:  nodetests
-node-builder  | esbuild nodetests {
-node-builder  |   featureIngestor: [Function: featureIngestor],
-node-builder  |   runtimes: {
-node-builder  |     rubytests: {
-node-builder  |       runtime: 'ruby',
-node-builder  |       tests: [Array],
-node-builder  |       checks: [],
-node-builder  |       dockerfile: 'testeranto/runtimes/ruby/ruby.Dockerfile',
-node-builder  |       buildOptions: 'testeranto/runtimes/ruby/ruby.rb'
-node-builder  |     },
-node-builder  |     nodetests: {
-node-builder  |       runtime: 'node',
-node-builder  |       tests: [Array],
-node-builder  |       checks: [Array],
-node-builder  |       dockerfile: 'testeranto/runtimes/node/node.Dockerfile',
-node-builder  |       buildOptions: 'testeranto/runtimes/node/node.mjs'
-node-builder  |     }
-node-builder  |   }
-node-builder  | }
-node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
-node-builder  | 
-node-builder  |     src/ts/Calculator.ts:10:21:
-node-builder  |       10 │       const result = eval(this.display);
-node-builder  |          ╵                      ~~~~
-node-builder  | 
-node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
-node-builder  | 
-node-builder  | node > build ended with 0 errors
-node-builder  | [node Builder] Wrote 5 input files to testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs-inputFiles.json
-node-builder  | Done in 0.41s.
-[Knode-builder exited with code 0
-
-=== Log ended at 2026-02-04T03:22:55.778Z, process exited with code 0 ===
+node-builder  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+node-builder  | error Command "tsx" not found. Did you mean "tsc"?

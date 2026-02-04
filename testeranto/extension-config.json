@@ -15,8 +15,41 @@
       "tests": [
         "src/ts/Calculator.test.ts"
       ]
+    },
+    {
+      "key": "webtests",
+      "runtime": "web",
+      "label": "Web",
+      "tests": [
+        "src/Calculator.test.ts"
+      ]
+    },
+    {
+      "key": "pythontests",
+      "runtime": "python",
+      "label": "Python",
+      "tests": [
+        "src/Calculator.test.py"
+      ]
+    },
+    {
+      "key": "golangtests",
+      "runtime": "golang",
+      "label": "Golang",
+      "tests": [
+        "src/Calculator.test.go"
+      ]
+    },
+    {
+      "key": "rusttests",
+      "runtime": "rust",
+      "label": "Rust",
+      "tests": [
+        "src/Calculator.test.rs"
+      ]
     }
   ],
-  "timestamp": "2026-02-04T03:22:47.247Z",
-  "source": "testeranto.ts"
+  "timestamp": "2026-02-04T15:29:53.011Z",
+  "source": "testeranto.ts",
+  "serverStarted": true
 }

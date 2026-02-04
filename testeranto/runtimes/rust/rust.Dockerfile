@@ -17,9 +17,9 @@ RUN apk add --no-cache \
     pkgconfig \
     && rm -rf /var/cache/apk/*
 
-COPY example/Cargo.toml /workspace/Cargo.toml
-COPY example/src /workspace/src
-COPY example/src/lib/rusto /workspace/src/lib/rusto
+COPY Cargo.toml /workspace/Cargo.toml
+COPY src/rust /workspace/src/rust
+COPY src/main.rs /workspace/src/main.rs
 
 # Install additional tools that might be needed for testing
 RUN cargo install --version 0.9.0 cargo-audit || true
