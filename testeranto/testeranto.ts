@@ -1,5 +1,17 @@
 import { ITestconfigV2 } from "testeranto/src/Types";
 
+export const golangciLintCommand = (files: string[]): string => {
+  if (files.length === 0) return "golangci-lint run ./...";
+
+  // Escape dots and join files into a regex: (file1\.go|file2\.go)
+  const pattern = files
+    .map(f => f.replace(/\./g, '\\.'))
+    .join('|');
+
+  // We use ./... to ensure the linter sees all dependencies,
+  // but '--include' ensures it only outputs issues for your list.
+  return `golangci-lint run ./... --include "^(${pattern})$" --issues-exit-code=0`;
+};
 const config: ITestconfigV2 = {
   featureIngestor: function (s: string): Promise<string> {
     throw new Error("Function not implemented.");
@@ -64,8 +76,8 @@ const config: ITestconfigV2 = {
         runtime: "golang",
         tests: ["src/Calculator.test.go"],
         checks: [
-          (x) => `yarn eslint`,
-          (x) => `yarn tsc --noEmit`,
+          (x) => `go tool vet ${x.join(' ')}`,
+          golangciLintCommand
         ],
         dockerfile: `testeranto/runtimes/golang/golang.Dockerfile`,
         buildOptions: `testeranto/runtimes/golang/golang.ts`

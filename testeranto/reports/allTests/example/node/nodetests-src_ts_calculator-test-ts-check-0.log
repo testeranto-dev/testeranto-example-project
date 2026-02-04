@@ -1,0 +1,9 @@
+nodetests-src_ts_calculator-test-ts-check-0  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-check-0  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+nodetests-src_ts_calculator-test-ts-check-0  | error Command "eslint" not found.
+
+=== Log started at 2026-02-04T17:54:45.008Z for service nodetests-src_ts_calculator-test-ts-check-0 ===
+
+nodetests-src_ts_calculator-test-ts-check-0  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-ts-check-0  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+nodetests-src_ts_calculator-test-ts-check-0  | error Command "eslint" not found.

@@ -1,9 +1,5 @@
-ruby-builder  | /workspace/node_modules/testeranto/dist [error opening dir]
-ruby-builder  | 
-ruby-builder  | 0 directories, 0 files
+ruby-builder  | ruby: No such file or directory -- /var/folders/v3/nqbhmncn3j91hhrf209ddf7r0000gn/T/ruby-1770227662402.rb (LoadError)
 
-=== Log started at 2026-02-04T15:29:59.238Z for service ruby-builder ===
+=== Log started at 2026-02-04T17:54:33.189Z for service ruby-builder ===
 
-ruby-builder  | /workspace/node_modules/testeranto/dist [error opening dir]
-ruby-builder  | 
-ruby-builder  | 0 directories, 0 files
+ruby-builder  | ruby: No such file or directory -- /var/folders/v3/nqbhmncn3j91hhrf209ddf7r0000gn/T/ruby-1770227662402.rb (LoadError)

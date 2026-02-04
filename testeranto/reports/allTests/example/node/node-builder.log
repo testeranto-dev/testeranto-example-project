@@ -1,9 +1,6 @@
-node-builder  | yarn run v1.22.22
-node-builder  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-node-builder  | error Command "tsx" not found. Did you mean "tsc"?
 
-=== Log started at 2026-02-04T15:29:56.226Z for service node-builder ===
+=== Log started at 2026-02-04T17:54:29.602Z for service node-builder ===
 
 node-builder  | yarn run v1.22.22
-node-builder  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 node-builder  | error Command "tsx" not found. Did you mean "tsc"?
+node-builder  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

@@ -1,5 +1,5 @@
 
-=== Log started at 2026-02-04T15:30:02.746Z for service golangtests-src_calculator-test-go-aider ===
+=== Log started at 2026-02-04T17:54:37.359Z for service golangtests-src_calculator-test-go-aider ===
 
 golangtests-src_calculator-test-go-aider  | Warning: Input is not a terminal (fd=0).
 golangtests-src_calculator-test-go-aider  | Warning: Unable to write to chat history file .aider.chat.history.md.
@@ -10,10 +10,7 @@ golangtests-src_calculator-test-go-aider  | OpenRouter provides free and paid ac
 golangtests-src_calculator-test-go-aider  | 
 golangtests-src_calculator-test-go-aider  | Please open this URL in your browser to connect Aider with OpenRouter:
 golangtests-src_calculator-test-go-aider  | 
-golangtests-src_calculator-test-go-aider  | https://openrouter.ai/auth?callback_url=http://localhost:8484/callback/aider&code_challenge=fN4mjF_RcNg_LVI8z3xtgQ8NdgGYO415DYU982OOMbs&code_challenge_method=S256
+golangtests-src_calculator-test-go-aider  | https://openrouter.ai/auth?callback_url=http://localhost:8484/callback/aider&code_challenge=-df0qMNCQPlMEiCozaHhyyG5Mt6b2HCzfBo0cSuZHeI&code_challenge_method=S256
 golangtests-src_calculator-test-go-aider  | 
 golangtests-src_calculator-test-go-aider  | Waiting up to 5 minutes for you to finish in the browser...
 golangtests-src_calculator-test-go-aider  | Use Control-C to interrupt.
-[Kgolangtests-src_calculator-test-go-aider exited with code 137
-
-=== Log ended at 2026-02-04T15:30:51.410Z, process exited with code null ===
