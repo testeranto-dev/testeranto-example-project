@@ -5,6 +5,10 @@ WORKDIR /workspace
 COPY ./tsconfig*.json ./
 COPY package.json /workspace
 COPY ./.yarnrc.yml ./
+
+# DO NOT DO THIS
+# COPY projects/testeranto/testeranto/src/lib/tiposkripto/ ./projects/testeranto/testeranto/src/lib/tiposkripto/
+
 RUN apk add --no-cache python3 libxml2-utils make build-base g++ git pkgconfig
 RUN ln -sf python3 /usr/bin/python
 ENV npm_config_python=/usr/bin/python3
