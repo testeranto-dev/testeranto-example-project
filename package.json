@@ -12,7 +12,9 @@
   "dependencies": {
     "ansi-colors": "^4.1.3",
     "chai": "^6.2.2",
-    "tiposkripto": "0.0.28"
+    "eslint": "^9.39.2",
+    "tiposkripto": "0.0.28",
+    "typescript": "^5.9.3"
   },
   "type": "module"
 }

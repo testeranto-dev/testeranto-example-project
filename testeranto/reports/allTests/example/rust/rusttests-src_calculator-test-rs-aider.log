@@ -1,16 +1,23 @@
+rusttests-src_calculator-test-rs-aider  | Warning: Input is not a terminal (fd=0).
+rusttests-src_calculator-test-rs-aider  | Warning: Unable to write to chat history file .aider.chat.history.md.
+rusttests-src_calculator-test-rs-aider  | [Errno 13] Permission denied: '.aider.chat.history.md'
+rusttests-src_calculator-test-rs-aider  | ────────────────────────────────────────────────────────────────────────────────
 
-=== Log started at 2026-02-04T17:54:38.410Z for service rusttests-src_calculator-test-rs-aider ===
+=== Log started at 2026-02-04T22:51:31.501Z for service rusttests-src_calculator-test-rs-aider ===
 
 rusttests-src_calculator-test-rs-aider  | Warning: Input is not a terminal (fd=0).
 rusttests-src_calculator-test-rs-aider  | Warning: Unable to write to chat history file .aider.chat.history.md.
 rusttests-src_calculator-test-rs-aider  | [Errno 13] Permission denied: '.aider.chat.history.md'
 rusttests-src_calculator-test-rs-aider  | ────────────────────────────────────────────────────────────────────────────────
-rusttests-src_calculator-test-rs-aider  | No LLM model was specified and no API keys were provided.
-rusttests-src_calculator-test-rs-aider  | OpenRouter provides free and paid access to many LLMs.
+rusttests-src_calculator-test-rs-aider  | Aider v0.86.1
+rusttests-src_calculator-test-rs-aider  | Main model: gpt-4o with diff edit format
+rusttests-src_calculator-test-rs-aider  | Weak model: gpt-4o-mini
+rusttests-src_calculator-test-rs-aider  | Git repo: none
+rusttests-src_calculator-test-rs-aider  | Repo-map: disabled
 rusttests-src_calculator-test-rs-aider  | 
-rusttests-src_calculator-test-rs-aider  | Please open this URL in your browser to connect Aider with OpenRouter:
 rusttests-src_calculator-test-rs-aider  | 
-rusttests-src_calculator-test-rs-aider  | https://openrouter.ai/auth?callback_url=http://localhost:8484/callback/aider&code_challenge=-afQswMl09OXSccY13g6cKjIpB0kIWqKTN6jL4a6MRg&code_challenge_method=S256
-rusttests-src_calculator-test-rs-aider  | 
-rusttests-src_calculator-test-rs-aider  | Waiting up to 5 minutes for you to finish in the browser...
-rusttests-src_calculator-test-rs-aider  | Use Control-C to interrupt.
+rusttests-src_calculator-test-rs-aider  | https://aider.chat/HISTORY.html#release-notes
+rusttests-src_calculator-test-rs-aider  | ────────────────────────────────────────────────────────────────────────────────
+[Krusttests-src_calculator-test-rs-aider exited with code 0
+
+=== Log ended at 2026-02-04T22:51:32.783Z, process exited with code 0 ===

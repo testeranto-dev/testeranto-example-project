@@ -1,16 +1,23 @@
+pythontests-src_calculator-test-py-aider  | Warning: Input is not a terminal (fd=0).
+pythontests-src_calculator-test-py-aider  | Warning: Unable to write to chat history file .aider.chat.history.md.
+pythontests-src_calculator-test-py-aider  | [Errno 13] Permission denied: '.aider.chat.history.md'
+pythontests-src_calculator-test-py-aider  | ────────────────────────────────────────────────────────────────────────────────
 
-=== Log started at 2026-02-04T17:54:36.356Z for service pythontests-src_calculator-test-py-aider ===
+=== Log started at 2026-02-04T22:51:25.555Z for service pythontests-src_calculator-test-py-aider ===
 
 pythontests-src_calculator-test-py-aider  | Warning: Input is not a terminal (fd=0).
 pythontests-src_calculator-test-py-aider  | Warning: Unable to write to chat history file .aider.chat.history.md.
 pythontests-src_calculator-test-py-aider  | [Errno 13] Permission denied: '.aider.chat.history.md'
 pythontests-src_calculator-test-py-aider  | ────────────────────────────────────────────────────────────────────────────────
-pythontests-src_calculator-test-py-aider  | No LLM model was specified and no API keys were provided.
-pythontests-src_calculator-test-py-aider  | OpenRouter provides free and paid access to many LLMs.
+pythontests-src_calculator-test-py-aider  | Aider v0.86.1
+pythontests-src_calculator-test-py-aider  | Main model: gpt-4o with diff edit format
+pythontests-src_calculator-test-py-aider  | Weak model: gpt-4o-mini
+pythontests-src_calculator-test-py-aider  | Git repo: none
+pythontests-src_calculator-test-py-aider  | Repo-map: disabled
 pythontests-src_calculator-test-py-aider  | 
-pythontests-src_calculator-test-py-aider  | Please open this URL in your browser to connect Aider with OpenRouter:
 pythontests-src_calculator-test-py-aider  | 
-pythontests-src_calculator-test-py-aider  | https://openrouter.ai/auth?callback_url=http://localhost:8484/callback/aider&code_challenge=IrYxGAZXeHpuXpmb-sxaGfZ0NLxei2wQwpBCWESqI28&code_challenge_method=S256
-pythontests-src_calculator-test-py-aider  | 
-pythontests-src_calculator-test-py-aider  | Waiting up to 5 minutes for you to finish in the browser...
-pythontests-src_calculator-test-py-aider  | Use Control-C to interrupt.
+pythontests-src_calculator-test-py-aider  | https://aider.chat/HISTORY.html#release-notes
+pythontests-src_calculator-test-py-aider  | ────────────────────────────────────────────────────────────────────────────────
+[Kpythontests-src_calculator-test-py-aider exited with code 0
+
+=== Log ended at 2026-02-04T22:51:29.194Z, process exited with code 0 ===
