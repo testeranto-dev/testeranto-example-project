@@ -1,9 +1,29 @@
 node-builder  | yarn run v1.22.22
-node-builder  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-node-builder  | error Command "tsx" not found. Did you mean "tsc"?
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
 
-=== Log started at 2026-02-05T00:44:32.812Z for service node-builder ===
+=== Log started at 2026-02-16T15:19:53.604Z for service node-builder ===
 
 node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+node-builder  | 
+node-builder  | node:internal/modules/run_main:123
+node-builder  |     triggerUncaughtException(
+node-builder  |     ^
+node-builder  | Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspace/node_modules/testeranto/src/server/runtimes/node/node.ts' imported from /workspace/
+node-builder  |     at finalizeResolution (node:internal/modules/esm/resolve:283:11)
+node-builder  |     at moduleResolve (node:internal/modules/esm/resolve:952:10)
+node-builder  |     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+node-builder  |     at nextResolve (node:internal/modules/esm/hooks:864:28)
+node-builder  |     at resolveBase (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1771255193345:2:3744)
+node-builder  |     at async resolveDirectory (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1771255193345:2:4237)
+node-builder  |     at async resolve (file:///workspace/node_modules/tsx/dist/esm/index.mjs?1771255193345:2:5355)
+node-builder  |     at async nextResolve (node:internal/modules/esm/hooks:864:22)
+node-builder  |     at async Hooks.resolve (node:internal/modules/esm/hooks:306:24)
+node-builder  |     at async handleMessage (node:internal/modules/esm/worker:196:18) {
+node-builder  |   code: 'ERR_MODULE_NOT_FOUND',
+node-builder  |   url: 'file:///workspace/node_modules/testeranto/src/server/runtimes/node/node.ts'
+node-builder  | }
+node-builder  | 
+node-builder  | Node.js v20.19.4
 node-builder  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-node-builder  | error Command "tsx" not found. Did you mean "tsc"?
+node-builder  | error Command failed with exit code 1.

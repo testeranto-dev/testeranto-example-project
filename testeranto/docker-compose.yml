@@ -1,4 +1,59 @@
 services:
+  ruby-builder:
+    build:
+      context: /Users/adam/Code/testeranto-example-project
+      dockerfile: testeranto/runtimes/ruby/ruby.Dockerfile
+    container_name: ruby-builder
+    environment: {}
+    working_dir: /workspace
+    volumes:
+      - /Users/adam/Code/testeranto-example-project/src:/workspace/src
+      - /Users/adam/Code/testeranto-example-project/example:/workspace/example
+      - /Users/adam/Code/testeranto-example-project/dist:/workspace/dist
+      - /Users/adam/Code/testeranto-example-project/testeranto:/workspace/testeranto
+    command: ruby /workspace/testeranto/extracted_script.rb /workspace/testeranto/runtimes/ruby/ruby.rb
+    networks:
+      - allTests_network
+  rubytests-src_ruby_calculator-test-rb-bdd:
+    build:
+      context: /Users/adam/Code/testeranto-example-project
+      dockerfile: testeranto/runtimes/ruby/ruby.Dockerfile
+    container_name: rubytests-src_ruby_calculator-test-rb-bdd
+    environment: {}
+    working_dir: /workspace
+    volumes:
+      - /Users/adam/Code/testeranto-example-project/src:/workspace/src
+      - /Users/adam/Code/testeranto-example-project/example:/workspace/example
+      - /Users/adam/Code/testeranto-example-project/dist:/workspace/dist
+      - /Users/adam/Code/testeranto-example-project/testeranto:/workspace/testeranto
+    command: ruby testeranto/bundles/allTests/ruby/example/Calculator.test.rb '{"ports":[1111]}'
+    networks:
+      - allTests_network
+  rubytests-src_ruby_calculator-test-rb-aider:
+    build:
+      context: /Users/adam/Code/testeranto-example-project
+      dockerfile: aider.Dockerfile
+    container_name: rubytests-src_ruby_calculator-test-rb-aider
+    environment: {}
+    volumes:
+      - /Users/adam/Code/testeranto-example-project/.aider.conf.yml:/workspace/.aider.conf.yml
+      - /Users/adam/Code/testeranto-example-project:/workspace
+    working_dir: /workspace
+    command: tail -f /dev/null
+    networks:
+      - allTests_network
+    tty: true
+    stdin_open: true
+  rubytests-src_ruby_calculator-test-rb-check-0:
+    build:
+      context: /Users/adam/Code/testeranto-example-project
+      dockerfile: testeranto/runtimes/ruby/ruby.Dockerfile
+    container_name: rubytests-src_ruby_calculator-test-rb-check-0
+    environment: {}
+    working_dir: /workspace
+    command: 'bundle exec rubocop '
+    networks:
+      - allTests_network
   node-builder:
     build:
       context: /Users/adam/Code/testeranto-example-project
@@ -37,10 +92,13 @@ services:
     environment: {}
     volumes:
       - /Users/adam/Code/testeranto-example-project/.aider.conf.yml:/workspace/.aider.conf.yml
+      - /Users/adam/Code/testeranto-example-project:/workspace
     working_dir: /workspace
-    command: aider
+    command: tail -f /dev/null
     networks:
       - allTests_network
+    tty: true
+    stdin_open: true
   nodetests-src_ts_calculator-test-ts-check-0:
     build:
       context: /Users/adam/Code/testeranto-example-project
@@ -48,7 +106,7 @@ services:
     container_name: nodetests-src_ts_calculator-test-ts-check-0
     environment: {}
     working_dir: /workspace
-    command: yarn eslint
+    command: 'yarn eslint  '
     networks:
       - allTests_network
   nodetests-src_ts_calculator-test-ts-check-1:
@@ -58,7 +116,7 @@ services:
     container_name: nodetests-src_ts_calculator-test-ts-check-1
     environment: {}
     working_dir: /workspace
-    command: yarn tsc --noEmit
+    command: 'yarn tsc --noEmit '
     networks:
       - allTests_network
 volumes:

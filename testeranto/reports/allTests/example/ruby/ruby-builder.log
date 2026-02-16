@@ -1,5 +1,13 @@
-ruby-builder  | ruby: No such file or directory -- /var/folders/v3/nqbhmncn3j91hhrf209ddf7r0000gn/T/ruby-1770245470152.rb (LoadError)
+ruby-builder  | hello ruby builder
+ruby-builder  | ["/workspace/testeranto/runtimes/ruby/ruby.rb"]
+ruby-builder  | Generated test files:
+ruby-builder  |   - testeranto/bundles/allTests/ruby/example/Calculator.test.rb-inputFiles.json
+ruby-builder  |   - testeranto/bundles/allTests/ruby/example/Calculator.test.rb
 
-=== Log started at 2026-02-04T22:51:18.977Z for service ruby-builder ===
+=== Log started at 2026-02-16T15:19:52.715Z for service ruby-builder ===
 
-ruby-builder  | ruby: No such file or directory -- /var/folders/v3/nqbhmncn3j91hhrf209ddf7r0000gn/T/ruby-1770245470152.rb (LoadError)
+ruby-builder  | hello ruby builder
+ruby-builder  | ["/workspace/testeranto/runtimes/ruby/ruby.rb"]
+ruby-builder  | Generated test files:
+ruby-builder  |   - testeranto/bundles/allTests/ruby/example/Calculator.test.rb-inputFiles.json
+ruby-builder  |   - testeranto/bundles/allTests/ruby/example/Calculator.test.rb

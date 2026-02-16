@@ -1,19 +1,28 @@
 
-=== Log started at 2026-02-05T00:44:33.492Z for service nodetests-src_ts_calculator-test-ts-aider ===
+=== Log started at 2026-02-05T04:31:59.535Z for service nodetests-src_ts_calculator-test-ts-aider ===
 
-nodetests-src_ts_calculator-test-ts-aider  | Warning: Input is not a terminal (fd=0).
-nodetests-src_ts_calculator-test-ts-aider  | Warning: Unable to write to chat history file .aider.chat.history.md.
-nodetests-src_ts_calculator-test-ts-aider  | [Errno 13] Permission denied: '.aider.chat.history.md'
-nodetests-src_ts_calculator-test-ts-aider  | ────────────────────────────────────────────────────────────────────────────────
-nodetests-src_ts_calculator-test-ts-aider  | Aider v0.86.1
-nodetests-src_ts_calculator-test-ts-aider  | Main model: gpt-4o with diff edit format
-nodetests-src_ts_calculator-test-ts-aider  | Weak model: gpt-4o-mini
-nodetests-src_ts_calculator-test-ts-aider  | Git repo: none
-nodetests-src_ts_calculator-test-ts-aider  | Repo-map: disabled
-nodetests-src_ts_calculator-test-ts-aider  | 
-nodetests-src_ts_calculator-test-ts-aider  | 
-nodetests-src_ts_calculator-test-ts-aider  | https://aider.chat/HISTORY.html#release-notes
-nodetests-src_ts_calculator-test-ts-aider  | ────────────────────────────────────────────────────────────────────────────────
-[Knodetests-src_ts_calculator-test-ts-aider exited with code 0
+testeranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa  | source /Users/adam/Code/testeranto-example-project/bin/activate
+testeranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa  | [?12l[?25h[32m──────────────────────────────────────────────────────────────[0m
+testeranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa  | [7mAider v0.86.1[0m
+testeranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa  | Model: deepseek/deepseek-chat with diff edit format, prompt 
+testeranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa  | cache, infinite output
+testeranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa  | Git repo: none
+testeranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa  | Repo-map: disabled
+testeranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa  | 
+testeranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa  | 
+testeranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa  | [7mhttps://aider.chat/HISTORY.html#release-notes[0m
+testeranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa  | [6n[?2004h[?1l[?25l[0m[?7l[0m[J[0;38;5;40mWould you like to see what's new in this version? (Y)es/(N)o [61C[[0m
+testeranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa  | [0;38;5;40mYes]:                                                        [61C [6C[?7h[0m[?12l[?25h[?25l[?7l[6D[0;38;5;40mYes]: source /Users/adam/Code/testeranto-example-project/bin/[61Ca[0m
+testeranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa  | [0;38;5;40mctivate                                                      [61C [7C[?7h[0m[?12l[?25h[?25l[?7l[2A[7D[0m[J[0;38;5;40mWould you like to see what's new in this version? (Y)es/(N)o [61C[[0m
+testeranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa  | [0;38;5;40mYes]: source /Users/adam/Code/testeranto-example-project/bin/[61Ca[0m
+testeranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa  | [0;38;5;40mctivate                                                      [61C [0m
+testeranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa  | [J[?7h[0m[?12l[?25h[?2004l[91mPlease answer with one of: yes, no, skip, all[0m
+testeranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa  | [6n[?2004h[?25l[0m[?7l[0m[J[0;38;5;40mWould you like to see what's new in this version? (Y)es/(N)o [61C[[0m
+testeranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa  | [0;38;5;40mYes]:                                                        [61C [6C[?7h[0m[?12l[?25h[?25l[?7l[6D[0;38;5;40mYes]:  [0m[K[0m
+testeranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa  | 
+testeranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa  | 
+testeranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa  | 
+[Knodetests-src_ts_calculator-test-ts-aider exited with code 137
+[Ktesteranto-nodetests-src_ts_calculator-test-ts-aider-run-da7073881dfa exited with code 137
 
-=== Log ended at 2026-02-05T00:44:35.421Z, process exited with code 0 ===
+=== Log ended at 2026-02-05T04:35:27.888Z, process exited with code 0 ===

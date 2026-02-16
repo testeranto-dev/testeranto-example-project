@@ -3,7 +3,7 @@ import { ITestconfigV2 } from "testeranto/src/Types";
 export const golangciLintCommand = (files: string[]): string => {
   if (files.length === 0) return "golangci-lint run ./...";
 
-  // Escape dots and join files into a regex: (file1\.go|file2\.go)
+  // Escape dots and join files into apru regex: (file1\.go|file2\.go)
   const pattern = files
     .map(f => f.replace(/\./g, '\\.'))
     .join('|');
@@ -19,26 +19,26 @@ const config: ITestconfigV2 = {
 
   runtimes: {
 
-    // rubytests: (
-    //   {
-    //     runtime: "ruby",
-    //     tests: ["src/ruby/Calculator-test.rb"],
-    //     checks: [
-    //       // (x) => `yarn eslint`,
-    //       // (x) => `yarn tsc --noEmit`,  
-    //     ],
-    //     dockerfile: `testeranto/runtimes/ruby/ruby.Dockerfile`,
-    //     buildOptions: `testeranto/runtimes/ruby/ruby.rb`
-    //   }
-    // ),
+    rubytests: (
+      {
+        runtime: "ruby",
+        tests: ["src/ruby/Calculator-test.rb"],
+        checks: [
+          (x) => `bundle exec rubocop ${x.join(' ')}`,
+          // (x) => `cat Gemfile`,
+        ],
+        dockerfile: `testeranto/runtimes/ruby/ruby.Dockerfile`,
+        buildOptions: `testeranto/runtimes/ruby/ruby.rb`
+      }
+    ),
     
     nodetests: (
       {
         runtime: "node",
         tests: ["src/ts/Calculator.test.ts"],
         checks: [
-          (x) => `yarn eslint`,
-          (x) => `yarn tsc --noEmit`,
+          (x) => `yarn eslint ${x.join(' ')} `,
+          (x) => `yarn tsc --noEmit ${x.join(' ')}`,
         ],
         dockerfile: `testeranto/runtimes/node/node.Dockerfile`,
         buildOptions: `testeranto/runtimes/node/node.mjs`
