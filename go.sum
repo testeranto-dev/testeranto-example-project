@@ -1,2 +1,4 @@
 github.com/adamwong246/testeranto/src/golingvu v0.0.0-20251206101003-ffcde7dead81 h1:TGqSwaAvxTRFlV9HPEWTZ5H5Q6Z0nHps6jV8qL3cwpM=
 github.com/adamwong246/testeranto/src/golingvu v0.0.0-20251206101003-ffcde7dead81/go.mod h1:AbfGhZiV/wrGmLg7N4NjH8duxc2Rc3on5WPOGEdGddY=
+github.com/testeranto-dev/testeranto/src/lib/golingvu v0.1.15 h1:R7e5AHejVyUuA07gI+H/hcR2BiNjceRs8dI8xFeIKVM=
+github.com/testeranto-dev/testeranto/src/lib/golingvu v0.1.15/go.mod h1:ZHqNi7PEEFLe6hZ8AsSXTryb9icA91xMFjoZsoivoVg=

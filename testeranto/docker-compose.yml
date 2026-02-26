@@ -3,92 +3,73 @@ services:
     build:
       context: /Users/adam/Code/testeranto-example-project
       dockerfile: testeranto/runtimes/ruby/ruby.Dockerfile
-    container_name: ruby-builder
-    environment: {}
+    container_name: rubytests
+    environment:
+      NODE_ENV: production
+      ENV: node
     working_dir: /workspace
     volumes:
       - /Users/adam/Code/testeranto-example-project/src:/workspace/src
-      - /Users/adam/Code/testeranto-example-project/example:/workspace/example
       - /Users/adam/Code/testeranto-example-project/dist:/workspace/dist
       - /Users/adam/Code/testeranto-example-project/testeranto:/workspace/testeranto
-    command: ruby /workspace/testeranto/extracted_script.rb /workspace/testeranto/runtimes/ruby/ruby.rb
-    networks:
-      - allTests_network
-  rubytests-src_ruby_calculator-test-rb-bdd:
-    build:
-      context: /Users/adam/Code/testeranto-example-project
-      dockerfile: testeranto/runtimes/ruby/ruby.Dockerfile
-    container_name: rubytests-src_ruby_calculator-test-rb-bdd
-    environment: {}
-    working_dir: /workspace
-    volumes:
-      - /Users/adam/Code/testeranto-example-project/src:/workspace/src
-      - /Users/adam/Code/testeranto-example-project/example:/workspace/example
-      - /Users/adam/Code/testeranto-example-project/dist:/workspace/dist
-      - /Users/adam/Code/testeranto-example-project/testeranto:/workspace/testeranto
-    command: ruby testeranto/bundles/allTests/ruby/example/Calculator.test.rb '{"ports":[1111]}'
-    networks:
-      - allTests_network
-  rubytests-src_ruby_calculator-test-rb-aider:
-    build:
-      context: /Users/adam/Code/testeranto-example-project
-      dockerfile: aider.Dockerfile
-    container_name: rubytests-src_ruby_calculator-test-rb-aider
-    environment: {}
-    volumes:
-      - /Users/adam/Code/testeranto-example-project/.aider.conf.yml:/workspace/.aider.conf.yml
-      - /Users/adam/Code/testeranto-example-project:/workspace
-    working_dir: /workspace
-    command: tail -f /dev/null
-    networks:
-      - allTests_network
-    tty: true
-    stdin_open: true
-  rubytests-src_ruby_calculator-test-rb-check-0:
-    build:
-      context: /Users/adam/Code/testeranto-example-project
-      dockerfile: testeranto/runtimes/ruby/ruby.Dockerfile
-    container_name: rubytests-src_ruby_calculator-test-rb-check-0
-    environment: {}
-    working_dir: /workspace
-    command: 'bundle exec rubocop '
+    command: 'ruby /workspace/testeranto/ruby_runtime.rb /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/ruby/ruby.rb rubytests '
     networks:
       - allTests_network
   node-builder:
     build:
       context: /Users/adam/Code/testeranto-example-project
       dockerfile: testeranto/runtimes/node/node.Dockerfile
-    container_name: node-builder
-    environment: {}
+    container_name: nodetests
+    environment:
+      NODE_ENV: production
+      ENV: node
     working_dir: /workspace
     volumes:
       - /Users/adam/Code/testeranto-example-project/src:/workspace/src
-      - /Users/adam/Code/testeranto-example-project/example:/workspace/example
       - /Users/adam/Code/testeranto-example-project/dist:/workspace/dist
       - /Users/adam/Code/testeranto-example-project/testeranto:/workspace/testeranto
-    command: yarn tsx node_modules/testeranto/src/server/runtimes/node/node.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+    command: yarn tsx /workspace/testeranto/node_runtime.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
     networks:
       - allTests_network
-  nodetests-src_ts_calculator-test-ts-bdd:
+  web-builder:
     build:
       context: /Users/adam/Code/testeranto-example-project
-      dockerfile: testeranto/runtimes/node/node.Dockerfile
-    container_name: nodetests-src_ts_calculator-test-ts-bdd
+      dockerfile: testeranto/runtimes/web/web.Dockerfile
+    container_name: webtests
+    environment:
+      NODE_ENV: production
+      ENV: node
+    working_dir: /workspace
+    volumes:
+      - /Users/adam/Code/testeranto-example-project/src:/workspace/src
+      - /Users/adam/Code/testeranto-example-project/dist:/workspace/dist
+      - /Users/adam/Code/testeranto-example-project/testeranto:/workspace/testeranto
+    command: sh -c "socat TCP-LISTEN:9223,fork,reuseaddr TCP:127.0.0.1:9222 & yarn tsx /workspace/testeranto/web_runtime.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/web/web.ts webtests "
+    expose:
+      - '9223'
+    networks:
+      - allTests_network
+  webtests-src_ts_calculator-test-ts-bdd:
+    build:
+      context: /Users/adam/Code/testeranto-example-project
+      dockerfile: testeranto/runtimes/web/web.Dockerfile
+    container_name: webtests-src_ts_calculator-test-ts-bdd
     environment: {}
     working_dir: /workspace
     volumes:
       - /Users/adam/Code/testeranto-example-project/src:/workspace/src
-      - /Users/adam/Code/testeranto-example-project/example:/workspace/example
       - /Users/adam/Code/testeranto-example-project/dist:/workspace/dist
       - /Users/adam/Code/testeranto-example-project/testeranto:/workspace/testeranto
-    command: yarn tsx testeranto/bundles/allTests/node/src/ts/Calculator.test.mjs /workspace/testeranto/runtimes/node/node.mjs
+    command: yarn tsx  /workspace/testeranto/web_hoist testeranto/bundles/webtests/src/ts/Calculator.test.mjs '{"ports":[1111],"fs":"testeranto/reports/web"}'
     networks:
       - allTests_network
-  nodetests-src_ts_calculator-test-ts-aider:
+    expose:
+      - '9222'
+  webtests-src_ts_calculator-test-ts-aider:
     build:
       context: /Users/adam/Code/testeranto-example-project
       dockerfile: aider.Dockerfile
-    container_name: nodetests-src_ts_calculator-test-ts-aider
+    container_name: webtests-src_ts_calculator-test-ts-aider
     environment: {}
     volumes:
       - /Users/adam/Code/testeranto-example-project/.aider.conf.yml:/workspace/.aider.conf.yml
@@ -99,24 +80,72 @@ services:
       - allTests_network
     tty: true
     stdin_open: true
-  nodetests-src_ts_calculator-test-ts-check-0:
+  webtests-src_ts_calculator-test-ts-check-0:
     build:
       context: /Users/adam/Code/testeranto-example-project
-      dockerfile: testeranto/runtimes/node/node.Dockerfile
-    container_name: nodetests-src_ts_calculator-test-ts-check-0
+      dockerfile: testeranto/runtimes/web/web.Dockerfile
+    container_name: webtests-src_ts_calculator-test-ts-check-0
     environment: {}
     working_dir: /workspace
     command: 'yarn eslint  '
     networks:
       - allTests_network
-  nodetests-src_ts_calculator-test-ts-check-1:
+  webtests-src_ts_calculator-test-ts-check-1:
     build:
       context: /Users/adam/Code/testeranto-example-project
-      dockerfile: testeranto/runtimes/node/node.Dockerfile
-    container_name: nodetests-src_ts_calculator-test-ts-check-1
+      dockerfile: testeranto/runtimes/web/web.Dockerfile
+    container_name: webtests-src_ts_calculator-test-ts-check-1
     environment: {}
     working_dir: /workspace
     command: 'yarn tsc --noEmit '
+    networks:
+      - allTests_network
+  python-builder:
+    build:
+      context: /Users/adam/Code/testeranto-example-project
+      dockerfile: testeranto/runtimes/python/python.Dockerfile
+    container_name: pythontests
+    environment:
+      NODE_ENV: production
+      ENV: node
+    working_dir: /workspace
+    volumes:
+      - /Users/adam/Code/testeranto-example-project/src:/workspace/src
+      - /Users/adam/Code/testeranto-example-project/dist:/workspace/dist
+      - /Users/adam/Code/testeranto-example-project/testeranto:/workspace/testeranto
+    command: 'python /workspace/testeranto/python_runtime.py /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/python/python.py pythontests   '
+    networks:
+      - allTests_network
+  golang-builder:
+    build:
+      context: /Users/adam/Code/testeranto-example-project
+      dockerfile: testeranto/runtimes/golang/golang.Dockerfile
+    container_name: golangtests
+    environment:
+      NODE_ENV: production
+      ENV: node
+    working_dir: /workspace
+    volumes:
+      - /Users/adam/Code/testeranto-example-project/src:/workspace/src
+      - /Users/adam/Code/testeranto-example-project/dist:/workspace/dist
+      - /Users/adam/Code/testeranto-example-project/testeranto:/workspace/testeranto
+    command: 'go run /workspace/testeranto/golang_runtime.go /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/golang/golang.ts golangtests '
+    networks:
+      - allTests_network
+  rust-builder:
+    build:
+      context: /Users/adam/Code/testeranto-example-project
+      dockerfile: testeranto/runtimes/rust/rust.Dockerfile
+    container_name: rusttests
+    environment:
+      NODE_ENV: production
+      ENV: node
+    working_dir: /workspace
+    volumes:
+      - /Users/adam/Code/testeranto-example-project/src:/workspace/src
+      - /Users/adam/Code/testeranto-example-project/dist:/workspace/dist
+      - /Users/adam/Code/testeranto-example-project/testeranto:/workspace/testeranto
+    command: 'cargo run --manifest-path /workspace/testeranto/rust_builder/Cargo.toml -- /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/rust/rust.ts rusttests '
     networks:
       - allTests_network
 volumes:

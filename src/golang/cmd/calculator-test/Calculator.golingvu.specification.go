@@ -1,6 +1,6 @@
 package main
 
-import "github.com/adamwong246/testeranto/src/golingvu"
+import "github.com/testeranto-dev/testeranto/src/lib/golingvu"
 
 // Specification for Calculator tests
 var CalculatorSpecification golingvu.ITestSpecification = func(

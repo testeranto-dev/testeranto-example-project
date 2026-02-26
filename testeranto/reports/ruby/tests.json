@@ -1,0 +1,279 @@
+{
+  "features": [
+    "pressing nothing, the display is empty",
+    "entering a number puts it on the display",
+    "entering multiple digits concatenates them",
+    "addition expression is displayed correctly",
+    "simple addition calculation",
+    "memory store and recall"
+  ],
+  "failed": true,
+  "fails": 1,
+  "artifacts": [],
+  "tests": 0,
+  "runTimeTests": 6,
+  "testJob": {
+    "name": "Testing Calculator operations",
+    "givens": [
+      {
+        "key": "testEmptyDisplay",
+        "whens": [],
+        "thens": [
+          {
+            "name": "result",
+            "error": false,
+            "artifacts": [],
+            "status": true
+          }
+        ],
+        "error": null,
+        "failed": false,
+        "features": [
+          "pressing nothing, the display is empty"
+        ],
+        "artifacts": [],
+        "status": true
+      },
+      {
+        "key": "testSingleDigit",
+        "whens": [
+          {
+            "name": "press",
+            "status": true,
+            "error": null,
+            "artifacts": []
+          }
+        ],
+        "thens": [
+          {
+            "name": "result",
+            "error": false,
+            "artifacts": [],
+            "status": true
+          }
+        ],
+        "error": null,
+        "failed": false,
+        "features": [
+          "entering a number puts it on the display"
+        ],
+        "artifacts": [],
+        "status": true
+      },
+      {
+        "key": "testMultipleDigits",
+        "whens": [
+          {
+            "name": "press",
+            "status": true,
+            "error": null,
+            "artifacts": []
+          },
+          {
+            "name": "press",
+            "status": true,
+            "error": null,
+            "artifacts": []
+          }
+        ],
+        "thens": [
+          {
+            "name": "result",
+            "error": false,
+            "artifacts": [],
+            "status": true
+          }
+        ],
+        "error": null,
+        "failed": false,
+        "features": [
+          "entering multiple digits concatenates them"
+        ],
+        "artifacts": [],
+        "status": true
+      },
+      {
+        "key": "testAdditionExpression",
+        "whens": [
+          {
+            "name": "press",
+            "status": true,
+            "error": null,
+            "artifacts": []
+          },
+          {
+            "name": "press",
+            "status": true,
+            "error": null,
+            "artifacts": []
+          },
+          {
+            "name": "press",
+            "status": true,
+            "error": null,
+            "artifacts": []
+          }
+        ],
+        "thens": [
+          {
+            "name": "result",
+            "error": false,
+            "artifacts": [],
+            "status": true
+          }
+        ],
+        "error": null,
+        "failed": false,
+        "features": [
+          "addition expression is displayed correctly"
+        ],
+        "artifacts": [],
+        "status": true
+      },
+      {
+        "key": "testSimpleAddition",
+        "whens": [
+          {
+            "name": "press",
+            "status": true,
+            "error": null,
+            "artifacts": []
+          },
+          {
+            "name": "press",
+            "status": true,
+            "error": null,
+            "artifacts": []
+          },
+          {
+            "name": "press",
+            "status": true,
+            "error": null,
+            "artifacts": []
+          },
+          {
+            "name": "press",
+            "status": true,
+            "error": null,
+            "artifacts": []
+          },
+          {
+            "name": "press",
+            "status": true,
+            "error": null,
+            "artifacts": []
+          },
+          {
+            "name": "enter",
+            "status": true,
+            "error": null,
+            "artifacts": []
+          }
+        ],
+        "thens": [
+          {
+            "name": "result",
+            "error": false,
+            "artifacts": [],
+            "status": true
+          }
+        ],
+        "error": null,
+        "failed": false,
+        "features": [
+          "simple addition calculation"
+        ],
+        "artifacts": [],
+        "status": true
+      },
+      {
+        "key": "testMemoryStoreRecall",
+        "whens": [
+          {
+            "name": "press",
+            "status": true,
+            "error": null,
+            "artifacts": []
+          },
+          {
+            "name": "press",
+            "status": true,
+            "error": null,
+            "artifacts": []
+          },
+          {
+            "name": "press",
+            "status": true,
+            "error": null,
+            "artifacts": []
+          },
+          {
+            "name": "memoryStore",
+            "status": true,
+            "error": null,
+            "artifacts": []
+          },
+          {
+            "name": "press",
+            "status": true,
+            "error": null,
+            "artifacts": []
+          },
+          {
+            "name": "memoryRecall",
+            "status": true,
+            "error": null,
+            "artifacts": []
+          }
+        ],
+        "thens": [
+          {
+            "name": "result",
+            "error": true,
+            "artifacts": [],
+            "status": false
+          }
+        ],
+        "error": [
+          "Expected display '123', got '123.0'",
+          [
+            "/workspace/src/ruby/Calculator-test.rb:63:in `block (2 levels) in <top (required)>'",
+            "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/base_then.rb:34:in `test'",
+            "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/base_given.rb:104:in `block in give'",
+            "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/base_given.rb:102:in `each'",
+            "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/base_given.rb:102:in `each_with_index'",
+            "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/base_given.rb:102:in `give'",
+            "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/base_suite.rb:65:in `block in run'",
+            "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/base_suite.rb:63:in `each'",
+            "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/base_suite.rb:63:in `run'",
+            "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/rubeno.rb:177:in `run_test_job'",
+            "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/rubeno.rb:236:in `block in receiveTestResourceConfig'",
+            "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/rubeno.rb:232:in `each'",
+            "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/rubeno.rb:232:in `each_with_index'",
+            "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/rubeno.rb:232:in `receiveTestResourceConfig'",
+            "/workspace/src/ruby/Calculator-test.rb:146:in `<top (required)>'",
+            "testeranto/bundles/rubytests/src/ruby/Calculator-test.rb:11:in `load'",
+            "testeranto/bundles/rubytests/src/ruby/Calculator-test.rb:11:in `<main>'"
+          ]
+        ],
+        "failed": true,
+        "features": [
+          "memory store and recall"
+        ],
+        "artifacts": [],
+        "status": true
+      }
+    ],
+    "fails": 1,
+    "failed": true,
+    "features": [
+      "pressing nothing, the display is empty",
+      "entering a number puts it on the display",
+      "entering multiple digits concatenates them",
+      "addition expression is displayed correctly",
+      "simple addition calculation",
+      "memory store and recall"
+    ],
+    "artifacts": []
+  }
+}

@@ -1,4 +1,4 @@
-import { Ibdd_in, Ibdd_out } from "tiposkripto/types";
+import { Ibdd_in, Ibdd_out } from "testeranto.tiposkripto/types";
 import { Calculator } from "./Calculator.js";
 
 export type I = Ibdd_in<

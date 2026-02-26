@@ -1,0 +1,13 @@
+[
+  "src/golang/cmd/calculator-test/main.go",
+  "go.mod",
+  "go.sum",
+  "src/golang/cmd/calculator-test/Calculator.golingvu.adapter.go",
+  "src/golang/cmd/calculator-test/Calculator.golingvu.implementation.go",
+  "src/golang/cmd/calculator-test/Calculator.golingvu.specification.go",
+  "src/golang/cmd/calculator-test/calculator.go",
+  "src/golang/cmd/calculator-test/main.go",
+  "src/main.go",
+  "testeranto/golang_runtime.go",
+  "testeranto/runtimes/golang/golang.go"
+]

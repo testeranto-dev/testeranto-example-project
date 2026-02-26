@@ -1,0 +1,20 @@
+webtests-src_calculator-test-ts-check-0  | yarn run v1.22.22
+webtests-src_calculator-test-ts-check-0  | $ /workspace/node_modules/.bin/eslint
+webtests-src_calculator-test-ts-check-0  | 
+webtests-src_calculator-test-ts-check-0  | Oops! Something went wrong! :(
+webtests-src_calculator-test-ts-check-0  | 
+webtests-src_calculator-test-ts-check-0  | ESLint: 10.0.2
+webtests-src_calculator-test-ts-check-0  | 
+webtests-src_calculator-test-ts-check-0  | ESLint couldn't find an eslint.config.(js|mjs|cjs) file.
+webtests-src_calculator-test-ts-check-0  | 
+webtests-src_calculator-test-ts-check-0  | From ESLint v9.0.0, the default configuration file is now eslint.config.js.
+webtests-src_calculator-test-ts-check-0  | If you are using a .eslintrc.* file, please follow the migration guide
+webtests-src_calculator-test-ts-check-0  | to update your configuration file to the new format:
+webtests-src_calculator-test-ts-check-0  | 
+webtests-src_calculator-test-ts-check-0  | https://eslint.org/docs/latest/use/configure/migration-guide
+webtests-src_calculator-test-ts-check-0  | 
+webtests-src_calculator-test-ts-check-0  | If you still have problems after following the migration guide, please stop by
+webtests-src_calculator-test-ts-check-0  | https://eslint.org/chat/help to chat with the team.
+webtests-src_calculator-test-ts-check-0  | 
+webtests-src_calculator-test-ts-check-0  | error Command failed with exit code 2.
+webtests-src_calculator-test-ts-check-0  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

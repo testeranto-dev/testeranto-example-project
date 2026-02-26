@@ -1,4 +1,4 @@
-import { ITestAdapter } from "tiposkripto";
+import { ITestAdapter } from "testeranto.tiposkripto";
 import { I } from "./Calculator.test.types.js";
 
 export const adapter: ITestAdapter<I> = {

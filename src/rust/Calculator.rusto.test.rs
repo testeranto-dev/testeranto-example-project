@@ -1,5 +1,5 @@
-use rusto::{rusto, BaseGiven, BaseSuite, BaseThen, BaseWhen, SimpleTestAdapter};
-use serde::{Deserialize, Serialize};
+use testeranto_rusto::{rusto, BaseGiven, BaseSuite, BaseThen, BaseWhen, SimpleTestAdapter};
+// use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 
 // Define our Calculator type

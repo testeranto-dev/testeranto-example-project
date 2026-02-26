@@ -1,0 +1,32 @@
+webtests  | yarn run v1.22.22
+webtests  | $ /workspace/node_modules/.bin/tsx /workspace/testeranto/web_runtime.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/web/web.ts webtests
+
+=== Log started at 2026-02-26T21:48:22.288Z for service web-builder ===
+
+webtests  | yarn run v1.22.22
+webtests  | $ /workspace/node_modules/.bin/tsx /workspace/testeranto/web_runtime.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/web/web.ts webtests
+webtests  | [WEB BUILDER] is now bundling:  webtests
+webtests  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+webtests  | 
+webtests  |     src/ts/Calculator.ts:10:21:
+webtests  |       10 │       const result = eval(this.display);
+webtests  |          ╵                      ~~~~
+webtests  | 
+webtests  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+webtests  | 
+webtests  | web > build ended with 0 errors
+webtests  | [web Builder] Wrote 5 input files to testeranto/bundles/webtests/src/ts/Calculator.test.mjs-inputFiles.json
+webtests  | Created HTML file: testeranto/bundles/allTests/web/example/Calculator.test.ts.html
+webtests  | WEB BUILDER: Metafiles have been generated
+webtests  | WEB BUILDER: Running in dev mode, keeping builder alive...
+webtests  | [WEB BUILDER]: esbuild server 127.0.0.1,172.18.0.2, 8000
+webtests  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+webtests  | 
+webtests  |     src/ts/Calculator.ts:10:21:
+webtests  |       10 │       const result = eval(this.display);
+webtests  |          ╵                      ~~~~
+webtests  | 
+webtests  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+webtests  | 
+webtests  | web > build ended with 0 errors
+webtests  | Puppeteer launched successfully CdpBrowser { protocol: 'cdp' }

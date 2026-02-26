@@ -1,0 +1,16 @@
+nodetests  | yarn run v1.22.22
+
+=== Log started at 2026-02-26T21:48:20.932Z for service node-builder ===
+
+nodetests  | yarn run v1.22.22
+nodetests  | $ /workspace/node_modules/.bin/tsx /workspace/testeranto/node_runtime.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+nodetests  | [NODE BUILDER] hello:  /usr/local/bin/node,/workspace/testeranto/node_runtime.ts,/workspace/testeranto/testeranto.ts,/workspace/testeranto/runtimes/node/node.mjs,nodetests
+nodetests  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+nodetests  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+nodetests  | [NODE BUILDER] testName:  nodetests
+nodetests  | [NODE BUILDER] is now bundling:  nodetests
+nodetests  | node > build ended with 0 errors
+nodetests  | Done in 0.52s.
+[Knodetests exited with code 0
+
+=== Log ended at 2026-02-26T21:48:21.633Z, process exited with code 0 ===

@@ -1,0 +1,136 @@
+rubytests-src_ruby_calculator-test-rb-bdd  | === Calculator-test.rb loaded ===
+rubytests-src_ruby_calculator-test-rb-bdd  | hello calculator test - using Rubeno
+rubytests-src_ruby_calculator-test-rb-bdd  | Rubeno.initialize: starting
+rubytests-src_ruby_calculator-test-rb-bdd  | Rubeno.initialize: about to initialize_classy_implementations
+rubytests-src_ruby_calculator-test-rb-bdd  | initialize_classy_implementations: starting
+rubytests-src_ruby_calculator-test-rb-bdd  |   suites: ["Default"]
+rubytests-src_ruby_calculator-test-rb-bdd  |   givens: ["Default"]
+rubytests-src_ruby_calculator-test-rb-bdd  |   whens: ["press", "enter", "memoryStore", "memoryRecall", "memoryClear", "memoryAdd"]
+rubytests-src_ruby_calculator-test-rb-bdd  |   thens: ["result"]
+rubytests-src_ruby_calculator-test-rb-bdd  | initialize_classy_implementations: done
+rubytests-src_ruby_calculator-test-rb-bdd  | Rubeno.initialize: classy implementations done
+rubytests-src_ruby_calculator-test-rb-bdd  |   suites_overrides keys: ["Default"]
+rubytests-src_ruby_calculator-test-rb-bdd  |   given_overrides keys: ["Default"]
+rubytests-src_ruby_calculator-test-rb-bdd  |   when_overrides keys: ["press", "enter", "memoryStore", "memoryRecall", "memoryClear", "memoryAdd"]
+rubytests-src_ruby_calculator-test-rb-bdd  |   then_overrides keys: ["result"]
+rubytests-src_ruby_calculator-test-rb-bdd  | Rubeno.initialize: about to call test_specification
+rubytests-src_ruby_calculator-test-rb-bdd  | suites_wrapper: creating wrapper with methods: ["Default"]
+rubytests-src_ruby_calculator-test-rb-bdd  | suites_wrapper: returning wrapper
+rubytests-src_ruby_calculator-test-rb-bdd  | given_wrapper: creating wrapper with methods: ["Default"]
+rubytests-src_ruby_calculator-test-rb-bdd  | given_wrapper: returning wrapper
+rubytests-src_ruby_calculator-test-rb-bdd  | when_wrapper: creating wrapper with methods: ["press", "enter", "memoryStore", "memoryRecall", "memoryClear", "memoryAdd"]
+rubytests-src_ruby_calculator-test-rb-bdd  | when_wrapper: returning wrapper
+rubytests-src_ruby_calculator-test-rb-bdd  | then_wrapper: creating wrapper with methods: ["result"]
+rubytests-src_ruby_calculator-test-rb-bdd  | then_wrapper: returning wrapper
+rubytests-src_ruby_calculator-test-rb-bdd  | then_wrapper.result called with args: [""]
+rubytests-src_ruby_calculator-test-rb-bdd  |     then_wrapper.result called with args: [""]
+rubytests-src_ruby_calculator-test-rb-bdd  | given_wrapper.Default called with features: ["pressing nothing, the display is empty"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     given_wrapper.Default called with features: ["pressing nothing, the display is empty"]
+rubytests-src_ruby_calculator-test-rb-bdd  | when_wrapper.press called with args: ["2"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     when_wrapper.press called with args: ["2"]
+rubytests-src_ruby_calculator-test-rb-bdd  | then_wrapper.result called with args: ["2"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     then_wrapper.result called with args: ["2"]
+rubytests-src_ruby_calculator-test-rb-bdd  | given_wrapper.Default called with features: ["entering a number puts it on the display"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     given_wrapper.Default called with features: ["entering a number puts it on the display"]
+rubytests-src_ruby_calculator-test-rb-bdd  | when_wrapper.press called with args: ["2"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     when_wrapper.press called with args: ["2"]
+rubytests-src_ruby_calculator-test-rb-bdd  | when_wrapper.press called with args: ["2"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     when_wrapper.press called with args: ["2"]
+rubytests-src_ruby_calculator-test-rb-bdd  | then_wrapper.result called with args: ["22"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     then_wrapper.result called with args: ["22"]
+rubytests-src_ruby_calculator-test-rb-bdd  | given_wrapper.Default called with features: ["entering multiple digits concatenates them"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     given_wrapper.Default called with features: ["entering multiple digits concatenates them"]
+rubytests-src_ruby_calculator-test-rb-bdd  | when_wrapper.press called with args: ["2"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     when_wrapper.press called with args: ["2"]
+rubytests-src_ruby_calculator-test-rb-bdd  | when_wrapper.press called with args: ["+"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     when_wrapper.press called with args: ["+"]
+rubytests-src_ruby_calculator-test-rb-bdd  | when_wrapper.press called with args: ["3"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     when_wrapper.press called with args: ["3"]
+rubytests-src_ruby_calculator-test-rb-bdd  | then_wrapper.result called with args: ["2+3"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     then_wrapper.result called with args: ["2+3"]
+rubytests-src_ruby_calculator-test-rb-bdd  | given_wrapper.Default called with features: ["addition expression is displayed correctly"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     given_wrapper.Default called with features: ["addition expression is displayed correctly"]
+rubytests-src_ruby_calculator-test-rb-bdd  | when_wrapper.press called with args: ["2"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     when_wrapper.press called with args: ["2"]
+rubytests-src_ruby_calculator-test-rb-bdd  | when_wrapper.press called with args: ["3"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     when_wrapper.press called with args: ["3"]
+rubytests-src_ruby_calculator-test-rb-bdd  | when_wrapper.press called with args: ["+"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     when_wrapper.press called with args: ["+"]
+rubytests-src_ruby_calculator-test-rb-bdd  | when_wrapper.press called with args: ["4"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     when_wrapper.press called with args: ["4"]
+rubytests-src_ruby_calculator-test-rb-bdd  | when_wrapper.press called with args: ["5"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     when_wrapper.press called with args: ["5"]
+rubytests-src_ruby_calculator-test-rb-bdd  | when_wrapper.enter called with args: []
+rubytests-src_ruby_calculator-test-rb-bdd  |     when_wrapper.enter called with args: []
+rubytests-src_ruby_calculator-test-rb-bdd  | then_wrapper.result called with args: ["68"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     then_wrapper.result called with args: ["68"]
+rubytests-src_ruby_calculator-test-rb-bdd  | given_wrapper.Default called with features: ["simple addition calculation"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     given_wrapper.Default called with features: ["simple addition calculation"]
+rubytests-src_ruby_calculator-test-rb-bdd  | when_wrapper.press called with args: ["1"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     when_wrapper.press called with args: ["1"]
+rubytests-src_ruby_calculator-test-rb-bdd  | when_wrapper.press called with args: ["2"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     when_wrapper.press called with args: ["2"]
+rubytests-src_ruby_calculator-test-rb-bdd  | when_wrapper.press called with args: ["3"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     when_wrapper.press called with args: ["3"]
+rubytests-src_ruby_calculator-test-rb-bdd  | when_wrapper.memoryStore called with args: []
+rubytests-src_ruby_calculator-test-rb-bdd  |     when_wrapper.memoryStore called with args: []
+rubytests-src_ruby_calculator-test-rb-bdd  | when_wrapper.press called with args: ["C"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     when_wrapper.press called with args: ["C"]
+rubytests-src_ruby_calculator-test-rb-bdd  | when_wrapper.memoryRecall called with args: []
+rubytests-src_ruby_calculator-test-rb-bdd  |     when_wrapper.memoryRecall called with args: []
+rubytests-src_ruby_calculator-test-rb-bdd  | then_wrapper.result called with args: ["123"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     then_wrapper.result called with args: ["123"]
+rubytests-src_ruby_calculator-test-rb-bdd  | given_wrapper.Default called with features: ["memory store and recall"]
+rubytests-src_ruby_calculator-test-rb-bdd  |     given_wrapper.Default called with features: ["memory store and recall"]
+rubytests-src_ruby_calculator-test-rb-bdd  | suites_wrapper.Default called with description: Testing Calculator operations
+rubytests-src_ruby_calculator-test-rb-bdd  |     suites_wrapper.Default called with description: Testing Calculator operations
+rubytests-src_ruby_calculator-test-rb-bdd  | Rubeno.initialize: specs generated, count: 1
+rubytests-src_ruby_calculator-test-rb-bdd  | Rubeno.initialize: about to initialize_test_jobs
+rubytests-src_ruby_calculator-test-rb-bdd  | Rubeno.initialize: done
+rubytests-src_ruby_calculator-test-rb-bdd  | Rubeno instance configured successfully
+rubytests-src_ruby_calculator-test-rb-bdd  | Using command-line argument for test resource configuration
+rubytests-src_ruby_calculator-test-rb-bdd  | Config JSON from command line: {"name":"ruby-test","ports":[1111],"fs":"testeranto/reports/ruby","timeout":30000,"retries":0,"environment":{}}
+rubytests-src_ruby_calculator-test-rb-bdd  | receiveTestResourceConfig: called
+rubytests-src_ruby_calculator-test-rb-bdd  |   partialTestResource: {"name":"ruby-test","ports":[1111],"fs":"testeranto/reports/ruby","timeout":30000,"retries":0,"environment":{}}
+rubytests-src_ruby_calculator-test-rb-bdd  |   websocket_port: ipcfile
+rubytests-src_ruby_calculator-test-rb-bdd  | parse_test_resource_config: called with {"name":"ruby-test","ports":[1111],"fs":"testeranto/reports/ruby","timeout":30000,"retries":0,"environment":{}}
+rubytests-src_ruby_calculator-test-rb-bdd  |   Parsed JSON: {"name"=>"ruby-test", "ports"=>[1111], "fs"=>"testeranto/reports/ruby", "timeout"=>30000, "retries"=>0, "environment"=>{}}
+rubytests-src_ruby_calculator-test-rb-bdd  |   config_hash: {"name"=>"ruby-test", "fs"=>"testeranto/reports/ruby", "ports"=>[1111], "timeout"=>30000, "retries"=>0, "environment"=>{}}
+rubytests-src_ruby_calculator-test-rb-bdd  |   test_resource created with fs: testeranto/reports/ruby
+rubytests-src_ruby_calculator-test-rb-bdd  |   test_resource_config.fs: testeranto/reports/ruby
+rubytests-src_ruby_calculator-test-rb-bdd  |   test_resource_config.name: ruby-test
+rubytests-src_ruby_calculator-test-rb-bdd  |   PM_Ruby created
+rubytests-src_ruby_calculator-test-rb-bdd  |   Number of test jobs: 1
+rubytests-src_ruby_calculator-test-rb-bdd  |   Processing job 0
+rubytests-src_ruby_calculator-test-rb-bdd  |     Job 0 result: fails=1, features=6, artifacts=0
+rubytests-src_ruby_calculator-test-rb-bdd  |   Total fails: 1
+rubytests-src_ruby_calculator-test-rb-bdd  |   All features: ["pressing nothing, the display is empty", "entering a number puts it on the display", "entering multiple digits concatenates them", "addition expression is displayed correctly", "simple addition calculation", "memory store and recall"]
+rubytests-src_ruby_calculator-test-rb-bdd  |   All artifacts: []
+rubytests-src_ruby_calculator-test-rb-bdd  |   Total tests: 6
+rubytests-src_ruby_calculator-test-rb-bdd  | write_tests_json: starting
+rubytests-src_ruby_calculator-test-rb-bdd  |   test_resource_config.fs: testeranto/reports/ruby
+rubytests-src_ruby_calculator-test-rb-bdd  |   total_fails: 1
+rubytests-src_ruby_calculator-test-rb-bdd  |   features count: 6
+rubytests-src_ruby_calculator-test-rb-bdd  |   artifacts count: 0
+rubytests-src_ruby_calculator-test-rb-bdd  |   total_tests: 6
+rubytests-src_ruby_calculator-test-rb-bdd  |   test_job_obj keys: [:name, :givens, :fails, :failed, :features, :artifacts]
+rubytests-src_ruby_calculator-test-rb-bdd  |   fs_path: testeranto/reports/ruby
+rubytests-src_ruby_calculator-test-rb-bdd  |   fs_path class: String
+rubytests-src_ruby_calculator-test-rb-bdd  |   fs_path after conversion: testeranto/reports/ruby
+rubytests-src_ruby_calculator-test-rb-bdd  |   report_json_path: testeranto/reports/ruby/tests.json
+rubytests-src_ruby_calculator-test-rb-bdd  |   absolute report_json_path: /workspace/testeranto/reports/ruby/tests.json
+rubytests-src_ruby_calculator-test-rb-bdd  |   Current directory: /workspace
+rubytests-src_ruby_calculator-test-rb-bdd  |   dir_path: testeranto/reports/ruby
+rubytests-src_ruby_calculator-test-rb-bdd  |   Dir.exist?(dir_path): true
+rubytests-src_ruby_calculator-test-rb-bdd  |   Directory created or already exists
+rubytests-src_ruby_calculator-test-rb-bdd  |   Writing JSON to file...
+rubytests-src_ruby_calculator-test-rb-bdd  |   File.write succeeded
+rubytests-src_ruby_calculator-test-rb-bdd  |   File exists? true
+rubytests-src_ruby_calculator-test-rb-bdd  |   File size: 7573
+rubytests-src_ruby_calculator-test-rb-bdd  | tests.json written to: testeranto/reports/ruby/tests.json
+rubytests-src_ruby_calculator-test-rb-bdd  |   test_job_obj: {:name=>"Testing Calculator operations", :givens=>[{:key=>"testEmptyDisplay", :whens=>[], :thens=>[{:name=>"result", :error=>false, :artifacts=>[], :status=>true}], :error=>nil, :failed=>false, :features=>["pressing nothing, the display is empty"], :artifacts=>[], :status=>true}, {:key=>"testSingleDigit", :whens=>[{:name=>"press", :status=>true, :error=>nil, :artifacts=>[]}], :thens=>[{:name=>"result", :error=>false, :artifacts=>[], :status=>true}], :error=>nil, :failed=>false, :features=>["entering a number puts it on the display"], :artifacts=>[], :status=>true}, {:key=>"testMultipleDigits", :whens=>[{:name=>"press", :status=>true, :error=>nil, :artifacts=>[]}, {:name=>"press", :status=>true, :error=>nil, :artifacts=>[]}], :thens=>[{:name=>"result", :error=>false, :artifacts=>[], :status=>true}], :error=>nil, :failed=>false, :features=>["entering multiple digits concatenates them"], :artifacts=>[], :status=>true}, {:key=>"testAdditionExpression", :whens=>[{:name=>"press", :status=>true, :error=>nil, :artifacts=>[]}, {:name=>"press", :status=>true, :error=>nil, :artifacts=>[]}, {:name=>"press", :status=>true, :error=>nil, :artifacts=>[]}], :thens=>[{:name=>"result", :error=>false, :artifacts=>[], :status=>true}], :error=>nil, :failed=>false, :features=>["addition expression is displayed correctly"], :artifacts=>[], :status=>true}, {:key=>"testSimpleAddition", :whens=>[{:name=>"press", :status=>true, :error=>nil, :artifacts=>[]}, {:name=>"press", :status=>true, :error=>nil, :artifacts=>[]}, {:name=>"press", :status=>true, :error=>nil, :artifacts=>[]}, {:name=>"press", :status=>true, :error=>nil, :artifacts=>[]}, {:name=>"press", :status=>true, :error=>nil, :artifacts=>[]}, {:name=>"enter", :status=>true, :error=>nil, :artifacts=>[]}], :thens=>[{:name=>"result", :error=>false, :artifacts=>[], :status=>true}], :error=>nil, :failed=>false, :features=>["simple addition calculation"], :artifacts=>[], :status=>true}, {:key=>"testMemoryStoreRecall", :whens=>[{:name=>"press", :status=>true, :error=>nil, :artifacts=>[]}, {:name=>"press", :status=>true, :error=>nil, :artifacts=>[]}, {:name=>"press", :status=>true, :error=>nil, :artifacts=>[]}, {:name=>"memoryStore", :status=>true, :error=>nil, :artifacts=>[]}, {:name=>"press", :status=>true, :error=>nil, :artifacts=>[]}, {:name=>"memoryRecall", :status=>true, :error=>nil, :artifacts=>[]}], :thens=>[{:name=>"result", :error=>true, :artifacts=>[], :status=>false}], :error=>[#<RuntimeError: Expected display '123', got '123.0'>, ["/workspace/src/ruby/Calculator-test.rb:63:in `block (2 levels) in <top (required)>'", "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/base_then.rb:34:in `test'", "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/base_given.rb:104:in `block in give'", "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/base_given.rb:102:in `each'", "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/base_given.rb:102:in `each_with_index'", "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/base_given.rb:102:in `give'", "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/base_suite.rb:65:in `block in run'", "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/base_suite.rb:63:in `each'", "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/base_suite.rb:63:in `run'", "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/rubeno.rb:177:in `run_test_job'", "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/rubeno.rb:236:in `block in receiveTestResourceConfig'", "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/rubeno.rb:232:in `each'", "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/rubeno.rb:232:in `each_with_index'", "/usr/local/bundle/gems/testeranto.rubeno-0.1.7/lib/rubeno.rb:232:in `receiveTestResourceConfig'", "/workspace/src/ruby/Calculator-test.rb:146:in `<top (required)>'", "testeranto/bundles/rubytests/src/ruby/Calculator-test.rb:11:in `load'", "testeranto/bundles/rubytests/src/ruby/Calculator-test.rb:11:in `<main>'"]], :failed=>true, :features=>["memory store and recall"], :artifacts=>[], :status=>true}], :fails=>1, :failed=>true, :features=>["pressing nothing, the display is empty", "entering a number puts it on the display", "entering multiple digits concatenates them", "addition expression is displayed correctly", "simple addition calculation", "memory store and recall"], :artifacts=>[]}
+rubytests-src_ruby_calculator-test-rb-bdd  |   Returning IFinalResults
+rubytests-src_ruby_calculator-test-rb-bdd  | Tests completed with 1 failures
+rubytests-src_ruby_calculator-test-rb-bdd  | Result features: ["pressing nothing, the display is empty", "entering a number puts it on the display", "entering multiple digits concatenates them", "addition expression is displayed correctly", "simple addition calculation", "memory store and recall"]
+rubytests-src_ruby_calculator-test-rb-bdd  | Result artifacts: []
+rubytests-src_ruby_calculator-test-rb-bdd  | Result failed?: true

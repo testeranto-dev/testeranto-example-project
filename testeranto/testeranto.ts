@@ -12,6 +12,7 @@ export const golangciLintCommand = (files: string[]): string => {
   // but '--include' ensures it only outputs issues for your list.
   return `golangci-lint run ./... --include "^(${pattern})$" --issues-exit-code=0`;
 };
+
 const config: ITestconfigV2 = {
   featureIngestor: function (s: string): Promise<string> {
     throw new Error("Function not implemented.");
@@ -22,7 +23,9 @@ const config: ITestconfigV2 = {
     rubytests: (
       {
         runtime: "ruby",
-        tests: ["src/ruby/Calculator-test.rb"],
+        tests: [
+          // "src/ruby/Calculator-test.rb"
+        ],
         checks: [
           (x) => `bundle exec rubocop ${x.join(' ')}`,
           // (x) => `cat Gemfile`,
@@ -31,73 +34,82 @@ const config: ITestconfigV2 = {
         buildOptions: `testeranto/runtimes/ruby/ruby.rb`
       }
     ),
-    
+
     nodetests: (
       {
         runtime: "node",
-        tests: ["src/ts/Calculator.test.ts"],
+        tests: [
+          // "src/ts/Calculator.test.ts"
+        ],
         checks: [
           (x) => `yarn eslint ${x.join(' ')} `,
           (x) => `yarn tsc --noEmit ${x.join(' ')}`,
         ],
         dockerfile: `testeranto/runtimes/node/node.Dockerfile`,
-        buildOptions: `testeranto/runtimes/node/node.mjs`
+        buildOptions: `testeranto/runtimes/node/node.mjs`,
+        outputs: ["src/ts/Calculator.ts"]
       }
     ),
 
-    // webtests: (
-    //   {
-    //     runtime: "web",
-    //     tests: ["src/Calculator.test.ts"],
-    //     checks: [
-    //       (x) => `yarn eslint`,
-    //       (x) => `yarn tsc --noEmit`,
-    //     ],
-    //     dockerfile: `testeranto/runtimes/web/web.Dockerfile`,
-    //     buildOptions: `testeranto/runtimes/web/web.ts`
-    //   }
-    // ),
+    webtests: (
+      {
+        runtime: "web",
+        tests: ["src/ts/Calculator.test.ts"],
+        checks: [
+          (x) => `yarn eslint ${x.join(' ')} `,
+          (x) => `yarn tsc --noEmit ${x.join(' ')}`,
+        ],
+        dockerfile: `testeranto/runtimes/web/web.Dockerfile`,
+        buildOptions: `testeranto/runtimes/web/web.ts`
+      }
+    ),
 
-    // pythontests: (
-    //   {
-    //     runtime: "python",
-    //     tests: ["src/Calculator.test.py"],
-    //     checks: [
-    //       (x) => `yarn eslint`,
-    //       (x) => `yarn tsc --noEmit`,
-    //     ],
-    //     dockerfile: `testeranto/runtimes/python/python.Dockerfile`,
-    //     buildOptions: `testeranto/runtimes/python/python.ts`
-    //   }
-    // ),
+    pythontests: (
+      {
+        runtime: "python",
+        tests: [
+          // "src/python/Calculator.pitono.test.py"
+        ],
+        checks: [
+          (x) => `yarn eslint`,
+          (x) => `yarn tsc --noEmit`,
+        ],
+        dockerfile: `testeranto/runtimes/python/python.Dockerfile`,
+        buildOptions: `testeranto/runtimes/python/python.py`
+      }
+    ),
 
-    // golangtests: (
-    //   {
-    //     runtime: "golang",
-    //     tests: ["src/Calculator.test.go"],
-    //     checks: [
-    //       (x) => `go tool vet ${x.join(' ')}`,
-    //       golangciLintCommand
-    //     ],
-    //     dockerfile: `testeranto/runtimes/golang/golang.Dockerfile`,
-    //     buildOptions: `testeranto/runtimes/golang/golang.ts`
-    //   }
-    // ),
+    golangtests: (
+      {
+        runtime: "golang",
+        tests: [
+          // "src/golang/cmd/calculator-test/main.go"
+        ],
+        checks: [
+          (x) => `go vet ${x.join(' ')}`,
+          golangciLintCommand
+        ],
+        dockerfile: `testeranto/runtimes/golang/golang.Dockerfile`,
+        buildOptions: `testeranto/runtimes/golang/golang.ts`
+      }
+    ),
 
-    // rusttests: (
-    //   {
-    //     runtime: "rust",
-    //     tests: ["src/Calculator.test.rs"],
-    //     checks: [
-    //       (x) => `yarn eslint`,
-    //       (x) => `yarn tsc --noEmit`,
-    //     ],
-    //     dockerfile: `testeranto/runtimes/rust/rust.Dockerfile`,
-    //     buildOptions: `testeranto/runtimes/rust/rust.ts`
-    //   }
-    // ),
+    rusttests: (
+      {
+        runtime: "rust",
+        tests: [
+          // "src/rust/Calculator.rusto.test.rs"
+        ],
+        checks: [
+          // (x) => `yarn eslint`,
+          // (x) => `yarn tsc --noEmit`,
+        ],
+        dockerfile: `testeranto/runtimes/rust/rust.Dockerfile`,
+        buildOptions: `testeranto/runtimes/rust/rust.ts`
+      }
+    ),
 
-    
+
   },
 
 };

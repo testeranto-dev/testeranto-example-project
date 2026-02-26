@@ -5,8 +5,8 @@ console.log("hello calcualtor test")
 import { Calculator } from "./Calculator.js";
 console.log("hello Calculator", Calculator)
 
-import Tiposkripto from "tiposkripto";
-console.log("hello Tiposkripto", Tiposkripto)
+import Tiposkripto from "testeranto.tiposkripto";
+
 
 import { adapter } from "./Calculator.test.adapter.js";
 import { implementation } from "./Calculator.test.implementation.js";

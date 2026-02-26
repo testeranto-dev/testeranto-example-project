@@ -5,8 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/adamwong246/testeranto/src/golingvu"
-	calculatorlib "example/goLib"
+	"github.com/testeranto-dev/testeranto/src/lib/golingvu"
 )
 
 func main() {

@@ -1,0 +1,15 @@
+pythontests  | [Python Builder] ARGV: ['/workspace/testeranto/python_runtime.py', '/workspace/testeranto/testeranto.ts', '/workspace/testeranto/runtimes/python/python.py', 'pythontests']
+pythontests  | [Python Builder] Project config: /workspace/testeranto/testeranto.ts
+pythontests  | [Python Builder] Python config: /workspace/testeranto/runtimes/python/python.py
+pythontests  | [Python Builder] Test name: pythontests
+pythontests  | [Python Builder] Entry points: []
+pythontests  | [Python Builder] Python builder completed
+
+=== Log started at 2026-02-26T21:48:23.931Z for service python-builder ===
+
+pythontests  | [Python Builder] ARGV: ['/workspace/testeranto/python_runtime.py', '/workspace/testeranto/testeranto.ts', '/workspace/testeranto/runtimes/python/python.py', 'pythontests']
+pythontests  | [Python Builder] Project config: /workspace/testeranto/testeranto.ts
+pythontests  | [Python Builder] Python config: /workspace/testeranto/runtimes/python/python.py
+pythontests  | [Python Builder] Test name: pythontests
+pythontests  | [Python Builder] Entry points: []
+pythontests  | [Python Builder] Python builder completed

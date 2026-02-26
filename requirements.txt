@@ -1,2 +1,2 @@
-# List your project dependencies here
-# e.g., requests==2.25.1
+# Install testeranto-pitono from PyPI
+testeranto-pitono==0.1.24

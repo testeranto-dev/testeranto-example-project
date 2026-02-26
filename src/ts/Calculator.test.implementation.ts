@@ -1,6 +1,6 @@
 import { assert } from "chai";
 
-import { ITestImplementation } from "tiposkripto/types";
+import { ITestImplementation } from "testeranto.tiposkripto/types";
 import { I, O, M } from "./Calculator.test.types.js";
 import { Calculator } from "./Calculator.js";
 

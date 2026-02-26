@@ -2,6 +2,7 @@ require 'json'
 require 'rubeno'
 require_relative './Calculator'
 
+puts "=== Calculator-test.rb loaded ==="
 puts "hello calculator test - using Rubeno"
 
 # Define test implementation
@@ -68,80 +69,52 @@ test_implementation = Rubeno::ITestImplementation.new(
 
 # Define test specification
 test_specification = ->(suites, givens, whens, thens) do
-  # Create a wrapper object that responds to method calls for suites
-  suite_wrapper = Object.new
-  suite_wrapper.define_singleton_method(:Default) do |name, givens_dict|
-    {
-      'name' => name,
-      'givens' => givens_dict
-    }
-  end
-  
-  # Create wrapper objects for givens, whens, thens
-  given_wrapper = Object.new
-  given_wrapper.define_singleton_method(:Default) do |features, when_steps, then_steps, initial_values|
-    givens['Default'].call(features, when_steps, then_steps, initial_values)
-  end
-  
-  when_wrapper = Object.new
-  test_implementation.whens.each do |key, proc|
-    when_wrapper.define_singleton_method(key) do |*args|
-      proc.call(*args)
-    end
-  end
-  
-  then_wrapper = Object.new
-  test_implementation.thens.each do |key, proc|
-    then_wrapper.define_singleton_method(key) do |*args|
-      proc.call(*args)
-    end
-  end
-  
+  # Use the provided wrappers directly
   # Build the test specification
   [
-    suite_wrapper.Default('Testing Calculator operations', {
-      'testEmptyDisplay' => given_wrapper.Default(
+    suites.Default('Testing Calculator operations', {
+      'testEmptyDisplay' => givens.Default(
         ['pressing nothing, the display is empty'],
         [],
-        [then_wrapper.result('')],
+        [thens.result('')],
         nil
       ),
-      'testSingleDigit' => given_wrapper.Default(
+      'testSingleDigit' => givens.Default(
         ['entering a number puts it on the display'],
-        [when_wrapper.press('2')],
-        [then_wrapper.result('2')],
+        [whens.press('2')],
+        [thens.result('2')],
         nil
       ),
-      'testMultipleDigits' => given_wrapper.Default(
+      'testMultipleDigits' => givens.Default(
         ['entering multiple digits concatenates them'],
-        [when_wrapper.press('2'), when_wrapper.press('2')],
-        [then_wrapper.result('22')],
+        [whens.press('2'), whens.press('2')],
+        [thens.result('22')],
         nil
       ),
-      'testAdditionExpression' => given_wrapper.Default(
+      'testAdditionExpression' => givens.Default(
         ['addition expression is displayed correctly'],
-        [when_wrapper.press('2'), when_wrapper.press('+'), when_wrapper.press('3')],
-        [then_wrapper.result('2+3')],
+        [whens.press('2'), whens.press('+'), whens.press('3')],
+        [thens.result('2+3')],
         nil
       ),
-      'testSimpleAddition' => given_wrapper.Default(
+      'testSimpleAddition' => givens.Default(
         ['simple addition calculation'],
         [
-          when_wrapper.press('2'), when_wrapper.press('3'), when_wrapper.press('+'),
-          when_wrapper.press('4'), when_wrapper.press('5'), when_wrapper.enter()
+          whens.press('2'), whens.press('3'), whens.press('+'),
+          whens.press('4'), whens.press('5'), whens.enter()
         ],
-        [then_wrapper.result('68')],
+        [thens.result('68')],
         nil
       ),
-      'testMemoryStoreRecall' => given_wrapper.Default(
+      'testMemoryStoreRecall' => givens.Default(
         ['memory store and recall'],
         [
-          when_wrapper.press('1'), when_wrapper.press('2'), when_wrapper.press('3'),
-          when_wrapper.memoryStore(), 
-          when_wrapper.press('C'), 
-          when_wrapper.memoryRecall()
+          whens.press('1'), whens.press('2'), whens.press('3'),
+          whens.memoryStore(), 
+          whens.press('C'), 
+          whens.memoryRecall()
         ],
-        [then_wrapper.result('123')],
+        [thens.result('123')],
         nil
       )
     })
@@ -162,20 +135,43 @@ Rubeno.set_default_instance(rubeno_instance)
 
 puts "Rubeno instance configured successfully"
 
-# If this file is being run directly, execute the tests
-if __FILE__ == $0
-  # Rubeno.main expects command line arguments
-  # The first argument should be a JSON string with test resource configuration
-  config = {
-    name: 'calculator-test',
-    fs: '.',
-    ports: [],
-    timeout: 30000,
-    retries: 0,
-    environment: {}
-  }.to_json
+# Check if a test resource configuration was passed via command line
+if ARGV[0] && !ARGV[0].empty?
+  puts "Using command-line argument for test resource configuration"
+  config_json = ARGV[0]
+  puts "Config JSON from command line: #{config_json}"
   
-  # Call Rubeno.main with the configuration
-  ARGV.replace([config])
-  Rubeno.main
+  # Run tests with the provided configuration
+  begin
+    result = rubeno_instance.receiveTestResourceConfig(config_json)
+    puts "Tests completed with #{result.fails} failures"
+    puts "Result features: #{result.features}"
+    puts "Result artifacts: #{result.artifacts}"
+    puts "Result failed?: #{result.failed}"
+  rescue => e
+    puts "Error running tests: #{e.message}"
+    puts e.backtrace
+  end
+  
+  # Exit after running tests (don't continue to Rubeno.main)
+  exit(result.fails) if defined?(result) && result.respond_to?(:fails)
+else
+  puts "No command-line argument provided. Tests will be run via Rubeno.main if executed directly."
+  
+  # If this file is being run directly (not loaded), call Rubeno.main
+  # But we need to provide a default config
+  if __FILE__ == $0
+    puts "Running via __FILE__ == $0, calling Rubeno.main with default config"
+    # Create a default test resource configuration
+    default_config = {
+      name: 'calculator-test',
+      fs: '.',
+      ports: [],
+      timeout: 30000,
+      retries: 0,
+      environment: {}
+    }.to_json
+    ARGV.replace([default_config])
+    Rubeno.main
+  end
 end

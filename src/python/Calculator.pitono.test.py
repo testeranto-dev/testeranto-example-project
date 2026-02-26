@@ -13,10 +13,6 @@ print("This is a simple console message.")
 current_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, current_dir)
 
-# Add the parent directory to find src/lib/pitono
-project_root = os.path.abspath(os.path.join(current_dir, '..'))
-sys.path.insert(0, project_root)
-
 # Import Calculator from the current directory
 from Calculator import Calculator
 
@@ -39,25 +35,22 @@ adapter_module = importlib.util.module_from_spec(adapter_spec)
 adapter_spec.loader.exec_module(adapter_module)
 SimpleTestAdapter = adapter_module.SimpleTestAdapter
 
-# Try to import pitono from src/lib/pitono
+# Import from installed testeranto-pitono package
+# The distribution name is "testeranto-pitono" which becomes "testeranto_pitono" when imported
 try:
-    # Add src/lib to the path
-    src_lib_path = os.path.join(project_root, 'src/lib')
-    sys.path.insert(0, src_lib_path)
-    
-    from pitono.Pitono import Pitono, set_default_instance, main
+    from testeranto_pitono import Pitono, set_default_instance, main
+    print("Successfully imported testeranto_pitono from PyPI package 'testeranto-pitono'")
 except ImportError as e:
-    print(f"Error importing pitono: {e}")
-    print("Trying alternative import path...")
-    # Try to import directly
-    try:
-        # Add the pitono directory directly
-        pitono_dir = os.path.join(project_root, 'src/lib/pitono')
-        sys.path.insert(0, pitono_dir)
-        from Pitono import Pitono, set_default_instance, main
-    except ImportError as e2:
-        print(f"Failed to import pitono: {e2}")
-        sys.exit(1)
+    print(f"Error importing testeranto_pitono: {e}")
+    print("\nThe 'testeranto-pitono' package is not installed or has import issues.")
+    print("\nTo install from local source:")
+    print("  cd testerantoV2/src/lib/pitono/")
+    print("  pip install -e .")
+    print("\nOr from PyPI:")
+    print("  pip install testeranto-pitono==0.1.15")
+    print("\nAfter installation, verify with:")
+    print("  python -c 'import testeranto_pitono; print(\"Import successful\")'")
+    sys.exit(1)
 
 # Create a mock input value (not used in our case)
 mock_input = None
@@ -91,9 +84,11 @@ if __name__ == "__main__":
         print("Running in standalone mode...")
 
         # Create a simple test resource configuration
+        # The fs path should include the test filename as a directory (without .py extension)
+        test_name = "Calculator.pitono.test"
         test_resource_config = {
             "name": "local-test",
-            "fs": "testeranto/bundles/allTests/python/Calculator.pitono.test.py",
+            "fs": f"testeranto/reports/python/{test_name}",
             "ports": [8080],
             "browser_ws_endpoint": None,
             "timeout": 30000,

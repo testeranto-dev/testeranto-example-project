@@ -1,5 +1,0 @@
-golangtests-src_calculator-test-go-bdd  | package example/cmd/calculator-test is not in std (/usr/local/go/src/example/cmd/calculator-test)
-
-=== Log started at 2026-02-04T22:31:47.403Z for service golangtests-src_calculator-test-go-bdd ===
-
-golangtests-src_calculator-test-go-bdd  | package example/cmd/calculator-test is not in std (/usr/local/go/src/example/cmd/calculator-test)

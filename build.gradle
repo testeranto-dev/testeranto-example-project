@@ -7,11 +7,14 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven {
+        url = uri("https://repo.maven.apache.org/maven2")
+    }
 }
 
 dependencies {
-    // Add your project dependencies here
     testImplementation 'junit:junit:4.13.2'
+    implementation 'com.testeranto:testeranto.kafe:0.1.5'
 }
 
 test {
