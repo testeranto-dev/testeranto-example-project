@@ -22,9 +22,9 @@ var CalculatorSpecification golingvu.ITestSpecification = func(
 	testEmptyDisplayFunc := givensMap["testEmptyDisplay"].(func(string, []string, []*golingvu.BaseWhen, []*golingvu.BaseThen, interface{}, interface{}) *golingvu.BaseGiven)
 	testSingleDigitFunc := givensMap["testSingleDigit"].(func(string, []string, []*golingvu.BaseWhen, []*golingvu.BaseThen, interface{}, interface{}) *golingvu.BaseGiven)
 	
-	pressFunc := whensMap["press"].(func(interface{}) *golingvu.BaseWhen)
-	enterFunc := whensMap["enter"].(func(interface{}) *golingvu.BaseWhen)
-	resultFunc := thensMap["result"].(func(interface{}) *golingvu.BaseThen)
+	pressFunc := whensMap["press"].(func(...interface{}) *golingvu.BaseWhen)
+	enterFunc := whensMap["enter"].(func(...interface{}) *golingvu.BaseWhen)
+	resultFunc := thensMap["result"].(func(...interface{}) *golingvu.BaseThen)
 	// Use the functions to avoid "declared and not used" error
 	_ = pressFunc
 	_ = enterFunc
@@ -37,7 +37,7 @@ var CalculatorSpecification golingvu.ITestSpecification = func(
 			whensList = append(whensList, pressFunc(button))
 		}
 		if useEnter {
-			whensList = append(whensList, enterFunc(nil))
+			whensList = append(whensList, enterFunc())
 		}
 		
 		thensList := []*golingvu.BaseThen{

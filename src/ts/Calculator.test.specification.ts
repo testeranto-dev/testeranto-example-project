@@ -1,4 +1,4 @@
-import { ITestSpecification } from "testeranto.tiposkripto/types";
+import { ITestSpecification } from "testeranto.tiposkripto/CoreTypes";
 
 import { I, O } from "./Calculator.test.types.js";
 

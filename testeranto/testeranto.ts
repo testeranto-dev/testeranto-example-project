@@ -20,47 +20,68 @@ const config: ITestconfigV2 = {
 
   runtimes: {
 
+    javatests: {
+      runtime: "java",
+      tests: ["example/Calculator-test.java"],
+      checks: [
+        (x: string[]) => `javac -cp ".:lib/*" ${x.join(' ')}`,
+      ],
+      dockerfile: `testeranto/runtimes/java/java.Dockerfile`,
+      buildOptions: `testeranto/runtimes/java/java.java`,
+      outputs: [],
+      buildKitOptions: {
+        cacheMounts: ["/root/.m2", "/root/.gradle"]
+      }
+    },
+
     rubytests: (
       {
         runtime: "ruby",
         tests: [
-          // "src/ruby/Calculator-test.rb"
+          "src/ruby/Calculator-test.rb"
         ],
         checks: [
           (x) => `bundle exec rubocop ${x.join(' ')}`,
           // (x) => `cat Gemfile`,
         ],
         dockerfile: `testeranto/runtimes/ruby/ruby.Dockerfile`,
-        buildOptions: `testeranto/runtimes/ruby/ruby.rb`
+        buildOptions: `testeranto/runtimes/ruby/ruby.rb`,
+        buildKitOptions: {
+          // Single-stage Dockerfile, no targetStage needed
+        }
       }
     ),
 
     nodetests: (
       {
         runtime: "node",
-        tests: [
-          // "src/ts/Calculator.test.ts"
-        ],
+        tests: ["src/ts/Calculator.test.node.ts"],
         checks: [
           (x) => `yarn eslint ${x.join(' ')} `,
           (x) => `yarn tsc --noEmit ${x.join(' ')}`,
         ],
         dockerfile: `testeranto/runtimes/node/node.Dockerfile`,
         buildOptions: `testeranto/runtimes/node/node.mjs`,
-        outputs: ["src/ts/Calculator.ts"]
+        buildKitOptions: {
+          // Single-stage Dockerfile, no targetStage needed
+        }
+        // outputs: ["src/ts/Calculator.ts"]
       }
     ),
 
     webtests: (
       {
         runtime: "web",
-        tests: ["src/ts/Calculator.test.ts"],
+        tests: ["src/ts/Calculator.test.web.ts"],
         checks: [
           (x) => `yarn eslint ${x.join(' ')} `,
           (x) => `yarn tsc --noEmit ${x.join(' ')}`,
         ],
         dockerfile: `testeranto/runtimes/web/web.Dockerfile`,
-        buildOptions: `testeranto/runtimes/web/web.ts`
+        buildOptions: `testeranto/runtimes/web/web.ts`,
+        buildKitOptions: {
+          // Single-stage Dockerfile, no targetStage needed
+        }
       }
     ),
 
@@ -68,14 +89,17 @@ const config: ITestconfigV2 = {
       {
         runtime: "python",
         tests: [
-          // "src/python/Calculator.pitono.test.py"
+          "src/python/Calculator.pitono.test.py"
         ],
         checks: [
           (x) => `yarn eslint`,
           (x) => `yarn tsc --noEmit`,
         ],
         dockerfile: `testeranto/runtimes/python/python.Dockerfile`,
-        buildOptions: `testeranto/runtimes/python/python.py`
+        buildOptions: `testeranto/runtimes/python/python.py`,
+        buildKitOptions: {
+          // Single-stage Dockerfile, no targetStage needed
+        }
       }
     ),
 
@@ -83,14 +107,17 @@ const config: ITestconfigV2 = {
       {
         runtime: "golang",
         tests: [
-          // "src/golang/cmd/calculator-test/main.go"
+          "src/golang/cmd/calculator-test/main.go"
         ],
         checks: [
           (x) => `go vet ${x.join(' ')}`,
           golangciLintCommand
         ],
         dockerfile: `testeranto/runtimes/golang/golang.Dockerfile`,
-        buildOptions: `testeranto/runtimes/golang/golang.ts`
+        buildOptions: `testeranto/runtimes/golang/golang.ts`,
+        buildKitOptions: {
+          // Single-stage Dockerfile, no targetStage needed
+        }
       }
     ),
 
@@ -98,14 +125,17 @@ const config: ITestconfigV2 = {
       {
         runtime: "rust",
         tests: [
-          // "src/rust/Calculator.rusto.test.rs"
+          "src/rust/Calculator.rusto.test.rs"
         ],
         checks: [
           // (x) => `yarn eslint`,
           // (x) => `yarn tsc --noEmit`,
         ],
         dockerfile: `testeranto/runtimes/rust/rust.Dockerfile`,
-        buildOptions: `testeranto/runtimes/rust/rust.ts`
+        buildOptions: `testeranto/runtimes/rust/rust.ts`,
+        buildKitOptions: {
+          // Single-stage Dockerfile, no targetStage needed
+        }
       }
     ),
 

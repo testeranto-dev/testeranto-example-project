@@ -161,7 +161,10 @@ def compute_files_hash(files)
   hash.hexdigest
 end
 
-entryPoints.each do |entry_point|
+  # Create a hash to store all tests' information
+  all_tests_info = {}
+  
+  entryPoints.each do |entry_point|
     # Only process test files (files ending with .test.rb, .spec.rb, etc.)
     # next unless entry_point =~ /\.(test|spec)\.rb$/
     
@@ -177,22 +180,20 @@ entryPoints.each do |entry_point|
     workspace_root = '/workspace'
     relative_files = to_workspace_relative_paths(all_dependencies, workspace_root)
     
-    # Create output directory structure similar to Node builder
-    output_base_name = File.basename(entry_point_path, '.rb')
-    input_files_path = "testeranto/bundles/#{test_name}/#{entry_point}-inputFiles.json"
-    
-    # Ensure directory exists
-    FileUtils.mkdir_p(File.dirname(input_files_path))
-    
-    # Write the input files JSON
-    File.write(input_files_path, JSON.pretty_generate(relative_files))
-    puts "Wrote #{relative_files.length} input files to #{input_files_path}"
-    
     # Compute hash of input files
     files_hash = compute_files_hash(all_dependencies)
     
+    # Store test information
+    all_tests_info[entry_point] = {
+      "hash" => files_hash,
+      "files" => relative_files
+    }
+    
     # Create the dummy bundle file that requires the original test file
     bundle_path = "testeranto/bundles/#{test_name}/#{entry_point}"
+    
+    # Ensure directory exists
+    FileUtils.mkdir_p(File.dirname(bundle_path))
     
     # Write a dummy file that loads and executes the original test file
     # Using load ensures the file is executed every time
@@ -218,6 +219,12 @@ entryPoints.each do |entry_point|
     File.write(bundle_path, dummy_content)
     puts "Created dummy bundle file at #{bundle_path}"
   end
+  
+  # Write single inputFiles.json for all tests
+  input_files_path = "testeranto/bundles/#{test_name}/inputFiles.json"
+  FileUtils.mkdir_p(File.dirname(input_files_path))
+  File.write(input_files_path, JSON.pretty_generate(all_tests_info))
+  puts "Wrote inputFiles.json for #{all_tests_info.size} tests to #{input_files_path}"
   
 
 

@@ -1,9 +1,8 @@
-rubytests  | hello ruby builder!
-rubytests  | ["/workspace/testeranto/testeranto.ts", "/workspace/testeranto/runtimes/ruby/ruby.rb", "rubytests"]
-rubytests  | Ruby builder completed
+=== Log started at 2026-03-14T11:23:53.953Z for service ruby-builder ===
 
-=== Log started at 2026-02-26T21:48:20.018Z for service ruby-builder ===
-
-rubytests  | hello ruby builder!
-rubytests  | ["/workspace/testeranto/testeranto.ts", "/workspace/testeranto/runtimes/ruby/ruby.rb", "rubytests"]
-rubytests  | Ruby builder completed
+ruby-builder  | hello ruby builder!
+ruby-builder  | ["/workspace/testeranto/testeranto.ts", "/workspace/testeranto/runtimes/ruby/ruby.rb", "rubytests", "src/ruby/Calculator-test.rb"]
+ruby-builder  | Processing Ruby test: src/ruby/Calculator-test.rb
+ruby-builder  | Created dummy bundle file at testeranto/bundles/rubytests/src/ruby/Calculator-test.rb
+ruby-builder  | Wrote inputFiles.json for 1 tests to testeranto/bundles/rubytests/inputFiles.json
+ruby-builder  | Ruby builder completed

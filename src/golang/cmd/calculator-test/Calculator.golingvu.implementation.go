@@ -4,7 +4,6 @@ import (
 	"fmt"
 
 	"github.com/testeranto-dev/testeranto/src/lib/golingvu"
-	calculator "testeranto-example-project/pkg/calculator"
 )
 
 // Implementation for Calculator tests
@@ -246,7 +245,7 @@ func NewCalculatorTestImplementation() golingvu.ITestImplementation {
 			return &golingvu.BaseWhen{
 				Key: "press",
 				WhenCB: func(store, testResource, pm interface{}) (interface{}, error) {
-					if calc, ok := store.(*calculator.Calculator); ok {
+					if calc, ok := store.(*Calculator); ok {
 						calc.Press(button)
 						return calc, nil
 					}
@@ -258,7 +257,7 @@ func NewCalculatorTestImplementation() golingvu.ITestImplementation {
 			return &golingvu.BaseWhen{
 				Key: "enter",
 				WhenCB: func(store, testResource, pm interface{}) (interface{}, error) {
-					if calc, ok := store.(*calculator.Calculator); ok {
+					if calc, ok := store.(*Calculator); ok {
 						calc.Enter()
 						return calc, nil
 					}
@@ -274,7 +273,7 @@ func NewCalculatorTestImplementation() golingvu.ITestImplementation {
 			return &golingvu.BaseThen{
 				Key: "result",
 				ThenCB: func(store, testResource, pm interface{}) (interface{}, error) {
-					if calc, ok := store.(*calculator.Calculator); ok {
+					if calc, ok := store.(*Calculator); ok {
 						actual := calc.GetDisplay()
 						if actual != expected {
 							return nil, fmt.Errorf("expected %s, got %s", expected, actual)

@@ -21,7 +21,7 @@ export class Calculator {
   }
 
   memoryRecall(): void {
-    const memoryValue = this.getValue("meemory") || 0;
+    const memoryValue = this.getValue("memory") || 0;
     this.display = memoryValue.toString();
   }
 

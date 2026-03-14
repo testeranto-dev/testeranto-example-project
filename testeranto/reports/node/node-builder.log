@@ -1,16 +1,35 @@
-nodetests  | yarn run v1.22.22
+=== Log started at 2026-03-14T11:23:54.513Z for service node-builder ===
 
-=== Log started at 2026-02-26T21:48:20.932Z for service node-builder ===
-
-nodetests  | yarn run v1.22.22
-nodetests  | $ /workspace/node_modules/.bin/tsx /workspace/testeranto/node_runtime.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
-nodetests  | [NODE BUILDER] hello:  /usr/local/bin/node,/workspace/testeranto/node_runtime.ts,/workspace/testeranto/testeranto.ts,/workspace/testeranto/runtimes/node/node.mjs,nodetests
-nodetests  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
-nodetests  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
-nodetests  | [NODE BUILDER] testName:  nodetests
-nodetests  | [NODE BUILDER] is now bundling:  nodetests
-nodetests  | node > build ended with 0 errors
-nodetests  | Done in 0.52s.
-[Knodetests exited with code 0
-
-=== Log ended at 2026-02-26T21:48:21.633Z, process exited with code 0 ===
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx /workspace/testeranto/node_runtime.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests
+node-builder  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+node-builder  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+node-builder  | [NODE BUILDER] testName:  nodetests
+node-builder  | [NODE BUILDER] is now bundling:  nodetests
+node-builder  | [NODE BUILDER] Running in dev mode - starting watch mode
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors
+node-builder  | [node Builder] Skipping non-test entryPoint: src/ts/Calculator.test.node.ts
+node-builder  | [node Builder] Wrote inputFiles.json for 0 tests to testeranto/bundles/nodetests/inputFiles.json
+node-builder  | [NODE BUILDER] Watch mode active - waiting for file changes...
+node-builder  | NODE BUILDER: Error: TypeError: ctx.on is not a function
+node-builder  |     at startBundling (/workspace/testeranto/node_runtime.ts:243:9)
+node-builder  |     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+node-builder  |     at async main (/workspace/testeranto/node_runtime.ts:311:5)
+node-builder  | [NODE BUILDER] Error occurred but keeping process alive in dev mode
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors

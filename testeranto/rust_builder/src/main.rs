@@ -47,6 +47,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let bundles_dir = workspace.join("testeranto/bundles").join(test_name);
     fs::create_dir_all(&bundles_dir)?;
     
+    // Create a map to store all tests' information
+    use std::collections::HashMap;
+    let mut all_tests_info: HashMap<String, serde_json::Value> = HashMap::new();
+    
     // Process each entry point
     for entry_point in entry_points {
         println!("\n📦 Processing Rust test: {}", entry_point);
@@ -71,12 +75,25 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         // Replace dots with underscores to make a valid Rust crate name
         let base_name: String = base_name_with_dots.replace('.', "_");
         
-        // Create inputFiles.json
+        // Collect input files
         let input_files = collect_input_files(entry_point_path);
-        let input_files_basename = entry_point.replace("/", "_").replace("\\", "_") + "-inputFiles.json";
-        let input_files_path = bundles_dir.join(input_files_basename);
-        fs::write(&input_files_path, serde_json::to_string_pretty(&input_files)?)?;
-        println!("  ✅ Created inputFiles.json");
+        
+        // Compute hash (simplified)
+        use std::collections::hash_map::DefaultHasher;
+        use std::hash::{Hash, Hasher};
+        let mut hasher = DefaultHasher::new();
+        for file in &input_files {
+            file.hash(&mut hasher);
+        }
+        let hash = hasher.finish();
+        let hash_str = format!("{:x}", hash);
+        
+        // Store test information
+        let test_info = serde_json::json!({
+            "hash": hash_str,
+            "files": input_files
+        });
+        all_tests_info.insert(entry_point.to_string(), test_info);
         
         // Create a temporary directory for this test
         let temp_dir = workspace.join("target").join("testeranto_temp").join(&base_name);
@@ -166,6 +183,11 @@ exec "{}/{}" "$@"
         // Clean up: remove temporary directory
         let _ = fs::remove_dir_all(temp_dir);
     }
+    
+    // Write single inputFiles.json for all tests
+    let input_files_path = bundles_dir.join("inputFiles.json");
+    fs::write(&input_files_path, serde_json::to_string_pretty(&all_tests_info)?)?;
+    println!("\n✅ Created inputFiles.json at {:?} with {} tests", input_files_path, all_tests_info.len());
     
     println!("\n🎉 Rust builder completed successfully");
     Ok(())

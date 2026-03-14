@@ -1,0 +1,5 @@
+=== Log started at 2026-03-14T11:24:16.642Z for service golangtests-src_golang_cmd_calculator-test_main-go-bdd ===
+
+golangtests-src_golang_cmd_calculator-test_main-go-bdd  | Running Calculator BDD tests with Golingvu...
+golangtests-src_golang_cmd_calculator-test_main-go-bdd  | writing tests.json to ->: testeranto/reports/golangtests/tests.json
+golangtests-src_golang_cmd_calculator-test_main-go-bdd  | All tests passed: 1 tests executed successfully

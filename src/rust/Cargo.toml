@@ -1,0 +1,36 @@
+[package]
+name = "calculator"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <you@example.com>"]
+description = "A calculator implementation for testing with Testeranto"
+license = "MIT"
+repository = ""
+readme = "README.md"
+
+# The library crate containing the Calculator implementation
+[lib]
+name = "calculator"
+path = "src/lib.rs"
+
+# Main application binary
+[[bin]]
+name = "calculator_app"
+path = "src/bin/main.rs"
+
+# Testeranto test binary - separate from regular tests
+[[bin]]
+name = "calculator_testeranto_test"
+path = "testeranto/Calculator.rusto.test.rs"
+
+# Dependencies for the library
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+
+# Regular Rust tests (unit and integration)
+[dev-dependencies]
+
+# Testeranto-specific dependencies (only for the testeranto binary)
+# These won't affect the library or main application
+[target.'cfg(testeranto)'.dependencies]
+testeranto_rusto = { path = "../../../testerantoV2/src/lib/rusto" }

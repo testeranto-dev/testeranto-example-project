@@ -3,45 +3,52 @@ import { I } from "./Calculator.test.types.js";
 
 export const adapter: ITestAdapter<I> = {
   beforeAll: async (input, testResource) => {
+    console.log("[adapter] beforeAll called with input:", input);
     return input;
   },
   beforeEach: async (subject, initializer, testResource, initialValues) => {
-    const result = await initializer();
-    return result;
+    console.log("[adapter] beforeEach called with subject:", subject);
+    // The initializer should create and return a Calculator instance
+    const calculator = await initializer();
+    console.log("[adapter] beforeEach created calculator:", calculator);
+    if (!calculator) {
+      throw new Error("Initializer failed to create a Calculator instance");
+    }
+    return calculator;
   },
   andWhen: async (store, whenCB, testResource) => {
-    const transform = whenCB;
-    const result = transform(store);
-    return result;
+    console.log("[adapter] andWhen called with store:", store);
+    if (!store) {
+      throw new Error("Store is undefined in andWhen");
+    }
+    const updatedStore = whenCB(store);
+    console.log("[adapter] andWhen updated store:", updatedStore);
+    // Ensure we always return a valid store
+    return updatedStore || store;
   },
   butThen: async (store, thenCB, testResource) => {
+    console.log("[adapter] butThen called with store:", store);
+    if (!store) {
+      throw new Error("Store is undefined in butThen");
+    }
+    // Call the assertion function with the store
+    // This will perform the assertion (e.g., assert.equal)
+    console.log("[adapter] butThen calling thenCB with store");
     thenCB(store);
-
-    const display = store.getDisplay();
-
-    return display;
+    
+    // Return the store itself
+    return store;
   },
   afterEach: async (store, key) => {
+    console.log("[adapter] afterEach called with store:", store);
     return store;
   },
   afterAll: async (store) => {
-    const root = await navigator.storage.getDirectory();
-
-    // 1. Create (or get) a file handle
-    const fileHandle = await root.getFileHandle("data.txt", { create: true });
-
-    // 2. Create a writable stream
-    const writable = await fileHandle.createWritable();
-
-    // 3. Write data (strings, Blobs, or ArrayBuffers)
-    await writable.write("Hello from OPFS 2026!");
-
-    // 4. Close the stream to save changes
-    await writable.close();
-
+    console.log("afterAll called, but skipping web-only storage operations in Node.js");
     return store;
   },
   assertThis: (actual: string) => {
+    console.log("[adapter] assertThis called with actual:", actual);
     return actual;
   },
 };

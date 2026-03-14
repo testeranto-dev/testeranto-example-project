@@ -1,8 +1,6 @@
 package main
 
 import (
-	calculator "testeranto-example-project/pkg/calculator"
-
 	"github.com/testeranto-dev/testeranto/src/lib/golingvu"
 )
 
@@ -52,7 +50,7 @@ func (a *SimpleTestAdapter) AssertThis(t interface{}) bool {
 // BeforeAll implements golingvu.ITestAdapter.
 func (a *SimpleTestAdapter) BeforeAll(input interface{}, tr golingvu.ITTestResourceConfiguration, pm interface{}) interface{} {
 	// Initialize before all tests - create a new calculator
-	return calculator.NewCalculator()
+	return NewCalculator()
 }
 
 // BeforeEach implements golingvu.ITestAdapter.
@@ -60,7 +58,7 @@ func (a *SimpleTestAdapter) BeforeEach(subject interface{}, initializer interfac
 	// Initialize before each test - create a new calculator
 	// Since the calculator fields are private, we can't reset them directly
 	// So we return a fresh calculator instance
-	return calculator.NewCalculator()
+	return NewCalculator()
 }
 
 // ButThen implements golingvu.ITestAdapter.

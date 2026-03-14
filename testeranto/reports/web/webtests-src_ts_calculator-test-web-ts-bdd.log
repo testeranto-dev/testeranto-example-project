@@ -1,0 +1,25 @@
+=== Log started at 2026-03-14T11:24:08.632Z for service webtests-src_ts_calculator-test-web-ts-bdd ===
+
+webtests-src_ts_calculator-test-web-ts-bdd  | yarn run v1.22.22
+webtests-src_ts_calculator-test-web-ts-bdd  | $ /workspace/node_modules/.bin/tsx /workspace/testeranto/web_hoist.ts testeranto/bundles/webtests/src/ts/Calculator.test.web.mjs '{"ports":[1111],"fs":"testeranto/reports/webtests"}'
+webtests-src_ts_calculator-test-web-ts-bdd  | [CLIENT] Attempting to reach Chrome service at http://chrome-service:9222/json/version...
+webtests-src_ts_calculator-test-web-ts-bdd  | [CLIENT] HTTP Request Failed: getaddrinfo ENOTFOUND chrome-service
+webtests-src_ts_calculator-test-web-ts-bdd  | /workspace/testeranto/web_hoist.ts:71
+webtests-src_ts_calculator-test-web-ts-bdd  |     throw err;
+webtests-src_ts_calculator-test-web-ts-bdd  |     ^
+webtests-src_ts_calculator-test-web-ts-bdd  | 
+webtests-src_ts_calculator-test-web-ts-bdd  | 
+webtests-src_ts_calculator-test-web-ts-bdd  | Error: getaddrinfo ENOTFOUND chrome-service
+webtests-src_ts_calculator-test-web-ts-bdd  |     at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+webtests-src_ts_calculator-test-web-ts-bdd  |   errno: -3008,
+webtests-src_ts_calculator-test-web-ts-bdd  |   code: 'ENOTFOUND',
+webtests-src_ts_calculator-test-web-ts-bdd  |   syscall: 'getaddrinfo',
+webtests-src_ts_calculator-test-web-ts-bdd  |   hostname: 'chrome-service'
+webtests-src_ts_calculator-test-web-ts-bdd  | }
+webtests-src_ts_calculator-test-web-ts-bdd  | 
+webtests-src_ts_calculator-test-web-ts-bdd  | Node.js v20.19.4
+webtests-src_ts_calculator-test-web-ts-bdd  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+webtests-src_ts_calculator-test-web-ts-bdd  | error Command failed with exit code 1.
+[Kwebtests-src_ts_calculator-test-web-ts-bdd exited with code 1
+
+=== Log ended at 2026-03-14T11:24:09.086Z, process exited with code 0 ===
