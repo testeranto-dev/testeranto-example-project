@@ -71,3 +71,31 @@ class Calculator
     @display
   end
 end
+# Simple Calculator class for Ruby tests
+class Calculator
+  def initialize
+    @display = ""
+  end
+
+  def press(button)
+    if button == 'C'
+      @display = ""
+    else
+      @display += button
+    end
+    self
+  end
+
+  def enter
+    begin
+      @display = eval(@display).to_s
+    rescue
+      @display = "Error"
+    end
+    self
+  end
+
+  def get_display
+    @display
+  end
+end

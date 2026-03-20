@@ -1,14 +1,0 @@
-=== Log started at 2026-03-14T11:23:53.394Z for service java-builder ===
-
-java-builder  | testeranto/java_runtime.java:7: error: class main is public, should be declared in a file named main.java
-java-builder  | public class main {
-java-builder  |        ^
-java-builder  | testeranto/java_runtime.java:153: error: cannot find symbol
-java-builder  |                     FileTime lastModified = Files.getLastModifiedTime(filePath);
-java-builder  |                     ^
-java-builder  |   symbol:   class FileTime
-java-builder  |   location: class main
-java-builder  | 2 errors
-[Kjava-builder exited with code 1
-
-=== Log ended at 2026-03-14T11:23:54.286Z, process exited with code 0 ===

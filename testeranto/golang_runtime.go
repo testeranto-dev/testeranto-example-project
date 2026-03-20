@@ -5,12 +5,12 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-
-	// "log"
 	"os"
 	"os/exec"
 	"path/filepath"
 	"strings"
+	
+	frameworkconverters "src/server/runtimes/golang/framework-converters"
 )
 
 // Package struct maps the fields we need from 'go list'
@@ -203,7 +203,22 @@ func main() {
 			// Continue anyway, as the build might still work
 		}
 
-		// Collect input files in a simple way, similar to rust builder
+		// Use framework converters to detect test type
+		converter := frameworkconverters.DetectFramework(entryPointPath)
+		fmt.Printf("  Detected framework: %s\n", converter.Name())
+		
+		// Run native detection for more detailed analysis
+		detectionResult, err := TranslateNativeTest(entryPointPath)
+		if err != nil {
+			fmt.Printf("  ⚠️  Native detection failed: %v\n", err)
+			detectionResult = &DetectionResult{
+				IsNativeTest:   true,
+				FrameworkType:  converter.Name(),
+				TestStructure:  map[string]interface{}{},
+			}
+		}
+		
+		// Collect input files
 		var inputs []string
 		
 		// Add the entry point file itself
@@ -211,14 +226,12 @@ func main() {
 		if errRel == nil && !strings.HasPrefix(relEntryToWorkspace, "..") {
 			inputs = append(inputs, relEntryToWorkspace)
 		} else {
-			// Fallback
 			inputs = append(inputs, entryPoint)
 		}
 		
 		// Add go.mod and go.sum if they exist
 		goModPath := filepath.Join(moduleRoot, "go.mod")
-		// goSumPath is already declared above, so use assignment
-		goSumPath = filepath.Join(moduleRoot, "go.sum")
+		goSumPath := filepath.Join(moduleRoot, "go.sum")
 		fmt.Printf("  Module root: %s\n", moduleRoot)
 		fmt.Printf("  go.mod path: %s\n", goModPath)
 		for _, filePath := range []string{goModPath, goSumPath} {
@@ -233,10 +246,9 @@ func main() {
 		}
 		
 		// Add all .go files in the module root and subdirectories
-		// This is similar to rust builder which adds all .rs files in src/
 		errWalk := filepath.Walk(moduleRoot, func(path string, info os.FileInfo, errWalkInner error) error {
 			if errWalkInner != nil {
-				return nil // skip errors
+				return nil
 			}
 			if !info.IsDir() && strings.HasSuffix(path, ".go") {
 				relToWorkspace, errRel := filepath.Rel(workspace, path)
@@ -250,7 +262,50 @@ func main() {
 			fmt.Printf("  ⚠️  Warning while walking directory: %v\n", errWalk)
 		}
 		
-		fmt.Printf("  Found %d input files (simplified collection)\n", len(inputs))
+		fmt.Printf("  Found %d input files\n", len(inputs))
+		
+		// Generate framework-specific wrapper if needed
+		if detectionResult.IsNativeTest {
+			fmt.Printf("  Generating %s wrapper...\n", converter.Name())
+			
+			// Create wrapper directory
+			wrapperDir := filepath.Join(bundlesDir, "wrappers")
+			if err := os.MkdirAll(wrapperDir, 0755); err != nil {
+				fmt.Printf("  ⚠️  Failed to create wrapper directory: %v\n", err)
+			} else {
+				// Convert detection result to map for converter
+				detectionMap := map[string]interface{}{
+					"isNativeTest":  detectionResult.IsNativeTest,
+					"frameworkType": detectionResult.FrameworkType,
+					"testStructure": detectionResult.TestStructure,
+				}
+				
+				// Generate wrapper content
+				wrapperContent := converter.GenerateWrapper(entryPointPath, detectionMap, hash)
+				
+				// Write wrapper file
+				wrapperFileName := fmt.Sprintf("%s_wrapper.go", binaryName)
+				wrapperPath := filepath.Join(wrapperDir, wrapperFileName)
+				if err := os.WriteFile(wrapperPath, []byte(wrapperContent), 0644); err != nil {
+					fmt.Printf("  ⚠️  Failed to write wrapper: %v\n", err)
+				} else {
+					fmt.Printf("  ✅ Wrapper generated: %s\n", wrapperPath)
+					
+					// Also compile the wrapper
+					wrapperExePath := filepath.Join(bundlesDir, fmt.Sprintf("%s_wrapper", binaryName))
+					buildWrapperCmd := exec.Command("go", "build", "-o", wrapperExePath, wrapperPath)
+					buildWrapperCmd.Stdout = os.Stdout
+					buildWrapperCmd.Stderr = os.Stderr
+					buildWrapperCmd.Dir = moduleRoot
+					
+					if err := buildWrapperCmd.Run(); err != nil {
+						fmt.Printf("  ⚠️  Failed to compile wrapper: %v\n", err)
+					} else {
+						fmt.Printf("  ✅ Wrapper compiled: %s\n", wrapperExePath)
+					}
+				}
+			}
+		}
 
 		// Compute hash
 		hash, err2 := computeFilesHash(inputs)

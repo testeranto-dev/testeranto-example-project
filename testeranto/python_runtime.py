@@ -9,6 +9,20 @@ import hashlib
 
 import time
 
+# Import native detection module
+try:
+    from native_detection import PythonNativeTestDetection
+except ImportError:
+    # Create a dummy class if module not found
+    class PythonNativeTestDetection:
+        @staticmethod
+        def detect_native_test(file_path: str) -> Dict[str, Any]:
+            return {"is_native_test": False, "framework_type": None, "test_structure": {}}
+        
+        @staticmethod
+        def translate_to_testeranto(detection_result: Dict[str, Any]) -> Dict[str, str]:
+            return {"specification": "", "implementation": "", "adapter": ""}
+
 def resolve_python_import(import_path: str, current_file: str) -> str | None:
     """Resolve a Python import to a file path."""
     # Handle relative imports
@@ -139,214 +153,6 @@ def collect_dependencies(file_path: str, visited: Set[str] = None) -> List[str]:
             unique.append(dep)
     return unique
 
-def topological_sort(files: List[str]) -> List[str]:
-    """Sort files based on import dependencies."""
-    # Build dependency graph
-    graph = {file: set() for file in files}
-    for file in files:
-        imports = parse_python_imports(file)
-        for imp in imports:
-            if not imp.get('external') and imp['path']:
-                resolved = resolve_python_import(imp['path'], file)
-                if resolved and resolved in files:
-                    graph[file].add(resolved)
-    
-    # Kahn's algorithm
-    in_degree = {node: 0 for node in graph}
-    for node in graph:
-        for neighbor in graph[node]:
-            in_degree[neighbor] += 1
-    
-    # Queue of nodes with no incoming edges
-    queue = [node for node in graph if in_degree[node] == 0]
-    sorted_list = []
-    
-    while queue:
-        node = queue.pop(0)
-        sorted_list.append(node)
-        for neighbor in graph[node]:
-            in_degree[neighbor] -= 1
-            if in_degree[neighbor] == 0:
-                queue.append(neighbor)
-    
-    # Check for cycles
-    if len(sorted_list) != len(files):
-        print("Warning: Circular dependencies detected, using original order")
-        return files
-    
-    return sorted_list
-
-def strip_imports(content: str) -> str:
-    """Remove import statements from Python code."""
-    lines = content.split('\n')
-    result_lines = []
-    in_multiline_string = False
-    multiline_delimiter = None
-    
-    for line in lines:
-        # Handle multiline strings
-        stripped_line = line.strip()
-        if not in_multiline_string:
-            # Check for start of multiline string
-            if stripped_line.startswith('"""') or stripped_line.startswith("'''"):
-                # Check if it's a single line or multiline
-                if stripped_line.count('"""') == 1 or stripped_line.count("'''") == 1:
-                    in_multiline_string = True
-                    multiline_delimiter = stripped_line[:3]
-                result_lines.append(line)
-                continue
-            # Check for import statements
-            elif stripped_line.startswith('import ') or stripped_line.startswith('from '):
-                # Skip this line
-                continue
-            else:
-                result_lines.append(line)
-        else:
-            # Inside a multiline string
-            result_lines.append(line)
-            # Check for end of multiline string
-            if multiline_delimiter in stripped_line:
-                # Count occurrences to handle cases where delimiter appears in the string
-                if stripped_line.count(multiline_delimiter) % 2 == 1:
-                    in_multiline_string = False
-                    multiline_delimiter = None
-    
-    return '\n'.join(result_lines)
-
-def bundle_python_files(entry_point: str, test_name: str, output_base_dir: str) -> str:
-    """Generate bundle files similar to Ruby runtime."""
-    print(f"[Python Builder] Processing: {entry_point}")
-    
-    # Use the original entry point path to preserve directory structure
-    # This matches Ruby's pattern: testeranto/bundles/#{test_name}/#{entry_point}
-    # entry_point might be something like "src/python/Calculator.pitono.test.py"
-    
-    # Create the bundle path: testeranto/bundles/{test_name}/{entry_point}
-    # We need to handle both absolute and relative paths
-    if os.path.isabs(entry_point):
-        # If it's an absolute path, make it relative to current directory
-        # But first check if it's under workspace
-        workspace_root = '/workspace'
-        if entry_point.startswith(workspace_root):
-            # Make it relative to workspace root
-            rel_entry_path = entry_point[len(workspace_root):]
-            if rel_entry_path.startswith('/'):
-                rel_entry_path = rel_entry_path[1:]
-        else:
-            # Make it relative to current directory
-            rel_entry_path = os.path.relpath(entry_point, os.getcwd())
-    else:
-        # It's already a relative path
-        rel_entry_path = entry_point
-    
-    print(f"[Python Builder] Using entry path: {rel_entry_path}")
-    
-    # Create output directory structure: testeranto/bundles/{test_name}/{dir_of_rel_entry_path}
-    output_dir = os.path.join(output_base_dir, test_name, os.path.dirname(rel_entry_path))
-    # Remove any empty directory component
-    if output_dir.endswith('.'):
-        output_dir = os.path.dirname(output_dir)
-    os.makedirs(output_dir, exist_ok=True)
-    
-    # Get entry point filename
-    entry_filename = os.path.basename(entry_point)
-    
-    # 1. Collect all dependencies
-    all_deps = collect_dependencies(entry_point)
-    # Ensure entry point is included
-    if entry_point not in all_deps:
-        all_deps.append(entry_point)
-    # Sort for consistency
-    all_deps = sorted(set(all_deps))
-    
-    print(f"[Python Builder] Found {len(all_deps)} dependencies")
-    
-    # 2. Compute hash of input files (similar to Ruby's compute_files_hash)
-    files_hash = compute_files_hash(all_deps)
-    print(f"[Python Builder] Computed hash: {files_hash}")
-    
-    # 3. Write input files JSON
-    # Convert to workspace-relative paths
-    relative_files = []
-    for dep in all_deps:
-        abs_path = os.path.abspath(dep)
-        if abs_path.startswith(workspace_root):
-            rel_path = abs_path[len(workspace_root):]
-            # Ensure it starts with /
-            if not rel_path.startswith('/'):
-                rel_path = '/' + rel_path
-            relative_files.append(rel_path)
-        else:
-            # If not under workspace, use relative path from current directory
-            rel_path = os.path.relpath(abs_path, os.getcwd())
-            relative_files.append(rel_path)
-    
-    # Create input files path similar to Ruby: testeranto/bundles/{test_name}/{entry_point}-inputFiles.json
-    # The Ruby builder uses: "testeranto/bundles/#{test_name}/#{entry_point}-inputFiles.json"
-    # We need to handle the path correctly
-    # First, normalize the entry point path for use in filename
-    input_files_basename = rel_entry_path.replace('/', '_').replace('\\', '_') + '-inputFiles.json'
-    input_files_path = os.path.join(output_base_dir, test_name, input_files_basename)
-    
-    # Ensure directory exists
-    os.makedirs(os.path.dirname(input_files_path), exist_ok=True)
-    
-    with open(input_files_path, 'w', encoding='utf-8') as f:
-        json.dump(relative_files, f, indent=2)
-    print(f"[Python Builder] Wrote input files to: {input_files_path}")
-    
-    # 4. Create dummy bundle file that loads the original test file
-    # Similar to Ruby: testeranto/bundles/#{test_name}/#{entry_point}
-    bundle_path = os.path.join(output_base_dir, test_name, rel_entry_path)
-    
-    # Ensure the directory for the bundle exists
-    os.makedirs(os.path.dirname(bundle_path), exist_ok=True)
-    
-    # Create a simple bundle that loads and executes the original test file
-    # Use absolute path for the original test file
-    original_test_abs = os.path.abspath(entry_point)
-    bundle_content = f'''#!/usr/bin/env python3
-# Dummy bundle file generated by testeranto
-# Hash: {files_hash}
-# This file loads and executes the original test file: {original_test_abs}
-
-import sys
-import os
-
-# Add the original file's directory to sys.path if needed
-original_dir = os.path.dirname(r'{original_test_abs}')
-if original_dir not in sys.path:
-    sys.path.insert(0, original_dir)
-
-# Load and execute the original test file
-# Using exec to ensure execution every time
-with open(r'{original_test_abs}', 'r', encoding='utf-8') as f:
-    code = f.read()
-
-# Execute the code in the global namespace
-exec(code, {{'__name__': '__main__', '__file__': r'{original_test_abs}'}})
-
-# If the test framework requires explicit test execution, add it here
-# For example:
-#   if 'TestFramework' in locals():
-#       TestFramework.run()
-'''
-    
-    with open(bundle_path, 'w', encoding='utf-8') as f:
-        f.write(bundle_content)
-    
-    # Make executable
-    try:
-        os.chmod(bundle_path, 0o755)
-    except:
-        pass
-    
-    print(f"[Python Builder] Created dummy bundle file at: {bundle_path}")
-    
-    return input_files_path
-
-# Remove generate_metafile function as we're following Ruby pattern
-
 def compute_files_hash(files: List[str]) -> str:
     """Compute a simple hash from file paths and contents, similar to Ruby's compute_files_hash."""
     import hashlib
@@ -372,6 +178,59 @@ def compute_files_hash(files: List[str]) -> str:
             hash_obj.update(b'error')
     
     return hash_obj.hexdigest()
+
+def generate_native_test_wrapper(entry_point_path: str, detection_result: Dict[str, Any], 
+                                translation_result: Dict[str, str], files_hash: str) -> str:
+    """Generate wrapper for native Python tests with three-parameter translation."""
+    original_test_abs = os.path.abspath(entry_point_path)
+    framework = detection_result.get("framework_type", "unknown")
+    
+    wrapper = f'''#!/usr/bin/env python3
+# Native test wrapper generated by testeranto
+# Hash: {files_hash}
+# Framework: {framework}
+# This file loads the native test translation
+
+import sys
+import os
+import json
+
+# Add the original file's directory to sys.path
+original_dir = os.path.dirname(r'{original_test_abs}')
+if original_dir not in sys.path:
+    sys.path.insert(0, original_dir)
+
+# Load the translation components
+# Note: In a real implementation, these would be generated files
+# For now, we'll directly execute the original test
+
+# Execute through appropriate test runner based on framework
+if '{framework}' == 'pytest':
+    import pytest
+    # Run pytest on the original test file
+    sys.exit(pytest.main([r'{original_test_abs}']))
+elif '{framework}' == 'unittest':
+    import unittest
+    # Discover and run unittest tests
+    loader = unittest.TestLoader()
+    suite = loader.discover(os.path.dirname(r'{original_test_abs}'), 
+                           pattern=os.path.basename(r'{original_test_abs}'))
+    runner = unittest.TextTestRunner(verbosity=2)
+    result = runner.run(suite)
+    sys.exit(0 if result.wasSuccessful() else 1)
+else:
+    # Generic execution for unknown frameworks
+    with open(r'{original_test_abs}', 'r', encoding='utf-8') as f:
+        code = f.read()
+    
+    # Execute the code in the global namespace
+    exec(code, {{'__name__': '__main__', '__file__': r'{original_test_abs}'}})
+    
+    # If there's a test framework runner, execute it
+    if 'TestFramework' in locals():
+        TestFramework.run()
+'''
+    return wrapper
 
 def main():
     print(f"[Python Builder] ARGV: {sys.argv}")
@@ -408,11 +267,29 @@ def main():
             print(f"[Python Builder] Error: Entry point does not exist: {entry_point_path}")
             sys.exit(1)
         
+        # Detect if this is a native test
+        detection_result = PythonNativeTestDetection.detect_native_test(entry_point_path)
+        is_native_test = detection_result.get("is_native_test", False)
+        framework_type = detection_result.get("framework_type")
+        
+        if is_native_test:
+            print(f"[Python Builder] Detected native {framework_type} test")
+            # Generate translation components
+            translation_result = PythonNativeTestDetection.translate_to_testeranto(detection_result)
+        
         # Collect all dependencies
         all_deps = collect_dependencies(entry_point_path)
         # Ensure entry point is included
         if entry_point_path not in all_deps:
             all_deps.append(entry_point_path)
+        
+        # Add native detection module if it's a native test
+        if is_native_test:
+            detection_module_path = os.path.join(os.path.dirname(__file__), "native_detection.py")
+            if os.path.exists(detection_module_path):
+                if detection_module_path not in all_deps:
+                    all_deps.append(detection_module_path)
+        
         # Sort for consistency
         all_deps = sorted(set(all_deps))
         
@@ -439,16 +316,19 @@ def main():
                 relative_files.append(rel_path)
         
         # Store test information
-        all_tests_info[entry_point] = {
+        test_info = {
             "hash": files_hash,
-            "files": relative_files
+            "files": relative_files,
+            "is_native_test": is_native_test
         }
+        if is_native_test:
+            test_info["framework"] = framework_type
         
-        # Create the dummy bundle file that requires the original test file
-        # Similar to Ruby: testeranto/bundles/#{test_name}/#{entry_point}
-        # We need to handle the path correctly
+        all_tests_info[entry_point] = test_info
+        
+        # Create the bundle file
+        # Handle path correctly
         if os.path.isabs(entry_point):
-            # If it's an absolute path, make it relative to workspace
             if entry_point.startswith(workspace_root):
                 rel_entry_path = entry_point[len(workspace_root):]
                 if rel_entry_path.startswith('/'):
@@ -463,9 +343,15 @@ def main():
         # Ensure the directory for the bundle exists
         os.makedirs(os.path.dirname(bundle_path), exist_ok=True)
         
-        # Create a simple bundle that loads and executes the original test file
-        original_test_abs = os.path.abspath(entry_point)
-        bundle_content = f'''#!/usr/bin/env python3
+        # Generate appropriate wrapper content
+        if is_native_test:
+            bundle_content = generate_native_test_wrapper(
+                entry_point_path, detection_result, translation_result, files_hash
+            )
+        else:
+            # Original dummy bundle for testeranto tests
+            original_test_abs = os.path.abspath(entry_point)
+            bundle_content = f'''#!/usr/bin/env python3
 # Dummy bundle file generated by testeranto
 # Hash: {files_hash}
 # This file loads and executes the original test file: {original_test_abs}
@@ -501,7 +387,7 @@ exec(code, {{'__name__': '__main__', '__file__': r'{original_test_abs}'}})
         except:
             pass
         
-        print(f"[Python Builder] Created dummy bundle file at: {bundle_path}")
+        print(f"[Python Builder] Created bundle file at: {bundle_path}")
     
     # Write single inputFiles.json for all tests
     input_files_path = os.path.join("testeranto/bundles", test_name, "inputFiles.json")

@@ -1,6 +1,11 @@
+package com.example.calculator;
+
+import kafe.Default;
 import java.util.*;
 
-public class CalculatorKafeSpecification {
+import static kafe.Default.*;
+
+class CalculatorKafeSpecification {
     
     public static Object specification(
         Map<String, String> suites,
@@ -8,151 +13,242 @@ public class CalculatorKafeSpecification {
         Map<String, Object> whens,
         Map<String, Object> thens
     ) {
-        // Get the functions
-        Function<String, Function<Calculator, Calculator>> pressFunc = 
-            (Function<String, Function<Calculator, Calculator>>) whens.get("press");
-        Function<Void, Function<Calculator, Calculator>> enterFunc = 
-            (Function<Void, Function<Calculator, Calculator>>) whens.get("enter");
-        Function<String, Function<Calculator, Boolean>> resultFunc = 
-            (Function<String, Function<Calculator, Boolean>>) thens.get("result");
-        
-        // Create test cases similar to other language implementations
         Map<String, Map<String, Object>> testCases = new HashMap<>();
         
-        // Helper to create a test case
-        Function<String, String, List<Object>, Boolean, String, Map<String, Object>> createTestCase = 
-            (name, description, pressButtons, useEnter, expected) -> {
-                List<Object> whenList = new ArrayList<>();
-                for (String button : pressButtons) {
-                    whenList.add(pressFunc.apply(button));
-                }
-                if (useEnter) {
-                    whenList.add(enterFunc.apply(null));
-                }
-                
-                Map<String, Object> testCase = new HashMap<>();
-                testCase.put("description", description);
-                testCase.put("whens", whenList);
-                testCase.put("thens", Arrays.asList(resultFunc.apply(expected)));
-                return testCase;
-            };
-        
+        // Helper to add test cases concisely
         // Basic number input
-        testCases.put("testEmptyDisplay", createTestCase.apply(
-            "testEmptyDisplay", "pressing nothing, the display is empty", 
-            new ArrayList<>(), false, ""
+        testCases.put("testEmptyDisplay", testCase(
+            new String[]{"pressing nothing, the display is empty"},
+            Collections.emptyList(),
+            Collections.singletonList(then(thens, "result", ""))
         ));
         
-        testCases.put("testSingleDigit", createTestCase.apply(
-            "testSingleDigit", "entering a number puts it on the display", 
-            Arrays.asList("2"), false, "2"
+        testCases.put("testSingleDigit", testCase(
+            new String[]{"entering a number puts it on the display"},
+            Collections.singletonList(when(whens, "press", "2")),
+            Collections.singletonList(then(thens, "result", "2"))
         ));
         
-        testCases.put("testMultipleDigits", createTestCase.apply(
-            "testMultipleDigits", "entering multiple digits concatenates them", 
-            Arrays.asList("2", "2"), false, "22"
+        testCases.put("testMultipleDigits", testCase(
+            new String[]{"entering multiple digits concatenates them"},
+            Arrays.asList(
+                when(whens, "press", "2"),
+                when(whens, "press", "2")
+            ),
+            Collections.singletonList(then(thens, "result", "22"))
         ));
         
-        testCases.put("testLargeNumber", createTestCase.apply(
-            "testLargeNumber", "entering a large number works correctly", 
-            Arrays.asList("1", "2", "3", "4", "5"), false, "12345"
+        testCases.put("testLargeNumber", testCase(
+            new String[]{"entering a large number works correctly"},
+            Arrays.asList(
+                when(whens, "press", "1"),
+                when(whens, "press", "2"),
+                when(whens, "press", "3"),
+                when(whens, "press", "4"),
+                when(whens, "press", "5")
+            ),
+            Collections.singletonList(then(thens, "result", "12345"))
         ));
         
         // Basic operations
-        testCases.put("testAdditionExpression", createTestCase.apply(
-            "testAdditionExpression", "addition expression is displayed correctly", 
-            Arrays.asList("2", "+", "3"), false, "2+3"
+        testCases.put("testAdditionExpression", testCase(
+            new String[]{"addition expression is displayed correctly"},
+            Arrays.asList(
+                when(whens, "press", "2"),
+                when(whens, "press", "+"),
+                when(whens, "press", "3")
+            ),
+            Collections.singletonList(then(thens, "result", "2+3"))
         ));
         
-        testCases.put("testIncompleteAddition", createTestCase.apply(
-            "testIncompleteAddition", "incomplete addition expression is displayed correctly", 
-            Arrays.asList("2", "+"), false, "2+"
+        testCases.put("testIncompleteAddition", testCase(
+            new String[]{"incomplete addition expression is displayed correctly"},
+            Arrays.asList(
+                when(whens, "press", "2"),
+                when(whens, "press", "+")
+            ),
+            Collections.singletonList(then(thens, "result", "2+"))
         ));
         
-        testCases.put("testSubtractionExpression", createTestCase.apply(
-            "testSubtractionExpression", "subtraction expression is displayed correctly", 
-            Arrays.asList("7", "-", "3"), false, "7-3"
+        testCases.put("testSubtractionExpression", testCase(
+            new String[]{"subtraction expression is displayed correctly"},
+            Arrays.asList(
+                when(whens, "press", "7"),
+                when(whens, "press", "-"),
+                when(whens, "press", "3")
+            ),
+            Collections.singletonList(then(thens, "result", "7-3"))
         ));
         
-        testCases.put("testMultiplicationExpression", createTestCase.apply(
-            "testMultiplicationExpression", "multiplication expression is displayed correctly", 
-            Arrays.asList("4", "*", "5"), false, "4*5"
+        testCases.put("testMultiplicationExpression", testCase(
+            new String[]{"multiplication expression is displayed correctly"},
+            Arrays.asList(
+                when(whens, "press", "4"),
+                when(whens, "press", "*"),
+                when(whens, "press", "5")
+            ),
+            Collections.singletonList(then(thens, "result", "4*5"))
         ));
         
-        testCases.put("testDivisionExpression", createTestCase.apply(
-            "testDivisionExpression", "division expression is displayed correctly", 
-            Arrays.asList("8", "/", "2"), false, "8/2"
+        testCases.put("testDivisionExpression", testCase(
+            new String[]{"division expression is displayed correctly"},
+            Arrays.asList(
+                when(whens, "press", "8"),
+                when(whens, "press", "/"),
+                when(whens, "press", "2")
+            ),
+            Collections.singletonList(then(thens, "result", "8/2"))
         ));
         
         // Calculation tests
-        testCases.put("testSimpleAddition", createTestCase.apply(
-            "testSimpleAddition", "simple addition calculation", 
-            Arrays.asList("2", "3", "+", "4", "5"), true, "68"
+        testCases.put("testSimpleAddition", testCase(
+            new String[]{"simple addition calculation"},
+            Arrays.asList(
+                when(whens, "press", "2"),
+                when(whens, "press", "3"),
+                when(whens, "press", "+"),
+                when(whens, "press", "4"),
+                when(whens, "press", "5"),
+                when(whens, "enter")
+            ),
+            Collections.singletonList(then(thens, "result", "68"))
         ));
         
-        testCases.put("testSimpleSubtraction", createTestCase.apply(
-            "testSimpleSubtraction", "simple subtraction calculation", 
-            Arrays.asList("9", "5", "-", "3", "2"), true, "63"
+        testCases.put("testSimpleSubtraction", testCase(
+            new String[]{"simple subtraction calculation"},
+            Arrays.asList(
+                when(whens, "press", "9"),
+                when(whens, "press", "5"),
+                when(whens, "press", "-"),
+                when(whens, "press", "3"),
+                when(whens, "press", "2"),
+                when(whens, "enter")
+            ),
+            Collections.singletonList(then(thens, "result", "63"))
         ));
         
-        testCases.put("testSimpleMultiplication", createTestCase.apply(
-            "testSimpleMultiplication", "simple multiplication calculation", 
-            Arrays.asList("6", "*", "7"), true, "42"
+        testCases.put("testSimpleMultiplication", testCase(
+            new String[]{"simple multiplication calculation"},
+            Arrays.asList(
+                when(whens, "press", "6"),
+                when(whens, "press", "*"),
+                when(whens, "press", "7"),
+                when(whens, "enter")
+            ),
+            Collections.singletonList(then(thens, "result", "42"))
         ));
         
-        testCases.put("testSimpleDivision", createTestCase.apply(
-            "testSimpleDivision", "simple division calculation", 
-            Arrays.asList("8", "4", "/", "2"), true, "42"
+        testCases.put("testSimpleDivision", testCase(
+            new String[]{"simple division calculation"},
+            Arrays.asList(
+                when(whens, "press", "8"),
+                when(whens, "press", "4"),
+                when(whens, "press", "/"),
+                when(whens, "press", "2"),
+                when(whens, "enter")
+            ),
+            Collections.singletonList(then(thens, "result", "42"))
         ));
         
         // Edge cases
-        testCases.put("testClearOperation", createTestCase.apply(
-            "testClearOperation", "clear operation resets the display", 
-            Arrays.asList("1", "2", "3", "C", "4"), false, "4"
+        testCases.put("testClearOperation", testCase(
+            new String[]{"clear operation resets the display"},
+            Arrays.asList(
+                when(whens, "press", "1"),
+                when(whens, "press", "2"),
+                when(whens, "press", "3"),
+                when(whens, "press", "C"),
+                when(whens, "press", "4")
+            ),
+            Collections.singletonList(then(thens, "result", "4"))
         ));
         
-        testCases.put("testStartingWithOperator", createTestCase.apply(
-            "testStartingWithOperator", "starting with operator should work", 
-            Arrays.asList("+", "5"), false, "+5"
+        testCases.put("testStartingWithOperator", testCase(
+            new String[]{"starting with operator should work"},
+            Arrays.asList(
+                when(whens, "press", "+"),
+                when(whens, "press", "5")
+            ),
+            Collections.singletonList(then(thens, "result", "+5"))
         ));
         
-        testCases.put("testMultipleOperators", createTestCase.apply(
-            "testMultipleOperators", "multiple operators in sequence", 
-            Arrays.asList("5", "+", "-", "3"), false, "5+-3"
+        testCases.put("testMultipleOperators", testCase(
+            new String[]{"multiple operators in sequence"},
+            Arrays.asList(
+                when(whens, "press", "5"),
+                when(whens, "press", "+"),
+                when(whens, "press", "-"),
+                when(whens, "press", "3")
+            ),
+            Collections.singletonList(then(thens, "result", "5+-3"))
         ));
         
         // Error cases
-        testCases.put("testDivisionByZero", createTestCase.apply(
-            "testDivisionByZero", "division by zero shows error", 
-            Arrays.asList("5", "/", "0"), true, "Error"
+        testCases.put("testDivisionByZero", testCase(
+            new String[]{"division by zero shows error"},
+            Arrays.asList(
+                when(whens, "press", "5"),
+                when(whens, "press", "/"),
+                when(whens, "press", "0"),
+                when(whens, "enter")
+            ),
+            Collections.singletonList(then(thens, "result", "Error"))
         ));
         
-        testCases.put("testInvalidExpression", createTestCase.apply(
-            "testInvalidExpression", "invalid expression shows error", 
-            Arrays.asList("2", "+", "+", "3"), true, "Error"
+        testCases.put("testInvalidExpression", testCase(
+            new String[]{"invalid expression shows error"},
+            Arrays.asList(
+                when(whens, "press", "2"),
+                when(whens, "press", "+"),
+                when(whens, "press", "+"),
+                when(whens, "press", "3"),
+                when(whens, "enter")
+            ),
+            Collections.singletonList(then(thens, "result", "Error"))
         ));
         
         // Memory functions
-        testCases.put("testMemoryStoreRecall", createTestCase.apply(
-            "testMemoryStoreRecall", "memory store and recall", 
-            Arrays.asList("1", "2", "3", "MS", "C", "MR"), false, "123"
+        testCases.put("testMemoryStoreRecall", testCase(
+            new String[]{"memory store and recall"},
+            Arrays.asList(
+                when(whens, "press", "1"),
+                when(whens, "press", "2"),
+                when(whens, "press", "3"),
+                when(whens, "press", "MS"),
+                when(whens, "press", "C"),
+                when(whens, "press", "MR")
+            ),
+            Collections.singletonList(then(thens, "result", "123"))
         ));
         
-        testCases.put("testMemoryClear", createTestCase.apply(
-            "testMemoryClear", "memory clear", 
-            Arrays.asList("4", "5", "6", "MS", "MC", "MR"), false, "0"
+        testCases.put("testMemoryClear", testCase(
+            new String[]{"memory clear"},
+            Arrays.asList(
+                when(whens, "press", "4"),
+                when(whens, "press", "5"),
+                when(whens, "press", "6"),
+                when(whens, "press", "MS"),
+                when(whens, "press", "MC"),
+                when(whens, "press", "MR")
+            ),
+            Collections.singletonList(then(thens, "result", "0"))
         ));
         
-        testCases.put("testMemoryAddition", createTestCase.apply(
-            "testMemoryAddition", "memory addition", 
-            Arrays.asList("1", "0", "M+", "2", "0", "M+", "MR"), false, "30"
+        testCases.put("testMemoryAddition", testCase(
+            new String[]{"memory addition"},
+            Arrays.asList(
+                when(whens, "press", "1"),
+                when(whens, "press", "0"),
+                when(whens, "press", "M+"),
+                when(whens, "press", "2"),
+                when(whens, "press", "0"),
+                when(whens, "press", "M+"),
+                when(whens, "press", "MR")
+            ),
+            Collections.singletonList(then(thens, "result", "30"))
         ));
         
-        // Create the suite
-        Map<String, Object> suite = new HashMap<>();
-        suite.put("name", "Testing Calculator operations");
-        suite.put("testCases", testCases);
-        
-        return Arrays.asList(suite);
+        // Create the suite using the library helper
+        return suite("Testing Calculator operations", testCases);
     }
 }

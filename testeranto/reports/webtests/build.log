@@ -1,0 +1,25 @@
+[2026-03-20T20:15:47.548Z] [WEB BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+[2026-03-20T20:15:47.549Z] [WEB BUILDER] nodeConfig:  /workspace/testeranto/runtimes/web/web.ts
+[2026-03-20T20:15:47.549Z] [WEB BUILDER] testName:  webtests
+[2026-03-20T20:15:47.549Z] [WEB BUILDER] Log file: /workspace/testeranto/reports/webtests/build.log
+[2026-03-20T20:15:47.549Z] [WEB BUILDER] CWD: /workspace
+[2026-03-20T20:15:47.570Z] [WEB BUILDER] is now bundling: webtests
+[2026-03-20T20:15:47.570Z] [WEB BUILDER] Entry points: src/ts/Calculator.test.web.ts
+[2026-03-20T20:15:47.570Z] [WEB BUILDER] Running in dev mode - starting watch mode
+[2026-03-20T20:15:47.672Z] web > build ended with 0 errors
+[2026-03-20T20:15:47.678Z] [web Builder] Processed src/ts/Calculator.test.web.ts: 7 files, hash: 8a2adb3622cbc12e9218209408d454c8
+[2026-03-20T20:15:47.679Z] [web Builder] Wrote inputFiles.json for 1 tests to testeranto/bundles/webtests/inputFiles.json
+[2026-03-20T20:15:47.679Z] [WEB BUILDER] Metafile updated
+[2026-03-20T20:15:47.681Z] [WEB BUILDER] Triggered inputFiles.json update at testeranto/bundles/webtests/inputFiles.json
+[2026-03-20T20:15:47.683Z] [web Builder] Processed src/ts/Calculator.test.web.ts: 7 files, hash: 8a2adb3622cbc12e9218209408d454c8
+[2026-03-20T20:15:47.683Z] [web Builder] Wrote inputFiles.json for 1 tests to testeranto/bundles/webtests/inputFiles.json
+[2026-03-20T20:15:47.687Z] Created HTML file: testeranto/bundles/webtests/Calculator_test_web.html
+[2026-03-20T20:15:47.741Z] [WEB BUILDER]: esbuild server listening on 127.0.0.1,172.18.0.3, port 8000, /workspace
+[2026-03-20T20:15:47.745Z] [WEB BUILDER] Watch mode active - waiting for file changes...
+[2026-03-20T20:15:47.745Z] [WEB BUILDER] Using onEnd plugin for rebuild detection
+[2026-03-20T20:15:47.745Z] Chrome is a separate service, not launched in builder
+[2026-03-20T20:15:47.785Z] web > build ended with 0 errors
+[2026-03-20T20:15:47.788Z] [web Builder] Processed src/ts/Calculator.test.web.ts: 7 files, hash: 8a2adb3622cbc12e9218209408d454c8
+[2026-03-20T20:15:47.790Z] [web Builder] Wrote inputFiles.json for 1 tests to testeranto/bundles/webtests/inputFiles.json
+[2026-03-20T20:15:47.790Z] [WEB BUILDER] Metafile updated
+[2026-03-20T20:15:47.791Z] [WEB BUILDER] Triggered inputFiles.json update at testeranto/bundles/webtests/inputFiles.json

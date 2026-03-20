@@ -1,0 +1,10 @@
+{
+  "files": [
+    "lib/python3.14/site-packages/pip-25.3.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md",
+    "lib/python3.14/site-packages/pip/_vendor/idna/LICENSE.md",
+    "README.md",
+    "src/java/README.md",
+    "src/rust/README.md"
+  ],
+  "timestamp": 1773703813238
+}

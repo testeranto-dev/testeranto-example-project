@@ -1,2 +1,2 @@
-# Install testeranto-pitono from PyPI
-testeranto-pitono==0.1.24
+# Install pitono from PyPI
+pitono==0.2.1

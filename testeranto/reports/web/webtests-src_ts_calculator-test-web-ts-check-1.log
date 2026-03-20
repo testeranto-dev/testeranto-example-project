@@ -1,7 +1,0 @@
-=== Log started at 2026-03-14T11:24:11.774Z for service webtests-src_ts_calculator-test-web-ts-check-1 ===
-
-webtests-src_ts_calculator-test-web-ts-check-1  | yarn run v1.22.22
-webtests-src_ts_calculator-test-web-ts-check-1  | $ /workspace/node_modules/.bin/tsc --noEmit
-webtests-src_ts_calculator-test-web-ts-check-1  | error TS18003: No inputs were found in config file '/workspace/tsconfig.json'. Specified 'include' paths were '["./node_modules/testeranto/src/**/*.*ts","index.d.ts","./src/**/*.*ts","./src/**/*.*tsx","./src/types/**/*.d.ts","tester.ts"]' and 'exclude' paths were '["node_modules","trash"]'.
-webtests-src_ts_calculator-test-web-ts-check-1  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-webtests-src_ts_calculator-test-web-ts-check-1  | error Command failed with exit code 2.

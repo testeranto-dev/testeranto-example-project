@@ -1,0 +1,166 @@
+=== Log started at 2026-03-20T20:15:52.724Z for service web ===
+
+chrome-service  | 2026-03-20T20:15:49.978Z browserless:server Using configuration: 
+chrome-service  | 2026-03-20T20:15:49.980Z browserless:server {
+chrome-service  |   CONNECTION_TIMEOUT: 60000,
+chrome-service  |   MAX_CONCURRENT_SESSIONS: 1,
+chrome-service  |   QUEUE_LENGTH: 10,
+chrome-service  |   SINGLE_RUN: false,
+chrome-service  |   CHROME_REFRESH_TIME: 1800000,
+chrome-service  |   KEEP_ALIVE: false,
+chrome-service  |   DEFAULT_BLOCK_ADS: true,
+chrome-service  |   DEFAULT_HEADLESS: 'new',
+chrome-service  |   DEFAULT_LAUNCH_ARGS: [],
+chrome-service  |   DEFAULT_IGNORE_DEFAULT_ARGS: false,
+chrome-service  |   DEFAULT_IGNORE_HTTPS_ERRORS: false,
+chrome-service  |   DEFAULT_DUMPIO: false,
+chrome-service  |   DEFAULT_STEALTH: false,
+chrome-service  |   DEFAULT_USER_DATA_DIR: undefined,
+chrome-service  |   PREBOOT_CHROME: true,
+chrome-service  |   PREBOOT_QUANTITY: 0,
+chrome-service  |   PRINT_GET_STARTED_LINKS: true,
+chrome-service  |   PRINT_NETWORK_INFO: true,
+chrome-service  |   DEBUG: 'browserless*',
+chrome-service  |   DISABLED_FEATURES: [],
+chrome-service  |   ENABLE_CORS: true,
+chrome-service  |   ENABLE_API_GET: false,
+chrome-service  |   TOKEN: null,
+chrome-service  |   ENABLE_HEAP_DUMP: false,
+chrome-service  |   ALLOW_FILE_PROTOCOL: false,
+chrome-service  |   DISABLE_AUTO_SET_DOWNLOAD_BEHAVIOR: false,
+chrome-service  |   FUNCTION_BUILT_INS: [ 'url' ],
+chrome-service  |   FUNCTION_ENV_VARS: [],
+chrome-service  |   FUNCTION_ENABLE_INCOGNITO_MODE: false,
+chrome-service  |   FUNCTION_EXTERNALS: [ 'lighthouse', 'node-pdftk', 'sharp' ],
+chrome-service  |   WORKSPACE_DIR: '/usr/src/app/workspace',
+chrome-service  |   WORKSPACE_DELETE_EXPIRED: false,
+chrome-service  |   WORKSPACE_EXPIRE_DAYS: 30,
+chrome-service  |   FAILED_HEALTH_URL: null,
+chrome-service  |   QUEUE_ALERT_URL: null,
+chrome-service  |   REJECT_ALERT_URL: null,
+chrome-service  |   TIMEOUT_ALERT_URL: null,
+chrome-service  |   ERROR_ALERT_URL: null,
+chrome-service  |   SESSION_CHECK_FAIL_URL: null,
+chrome-service  |   PRE_REQUEST_HEALTH_CHECK: false,
+chrome-service  |   EXIT_ON_HEALTH_FAILURE: false,
+chrome-service  |   MAX_CPU_PERCENT: 99,
+chrome-service  |   MAX_MEMORY_PERCENT: 99,
+chrome-service  |   METRICS_JSON_PATH: null,
+chrome-service  |   HOST: '0.0.0.0',
+chrome-service  |   PORT: 3000,
+chrome-service  |   SOCKET_CLOSE_METHOD: 'http',
+chrome-service  |   PROXY_URL: undefined,
+chrome-service  |   MAX_PAYLOAD_SIZE: '5mb'
+chrome-service  | }
+chrome-service  | 2026-03-20T20:15:49.981Z browserless:server 
+chrome-service  | 
+chrome-service  | Running on port 3000
+chrome-service  | 	Localhost	 ws:localhost:3000
+chrome-service  | 	Local network	 ws:172.18.0.4:3000
+chrome-service  | 2026-03-20T20:15:49.981Z browserless:server 
+chrome-service  | Get started at	 https://www.browserless.io/docs/start
+chrome-service  | Get a license at	 https://www.browserless.io/sign-up?type=commercial
+chrome-service  | Get support at	 https://www.browserless.io/contact
+chrome-service  | 
+chrome-service  | Happy coding!
+chrome-service  | 
+chrome-service  | 2026-03-20T20:15:49.990Z browserless:system Starting chrome swarm: 1 chrome instances starting
+chrome-service  | 2026-03-20T20:15:49.995Z browserless:chrome-helper Launching Chrome with args: {
+chrome-service  |   "args": [
+chrome-service  |     "--no-sandbox",
+chrome-service  |     "--enable-logging",
+chrome-service  |     "--v1=1",
+chrome-service  |     "--disable-dev-shm-usage",
+chrome-service  |     "--no-first-run",
+chrome-service  |     "--remote-debugging-port=41219",
+chrome-service  |     "--user-data-dir=/tmp/browserless-data-dir-6Gk32x"
+chrome-service  |   ],
+chrome-service  |   "blockAds": true,
+chrome-service  |   "headless": "new",
+chrome-service  |   "ignoreDefaultArgs": false,
+chrome-service  |   "ignoreHTTPSErrors": false,
+chrome-service  |   "pauseOnConnect": false,
+chrome-service  |   "userDataDir": "/tmp/browserless-data-dir-6Gk32x",
+chrome-service  |   "playwright": false,
+chrome-service  |   "stealth": false,
+chrome-service  |   "meta": null,
+chrome-service  |   "executablePath": "/usr/bin/google-chrome",
+chrome-service  |   "handleSIGINT": false,
+chrome-service  |   "handleSIGTERM": false,
+chrome-service  |   "handleSIGHUP": false
+chrome-service  | }
+chrome-service  | 2026-03-20T20:15:51.394Z browserless:chrome-helper Chrome PID: 21
+chrome-service  | 2026-03-20T20:15:51.395Z browserless:chrome-helper Finding prior pages
+chrome-service  | 2026-03-20T20:15:51.411Z browserless:chrome-helper Found 1 pages
+chrome-service  | 2026-03-20T20:15:51.412Z browserless:chrome-helper Setting up page Unknown
+chrome-service  | 2026-03-20T20:15:51.412Z browserless:chrome-helper Injecting download dir "/usr/src/app/workspace"
+chrome-service  | 2026-03-20T20:15:51.413Z browserless:system Chrome launched 1422ms
+chrome-service  | 2026-03-20T20:15:51.447Z browserless:chrome-helper Setting up file:// protocol request rejection
+chrome-service  | 2026-03-20T20:15:51.447Z browserless:chrome-helper Setting up page for ad-blocking
+chrome-service  | [1m[43m[30m
+chrome-service  |   Puppeteer old Headless deprecation warning:[0m[33m
+chrome-service  |     In the near future `headless: true` will default to the new Headless mode
+chrome-service  |     for Chrome instead of the old Headless implementation. For more
+chrome-service  |     information, please see https://developer.chrome.com/articles/new-headless/.
+chrome-service  |     Consider opting in early by passing `headless: "new"` to `puppeteer.launch()`
+chrome-service  |     If you encounter any bugs, please report them to https://github.com/puppeteer/puppeteer/issues/new/choose.[0m
+chrome-service  | 
+chrome-service  | 2026-03-20T20:15:55.746Z browserless:job IHD7SMX10VOQ2K7DRUHCG7Q1OYKHHYOD: /: Inbound WebSocket request.
+chrome-service  | 2026-03-20T20:15:55.862Z browserless:hardware Checking overload status: CPU 2% Memory 15%
+chrome-service  | 2026-03-20T20:15:55.863Z browserless:job IHD7SMX10VOQ2K7DRUHCG7Q1OYKHHYOD: Adding new job to queue.
+chrome-service  | 2026-03-20T20:15:55.864Z browserless:server Starting new job
+chrome-service  | 2026-03-20T20:15:55.865Z browserless:system Waiting pre-booted chrome instance
+chrome-service  | 2026-03-20T20:15:55.865Z browserless:job IHD7SMX10VOQ2K7DRUHCG7Q1OYKHHYOD: Getting browser.
+chrome-service  | 2026-03-20T20:15:55.865Z browserless:system Got chrome instance
+chrome-service  | 2026-03-20T20:15:55.866Z browserless:job IHD7SMX10VOQ2K7DRUHCG7Q1OYKHHYOD: Starting session.
+chrome-service  | 2026-03-20T20:15:55.867Z browserless:job IHD7SMX10VOQ2K7DRUHCG7Q1OYKHHYOD: Proxying request to /devtools/browser route: ws://127.0.0.1:41219/devtools/browser/ccfc0437-4e00-4f7d-a708-ecc1a5f35444.
+chrome-service  | 2026-03-20T20:15:56.050Z browserless:chrome-helper Setting up page Unknown
+chrome-service  | 2026-03-20T20:15:56.050Z browserless:chrome-helper Injecting download dir "/usr/src/app/workspace"
+chrome-service  | 2026-03-20T20:15:56.050Z browserless:chrome-helper Setting up file:// protocol request rejection
+chrome-service  | 2026-03-20T20:15:56.051Z browserless:chrome-helper Setting up page for ad-blocking
+chrome-service  | 2026-03-20T20:16:03.599Z browserless:server IHD7SMX10VOQ2K7DRUHCG7Q1OYKHHYOD: Recording successful stat and cleaning up.
+chrome-service  | 2026-03-20T20:16:03.599Z browserless:job IHD7SMX10VOQ2K7DRUHCG7Q1OYKHHYOD: Cleaning up job
+chrome-service  | 2026-03-20T20:16:03.599Z browserless:job IHD7SMX10VOQ2K7DRUHCG7Q1OYKHHYOD: Browser not needed, closing
+chrome-service  | 2026-03-20T20:16:03.600Z browserless:chrome-helper Shutting down browser with close command
+chrome-service  | 2026-03-20T20:16:03.600Z browserless:system Adding back Chrome swarm
+chrome-service  | 2026-03-20T20:16:03.600Z browserless:job IHD7SMX10VOQ2K7DRUHCG7Q1OYKHHYOD: Browser cleanup complete.
+chrome-service  | 2026-03-20T20:16:03.601Z browserless:server Current workload complete.
+chrome-service  | 2026-03-20T20:16:03.601Z browserless:chrome-helper Sending SIGKILL signal to browser process 21
+chrome-service  | 2026-03-20T20:16:03.609Z browserless:chrome-helper Removing temp data-dir /tmp/browserless-data-dir-6Gk32x
+chrome-service  | 2026-03-20T20:16:03.616Z browserless:chrome-helper Launching Chrome with args: {
+chrome-service  |   "args": [
+chrome-service  |     "--no-sandbox",
+chrome-service  |     "--enable-logging",
+chrome-service  |     "--v1=1",
+chrome-service  |     "--disable-dev-shm-usage",
+chrome-service  |     "--no-first-run",
+chrome-service  |     "--remote-debugging-port=36209",
+chrome-service  |     "--user-data-dir=/tmp/browserless-data-dir-zgWlJT"
+chrome-service  |   ],
+chrome-service  |   "blockAds": true,
+chrome-service  |   "headless": "new",
+chrome-service  |   "ignoreDefaultArgs": false,
+chrome-service  |   "ignoreHTTPSErrors": false,
+chrome-service  |   "pauseOnConnect": false,
+chrome-service  |   "userDataDir": "/tmp/browserless-data-dir-zgWlJT",
+chrome-service  |   "playwright": false,
+chrome-service  |   "stealth": false,
+chrome-service  |   "meta": null,
+chrome-service  |   "executablePath": "/usr/bin/google-chrome",
+chrome-service  |   "handleSIGINT": false,
+chrome-service  |   "handleSIGTERM": false,
+chrome-service  |   "handleSIGHUP": false
+chrome-service  | }
+chrome-service  | 2026-03-20T20:16:03.670Z browserless:chrome-helper Garbage collecting and removing listeners
+chrome-service  | 2026-03-20T20:16:03.671Z browserless:chrome-helper Browser process ccfc0437-4e00-4f7d-a708-ecc1a5f35444 has closed, cleaning up.
+chrome-service  | 2026-03-20T20:16:03.793Z browserless:chrome-helper Temp dir /tmp/browserless-data-dir-6Gk32x removed successfully
+chrome-service  | 2026-03-20T20:16:03.890Z browserless:chrome-helper Chrome PID: 164
+chrome-service  | 2026-03-20T20:16:03.891Z browserless:chrome-helper Finding prior pages
+chrome-service  | 2026-03-20T20:16:03.901Z browserless:chrome-helper Found 1 pages
+chrome-service  | 2026-03-20T20:16:03.902Z browserless:chrome-helper Setting up page Unknown
+chrome-service  | 2026-03-20T20:16:03.902Z browserless:chrome-helper Injecting download dir "/usr/src/app/workspace"
+chrome-service  | 2026-03-20T20:16:03.902Z browserless:system Chrome launched 302ms
+chrome-service  | 2026-03-20T20:16:03.903Z browserless:chrome-helper Setting up file:// protocol request rejection
+chrome-service  | 2026-03-20T20:16:03.903Z browserless:chrome-helper Setting up page for ad-blocking
+chrome-service  | 2026-03-20T20:20:50.076Z browserless:server Health check stats: CPU 1%, MEM: 12%,
+chrome-service  | 2026-03-20T20:20:50.078Z browserless:server Current period usage: {"date":1774037749977,"error":0,"rejected":0,"successful":1,"timedout":0,"totalTime":7736,"maxTime":7736,"minTime":7736,"meanTime":7736,"maxConcurrent":1,"units":1}

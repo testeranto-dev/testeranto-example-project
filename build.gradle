@@ -2,21 +2,45 @@ plugins {
     id 'java'
 }
 
-group 'com.yourprojectname'
+group 'com.example'
 version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
-    maven {
-        url = uri("https://repo.maven.apache.org/maven2")
-    }
+    mavenLocal()
 }
 
 dependencies {
-    testImplementation 'junit:junit:4.13.2'
-    implementation 'com.testeranto:testeranto.kafe:0.1.8'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+    testImplementation 'org.assertj:assertj-core:3.24.2'
+    
+    // For JSON processing
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+    
+    // DO NOT Use local Kafe library, use maven
+    implementation 'com.testeranto:testeranto.kafe:0.1.24'
+    
+    // Add JSON library for org.json
+    implementation 'org.json:json:20230227'
 }
 
 test {
     useJUnitPlatform()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/java/main/java']
+        }
+    }
+    test {
+        java {
+            srcDirs = ['src/java/test/java']
+        }
+    }
+}
+
+compileJava {
+    options.compilerArgs += ['-Xlint:unchecked']
 }

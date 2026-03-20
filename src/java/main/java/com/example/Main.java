@@ -38,9 +38,15 @@ public class Main {
         System.out.println("\n3. Kafe Integration Example:");
         KafeCalculatorTest.main(new String[]{});
         
+        // Mention Dvipa tests
+        System.out.println("\n4. Dvipa BDD Tests:");
+        System.out.println("   Dvipa tests are available in CalculatorDvipaTest.java");
+        System.out.println("   Run with: mvn test -Dtest=CalculatorDvipaTest");
+        
         System.out.println("\nJava Calculator example completed successfully!");
         System.out.println("\nTo run tests: mvn test");
         System.out.println("To build: mvn clean compile");
         System.out.println("To run: mvn exec:java -Dexec.mainClass=\"com.example.Main\"");
+        System.out.println("To run Dvipa tests: mvn test -Dtest=CalculatorDvipaTest");
     }
 }

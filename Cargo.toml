@@ -1,9 +1,39 @@
 [package]
-name = "your_project_name"
+name = "calculator"
 version = "0.1.0"
 edition = "2021"
+authors = ["Your Name <you@example.com>"]
+description = "A calculator implementation for testing with Testeranto"
+license = "MIT"
+repository = ""
+readme = "README.md"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+# The library crate containing the Calculator implementation
+[lib]
+name = "calculator"
+path = "src/rust/lib.rs"
 
+# Main application binary
+[[bin]]
+name = "calculator_app"
+path = "src/rust/src/bin/main.rs"
+
+# Testeranto test binaries
+[[bin]]
+name = "calculator_testeranto_test"
+path = "src/rust/testeranto/Calculator.rusto.test.rs"
+
+[[bin]]
+name = "calculator_ruga_test"
+path = "src/rust/testeranto/ruga/Calculator.rusto.test.rs"
+
+# Dependencies for the library
 [dependencies]
-testeranto_rusto = "0.1.13"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+testeranto_rusto = "0.1.21"
+tokio = { version = "1.0", features = ["full"] }
+async-trait = "0.1"
+
+# Regular Rust tests (unit and integration)
+[dev-dependencies]

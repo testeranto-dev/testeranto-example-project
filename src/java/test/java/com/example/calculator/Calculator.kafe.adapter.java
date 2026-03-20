@@ -1,6 +1,8 @@
+package com.example.calculator;
+
 import java.util.function.Function;
 
-public class CalculatorKafeAdapter {
+class CalculatorKafeAdapter {
     
     public Object beforeAll(Object input, Object testResource) {
         return input;

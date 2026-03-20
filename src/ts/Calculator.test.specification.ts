@@ -6,7 +6,12 @@ export const specification: ITestSpecification<I, O> = (
   Suite,
   Given,
   When,
-  Then
+  Then,
+  Describe,
+  It,
+  Map, 
+  Feed,
+  Validate
 ) => {
   return [
     Suite.Default("Testing Calculator operations", {

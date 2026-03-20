@@ -1,0 +1,26 @@
+=== Log started at 2026-03-20T20:15:53.831Z for service web ===
+
+webtests-src_ts_calculator-test-web-ts-bdd  | yarn run v1.22.22
+webtests-src_ts_calculator-test-web-ts-bdd  | $ /workspace/node_modules/.bin/tsx /workspace/testeranto/web_hoist.ts testeranto/bundles/webtests/src/ts/Calculator.test.web.mjs '{"ports":[1111],"fs":"testeranto/reports/webtests/src/ts/Calculator.test.web.ts/"}'
+webtests-src_ts_calculator-test-web-ts-bdd  | [CLIENT] Attempt 1/30: Attempting to reach Chrome service at http://chrome-service:3000/json/version...
+webtests-src_ts_calculator-test-web-ts-bdd  | [CLIENT] HTTP Status: 200
+webtests-src_ts_calculator-test-web-ts-bdd  | [CLIENT] Successfully fetched WS URL: ws://chrome-service:3000
+webtests-src_ts_calculator-test-web-ts-bdd  | [hoist] Reading bundle from: testeranto/bundles/webtests/src/ts/Calculator.test.web.mjs
+webtests-src_ts_calculator-test-web-ts-bdd  | [hoist] Bundle size: 168731 characters
+webtests-src_ts_calculator-test-web-ts-bdd  | [hoist] Test resource config: {
+webtests-src_ts_calculator-test-web-ts-bdd  |   ports: [ 1111 ],
+webtests-src_ts_calculator-test-web-ts-bdd  |   fs: 'testeranto/reports/webtests/src/ts/Calculator.test.web.ts/'
+webtests-src_ts_calculator-test-web-ts-bdd  | }
+webtests-src_ts_calculator-test-web-ts-bdd  | [hoist] Navigating to data URL with embedded bundle
+webtests-src_ts_calculator-test-web-ts-bdd  | Browser console [log]: Test resource config injected: [object Object] [{"url":"","lineNumber":11,"columnNumber":14}]
+webtests-src_ts_calculator-test-web-ts-bdd  | Browser console [log]: testResourceConfiguration [object Object] [{"url":"blob:null/06a20d3d-da15-4c68-89d6-6557a3917e33","lineNumber":677,"columnNumber":14}]
+webtests-src_ts_calculator-test-web-ts-bdd  | [hoist] Wrote file: /workspace/testeranto/reports/webtests/src/ts/Calculator.test.web.ts/testeranto/reports/webtests/src/ts/Calculator.test.web.ts/tests.json
+webtests-src_ts_calculator-test-web-ts-bdd  | Browser console [log]: Test bundle loaded successfully from blob [{"url":"","lineNumber":21,"columnNumber":16}]
+webtests-src_ts_calculator-test-web-ts-bdd  | Browser console [log]: Module loaded: [object Module] [{"url":"","lineNumber":30,"columnNumber":18}]
+webtests-src_ts_calculator-test-web-ts-bdd  | [hoist] Successfully navigated to data URL
+webtests-src_ts_calculator-test-web-ts-bdd  | [hoist] Waiting for tests to execute...
+webtests-src_ts_calculator-test-web-ts-bdd  | [hoist] Page title: Test Runner
+webtests-src_ts_calculator-test-web-ts-bdd  | Done in 10.06s.
+[Kwebtests-src_ts_calculator-test-web-ts-bdd exited with code 0
+
+=== Log ended at 2026-03-20T20:16:03.954Z, process exited with code 0 ===

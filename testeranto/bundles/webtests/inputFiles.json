@@ -1,0 +1,14 @@
+{
+  "src/ts/Calculator.test.web.ts": {
+    "hash": "8a2adb3622cbc12e9218209408d454c8",
+    "files": [
+      "/node_modules/testeranto.tiposkripto/dist/module/Web.js",
+      "/src/ts/Calculator.ts",
+      "/src/ts/Calculator.test.adapter.ts",
+      "/node_modules/chai/index.js",
+      "/src/ts/Calculator.test.implementation.ts",
+      "/src/ts/Calculator.test.specification.ts",
+      "/src/ts/Calculator.test.web.ts"
+    ]
+  }
+}

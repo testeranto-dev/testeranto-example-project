@@ -47,7 +47,7 @@ public class CalculatorTest {
         assertThat(calculator.getDisplay()).isEmpty();
         
         calculator.memoryRecall();
-        assertEquals("42.0", calculator.getDisplay());
+        assertEquals("42", calculator.getDisplay());
     }
     
     @Test
@@ -55,7 +55,7 @@ public class CalculatorTest {
         calculator.press("1").press("0").memoryAdd();
         calculator.press("2").press("0").memoryAdd();
         calculator.memoryRecall();
-        assertEquals("30.0", calculator.getDisplay());
+        assertEquals("30", calculator.getDisplay());
     }
     
     @Test
@@ -63,19 +63,19 @@ public class CalculatorTest {
         calculator.press("5").press("0").memoryStore();
         calculator.memoryClear();
         calculator.memoryRecall();
-        assertEquals("0.0", calculator.getDisplay());
+        assertEquals("0", calculator.getDisplay());
     }
     
     @Test
     void testEnterWithNumber() {
         calculator.press("4").press("2").enter();
-        assertEquals("42.0", calculator.getDisplay());
+        assertEquals("42", calculator.getDisplay());
     }
     
     @Test
     void testEnterWithSimpleAddition() {
         calculator.press("1").press("2").press("+").press("3").press("4").enter();
-        assertEquals("46.0", calculator.getDisplay());
+        assertEquals("46", calculator.getDisplay());
     }
     
     @Test
@@ -117,7 +117,7 @@ public class CalculatorTest {
         calculator.press("7").press("8").press("9");
         calculator.memoryAdd();
         calculator.memoryRecall();
-        assertEquals("1245.0", calculator.getDisplay());
+        assertEquals("1245", calculator.getDisplay());
     }
     
     @Test
@@ -127,10 +127,10 @@ public class CalculatorTest {
         
         calculator.press("2").press("M+");
         calculator.press("MR");
-        assertEquals("3.0", calculator.getDisplay());
+        assertEquals("3", calculator.getDisplay());
         
         calculator.press("MC");
         calculator.press("MR");
-        assertEquals("0.0", calculator.getDisplay());
+        assertEquals("0", calculator.getDisplay());
     }
 }

@@ -1,7 +1,9 @@
+package com.example.calculator;
+
 import java.util.*;
 import java.util.function.Function;
 
-public class CalculatorKafeImplementation {
+class CalculatorKafeImplementation {
     
     public Map<String, String> suites;
     public Map<String, Object> givens;

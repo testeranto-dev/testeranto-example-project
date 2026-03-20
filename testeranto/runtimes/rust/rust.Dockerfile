@@ -1,4 +1,7 @@
 # syntax=docker/dockerfile:1
+# Minimal Rust Dockerfile for Testeranto
+# Source code is mounted via volumes at runtime
+
 FROM rust:1.75-alpine3.19
 
 WORKDIR /workspace
@@ -17,16 +20,12 @@ RUN apk add --no-cache \
     pkgconfig \
     && rm -rf /var/cache/apk/*
 
-COPY Cargo.toml /workspace/Cargo.toml
-COPY src/rust /workspace/src/rust
-COPY src/main.rs /workspace/src/main.rs
+# Pre-create target directory with proper permissions
+RUN mkdir -p /workspace/target && chmod 777 /workspace/target
 
 # Install additional tools that might be needed for testing
 RUN cargo install --version 0.9.0 cargo-audit || true
 
-# Pre-create target directory with proper permissions
-RUN mkdir -p /workspace/target && chmod 777 /workspace/target
-RUN cargo build --release
-# Don't do this, we run our own custom command
-# Default command: run the Rust builder
-# CMD ["sh", "-c", "cd /workspace && rustc src/server/runtimes/rust/main.rs -o /tmp/rust-builder && /tmp/rust-builder"]
+# No need to build rusto from source - it will be downloaded as a dependency
+# when building test binaries
+# No CMD - command is specified in docker-compose
