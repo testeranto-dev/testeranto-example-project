@@ -1,0 +1,51 @@
+=== Log started at 2026-03-23T03:39:33.851Z for service web ===
+
+webtests  | yarn run v1.22.22
+webtests  | $ /workspace/node_modules/.bin/tsx /workspace/testeranto/web_runtime.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/web/web.ts webtests src/ts/Calculator.test.web.ts src/ts/Calculator.test.web.react.ts
+webtests  | [WEB BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+webtests  | [WEB BUILDER] nodeConfig:  /workspace/testeranto/runtimes/web/web.ts
+webtests  | [WEB BUILDER] testName:  webtests
+webtests  | [WEB BUILDER] Log file: /workspace/testeranto/reports/webtests/build.log
+webtests  | [WEB BUILDER] CWD: /workspace
+webtests  | [WEB BUILDER] is now bundling: webtests
+webtests  | [WEB BUILDER] Entry points: src/ts/Calculator.test.web.ts, src/ts/Calculator.test.web.react.ts
+webtests  | [WEB BUILDER] Running in dev mode - starting watch mode
+webtests  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+webtests  | 
+webtests  |     src/ts/Calculator.ts:10:21:
+webtests  |       10 │       const result = eval(this.display);
+webtests  |          ╵                      ~~~~
+webtests  | 
+webtests  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+webtests  | 
+webtests  | web > build ended with 0 errors
+webtests  | [web Builder] Processed src/ts/Calculator.test.web.ts: 7 files, hash: 4d36e2fb087fae6572fdceed2e65c39f
+webtests  | [web Builder] Processed src/ts/Calculator.test.web.react.ts: 15 files, hash: 8f902b0f792f3bfee1103057682679d8
+webtests  | [web Builder] Wrote inputFiles.json for 2 tests to testeranto/bundles/webtests/inputFiles.json
+webtests  | [WEB BUILDER] Metafile updated
+webtests  | [WEB BUILDER] Triggered inputFiles.json update at testeranto/bundles/webtests/inputFiles.json
+webtests  | [web Builder] Processed src/ts/Calculator.test.web.ts: 7 files, hash: 4d36e2fb087fae6572fdceed2e65c39f
+webtests  | [web Builder] Processed src/ts/Calculator.test.web.react.ts: 15 files, hash: 8f902b0f792f3bfee1103057682679d8
+webtests  | [web Builder] Wrote inputFiles.json for 2 tests to testeranto/bundles/webtests/inputFiles.json
+webtests  | [WEB BUILDER]: esbuild server listening on 127.0.0.1,172.18.0.3, port 8000, /workspace
+webtests  | [WEB BUILDER] Watch mode active - waiting for file changes...
+webtests  | [WEB BUILDER] Using onEnd plugin for rebuild detection
+webtests  | Chrome is a separate service, not launched in builder
+webtests  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+webtests  | 
+webtests  |     src/ts/Calculator.ts:10:21:
+webtests  |       10 │       const result = eval(this.display);
+webtests  |          ╵                      ~~~~
+webtests  | 
+webtests  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+webtests  | 
+webtests  | web > build ended with 0 errors
+webtests  | [web Builder] Processed src/ts/Calculator.test.web.ts: 7 files, hash: 4d36e2fb087fae6572fdceed2e65c39f
+webtests  | [web Builder] Processed src/ts/Calculator.test.web.react.ts: 15 files, hash: 8f902b0f792f3bfee1103057682679d8
+webtests  | [web Builder] Wrote inputFiles.json for 2 tests to testeranto/bundles/webtests/inputFiles.json
+webtests  | [WEB BUILDER] Metafile updated
+webtests  | [WEB BUILDER] Triggered inputFiles.json update at testeranto/bundles/webtests/inputFiles.json
+webtests  | [WEB BUILDER] Process exiting
+[Kwebtests exited with code 1
+
+=== Log ended at 2026-03-23T03:41:42.887Z, process exited with code null ===

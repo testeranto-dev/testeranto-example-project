@@ -1,0 +1,21 @@
+=== Log started at 2026-03-23T03:40:21.728Z for service web ===
+
+webtests-src_ts_calculator-test-web-react-ts-check-0  | yarn run v1.22.22
+webtests-src_ts_calculator-test-web-react-ts-check-0  | $ /workspace/node_modules/.bin/eslint
+webtests-src_ts_calculator-test-web-react-ts-check-0  | 
+webtests-src_ts_calculator-test-web-react-ts-check-0  | Oops! Something went wrong! :(
+webtests-src_ts_calculator-test-web-react-ts-check-0  | 
+webtests-src_ts_calculator-test-web-react-ts-check-0  | ESLint: 10.1.0
+webtests-src_ts_calculator-test-web-react-ts-check-0  | 
+webtests-src_ts_calculator-test-web-react-ts-check-0  | A configuration object specifies rule "import/no-dynamic-require", but could not find plugin "import".
+webtests-src_ts_calculator-test-web-react-ts-check-0  | 
+webtests-src_ts_calculator-test-web-react-ts-check-0  | Common causes of this problem include:
+webtests-src_ts_calculator-test-web-react-ts-check-0  | 
+webtests-src_ts_calculator-test-web-react-ts-check-0  | 1. The "import" plugin is not defined in your configuration file.
+webtests-src_ts_calculator-test-web-react-ts-check-0  | 2. The "import" plugin is not defined within the same configuration object in which the "import/no-dynamic-require" rule is applied.
+webtests-src_ts_calculator-test-web-react-ts-check-0  | 
+webtests-src_ts_calculator-test-web-react-ts-check-0  | error Command failed with exit code 2.
+webtests-src_ts_calculator-test-web-react-ts-check-0  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+[Kwebtests-src_ts_calculator-test-web-react-ts-check-0 exited with code 2
+
+=== Log ended at 2026-03-23T03:40:23.476Z, process exited with code 0 ===

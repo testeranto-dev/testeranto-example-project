@@ -1,0 +1,22 @@
+/add /node_modules/testeranto.tiposkripto/dist/module/Web.js
+/add /src/ts/Calculator.ts
+/add /src/ts/Calculator.test.adapter.ts
+/add /node_modules/chai/index.js
+/add /src/ts/Calculator.test.implementation.ts
+/add /src/ts/Calculator.test.specification.ts
+/add /src/ts/Calculator.test.web.ts
+
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/.DS_Store
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.html
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.js
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.tsx
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/build.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/chrome-service.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/src/ts/Calculator.test.web.ts/aider-message.txt
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/webtests-src_ts_calculator-test-web-ts-bdd.container.exitcode
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/webtests-src_ts_calculator-test-web-ts-bdd.container.status
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/webtests-src_ts_calculator-test-web-ts-bdd.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/webtests.log
+
+Observe these logs and apply.
+

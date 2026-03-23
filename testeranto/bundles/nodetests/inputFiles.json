@@ -1,0 +1,12 @@
+{
+  "src/ts/Calculator.test.node.ts": {
+    "hash": "266b682766c9bcf5ab17d1207e4a38b0",
+    "files": [
+      "/src/ts/Calculator.test.node.ts",
+      "/src/ts/Calculator.ts",
+      "/src/ts/Calculator.test.adapter.ts",
+      "/src/ts/Calculator.test.implementation.ts",
+      "/src/ts/Calculator.test.specification.ts"
+    ]
+  }
+}

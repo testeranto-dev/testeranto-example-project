@@ -23,270 +23,6 @@
       color: #666;
     }
   </style>
-<script id="testeranto-config" type="application/json">
-{
-  "configs": {
-    "runtimes": {
-      "javatests": {
-        "runtime": "java",
-        "tests": [],
-        "checks": [
-          null,
-          null
-        ],
-        "dockerfile": "testeranto/runtimes/java/java.Dockerfile",
-        "buildOptions": "testeranto/runtimes/java/java.java",
-        "outputs": [],
-        "buildKitOptions": {
-          "cacheMounts": [
-            "/root/.m2",
-            "/root/.gradle"
-          ]
-        }
-      },
-      "rubytests": {
-        "runtime": "ruby",
-        "tests": [],
-        "checks": [
-          null,
-          null
-        ],
-        "dockerfile": "testeranto/runtimes/ruby/ruby.Dockerfile",
-        "buildOptions": "testeranto/runtimes/ruby/ruby.rb",
-        "buildKitOptions": {},
-        "outputs": []
-      },
-      "nodetests": {
-        "runtime": "node",
-        "tests": [],
-        "checks": [
-          null,
-          null,
-          null
-        ],
-        "dockerfile": "testeranto/runtimes/node/node.Dockerfile",
-        "buildOptions": "testeranto/runtimes/node/node.mjs",
-        "buildKitOptions": {},
-        "outputs": []
-      },
-      "webtests": {
-        "runtime": "web",
-        "tests": [
-          "src/ts/Calculator.test.web.ts"
-        ],
-        "checks": [
-          null,
-          null
-        ],
-        "dockerfile": "testeranto/runtimes/web/web.Dockerfile",
-        "buildOptions": "testeranto/runtimes/web/web.ts",
-        "buildKitOptions": {},
-        "outputs": []
-      },
-      "pythontests": {
-        "runtime": "python",
-        "tests": [],
-        "checks": [
-          null
-        ],
-        "dockerfile": "testeranto/runtimes/python/python.Dockerfile",
-        "buildOptions": "testeranto/runtimes/python/python.py",
-        "buildKitOptions": {},
-        "outputs": []
-      },
-      "golangtests": {
-        "runtime": "golang",
-        "tests": [],
-        "checks": [
-          null
-        ],
-        "dockerfile": "testeranto/runtimes/golang/golang.Dockerfile",
-        "buildOptions": "testeranto/runtimes/golang/golang.ts",
-        "buildKitOptions": {},
-        "outputs": []
-      },
-      "rusttests": {
-        "runtime": "rust",
-        "tests": [],
-        "checks": [],
-        "dockerfile": "testeranto/runtimes/rust/rust.Dockerfile",
-        "buildOptions": "testeranto/runtimes/rust/rust.ts",
-        "buildKitOptions": {},
-        "outputs": []
-      }
-    },
-    "documentationGlob": "./**/*.md"
-  },
-  "documentationFiles": [
-    "lib/python3.14/site-packages/pip-25.3.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md",
-    "lib/python3.14/site-packages/pip/_vendor/idna/LICENSE.md",
-    "README.md",
-    "src/java/README.md",
-    "src/rust/README.md"
-  ],
-  "featureTree": {
-    "type": "directory",
-    "name": "root",
-    "path": ".",
-    "children": {
-      "README.md": {
-        "type": "file",
-        "name": "README.md",
-        "path": "README.md",
-        "fileType": "documentation",
-        "content": "# testeranto-example-project\n\nThis demonstrates how to use all 6 runtimes against a common class.\n\n## Prerequisites\n\n1. Install the testeranto server as a bun executable globally or locally\n2. Install all required language runtimes:\n   - Node.js (with bun)\n   - Go\n   - Rust (with cargo)\n   - Java (with Gradle)\n   - Ruby (with bundler)\n   - Python (with pip)\n\n## Quick Setup\n\nRun the installation script to install all dependencies from their respective package managers:\n\n```bash\nchmod +x install-dependencies.sh\n./install-dependencies.sh\n```\n\n## Manual Setup\n\nIf you prefer to install dependencies manually:\n\n1. Install dependencies for each language:\n\n   ```bash\n   # JavaScript/TypeScript\n   bun install\n\n   # Go\n   go mod download\n\n   # Rust\n   cargo build\n\n   # Java (Kafe)\n   ./gradlew build\n\n   # Ruby\n   bundle install\n\n   # Python\n   pip install -r requirements.txt\n   ```\n\n2. Run tests using the testeranto server:\n\n   ```bash\n   bun run test\n   ```\n\n   Or directly:\n   ```bash\n   testeranto once\n   ```\n\n## Configuration\n\nThe test configuration is in `testeranto/testeranto.ts`. Edit this file to adjust test settings.\n\n## Dependencies\n\nThis project uses the following published packages:\n- JavaScript/TypeScript: testeranto.tiposkripto@0.1.4 (npm)\n- Go: github.com/testeranto-dev/testeranto/src/lib/golingvu@v0.1.10\n- Rust: testeranto_rusto@0.1.4 (crates.io)\n- Java: com.testeranto:testeranto.kafe:0.1.5 (Maven Central)\n- Ruby: testeranto.rubeno@0.1.4 (RubyGems)\n- Python: testeranto.pitono@0.1.4 (PyPI)\n\n## Note on Go Module\n\nThe Go module uses version v0.1.10. For Go modules in subdirectories, tags must include the full path (e.g., `src/lib/golingvu/v0.1.10`). The publish script has been updated to handle this correctly. Make sure to publish the module with the correct tag format before using.\n"
-      },
-      "lib": {
-        "type": "directory",
-        "name": "lib",
-        "path": "lib",
-        "children": {
-          "python3.14": {
-            "type": "directory",
-            "name": "python3.14",
-            "path": "lib/python3.14",
-            "children": {
-              "site-packages": {
-                "type": "directory",
-                "name": "site-packages",
-                "path": "lib/python3.14/site-packages",
-                "children": {
-                  "pip-25.3.dist-info": {
-                    "type": "directory",
-                    "name": "pip-25.3.dist-info",
-                    "path": "lib/python3.14/site-packages/pip-25.3.dist-info",
-                    "children": {
-                      "licenses": {
-                        "type": "directory",
-                        "name": "licenses",
-                        "path": "lib/python3.14/site-packages/pip-25.3.dist-info/licenses",
-                        "children": {
-                          "src": {
-                            "type": "directory",
-                            "name": "src",
-                            "path": "lib/python3.14/site-packages/pip-25.3.dist-info/licenses/src",
-                            "children": {
-                              "pip": {
-                                "type": "directory",
-                                "name": "pip",
-                                "path": "lib/python3.14/site-packages/pip-25.3.dist-info/licenses/src/pip",
-                                "children": {
-                                  "_vendor": {
-                                    "type": "directory",
-                                    "name": "_vendor",
-                                    "path": "lib/python3.14/site-packages/pip-25.3.dist-info/licenses/src/pip/_vendor",
-                                    "children": {
-                                      "idna": {
-                                        "type": "directory",
-                                        "name": "idna",
-                                        "path": "lib/python3.14/site-packages/pip-25.3.dist-info/licenses/src/pip/_vendor/idna",
-                                        "children": {
-                                          "LICENSE.md": {
-                                            "type": "file",
-                                            "name": "LICENSE.md",
-                                            "path": "lib/python3.14/site-packages/pip-25.3.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md",
-                                            "fileType": "documentation",
-                                            "content": "BSD 3-Clause License\n\nCopyright (c) 2013-2024, Kim Davies and contributors.\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are\nmet:\n\n1. Redistributions of source code must retain the above copyright\n   notice, this list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright\n   notice, this list of conditions and the following disclaimer in the\n   documentation and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n\"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\nLIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\nA PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\nHOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\nSPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED\nTO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR\nPROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF\nLIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING\nNEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\nSOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n"
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "pip": {
-                    "type": "directory",
-                    "name": "pip",
-                    "path": "lib/python3.14/site-packages/pip",
-                    "children": {
-                      "_vendor": {
-                        "type": "directory",
-                        "name": "_vendor",
-                        "path": "lib/python3.14/site-packages/pip/_vendor",
-                        "children": {
-                          "idna": {
-                            "type": "directory",
-                            "name": "idna",
-                            "path": "lib/python3.14/site-packages/pip/_vendor/idna",
-                            "children": {
-                              "LICENSE.md": {
-                                "type": "file",
-                                "name": "LICENSE.md",
-                                "path": "lib/python3.14/site-packages/pip/_vendor/idna/LICENSE.md",
-                                "fileType": "documentation",
-                                "content": "BSD 3-Clause License\n\nCopyright (c) 2013-2024, Kim Davies and contributors.\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are\nmet:\n\n1. Redistributions of source code must retain the above copyright\n   notice, this list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright\n   notice, this list of conditions and the following disclaimer in the\n   documentation and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n\"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\nLIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\nA PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\nHOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\nSPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED\nTO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR\nPROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF\nLIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING\nNEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\nSOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "src": {
-        "type": "directory",
-        "name": "src",
-        "path": "src",
-        "children": {
-          "java": {
-            "type": "directory",
-            "name": "java",
-            "path": "src/java",
-            "children": {
-              "README.md": {
-                "type": "file",
-                "name": "README.md",
-                "path": "src/java/README.md",
-                "fileType": "documentation",
-                "content": "# Calculator Example for Kafe (Java)\n\nThis example demonstrates how to use the Dvipa flavored API for Testeranto in Java. It includes a Calculator class and two styles of tests:\n\n1. **Dvipa Annotation-based Tests**: Using `@DvipaTest`, `@Given`, `@When`, `@Then` annotations with JUnit 5\n2. **Fluent Builder Tests**: Using chainable fluent API similar to TypeScript's flavored API\n\n## Structure\n\n- `Calculator.java`: The calculator implementation\n- `CalculatorDvipaTest.java`: Annotation-based BDD tests using Dvipa\n- `CalculatorFluentBuilderTest.java`: Fluent builder style tests\n- `Main.java`: Main entry point to demonstrate the tests\n- `pom.xml`: Maven configuration\n"
-              }
-            }
-          },
-          "rust": {
-            "type": "directory",
-            "name": "rust",
-            "path": "src/rust",
-            "children": {
-              "README.md": {
-                "type": "file",
-                "name": "README.md",
-                "path": "src/rust/README.md",
-                "fileType": "documentation",
-                "content": "# Calculator Rust Project\n\nThis is a well-structured Rust project demonstrating best practices for organizing a library with:\n1. A reusable Calculator library\n2. A standalone application binary\n3. Regular Rust tests (unit and integration)\n4. Testeranto BDD tests (separate binary)\n\n## Structure\n\n- `src/` - Library source code\n  - `lib.rs` - Library root with unit tests, re-exports Calculator\n  - `calculator.rs` - Calculator implementation\n  - `bin/` - Binary executables\n    - `main.rs` - Main application binary\n- `tests/` - Integration tests\n  - `integration_test.rs` - Regular Rust integration tests\n- `testeranto/` - Testeranto BDD tests\n  - `Calculator.rusto.test.rs` - Testeranto test binary (compiled separately)\n- `Cargo.toml` - Project configuration\n\n## Building and Testing\n\n### Build the library:\n```bash\ncargo build\n```\n\n### Run the main application:\n```bash\ncargo run --bin calculator_app\n```\n\n### Run regular Rust tests (unit and integration):\n```bash\ncargo test\n```\n\n### Run only integration tests:\n```bash\ncargo test --test integration_test\n```\n\n### Build Testeranto test binary:\n```bash\ncargo build --bin calculator_testeranto_test\n```\n\n### Run Testeranto tests (via Testeranto framework):\n```bash\n# This would be run through the Testeranto test runner, not directly\n```\n\n## Library Usage\n\nAdd to your `Cargo.toml`:\n```toml\n[dependencies]\ncalculator = { path = \"./path/to/calculator\" }\n```\n\nUse in your code:\n```rust\nuse calculator::Calculator;\n\nfn main() {\n    let mut calc = Calculator::new();\n    calc.press(\"1\").press(\"2\").press(\"3\");\n    println!(\"Display: {}\", calc.get_display());\n}\n```\n\n## Best Practices Followed\n\n1. **Clear separation of concerns**: Library, application, and tests are separate\n2. **Proper testing structure**: Unit tests in `src/`, integration tests in `tests/`\n3. **Testeranto tests are separate**: Testeranto BDD tests are compiled as a separate binary\n   and don't interfere with regular Rust tests\n4. **Clean dependencies**: Testeranto dependencies are conditionally included only for the\n   Testeranto binary target\n5. **Documentation**: Clear comments and README explaining the structure\n\n## Key Distinctions\n\n- **Regular Rust tests**: Run with `cargo test`, use Rust's built-in testing framework\n- **Testeranto tests**: BDD-style tests compiled as a separate binary, run through the\n  Testeranto test runner framework for cross-language testing consistency\n"
-              }
-            }
-          },
-          "ts": {
-            "type": "directory",
-            "name": "ts",
-            "path": "src/ts",
-            "children": {
-              "Calculator.test.web.ts": {
-                "type": "file",
-                "name": "Calculator.test.web.ts",
-                "path": "src/ts/Calculator.test.web.ts",
-                "fileType": "test-source",
-                "content": null
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-</script>
 </head>
 <body>
   <div id="root">
@@ -300,14 +36,25 @@
       const root = document.getElementById('root');
       
       try {
-        // Import the bundled React app
-        const { renderApp } = await import('./index.js');
+        // Check for embedded data
+        const embeddedData = window.TESTERANTO_EMBEDDED_DATA;
+        if (!embeddedData) {
+          throw new Error('No embedded data found. The server may not have generated the report properly.');
+        }
         
-        // Load data using embedded config
-        const stakeholderData = await loadDataWithEmbeddedConfig();
+        console.log('Loaded embedded data:', embeddedData);
         
-        // Render the React app
-        renderApp(root, stakeholderData);
+        // Import the React app from the embedded bundle
+        // Note: We need to ensure index.js is available at /testeranto/reports/index.js
+        // But for now, we'll use a simple inline renderer if the import fails
+        try {
+          const { renderApp } = await import('/testeranto/reports/index.js');
+          renderApp(root, embeddedData);
+        } catch (importError) {
+          console.warn('Could not import React app, using fallback renderer:', importError);
+          // Fallback: render a simple view with the embedded data
+          renderFallbackApp(root, embeddedData);
+        }
       } catch (error) {
         console.error('Failed to load stakeholder report:', error);
         root.innerHTML = `
@@ -324,165 +71,73 @@
       }
     });
 
-    async function loadDataWithEmbeddedConfig() {
-      // Get the embedded config and documentation files from the HTML
-      const configElement = document.getElementById('testeranto-config');
-      if (!configElement) {
-        throw new Error('No embedded configuration found in HTML');
+    // Simple fallback renderer for when React app is not available
+    function renderFallbackApp(root, data) {
+      const { configs, featureTree, documentation, allTestResults } = data;
+      
+      let html = `
+        <div style="padding: 20px; font-family: sans-serif;">
+          <h1>Testeranto Stakeholder Report</h1>
+          <p><strong>Generated:</strong> ${new Date(data.timestamp).toLocaleString()}</p>
+      `;
+      
+      // Show documentation files
+      if (documentation && documentation.files && documentation.files.length > 0) {
+        html += `
+          <h2>Documentation Files (${documentation.files.length})</h2>
+          <ul style="background: #f5f5f5; padding: 15px; border-radius: 5px;">
+            ${documentation.files.map(file => `<li>${file}</li>`).join('')}
+          </ul>
+        `;
       }
       
-      let embeddedData;
-      try {
-        embeddedData = JSON.parse(configElement.textContent);
-      } catch (error) {
-        throw new Error(`Failed to parse embedded data: ${error.message}`);
-      }
-      
-      const { configs, documentationFiles, featureTree } = embeddedData;
-      console.log('Loaded embedded config:', configs);
-      console.log('Loaded embedded documentation files:', documentationFiles);
-      console.log('Loaded embedded feature tree:', featureTree);
-      
-      // Now use the config to load all test results
-      // Documentation files are already embedded, so we don't need to fetch them
-      const testResultsData = await loadTestResults(configs);
-      
-      return {
-        documentation: {
-          files: documentationFiles || [],
-          timestamp: Date.now()
-        },
-        testResults: testResultsData.testResults,
-        errors: testResultsData.errors || [],
-        configs: configs,
-        timestamp: new Date().toISOString(),
-        workspaceRoot: window.location.origin,
-        featureTree: featureTree
-      };
-    }
-
-
-    async function loadTestResults(configs) {
-      const testResults = {};
-      const errors = [];
-      
-      if (!configs.runtimes) {
-        console.log('No runtimes in config');
-        return { testResults, errors };
-      }
-      
-      // For each runtime and test, try to fetch the test results
-      const promises = [];
-      
-      for (const [configKey, runtimeConfig] of Object.entries(configs.runtimes)) {
-        const runtime = runtimeConfig.runtime;
-        const tests = runtimeConfig.tests || [];
+      // Show test results
+      if (allTestResults && Object.keys(allTestResults).length > 0) {
+        html += `<h2>Test Results</h2>`;
         
-        console.log(`Loading tests for ${configKey} (${runtime}): ${tests.length} tests`);
-        
-        for (const testName of tests) {
-          // Try multiple possible paths for test results
-          // The correct path structure is: testeranto/reports/{configKey}/{testName}/tests.json
-          // Also try with sanitized test name
+        for (const [runtimeKey, tests] of Object.entries(allTestResults)) {
+          html += `<h3>${runtimeKey}</h3>`;
           
-          const sanitizedTestName = testName.replace(/\//g, '_').replace(/\./g, '-');
-          const possiblePaths = [
-            // Primary correct path: HTML is at testeranto/reports/index.html
-            // So test results are at ./{configKey}/{testName}/tests.json
-            `./${configKey}/${testName}/tests.json`,
-            // Alternative with sanitized test name
-            `./${configKey}/${sanitizedTestName}/tests.json`,
-            // From project root (go up one level then into testeranto/reports)
-            `../testeranto/reports/${configKey}/${testName}/tests.json`,
-            `../testeranto/reports/${configKey}/${sanitizedTestName}/tests.json`,
-            // Using runtime instead of configKey (for backward compatibility)
-            `./${runtime}/${testName}/tests.json`,
-            `./${runtime}/${sanitizedTestName}/tests.json`,
-            `../testeranto/reports/${runtime}/${testName}/tests.json`,
-            `../testeranto/reports/${runtime}/${sanitizedTestName}/tests.json`,
-            // Absolute-like paths (may work on GitHub Pages)
-            `/testeranto/reports/${configKey}/${testName}/tests.json`,
-            `/testeranto/reports/${configKey}/${sanitizedTestName}/tests.json`,
-            `/testeranto/reports/${runtime}/${testName}/tests.json`,
-            `/testeranto/reports/${runtime}/${sanitizedTestName}/tests.json`,
-          ];
-          
-          promises.push(
-            fetchTestResultWithMultiplePaths(possiblePaths, configKey, testName, testResults, errors)
-          );
-        }
-      }
-      
-      // Wait for all promises to settle (both fulfilled and rejected)
-      await Promise.allSettled(promises);
-      
-      console.log(`Loaded ${Object.keys(testResults).length} test results, encountered ${errors.length} errors`);
-      
-      // Return both test results and errors
-      return { testResults, errors };
-    }
-
-    async function fetchTestResultWithMultiplePaths(paths, configKey, testName, testResults, errors) {
-      const key = `${configKey}/${testName}`;
-      let lastError = null;
-      
-      for (const path of paths) {
-        try {
-          const response = await fetch(path);
-          if (response.ok) {
-            const data = await response.json();
-            testResults[key] = {
-              ...data,
-              _sourcePath: path
-            };
-            console.log(`Loaded test results from: ${path}`);
-            return; // Success, stop trying other paths
-          } else {
-            // Store the HTTP error
-            lastError = {
-              type: 'http',
-              status: response.status,
-              statusText: response.statusText,
-              path: path,
-              configKey,
-              testName
-            };
-            console.warn(`HTTP ${response.status} for ${path}`);
+          for (const [testName, testData] of Object.entries(tests)) {
+            const status = testData.failed ? '❌ Failed' : '✅ Passed';
+            const color = testData.failed ? '#f44336' : '#4caf50';
+            
+            html += `
+              <div style="margin-bottom: 15px; padding: 10px; border-left: 4px solid ${color}; background: #f9f9f9;">
+                <div style="display: flex; justify-content: space-between;">
+                  <strong>${testName}</strong>
+                  <span style="color: ${color}; font-weight: bold;">${status}</span>
+                </div>
+                <div style="font-size: 14px; margin-top: 5px;">
+                  Tests: ${testData.runTimeTests || 0} | 
+                  Failures: ${testData.fails || 0}
+                </div>
+            `;
+            
+            // Show features if available
+            if (testData.features && testData.features.length > 0) {
+              html += `
+                <div style="margin-top: 10px;">
+                  <div style="font-size: 12px; font-weight: bold;">Features:</div>
+                  <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px;">
+                    ${testData.features.slice(0, 5).map(feature => 
+                      `<span style="background: #e3f2fd; padding: 2px 8px; border-radius: 10px; font-size: 11px;">${feature}</span>`
+                    ).join('')}
+                    ${testData.features.length > 5 ? 
+                      `<span style="background: #f5f5f5; padding: 2px 8px; border-radius: 10px; font-size: 11px;">+${testData.features.length - 5} more</span>` : 
+                      ''}
+                  </div>
+                </div>
+              `;
+            }
+            
+            html += `</div>`;
           }
-        } catch (error) {
-          // Store network or other errors
-          lastError = {
-            type: 'network',
-            error: error.message,
-            path: path,
-            configKey,
-            testName
-          };
-          console.warn(`Network error for ${path}: ${error.message}`);
-          // Continue to next path
         }
       }
       
-      // If we get here, all paths failed
-      const errorMessage = `Could not find test results for ${configKey}/${testName}`;
-      console.warn(errorMessage);
-      
-      // Add to errors array
-      errors.push({
-        configKey,
-        testName,
-        message: errorMessage,
-        lastAttempt: lastError,
-        triedPaths: paths
-      });
-      
-      // Still add an entry to testResults to indicate missing data
-      testResults[key] = {
-        _error: true,
-        _message: errorMessage,
-        _lastAttempt: lastError,
-        _triedPaths: paths
-      };
+      html += `</div>`;
+      root.innerHTML = html;
     }
   </script>
 </body>

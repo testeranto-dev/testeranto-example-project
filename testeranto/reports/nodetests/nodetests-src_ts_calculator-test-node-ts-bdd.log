@@ -1,0 +1,28 @@
+=== Log started at 2026-03-23T03:40:02.840Z for service node ===
+
+nodetests-src_ts_calculator-test-node-ts-bdd  | yarn run v1.22.22
+nodetests-src_ts_calculator-test-node-ts-bdd  | $ /workspace/node_modules/.bin/tsx testeranto/bundles/nodetests/src/ts/Calculator.test.node.mjs '{"ports":[1111],"fs":"testeranto/reports/nodetests/src/ts/Calculator.test.node.ts/"}'
+nodetests-src_ts_calculator-test-node-ts-bdd  | [NodeTiposkripto] /usr/local/bin/node,/workspace/testeranto/bundles/nodetests/src/ts/Calculator.test.node.mjs,{"ports":[1111],"fs":"testeranto/reports/nodetests/src/ts/Calculator.test.node.ts/"}
+nodetests-src_ts_calculator-test-node-ts-bdd  | [Node] Error creating Tiposkripto: TypeError: Cannot read properties of undefined (reading 'a simple caclulator')
+nodetests-src_ts_calculator-test-node-ts-bdd  |     at specification (file:///workspace/testeranto/bundles/nodetests/src/ts/Calculator.test.node.mjs:192:34)
+nodetests-src_ts_calculator-test-node-ts-bdd  |     at new BaseTiposkripto (file:///workspace/node_modules/testeranto.tiposkripto/dist/module/Node.js:876:18)
+nodetests-src_ts_calculator-test-node-ts-bdd  |     at new NodeTiposkripto (file:///workspace/node_modules/testeranto.tiposkripto/dist/module/Node.js:1050:5)
+nodetests-src_ts_calculator-test-node-ts-bdd  |     at tiposkripto (file:///workspace/node_modules/testeranto.tiposkripto/dist/module/Node.js:1070:15)
+nodetests-src_ts_calculator-test-node-ts-bdd  |     at file:///workspace/testeranto/bundles/nodetests/src/ts/Calculator.test.node.mjs:473:36
+nodetests-src_ts_calculator-test-node-ts-bdd  |     at ModuleJob.run (node:internal/modules/esm/module_job:263:25)
+nodetests-src_ts_calculator-test-node-ts-bdd  |     at async ModuleLoader.import (node:internal/modules/esm/loader:540:24)
+nodetests-src_ts_calculator-test-node-ts-bdd  |     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+nodetests-src_ts_calculator-test-node-ts-bdd  | TypeError: Cannot read properties of undefined (reading 'a simple caclulator')
+nodetests-src_ts_calculator-test-node-ts-bdd  |     at specification (file:///workspace/testeranto/bundles/nodetests/src/ts/Calculator.test.node.mjs:192:34)
+nodetests-src_ts_calculator-test-node-ts-bdd  |     at new BaseTiposkripto (file:///workspace/node_modules/testeranto.tiposkripto/dist/module/Node.js:876:18)
+nodetests-src_ts_calculator-test-node-ts-bdd  |     at new NodeTiposkripto (file:///workspace/node_modules/testeranto.tiposkripto/dist/module/Node.js:1050:5)
+nodetests-src_ts_calculator-test-node-ts-bdd  |     at tiposkripto (file:///workspace/node_modules/testeranto.tiposkripto/dist/module/Node.js:1070:15)
+nodetests-src_ts_calculator-test-node-ts-bdd  |     at file:///workspace/testeranto/bundles/nodetests/src/ts/Calculator.test.node.mjs:473:36
+nodetests-src_ts_calculator-test-node-ts-bdd  |     at ModuleJob.run (node:internal/modules/esm/module_job:263:25)
+nodetests-src_ts_calculator-test-node-ts-bdd  |     at async ModuleLoader.import (node:internal/modules/esm/loader:540:24)
+nodetests-src_ts_calculator-test-node-ts-bdd  |     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+nodetests-src_ts_calculator-test-node-ts-bdd  | error Command failed with exit code 255.
+nodetests-src_ts_calculator-test-node-ts-bdd  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+[Knodetests-src_ts_calculator-test-node-ts-bdd exited with code 255
+
+=== Log ended at 2026-03-23T03:40:03.208Z, process exited with code 0 ===

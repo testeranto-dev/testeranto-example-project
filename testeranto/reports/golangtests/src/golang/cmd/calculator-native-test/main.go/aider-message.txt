@@ -1,0 +1,25 @@
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/.DS_Store
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/.DS_Store
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/golangtests-src_golang_cmd_calculator-native-test_main-go-bdd.container.exitcode
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/golangtests-src_golang_cmd_calculator-native-test_main-go-bdd.container.status
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/golangtests-src_golang_cmd_calculator-native-test_main-go-bdd.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/golangtests-src_golang_cmd_calculator-test_main-go-bdd.container.exitcode
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/golangtests-src_golang_cmd_calculator-test_main-go-bdd.container.status
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/golangtests-src_golang_cmd_calculator-test_main-go-bdd.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/golangtests-src_golang_cmd_calculator-test_main-go-check-0.container.exitcode
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/golangtests-src_golang_cmd_calculator-test_main-go-check-0.container.status
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/golangtests-src_golang_cmd_calculator-test_main-go-check-0.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/golangtests-src_golang_cmd_calculator-test_main-go-check-1.container.exitcode
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/golangtests-src_golang_cmd_calculator-test_main-go-check-1.container.status
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/golangtests-src_golang_cmd_calculator-test_main-go-check-1.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/golangtests-src_golang_cmd_calculator-test_main-go-check-2.container.exitcode
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/golangtests-src_golang_cmd_calculator-test_main-go-check-2.container.status
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/golangtests-src_golang_cmd_calculator-test_main-go-check-2.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/src/golang/cmd/calculator-native-test/main.go/aider-message.txt
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/src/golang/cmd/calculator-test/main.go/aider-message.txt
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.html
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.js
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.tsx
+
+Observe these logs and apply.
+

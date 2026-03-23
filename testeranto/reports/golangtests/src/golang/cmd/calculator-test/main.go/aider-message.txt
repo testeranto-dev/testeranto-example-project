@@ -1,0 +1,11 @@
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/.DS_Store
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/golangtests-src_golang_cmd_calculator-test_main-go-bdd.container.exitcode
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/golangtests-src_golang_cmd_calculator-test_main-go-bdd.container.status
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/golangtests-src_golang_cmd_calculator-test_main-go-bdd.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/golangtests/src/golang/cmd/calculator-test/main.go/aider-message.txt
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.html
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.js
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.tsx
+
+Observe these logs and apply.
+

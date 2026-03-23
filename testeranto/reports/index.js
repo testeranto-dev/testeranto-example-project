@@ -1095,7 +1095,7 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useRef(initialValue);
         }
-        function useEffect(create, deps) {
+        function useEffect2(create, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useEffect(create, deps);
         }
@@ -1111,7 +1111,7 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useCallback(callback, deps);
         }
-        function useMemo(create, deps) {
+        function useMemo2(create, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useMemo(create, deps);
         }
@@ -1877,12 +1877,12 @@ var require_react_development = __commonJS({
         exports.useContext = useContext;
         exports.useDebugValue = useDebugValue;
         exports.useDeferredValue = useDeferredValue;
-        exports.useEffect = useEffect;
+        exports.useEffect = useEffect2;
         exports.useId = useId;
         exports.useImperativeHandle = useImperativeHandle;
         exports.useInsertionEffect = useInsertionEffect;
         exports.useLayoutEffect = useLayoutEffect;
-        exports.useMemo = useMemo;
+        exports.useMemo = useMemo2;
         exports.useReducer = useReducer;
         exports.useRef = useRef;
         exports.useState = useState2;
@@ -2381,9 +2381,9 @@ var require_react_dom_development = __commonJS({
         if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
           __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
         }
-        var React2 = require_react();
+        var React7 = require_react();
         var Scheduler = require_scheduler();
-        var ReactSharedInternals = React2.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+        var ReactSharedInternals = React7.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
         var suppressWarning = false;
         function setSuppressWarning(newSuppressWarning) {
           {
@@ -3990,7 +3990,7 @@ var require_react_dom_development = __commonJS({
           {
             if (props.value == null) {
               if (typeof props.children === "object" && props.children !== null) {
-                React2.Children.forEach(props.children, function(child) {
+                React7.Children.forEach(props.children, function(child) {
                   if (child == null) {
                     return;
                   }
@@ -12463,7 +12463,7 @@ var require_react_dom_development = __commonJS({
           }
         }
         var fakeInternalInstance = {};
-        var emptyRefsObject = new React2.Component().refs;
+        var emptyRefsObject = new React7.Component().refs;
         var didWarnAboutStateAssignmentForComponent;
         var didWarnAboutUninitializedState;
         var didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate;
@@ -23542,7 +23542,7 @@ var require_react_jsx_runtime_development = __commonJS({
     if (true) {
       (function() {
         "use strict";
-        var React2 = require_react();
+        var React7 = require_react();
         var REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.element");
         var REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal");
         var REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment");
@@ -23568,7 +23568,7 @@ var require_react_jsx_runtime_development = __commonJS({
           }
           return null;
         }
-        var ReactSharedInternals = React2.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+        var ReactSharedInternals = React7.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
         function error(format) {
           {
             {
@@ -24426,7 +24426,7 @@ var require_jsx_runtime = __commonJS({
 });
 
 // testeranto/reports/index.tsx
-var import_react = __toESM(require_react(), 1);
+var import_react6 = __toESM(require_react(), 1);
 var import_client = __toESM(require_client(), 1);
 
 // node_modules/testeranto/src/server/serverClasses/StakeholderUtils.tsx
@@ -24441,6 +24441,9 @@ var getNodeIcon = (node) => {
   } else if (node.fileType === "test-results") {
     icon = "\u{1F9EA}";
     color = "#ff9800";
+  } else if (node.fileType === "log") {
+    icon = "\u{1F4DD}";
+    color = "#795548";
   } else if (node.fileType === "test-directory") {
     icon = "\u{1F4C1}";
     color = "#9c27b0";
@@ -24482,15 +24485,405 @@ var getNodeIcon = (node) => {
   return { icon, color, bgColor };
 };
 
+// node_modules/grafeovidajo/dist/index.js
+var import_react = __toESM(require_react());
+var import_react2 = __toESM(require_react());
+var import_react3 = __toESM(require_react());
+var import_react4 = __toESM(require_react());
+var import_react5 = __toESM(require_react());
+function projectGraph(graph, config) {
+  const nodes = [];
+  const edges = [];
+  let minX = Infinity;
+  let maxX = -Infinity;
+  let minY = Infinity;
+  let maxY = -Infinity;
+  for (const node of graph.nodes) {
+    const x = getProjectedValue(node, config.xAttribute, config.xType, config.xTransform);
+    const y = getProjectedValue(node, config.yAttribute, config.yType, config.yTransform);
+    minX = Math.min(minX, x);
+    maxX = Math.max(maxX, x);
+    minY = Math.min(minY, y);
+    maxY = Math.max(maxY, y);
+    nodes.push({
+      ...node,
+      x,
+      y
+    });
+  }
+  if (graph.edges) {
+    for (const edge of graph.edges) {
+      edges.push({
+        ...edge
+      });
+    }
+  }
+  return {
+    nodes,
+    edges: edges.length > 0 ? edges : void 0,
+    bounds: {
+      x: [minX, maxX],
+      y: [minY, maxY]
+    }
+  };
+}
+function getProjectedValue(node, attribute, type, transform) {
+  if (!attribute) return 0.5;
+  const value = node.attributes[attribute];
+  if (transform) {
+    return transform(value);
+  }
+  switch (type) {
+    case "continuous":
+      return typeof value === "number" ? value : 0;
+    case "categorical":
+      return typeof value === "string" ? value.charCodeAt(0) % 10 / 10 : 0;
+    case "ordinal":
+      return typeof value === "number" ? value : 0;
+    case "temporal":
+      return value instanceof Date ? value.getTime() : 0;
+    default:
+      return typeof value === "number" ? value : 0.5;
+  }
+}
+function layoutGrid(nodes, spacing = { x: 50, y: 50 }) {
+  const sortedNodes = [...nodes].sort((a, b) => {
+    if (a.x !== b.x) return a.x - b.x;
+    return a.y - b.y;
+  });
+  return sortedNodes.map((node, index) => ({
+    ...node,
+    screenX: index * spacing.x,
+    screenY: Math.floor(index / 10) * spacing.y
+  }));
+}
+function layoutForce(nodes, edges) {
+  return nodes.map((node) => ({
+    ...node,
+    screenX: node.x * 100,
+    screenY: node.y * 100
+  }));
+}
+function layoutTree(nodes, edges, rootId) {
+  const root = rootId ? nodes.find((n) => n.id === rootId) : nodes[0];
+  return nodes.map((node, index) => ({
+    ...node,
+    screenX: index * 60,
+    screenY: getDepth(node, edges, nodes) * 80
+  }));
+}
+function getDepth(node, edges, allNodes) {
+  const incomingEdges = edges.filter((e) => e.target === node.id);
+  if (incomingEdges.length === 0) return 0;
+  const sourceNodes = incomingEdges.map((e) => allNodes.find((n) => n.id === e.source));
+  const maxDepth = Math.max(...sourceNodes.map((n) => getDepth(n, edges, allNodes)));
+  return maxDepth + 1;
+}
+function layoutTimeline(nodes, timeAttribute) {
+  const timeNodes = nodes.map((node) => ({
+    node,
+    time: node.attributes[timeAttribute]
+  })).sort((a, b) => a.time - b.time);
+  return timeNodes.map(({ node }, index) => ({
+    ...node,
+    screenX: index * 80,
+    screenY: 50
+  }));
+}
+function applyStyles(projectedGraph, styleConfig = {}) {
+  const styledNodes = projectedGraph.nodes.map((node) => {
+    const size = getNodeSize(node, styleConfig.nodeSize);
+    const color = getNodeColor(node, styleConfig.nodeColor);
+    const shape = getNodeShape(node, styleConfig.nodeShape);
+    const label = getNodeLabel(node, styleConfig.labels);
+    return {
+      ...node,
+      size,
+      color,
+      shape,
+      label
+    };
+  });
+  return {
+    ...projectedGraph,
+    nodes: styledNodes
+  };
+}
+function getNodeSize(node, sizeConfig) {
+  if (typeof sizeConfig === "function") {
+    return sizeConfig(node);
+  }
+  return sizeConfig || 10;
+}
+function getNodeColor(node, colorConfig) {
+  if (typeof colorConfig === "function") {
+    return colorConfig(node);
+  }
+  return colorConfig || "#3498db";
+}
+function getNodeShape(node, shapeConfig) {
+  if (typeof shapeConfig === "function") {
+    return shapeConfig(node);
+  }
+  return shapeConfig || "circle";
+}
+function getNodeLabel(node, labelsConfig) {
+  if (!labelsConfig?.show) return void 0;
+  const attribute = labelsConfig.attribute || "id";
+  return node.attributes[attribute] || node.id;
+}
+var BaseChart = ({
+  data,
+  config,
+  width,
+  height,
+  onNodeClick,
+  onNodeHover
+}) => {
+  const projectedGraph = (0, import_react.useMemo)(() => {
+    return projectGraph(data, config.projection);
+  }, [data, config.projection]);
+  const laidOutGraph = (0, import_react.useMemo)(() => {
+    const nodes = projectedGraph.nodes;
+    let laidOutNodes = [...nodes];
+    switch (config.projection.layout) {
+      case "grid":
+        laidOutNodes = layoutGrid(nodes, config.projection.spacing);
+        break;
+      case "force":
+        laidOutNodes = layoutForce(nodes, data.edges);
+        break;
+      case "tree":
+        if (data.edges) {
+          laidOutNodes = layoutTree(nodes, data.edges);
+        }
+        break;
+      case "timeline":
+        if (config.projection.xAttribute) {
+          laidOutNodes = layoutTimeline(nodes, config.projection.xAttribute);
+        }
+        break;
+      default:
+        laidOutNodes = nodes.map((node) => ({
+          ...node,
+          screenX: node.x * width,
+          screenY: node.y * height
+        }));
+    }
+    return {
+      ...projectedGraph,
+      nodes: laidOutNodes
+    };
+  }, [projectedGraph, config.projection.layout, data.edges, width, height]);
+  const styledGraph = (0, import_react.useMemo)(() => {
+    return applyStyles(laidOutGraph, config.style);
+  }, [laidOutGraph, config.style]);
+  const renderNodes = () => {
+    return styledGraph.nodes.map((node) => {
+      const x = node.screenX || node.x * width;
+      const y = node.screenY || node.y * height;
+      const nodeProps = {
+        key: node.id,
+        cx: x,
+        cy: y,
+        r: node.size,
+        fill: node.color,
+        onClick: () => onNodeClick?.(node),
+        onMouseEnter: () => onNodeHover?.(node),
+        onMouseLeave: () => onNodeHover?.(null),
+        style: { cursor: "pointer" }
+      };
+      switch (node.shape) {
+        case "square":
+          return /* @__PURE__ */ import_react.default.createElement(
+            "rect",
+            {
+              ...nodeProps,
+              x: x - node.size,
+              y: y - node.size,
+              width: node.size * 2,
+              height: node.size * 2
+            }
+          );
+        case "diamond":
+          return /* @__PURE__ */ import_react.default.createElement(
+            "polygon",
+            {
+              ...nodeProps,
+              points: `${x},${y - node.size} ${x + node.size},${y} ${x},${y + node.size} ${x - node.size},${y}`
+            }
+          );
+        default:
+          return /* @__PURE__ */ import_react.default.createElement("circle", { ...nodeProps });
+      }
+    });
+  };
+  const renderEdges = () => {
+    if (!styledGraph.edges) return null;
+    return styledGraph.edges.map((edge, index) => {
+      const sourceNode = styledGraph.nodes.find((n) => n.id === edge.source);
+      const targetNode = styledGraph.nodes.find((n) => n.id === edge.target);
+      if (!sourceNode || !targetNode) return null;
+      const x1 = sourceNode.screenX || sourceNode.x * width;
+      const y1 = sourceNode.screenY || sourceNode.y * height;
+      const x2 = targetNode.screenX || targetNode.x * width;
+      const y2 = targetNode.screenY || targetNode.y * height;
+      return /* @__PURE__ */ import_react.default.createElement(
+        "line",
+        {
+          key: `edge-${index}`,
+          x1,
+          y1,
+          x2,
+          y2,
+          stroke: config.style?.edgeColor || "#999",
+          strokeWidth: config.style?.edgeWidth || 1
+        }
+      );
+    });
+  };
+  const renderLabels = () => {
+    if (!config.style?.labels?.show) return null;
+    return styledGraph.nodes.map((node) => {
+      if (!node.label) return null;
+      const x = node.screenX || node.x * width;
+      const y = node.screenY || node.y * height;
+      return /* @__PURE__ */ import_react.default.createElement(
+        "text",
+        {
+          key: `label-${node.id}`,
+          x,
+          y: y + node.size + 15,
+          textAnchor: "middle",
+          fontSize: config.style.labels?.fontSize || 12,
+          fill: "#333"
+        },
+        node.label
+      );
+    });
+  };
+  return /* @__PURE__ */ import_react.default.createElement("svg", { width, height, style: { border: "1px solid #ccc" } }, renderEdges(), renderNodes(), renderLabels());
+};
+var EisenhowerMatrix = (props) => {
+  const { config, width, height } = props;
+  const renderQuadrantLines = () => {
+    const midX = width / 2;
+    const midY = height / 2;
+    return /* @__PURE__ */ import_react2.default.createElement(import_react2.default.Fragment, null, /* @__PURE__ */ import_react2.default.createElement(
+      "line",
+      {
+        x1: midX,
+        y1: 0,
+        x2: midX,
+        y2: height,
+        stroke: "#ccc",
+        strokeWidth: 2,
+        strokeDasharray: "5,5"
+      }
+    ), /* @__PURE__ */ import_react2.default.createElement(
+      "line",
+      {
+        x1: 0,
+        y1: midY,
+        x2: width,
+        y2: midY,
+        stroke: "#ccc",
+        strokeWidth: 2,
+        strokeDasharray: "5,5"
+      }
+    ), /* @__PURE__ */ import_react2.default.createElement("text", { x: width * 0.25, y: 20, textAnchor: "middle", fontWeight: "bold" }, "Urgent"), /* @__PURE__ */ import_react2.default.createElement("text", { x: width * 0.75, y: 20, textAnchor: "middle", fontWeight: "bold" }, "Not Urgent"), /* @__PURE__ */ import_react2.default.createElement("text", { x: 10, y: height * 0.25, textAnchor: "start", fontWeight: "bold", transform: `rotate(-90, 10, ${height * 0.25})` }, "Important"), /* @__PURE__ */ import_react2.default.createElement("text", { x: 10, y: height * 0.75, textAnchor: "start", fontWeight: "bold", transform: `rotate(-90, 10, ${height * 0.75})` }, "Not Important"));
+  };
+  return /* @__PURE__ */ import_react2.default.createElement("svg", { width, height, style: { border: "1px solid #ccc" } }, renderQuadrantLines(), /* @__PURE__ */ import_react2.default.createElement(BaseChart, { ...props }));
+};
+var GanttChart = (props) => {
+  const { config, width, height } = props;
+  const [startTime, endTime] = config.timeRange;
+  const totalDuration = endTime.getTime() - startTime.getTime();
+  const renderTimeline = () => {
+    const hours = Math.ceil(totalDuration / (1e3 * 60 * 60));
+    const segments = Math.min(hours, 24);
+    return Array.from({ length: segments }).map((_, i) => {
+      const x = i / segments * width;
+      const time = new Date(startTime.getTime() + i / segments * totalDuration);
+      return /* @__PURE__ */ import_react3.default.createElement("g", { key: `timeline-${i}` }, /* @__PURE__ */ import_react3.default.createElement(
+        "line",
+        {
+          x1: x,
+          y1: 0,
+          x2: x,
+          y2: height,
+          stroke: "#eee",
+          strokeWidth: 1
+        }
+      ), /* @__PURE__ */ import_react3.default.createElement(
+        "text",
+        {
+          x,
+          y: 15,
+          textAnchor: "middle",
+          fontSize: 10,
+          fill: "#666"
+        },
+        time.getHours().toString().padStart(2, "0"),
+        ":00"
+      ));
+    });
+  };
+  return /* @__PURE__ */ import_react3.default.createElement("svg", { width, height, style: { border: "1px solid #ccc" } }, renderTimeline(), /* @__PURE__ */ import_react3.default.createElement(BaseChart, { ...props }));
+};
+var KanbanBoard = (props) => {
+  const { config, width, height } = props;
+  const renderColumns = () => {
+    let currentX = 0;
+    return config.columns.map((column, index) => {
+      const columnWidth = column.width / 100 * width;
+      const columnX = currentX;
+      currentX += columnWidth;
+      const columnNodes = props.data.nodes.filter(column.statusFilter);
+      return /* @__PURE__ */ import_react4.default.createElement("g", { key: `column-${column.id}` }, /* @__PURE__ */ import_react4.default.createElement(
+        "rect",
+        {
+          x: columnX,
+          y: 0,
+          width: columnWidth,
+          height,
+          fill: "#f5f5f5",
+          stroke: "#ddd",
+          strokeWidth: 1
+        }
+      ), /* @__PURE__ */ import_react4.default.createElement(
+        "text",
+        {
+          x: columnX + columnWidth / 2,
+          y: 25,
+          textAnchor: "middle",
+          fontWeight: "bold",
+          fontSize: 14
+        },
+        column.title,
+        " (",
+        columnNodes.length,
+        ")"
+      ));
+    });
+  };
+  return /* @__PURE__ */ import_react4.default.createElement("svg", { width, height, style: { border: "1px solid #ccc" } }, renderColumns(), /* @__PURE__ */ import_react4.default.createElement(BaseChart, { ...props }));
+};
+var TreeGraph = (props) => {
+  return /* @__PURE__ */ import_react5.default.createElement(BaseChart, { ...props });
+};
+
 // testeranto/reports/index.tsx
 var DefaultStakeholderApp = ({
   data
 }) => {
-  const [expandedPaths, setExpandedPaths] = (0, import_react.useState)(
+  const [expandedPaths, setExpandedPaths] = (0, import_react6.useState)(
     /* @__PURE__ */ new Set([".", "root"])
   );
-  const [selectedFile, setSelectedFile] = (0, import_react.useState)(null);
-  const [selectedFileContent, setSelectedFileContent] = (0, import_react.useState)(null);
+  const [selectedFile, setSelectedFile] = (0, import_react6.useState)(null);
+  const [selectedFileContent, setSelectedFileContent] = (0, import_react6.useState)(null);
+  const [activeTab, setActiveTab] = (0, import_react6.useState)("tree");
+  const [vizType, setVizType] = (0, import_react6.useState)("eisenhower");
   const toggleExpand = (path) => {
     const newExpanded = new Set(expandedPaths);
     if (newExpanded.has(path)) {
@@ -24502,38 +24895,94 @@ var DefaultStakeholderApp = ({
   };
   const handleFileSelect = (node) => {
     setSelectedFile(node.path);
-    if (node.fileType === "test-results") {
-      if (node.testData) {
-        setSelectedFileContent(node.testData);
-      } else if (node.children) {
+    if (node.type === "file") {
+      const embeddedData = window.TESTERANTO_EMBEDDED_DATA;
+      if (embeddedData && embeddedData.fileContents && embeddedData.fileContents[node.path]) {
+        const content = embeddedData.fileContents[node.path];
+        const ext = node.path.split(".").pop()?.toLowerCase();
+        let language = "text";
+        if (ext === "js" || ext === "jsx") language = "javascript";
+        else if (ext === "ts" || ext === "tsx") language = "typescript";
+        else if (ext === "py") language = "python";
+        else if (ext === "rb") language = "ruby";
+        else if (ext === "go") language = "go";
+        else if (ext === "rs") language = "rust";
+        else if (ext === "java") language = "java";
+        else if (ext === "html") language = "html";
+        else if (ext === "css") language = "css";
+        else if (ext === "json") language = "json";
+        else if (ext === "md") language = "markdown";
+        else if (ext === "yml" || ext === "yaml") language = "yaml";
+        else if (ext === "xml") language = "xml";
+        else if (ext === "sh") language = "bash";
+        else if (ext === "log") language = "log";
         setSelectedFileContent({
-          type: "test-results-tree",
+          type: "file",
           path: node.path,
           name: node.name,
-          children: node.children
+          content,
+          language,
+          size: content.length,
+          fileType: node.fileType
+        });
+      } else if (embeddedData && embeddedData.documentation && embeddedData.documentation.contents && embeddedData.documentation.contents[node.path]) {
+        const content = embeddedData.documentation.contents[node.path];
+        setSelectedFileContent({
+          type: "documentation",
+          path: node.path,
+          name: node.name,
+          content,
+          language: "markdown",
+          size: content.length
         });
       } else {
-        setSelectedFileContent(null);
+        setSelectedFileContent({
+          type: "file",
+          path: node.path,
+          name: node.name,
+          message: `File content not embedded: ${node.path}`,
+          fileType: node.fileType
+        });
       }
-    } else if (node.fileType === "log") {
+    } else if (node.fileType === "documentation") {
+      const embeddedData = window.TESTERANTO_EMBEDDED_DATA;
+      if (embeddedData && embeddedData.documentation && embeddedData.documentation.contents && embeddedData.documentation.contents[node.path]) {
+        const content = embeddedData.documentation.contents[node.path];
+        setSelectedFileContent({
+          type: "documentation",
+          path: node.path,
+          name: node.name,
+          content,
+          language: "markdown",
+          size: content.length
+        });
+      } else {
+        setSelectedFileContent({
+          type: "documentation",
+          path: node.path,
+          name: node.name,
+          message: `Documentation file: ${node.path}. Content not embedded.`
+        });
+      }
+    } else if (node.type === "test") {
       setSelectedFileContent({
-        type: "log",
+        type: "test",
         path: node.path,
         name: node.name,
-        message: `Log file: ${node.path}. In a real implementation, the content would be fetched from the server.`
+        bddStatus: node.bddStatus || { status: "unknown", color: "gray" },
+        children: node.children
       });
-    } else if (node.fileType === "test-source") {
+    } else if (node.type === "feature") {
       setSelectedFileContent({
-        type: "test-source",
+        type: "feature",
         path: node.path,
         name: node.name,
-        message: "This is a test source file. Test results are attached below if available."
+        feature: node.feature,
+        status: node.status || "unknown"
       });
-    } else if (node.content !== null && node.content !== void 0 && node.fileType === "documentation") {
-      setSelectedFileContent(node.content);
-    } else if (node.children) {
+    } else if (node.type === "directory") {
       setSelectedFileContent({
-        type: "tree-node",
+        type: "directory",
         path: node.path,
         name: node.name,
         children: node.children
@@ -24547,13 +24996,13 @@ var DefaultStakeholderApp = ({
     const paddingLeft = depth * 20;
     const isExpanded = expandedPaths.has(node.path);
     if (node.type === "directory") {
-      return /* @__PURE__ */ import_react.default.createElement(
+      return /* @__PURE__ */ import_react6.default.createElement(
         "div",
         {
           key: node.path,
           style: { marginLeft: paddingLeft, marginBottom: "5px" }
         },
-        /* @__PURE__ */ import_react.default.createElement(
+        /* @__PURE__ */ import_react6.default.createElement(
           "div",
           {
             style: {
@@ -24565,9 +25014,9 @@ var DefaultStakeholderApp = ({
             },
             onClick: () => toggleExpand(node.path)
           },
-          /* @__PURE__ */ import_react.default.createElement("span", { style: { marginRight: "5px" } }, isExpanded ? "\u{1F4C2}" : "\u{1F4C1}"),
+          /* @__PURE__ */ import_react6.default.createElement("span", { style: { marginRight: "5px" } }, isExpanded ? "\u{1F4C2}" : "\u{1F4C1}"),
           node.name,
-          /* @__PURE__ */ import_react.default.createElement(
+          /* @__PURE__ */ import_react6.default.createElement(
             "span",
             {
               style: { fontSize: "0.8rem", marginLeft: "5px", color: "#666" }
@@ -24577,16 +25026,16 @@ var DefaultStakeholderApp = ({
             " items)"
           )
         ),
-        isExpanded && node.children && Object.keys(node.children).length > 0 && /* @__PURE__ */ import_react.default.createElement("div", { style: { marginLeft: "10px" } }, Object.values(node.children).map(
+        isExpanded && node.children && Object.keys(node.children).length > 0 && /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginLeft: "10px" } }, Object.values(node.children).map(
           (child) => renderTree(child, depth + 1)
         ))
       );
     } else if (node.type === "file") {
       const { icon, color } = getNodeIcon(node);
-      const bgColor = selectedFile === node.path ? node.fileType === "documentation" ? "#e8f5e9" : node.fileType === "test-results" ? "#fff3e0" : node.fileType === "log" ? "#fff8e1" : node.fileType === "test-directory" || node.fileType === "test-source" ? "#f3e5f5" : node.fileType === "test-artifact" ? "#efebe9" : node.fileType === "html" ? "#e3f2fd" : node.fileType === "javascript" ? "#fff3e0" : "transparent" : "transparent";
+      const bgColor = selectedFile === node.path ? node.fileType === "documentation" ? "#e8f5e9" : "transparent" : "transparent";
       const hasChildren = node.children && Object.keys(node.children).length > 0;
       const isExpanded2 = expandedPaths.has(node.path);
-      return /* @__PURE__ */ import_react.default.createElement(
+      return /* @__PURE__ */ import_react6.default.createElement(
         "div",
         {
           key: node.path,
@@ -24599,15 +25048,15 @@ var DefaultStakeholderApp = ({
             cursor: "pointer"
           }
         },
-        /* @__PURE__ */ import_react.default.createElement(
+        /* @__PURE__ */ import_react6.default.createElement(
           "div",
           {
             style: { color, display: "flex", alignItems: "center" },
             onClick: () => handleFileSelect(node)
           },
-          /* @__PURE__ */ import_react.default.createElement("span", { style: { marginRight: "5px" } }, icon),
+          /* @__PURE__ */ import_react6.default.createElement("span", { style: { marginRight: "5px" } }, icon),
           node.name,
-          node.fileType && /* @__PURE__ */ import_react.default.createElement(
+          node.fileType && /* @__PURE__ */ import_react6.default.createElement(
             "span",
             {
               style: { fontSize: "0.8rem", marginLeft: "5px", color: "#666" }
@@ -24616,7 +25065,7 @@ var DefaultStakeholderApp = ({
             node.fileType,
             ")"
           ),
-          hasChildren && /* @__PURE__ */ import_react.default.createElement(
+          hasChildren && /* @__PURE__ */ import_react6.default.createElement(
             "span",
             {
               style: {
@@ -24632,43 +25081,70 @@ var DefaultStakeholderApp = ({
             isExpanded2 ? "\u25BC" : "\u25B6"
           )
         ),
-        node.testData && /* @__PURE__ */ import_react.default.createElement(
-          "div",
-          {
-            style: { marginLeft: "10px", fontSize: "0.9rem", color: "#666" }
-          },
-          /* @__PURE__ */ import_react.default.createElement("div", null, "Status: ", node.testData.failed ? "\u274C Failed" : "\u2705 Passed", " | Tests: ", node.testData.runTimeTests || 0, " | Fails:", " ", node.testData.fails || 0)
-        ),
-        hasChildren && isExpanded2 && /* @__PURE__ */ import_react.default.createElement("div", { style: { marginLeft: "10px", marginTop: "5px" } }, Object.values(node.children).map(
+        hasChildren && isExpanded2 && /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginLeft: "10px", marginTop: "5px" } }, Object.values(node.children).map(
           (child) => renderTree(child, depth + 1)
         ))
       );
-    } else if (node.type === "feature" || node.type === "test-summary" || node.type === "test-job" || node.type === "test-given" || node.type === "test-when" || node.type === "test-then") {
-      const { icon, color } = getNodeIcon(node);
-      const hasChildren = node.children && Object.keys(node.children).length > 0;
-      const isExpanded2 = expandedPaths.has(node.path);
-      return /* @__PURE__ */ import_react.default.createElement(
+    } else if (node.type === "feature") {
+      const bgColor = selectedFile === node.path ? "#fff3e0" : "transparent";
+      return /* @__PURE__ */ import_react6.default.createElement(
         "div",
         {
           key: node.path,
-          style: { marginLeft: paddingLeft, marginBottom: "3px" }
+          style: {
+            marginLeft: paddingLeft,
+            marginBottom: "3px",
+            backgroundColor: bgColor,
+            borderRadius: "4px",
+            padding: "5px"
+          }
         },
-        /* @__PURE__ */ import_react.default.createElement("div", { style: { color, display: "flex", alignItems: "center" } }, /* @__PURE__ */ import_react.default.createElement("span", { style: { marginRight: "5px" } }, icon), node.name, hasChildren && /* @__PURE__ */ import_react.default.createElement(
+        /* @__PURE__ */ import_react6.default.createElement("div", { style: { color: "#ff9800", display: "flex", alignItems: "center" } }, /* @__PURE__ */ import_react6.default.createElement("span", { style: { marginRight: "5px" } }, "\u2B50"), node.name, node.status && /* @__PURE__ */ import_react6.default.createElement(
           "span",
           {
             style: {
-              marginLeft: "5px",
               fontSize: "0.8rem",
-              cursor: "pointer"
-            },
-            onClick: (e) => {
-              e.stopPropagation();
-              toggleExpand(node.path);
+              marginLeft: "5px",
+              color: "#666"
             }
           },
-          isExpanded2 ? "\u25BC" : "\u25B6"
+          "(status: ",
+          node.status,
+          ")"
+        ))
+      );
+    } else if (node.type === "test") {
+      const bgColor = selectedFile === node.path ? "#e3f2fd" : "transparent";
+      const status = node.bddStatus || { status: "unknown", color: "gray" };
+      return /* @__PURE__ */ import_react6.default.createElement(
+        "div",
+        {
+          key: node.path,
+          style: {
+            marginLeft: paddingLeft,
+            marginBottom: "3px",
+            backgroundColor: bgColor,
+            borderRadius: "4px",
+            padding: "5px",
+            cursor: "pointer"
+          },
+          onClick: () => handleFileSelect(node)
+        },
+        /* @__PURE__ */ import_react6.default.createElement("div", { style: { color: "#9c27b0", display: "flex", alignItems: "center" } }, /* @__PURE__ */ import_react6.default.createElement("span", { style: { marginRight: "5px" } }, "\u{1F9EA}"), node.name, /* @__PURE__ */ import_react6.default.createElement(
+          "span",
+          {
+            style: {
+              fontSize: "0.8rem",
+              marginLeft: "5px",
+              color: status.color === "green" ? "#4caf50" : status.color === "yellow" ? "#ff9800" : status.color === "red" ? "#f44336" : "#666",
+              fontWeight: "bold"
+            }
+          },
+          "(BDD: ",
+          status.status,
+          ")"
         )),
-        hasChildren && isExpanded2 && /* @__PURE__ */ import_react.default.createElement("div", { style: { marginLeft: "10px", marginTop: "5px" } }, Object.values(node.children).map(
+        node.children && Object.keys(node.children).length > 0 && /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginLeft: "10px", marginTop: "5px" } }, Object.values(node.children).map(
           (child) => renderTree(child, depth + 1)
         ))
       );
@@ -24677,9 +25153,9 @@ var DefaultStakeholderApp = ({
   };
   const renderTestDetails2 = (testData) => {
     if (!testData || typeof testData !== "object") {
-      return /* @__PURE__ */ import_react.default.createElement("div", { style: { marginTop: "20px" } }, /* @__PURE__ */ import_react.default.createElement("h3", null, "Test Results"), /* @__PURE__ */ import_react.default.createElement("p", null, "No test data available or invalid format."));
+      return /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginTop: "20px" } }, /* @__PURE__ */ import_react6.default.createElement("h3", null, "Test Results"), /* @__PURE__ */ import_react6.default.createElement("p", null, "No test data available or invalid format."));
     }
-    return /* @__PURE__ */ import_react.default.createElement("div", { style: { marginTop: "20px" } }, /* @__PURE__ */ import_react.default.createElement("h3", null, "Test Results Details"), /* @__PURE__ */ import_react.default.createElement(
+    return /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginTop: "20px" } }, /* @__PURE__ */ import_react6.default.createElement("h3", null, "Test Results Details"), /* @__PURE__ */ import_react6.default.createElement(
       "div",
       {
         style: {
@@ -24690,8 +25166,8 @@ var DefaultStakeholderApp = ({
           border: "1px solid #ddd"
         }
       },
-      /* @__PURE__ */ import_react.default.createElement("div", { style: { display: "flex", flexWrap: "wrap", gap: "20px" } }, /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("strong", null, "Overall Status:"), " ", testData.failed ? "\u274C Failed" : "\u2705 Passed"), /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("strong", null, "Total Tests:"), " ", testData.runTimeTests || 0), /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("strong", null, "Failures:"), " ", testData.fails || 0), testData.features && /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("strong", null, "Features:"), " ", testData.features.length))
-    ), testData.testJob && testData.testJob.givens && /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("h4", null, "Test Cases (", testData.testJob.givens.length, ")"), testData.testJob.givens.map((given, index) => /* @__PURE__ */ import_react.default.createElement(
+      /* @__PURE__ */ import_react6.default.createElement("div", { style: { display: "flex", flexWrap: "wrap", gap: "20px" } }, /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("strong", null, "Overall Status:"), " ", testData.failed ? "\u274C Failed" : "\u2705 Passed"), /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("strong", null, "Total Tests:"), " ", testData.runTimeTests || 0), /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("strong", null, "Failures:"), " ", testData.fails || 0), testData.features && /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("strong", null, "Features:"), " ", testData.features.length))
+    ), testData.testJob && testData.testJob.givens && /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("h4", null, "Test Cases (", testData.testJob.givens.length, ")"), testData.testJob.givens.map((given, index) => /* @__PURE__ */ import_react6.default.createElement(
       "div",
       {
         key: index,
@@ -24703,7 +25179,7 @@ var DefaultStakeholderApp = ({
           backgroundColor: given.failed ? "#ffebee" : "#e8f5e9"
         }
       },
-      /* @__PURE__ */ import_react.default.createElement(
+      /* @__PURE__ */ import_react6.default.createElement(
         "div",
         {
           style: {
@@ -24713,8 +25189,8 @@ var DefaultStakeholderApp = ({
             marginBottom: "10px"
           }
         },
-        /* @__PURE__ */ import_react.default.createElement("div", { style: { fontWeight: "bold", fontSize: "1.1rem" } }, given.key || `Test Case ${index + 1}`),
-        /* @__PURE__ */ import_react.default.createElement(
+        /* @__PURE__ */ import_react6.default.createElement("div", { style: { fontWeight: "bold", fontSize: "1.1rem" } }, given.key || `Test Case ${index + 1}`),
+        /* @__PURE__ */ import_react6.default.createElement(
           "div",
           {
             style: {
@@ -24728,7 +25204,7 @@ var DefaultStakeholderApp = ({
           given.failed ? "\u274C Failed" : "\u2705 Passed"
         )
       ),
-      given.features && given.features.length > 0 && /* @__PURE__ */ import_react.default.createElement("div", { style: { marginBottom: "10px" } }, /* @__PURE__ */ import_react.default.createElement("div", { style: { fontWeight: "bold", marginBottom: "5px" } }, "Features:"), /* @__PURE__ */ import_react.default.createElement(
+      given.features && given.features.length > 0 && /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginBottom: "10px" } }, /* @__PURE__ */ import_react6.default.createElement("div", { style: { fontWeight: "bold", marginBottom: "5px" } }, "Features:"), /* @__PURE__ */ import_react6.default.createElement(
         "div",
         {
           style: {
@@ -24738,7 +25214,7 @@ var DefaultStakeholderApp = ({
             marginBottom: "10px"
           }
         },
-        given.features.map((feature, i) => /* @__PURE__ */ import_react.default.createElement(
+        given.features.map((feature, i) => /* @__PURE__ */ import_react6.default.createElement(
           "span",
           {
             key: i,
@@ -24752,7 +25228,7 @@ var DefaultStakeholderApp = ({
           feature
         ))
       )),
-      given.whens && given.whens.length > 0 && /* @__PURE__ */ import_react.default.createElement("div", { style: { marginBottom: "10px" } }, /* @__PURE__ */ import_react.default.createElement("div", { style: { fontWeight: "bold", marginBottom: "5px" } }, "Steps:"), /* @__PURE__ */ import_react.default.createElement(
+      given.whens && given.whens.length > 0 && /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginBottom: "10px" } }, /* @__PURE__ */ import_react6.default.createElement("div", { style: { fontWeight: "bold", marginBottom: "5px" } }, "Steps:"), /* @__PURE__ */ import_react6.default.createElement(
         "div",
         {
           style: {
@@ -24762,7 +25238,7 @@ var DefaultStakeholderApp = ({
             border: "1px solid #eee"
           }
         },
-        given.whens.map((w, i) => /* @__PURE__ */ import_react.default.createElement(
+        given.whens.map((w, i) => /* @__PURE__ */ import_react6.default.createElement(
           "div",
           {
             key: i,
@@ -24772,7 +25248,7 @@ var DefaultStakeholderApp = ({
               marginBottom: i < given.whens.length - 1 ? "5px" : "0"
             }
           },
-          /* @__PURE__ */ import_react.default.createElement(
+          /* @__PURE__ */ import_react6.default.createElement(
             "div",
             {
               style: {
@@ -24790,7 +25266,7 @@ var DefaultStakeholderApp = ({
             },
             i + 1
           ),
-          /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("div", { style: { fontWeight: "bold" } }, w.name), w.error && /* @__PURE__ */ import_react.default.createElement(
+          /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("div", { style: { fontWeight: "bold" } }, w.name), w.error && /* @__PURE__ */ import_react6.default.createElement(
             "div",
             {
               style: { fontSize: "0.8rem", color: "#f44336" }
@@ -24801,7 +25277,7 @@ var DefaultStakeholderApp = ({
           ))
         ))
       )),
-      given.thens && given.thens.length > 0 && /* @__PURE__ */ import_react.default.createElement("div", { style: { marginBottom: "10px" } }, /* @__PURE__ */ import_react.default.createElement("div", { style: { fontWeight: "bold", marginBottom: "5px" } }, "Assertions:"), /* @__PURE__ */ import_react.default.createElement(
+      given.thens && given.thens.length > 0 && /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginBottom: "10px" } }, /* @__PURE__ */ import_react6.default.createElement("div", { style: { fontWeight: "bold", marginBottom: "5px" } }, "Assertions:"), /* @__PURE__ */ import_react6.default.createElement(
         "div",
         {
           style: {
@@ -24811,7 +25287,7 @@ var DefaultStakeholderApp = ({
             border: "1px solid #eee"
           }
         },
-        given.thens.map((then, i) => /* @__PURE__ */ import_react.default.createElement(
+        given.thens.map((then, i) => /* @__PURE__ */ import_react6.default.createElement(
           "div",
           {
             key: i,
@@ -24821,7 +25297,7 @@ var DefaultStakeholderApp = ({
               marginBottom: i < given.thens.length - 1 ? "5px" : "0"
             }
           },
-          /* @__PURE__ */ import_react.default.createElement(
+          /* @__PURE__ */ import_react6.default.createElement(
             "div",
             {
               style: {
@@ -24839,7 +25315,7 @@ var DefaultStakeholderApp = ({
             },
             then.status ? "\u2713" : "\u2717"
           ),
-          /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("div", { style: { fontWeight: "bold" } }, then.name), then.error && /* @__PURE__ */ import_react.default.createElement(
+          /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("div", { style: { fontWeight: "bold" } }, then.name), then.error && /* @__PURE__ */ import_react6.default.createElement(
             "div",
             {
               style: { fontSize: "0.8rem", color: "#f44336" }
@@ -24850,7 +25326,7 @@ var DefaultStakeholderApp = ({
           ))
         ))
       )),
-      given.error && /* @__PURE__ */ import_react.default.createElement(
+      given.error && /* @__PURE__ */ import_react6.default.createElement(
         "div",
         {
           style: {
@@ -24861,8 +25337,8 @@ var DefaultStakeholderApp = ({
             border: "1px solid #f44336"
           }
         },
-        /* @__PURE__ */ import_react.default.createElement("div", { style: { fontWeight: "bold", marginBottom: "5px" } }, "Error Details:"),
-        /* @__PURE__ */ import_react.default.createElement(
+        /* @__PURE__ */ import_react6.default.createElement("div", { style: { fontWeight: "bold", marginBottom: "5px" } }, "Error Details:"),
+        /* @__PURE__ */ import_react6.default.createElement(
           "pre",
           {
             style: {
@@ -24877,7 +25353,7 @@ var DefaultStakeholderApp = ({
           ).join("\n") : JSON.stringify(given.error, null, 2)
         )
       )
-    ))), testData.features && testData.features.length > 0 && /* @__PURE__ */ import_react.default.createElement("div", { style: { marginTop: "30px" } }, /* @__PURE__ */ import_react.default.createElement("h4", null, "All Features (", testData.features.length, ")"), /* @__PURE__ */ import_react.default.createElement(
+    ))), testData.features && testData.features.length > 0 && /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginTop: "30px" } }, /* @__PURE__ */ import_react6.default.createElement("h4", null, "All Features (", testData.features.length, ")"), /* @__PURE__ */ import_react6.default.createElement(
       "div",
       {
         style: {
@@ -24887,7 +25363,7 @@ var DefaultStakeholderApp = ({
           marginTop: "10px"
         }
       },
-      testData.features.map((feature, index) => /* @__PURE__ */ import_react.default.createElement(
+      testData.features.map((feature, index) => /* @__PURE__ */ import_react6.default.createElement(
         "div",
         {
           key: index,
@@ -24904,40 +25380,99 @@ var DefaultStakeholderApp = ({
   };
   const renderFileContent = () => {
     if (!selectedFile) return null;
-    if (selectedFileContent && typeof selectedFileContent === "object") {
-      if (selectedFileContent.testJob) {
-        return renderTestDetails2(selectedFileContent);
-      } else if (selectedFileContent.type === "log") {
-        return /* @__PURE__ */ import_react.default.createElement("div", { style: { marginTop: "20px" } }, /* @__PURE__ */ import_react.default.createElement("h3", null, "Log File: ", selectedFile.split("/").pop()), /* @__PURE__ */ import_react.default.createElement(
-          "div",
+    if (!selectedFileContent) {
+      return /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginTop: "20px" } }, /* @__PURE__ */ import_react6.default.createElement("h3", null, "No content available for ", selectedFile), /* @__PURE__ */ import_react6.default.createElement("p", null, "The file exists in the tree but its content could not be loaded."));
+    }
+    switch (selectedFileContent.type) {
+      case "file":
+      case "documentation":
+        const isDocumentation = selectedFileContent.type === "documentation";
+        const title = isDocumentation ? "Documentation" : "File";
+        return /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginTop: "20px" } }, /* @__PURE__ */ import_react6.default.createElement("h3", null, title, ": ", selectedFile.split("/").pop()), /* @__PURE__ */ import_react6.default.createElement("div", { style: { display: "flex", justifyContent: "space-between", marginBottom: "10px" } }, /* @__PURE__ */ import_react6.default.createElement("div", null, "Path: ", selectedFileContent.path), /* @__PURE__ */ import_react6.default.createElement("div", null, "Size: ", selectedFileContent.size || (selectedFileContent.content?.length || 0), " characters"), selectedFileContent.language && /* @__PURE__ */ import_react6.default.createElement("div", null, "Language: ", selectedFileContent.language)), selectedFileContent.content ? /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement(
+          "pre",
           {
             style: {
               backgroundColor: "#f5f5f5",
+              padding: "15px",
+              borderRadius: "4px",
+              overflow: "auto",
+              maxHeight: "500px",
+              border: "1px solid #ddd",
+              whiteSpace: "pre-wrap",
+              wordWrap: "break-word",
+              fontFamily: "monospace",
+              fontSize: "14px",
+              margin: 0
+            }
+          },
+          selectedFileContent.content
+        )) : selectedFileContent.message ? /* @__PURE__ */ import_react6.default.createElement(
+          "div",
+          {
+            style: {
+              backgroundColor: "#f9f9f9",
               padding: "20px",
               borderRadius: "4px",
               border: "1px solid #ddd"
             }
           },
-          /* @__PURE__ */ import_react.default.createElement("p", null, selectedFileContent.message),
-          /* @__PURE__ */ import_react.default.createElement("p", null, "Path: ", selectedFileContent.path),
-          /* @__PURE__ */ import_react.default.createElement("p", null, "Note: In a real implementation, the actual log content would be displayed here.")
-        ));
-      } else if (selectedFileContent.type === "test-source") {
-        return /* @__PURE__ */ import_react.default.createElement("div", { style: { marginTop: "20px" } }, /* @__PURE__ */ import_react.default.createElement("h3", null, "Test Source: ", selectedFile.split("/").pop()), /* @__PURE__ */ import_react.default.createElement(
+          /* @__PURE__ */ import_react6.default.createElement("p", null, selectedFileContent.message),
+          /* @__PURE__ */ import_react6.default.createElement("p", null, "Path: ", selectedFileContent.path),
+          isDocumentation && /* @__PURE__ */ import_react6.default.createElement("p", null, "Note: Documentation content was not embedded in the static site.")
+        ) : /* @__PURE__ */ import_react6.default.createElement(
           "div",
           {
             style: {
-              backgroundColor: "#e3f2fd",
+              backgroundColor: "#ffebee",
               padding: "20px",
+              borderRadius: "4px",
+              border: "1px solid #f44336"
+            }
+          },
+          /* @__PURE__ */ import_react6.default.createElement("p", null, "No content available for this file.")
+        ));
+      case "test":
+        return /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginTop: "20px" } }, /* @__PURE__ */ import_react6.default.createElement("h3", null, "Test: ", selectedFileContent.name), /* @__PURE__ */ import_react6.default.createElement(
+          "div",
+          {
+            style: {
+              padding: "15px",
+              backgroundColor: selectedFileContent.bddStatus.color === "green" ? "#e8f5e9" : selectedFileContent.bddStatus.color === "yellow" ? "#fff3e0" : selectedFileContent.bddStatus.color === "red" ? "#ffebee" : "#f5f5f5",
+              borderRadius: "4px",
+              marginBottom: "20px",
+              border: "1px solid #ddd"
+            }
+          },
+          /* @__PURE__ */ import_react6.default.createElement("div", { style: { display: "flex", flexWrap: "wrap", gap: "20px" } }, /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("strong", null, "BDD Status:"), " ", selectedFileContent.bddStatus.status), /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("strong", null, "Path:"), " ", selectedFileContent.path))
+        ), selectedFileContent.children && /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("h4", null, "Test Details"), /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginLeft: "20px" } }, Object.values(selectedFileContent.children).map((child, i) => /* @__PURE__ */ import_react6.default.createElement("div", { key: i, style: { marginBottom: "10px" } }, JSON.stringify(child, null, 2))))));
+      case "feature":
+        return /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginTop: "20px" } }, /* @__PURE__ */ import_react6.default.createElement("h3", null, "Feature: ", selectedFileContent.name), /* @__PURE__ */ import_react6.default.createElement(
+          "div",
+          {
+            style: {
+              padding: "15px",
+              backgroundColor: "#fff3e0",
+              borderRadius: "4px",
+              border: "1px solid #ff9800"
+            }
+          },
+          /* @__PURE__ */ import_react6.default.createElement("div", { style: { display: "flex", flexWrap: "wrap", gap: "20px" } }, /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("strong", null, "Feature:"), " ", selectedFileContent.feature), /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("strong", null, "Status:"), " ", selectedFileContent.status), /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("strong", null, "Path:"), " ", selectedFileContent.path))
+        ));
+      case "directory":
+        return /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginTop: "20px" } }, /* @__PURE__ */ import_react6.default.createElement("h3", null, "Directory: ", selectedFileContent.name), /* @__PURE__ */ import_react6.default.createElement(
+          "div",
+          {
+            style: {
+              padding: "15px",
+              backgroundColor: "#e3f2fd",
               borderRadius: "4px",
               border: "1px solid #2196f3"
             }
           },
-          /* @__PURE__ */ import_react.default.createElement("p", null, selectedFileContent.message),
-          /* @__PURE__ */ import_react.default.createElement("p", null, "Path: ", selectedFileContent.path)
+          /* @__PURE__ */ import_react6.default.createElement("div", { style: { display: "flex", flexWrap: "wrap", gap: "20px" } }, /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("strong", null, "Path:"), " ", selectedFileContent.path), /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("strong", null, "Items:"), " ", Object.keys(selectedFileContent.children || {}).length))
         ));
-      } else {
-        return /* @__PURE__ */ import_react.default.createElement("div", { style: { marginTop: "20px" } }, /* @__PURE__ */ import_react.default.createElement("h3", null, "File Content"), /* @__PURE__ */ import_react.default.createElement(
+      default:
+        return /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginTop: "20px" } }, /* @__PURE__ */ import_react6.default.createElement("h3", null, "File Content"), /* @__PURE__ */ import_react6.default.createElement(
           "pre",
           {
             style: {
@@ -24950,68 +25485,241 @@ var DefaultStakeholderApp = ({
           },
           JSON.stringify(selectedFileContent, null, 2)
         ));
-      }
-    } else if (selectedFileContent) {
-      const isMarkdown = selectedFile && (selectedFile.endsWith(".md") || selectedFile.endsWith(".markdown"));
-      if (isMarkdown && typeof selectedFileContent === "string") {
-        return /* @__PURE__ */ import_react.default.createElement("div", { style: { marginTop: "20px" } }, /* @__PURE__ */ import_react.default.createElement("h3", null, "Documentation: ", selectedFile.split("/").pop()), /* @__PURE__ */ import_react.default.createElement(
-          "div",
-          {
-            style: {
-              backgroundColor: "#f9f9f9",
-              padding: "20px",
-              borderRadius: "4px",
-              overflow: "auto",
-              maxHeight: "500px",
-              border: "1px solid #ddd"
-            }
-          },
-          /* @__PURE__ */ import_react.default.createElement(
-            "pre",
-            {
-              style: {
-                whiteSpace: "pre-wrap",
-                wordWrap: "break-word",
-                fontFamily: "monospace",
-                fontSize: "14px",
-                lineHeight: "1.5",
-                margin: 0
-              }
-            },
-            selectedFileContent
-          )
-        ));
-      } else if (typeof selectedFileContent === "string") {
-        return /* @__PURE__ */ import_react.default.createElement("div", { style: { marginTop: "20px" } }, /* @__PURE__ */ import_react.default.createElement("h3", null, "File Content"), /* @__PURE__ */ import_react.default.createElement(
-          "pre",
-          {
-            style: {
-              backgroundColor: "#f5f5f5",
-              padding: "10px",
-              borderRadius: "4px",
-              overflow: "auto",
-              maxHeight: "400px"
-            }
-          },
-          selectedFileContent
-        ));
-      }
-    } else {
-      return /* @__PURE__ */ import_react.default.createElement("div", { style: { marginTop: "20px" } }, /* @__PURE__ */ import_react.default.createElement("h3", null, "No content available for ", selectedFile), /* @__PURE__ */ import_react.default.createElement("p", null, "The file exists in the tree but its content could not be loaded."));
     }
-    return null;
   };
-  return /* @__PURE__ */ import_react.default.createElement(
+  const renderVisualization = () => {
+    if (!data.featureGraph || !data.featureGraph.nodes || data.featureGraph.nodes.length === 0) {
+      return /* @__PURE__ */ import_react6.default.createElement("div", { style: { padding: "40px", textAlign: "center" } }, /* @__PURE__ */ import_react6.default.createElement("h3", null, "No Feature Graph Available"), /* @__PURE__ */ import_react6.default.createElement("p", null, "Features need to be extracted from test results to create visualizations."), /* @__PURE__ */ import_react6.default.createElement("p", null, "Run tests to generate feature data."));
+    }
+    const graphData = {
+      nodes: data.featureGraph.nodes,
+      edges: data.featureGraph.edges || []
+    };
+    const baseConfig = data.vizConfig || {
+      projection: {
+        xAttribute: "status",
+        yAttribute: "points",
+        xType: "categorical",
+        yType: "continuous",
+        layout: "grid"
+      },
+      style: {
+        nodeSize: (node) => {
+          if (node.attributes.points) return Math.max(10, node.attributes.points * 5);
+          return 10;
+        },
+        nodeColor: (node) => {
+          const status = node.attributes.status;
+          if (status === "done") return "#4caf50";
+          if (status === "doing") return "#ff9800";
+          if (status === "todo") return "#f44336";
+          return "#9e9e9e";
+        },
+        nodeShape: "circle",
+        labels: {
+          show: true,
+          attribute: "name",
+          fontSize: 12
+        }
+      }
+    };
+    const commonProps = {
+      data: graphData,
+      width: 800,
+      height: 500,
+      onNodeClick: (node) => {
+        console.log("Node clicked:", node);
+      },
+      onNodeHover: (node) => {
+      }
+    };
+    switch (vizType) {
+      case "eisenhower":
+        return /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("h3", null, "Eisenhower Matrix"), /* @__PURE__ */ import_react6.default.createElement("p", null, "Urgency vs Importance of features"), /* @__PURE__ */ import_react6.default.createElement(
+          EisenhowerMatrix,
+          {
+            ...commonProps,
+            config: {
+              ...baseConfig,
+              projection: {
+                ...baseConfig.projection,
+                xAttribute: "urgency",
+                yAttribute: "importance",
+                xType: "continuous",
+                yType: "continuous"
+              },
+              quadrants: {
+                urgentImportant: { x: [0, 0.5], y: [0, 0.5] },
+                notUrgentImportant: { x: [0.5, 1], y: [0, 0.5] },
+                urgentNotImportant: { x: [0, 0.5], y: [0.5, 1] },
+                notUrgentNotImportant: { x: [0.5, 1], y: [0.5, 1] }
+              }
+            }
+          }
+        ));
+      case "gantt":
+        return /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("h3", null, "Gantt Chart"), /* @__PURE__ */ import_react6.default.createElement("p", null, "Feature timeline"), /* @__PURE__ */ import_react6.default.createElement(
+          GanttChart,
+          {
+            ...commonProps,
+            config: {
+              ...baseConfig,
+              timeRange: [/* @__PURE__ */ new Date(), new Date(Date.now() + 30 * 24 * 60 * 60 * 1e3)],
+              rowHeight: 30,
+              showDependencies: true
+            }
+          }
+        ));
+      case "kanban":
+        return /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("h3", null, "Kanban Board"), /* @__PURE__ */ import_react6.default.createElement("p", null, "Feature status columns"), /* @__PURE__ */ import_react6.default.createElement(
+          KanbanBoard,
+          {
+            ...commonProps,
+            config: {
+              ...baseConfig,
+              columns: [
+                {
+                  id: "todo",
+                  title: "To Do",
+                  statusFilter: (node) => node.attributes.status === "todo",
+                  width: 25
+                },
+                {
+                  id: "doing",
+                  title: "Doing",
+                  statusFilter: (node) => node.attributes.status === "doing",
+                  width: 25
+                },
+                {
+                  id: "review",
+                  title: "Review",
+                  statusFilter: (node) => node.attributes.status === "review",
+                  width: 25
+                },
+                {
+                  id: "done",
+                  title: "Done",
+                  statusFilter: (node) => node.attributes.status === "done",
+                  width: 25
+                }
+              ]
+            }
+          }
+        ));
+      case "tree":
+        return /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("h3", null, "Feature Dependency Tree"), /* @__PURE__ */ import_react6.default.createElement("p", null, "Feature relationships"), /* @__PURE__ */ import_react6.default.createElement(
+          TreeGraph,
+          {
+            ...commonProps,
+            config: {
+              ...baseConfig,
+              projection: {
+                ...baseConfig.projection,
+                layout: "tree"
+              },
+              orientation: "horizontal",
+              nodeSeparation: 100,
+              levelSeparation: 80
+            }
+          }
+        ));
+      default:
+        return /* @__PURE__ */ import_react6.default.createElement("div", null, "Select a visualization type");
+    }
+  };
+  return /* @__PURE__ */ import_react6.default.createElement(
     "div",
     {
       style: {
         padding: "20px",
-        fontFamily: "sans-serif",
-        display: "flex",
-        gap: "20px"
+        fontFamily: "sans-serif"
       }
     },
-    /* @__PURE__ */ import_react.default.createElement(
+    /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginBottom: "20px" } }, /* @__PURE__ */ import_react6.default.createElement("div", { style: { display: "flex", gap: "10px", marginBottom: "20px" } }, /* @__PURE__ */ import_react6.default.createElement(
+      "button",
+      {
+        style: {
+          padding: "10px 20px",
+          backgroundColor: activeTab === "tree" ? "#007acc" : "#f0f0f0",
+          color: activeTab === "tree" ? "white" : "black",
+          border: "none",
+          borderRadius: "4px",
+          cursor: "pointer"
+        },
+        onClick: () => setActiveTab("tree")
+      },
+      "File Tree"
+    ), /* @__PURE__ */ import_react6.default.createElement(
+      "button",
+      {
+        style: {
+          padding: "10px 20px",
+          backgroundColor: activeTab === "viz" ? "#007acc" : "#f0f0f0",
+          color: activeTab === "viz" ? "white" : "black",
+          border: "none",
+          borderRadius: "4px",
+          cursor: "pointer"
+        },
+        onClick: () => setActiveTab("viz")
+      },
+      "Visualizations"
+    )), activeTab === "viz" && /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("div", { style: { display: "flex", gap: "10px", marginBottom: "20px" } }, /* @__PURE__ */ import_react6.default.createElement(
+      "button",
+      {
+        style: {
+          padding: "8px 16px",
+          backgroundColor: vizType === "eisenhower" ? "#4caf50" : "#f0f0f0",
+          color: vizType === "eisenhower" ? "white" : "black",
+          border: "none",
+          borderRadius: "4px",
+          cursor: "pointer"
+        },
+        onClick: () => setVizType("eisenhower")
+      },
+      "Eisenhower Matrix"
+    ), /* @__PURE__ */ import_react6.default.createElement(
+      "button",
+      {
+        style: {
+          padding: "8px 16px",
+          backgroundColor: vizType === "gantt" ? "#4caf50" : "#f0f0f0",
+          color: vizType === "gantt" ? "white" : "black",
+          border: "none",
+          borderRadius: "4px",
+          cursor: "pointer"
+        },
+        onClick: () => setVizType("gantt")
+      },
+      "Gantt Chart"
+    ), /* @__PURE__ */ import_react6.default.createElement(
+      "button",
+      {
+        style: {
+          padding: "8px 16px",
+          backgroundColor: vizType === "kanban" ? "#4caf50" : "#f0f0f0",
+          color: vizType === "kanban" ? "white" : "black",
+          border: "none",
+          borderRadius: "4px",
+          cursor: "pointer"
+        },
+        onClick: () => setVizType("kanban")
+      },
+      "Kanban Board"
+    ), /* @__PURE__ */ import_react6.default.createElement(
+      "button",
+      {
+        style: {
+          padding: "8px 16px",
+          backgroundColor: vizType === "tree" ? "#4caf50" : "#f0f0f0",
+          color: vizType === "tree" ? "white" : "black",
+          border: "none",
+          borderRadius: "4px",
+          cursor: "pointer"
+        },
+        onClick: () => setVizType("tree")
+      },
+      "Dependency Tree"
+    )), renderVisualization(), /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginTop: "30px", padding: "20px", backgroundColor: "#f5f5f5", borderRadius: "4px" } }, /* @__PURE__ */ import_react6.default.createElement("h4", null, "Feature Graph Statistics"), /* @__PURE__ */ import_react6.default.createElement("p", null, "Total Features: ", data.featureGraph?.nodes?.length || 0), /* @__PURE__ */ import_react6.default.createElement("p", null, "Dependencies: ", data.featureGraph?.edges?.length || 0), /* @__PURE__ */ import_react6.default.createElement("p", null, "Features with status:"), /* @__PURE__ */ import_react6.default.createElement("ul", null, /* @__PURE__ */ import_react6.default.createElement("li", null, "Todo: ", data.featureGraph?.nodes?.filter((n) => n.attributes.status === "todo").length || 0), /* @__PURE__ */ import_react6.default.createElement("li", null, "Doing: ", data.featureGraph?.nodes?.filter((n) => n.attributes.status === "doing").length || 0), /* @__PURE__ */ import_react6.default.createElement("li", null, "Done: ", data.featureGraph?.nodes?.filter((n) => n.attributes.status === "done").length || 0)))), activeTab === "tree" && /* @__PURE__ */ import_react6.default.createElement("div", { style: { display: "flex", gap: "20px" } }, /* @__PURE__ */ import_react6.default.createElement(
       "div",
       {
         style: {
@@ -25020,7 +25728,7 @@ var DefaultStakeholderApp = ({
           paddingRight: "20px"
         }
       },
-      /* @__PURE__ */ import_react.default.createElement(
+      /* @__PURE__ */ import_react6.default.createElement(
         "div",
         {
           style: {
@@ -25031,7 +25739,7 @@ var DefaultStakeholderApp = ({
             overflow: "auto"
           }
         },
-        data.featureTree ? renderTree(data.featureTree) : /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("p", null, "No feature tree available. The tree should show documentation files in their proper folder structure."), /* @__PURE__ */ import_react.default.createElement("p", null, "Documentation files found:", " ", data.documentation?.files?.length || 0), /* @__PURE__ */ import_react.default.createElement(
+        data.featureTree ? renderTree(data.featureTree) : /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("p", null, "No feature tree available. The tree should show documentation files in their proper folder structure."), /* @__PURE__ */ import_react6.default.createElement("p", null, "Documentation files found:", " ", data.documentation?.files?.length || 0), /* @__PURE__ */ import_react6.default.createElement(
           "div",
           {
             style: {
@@ -25042,7 +25750,7 @@ var DefaultStakeholderApp = ({
               overflow: "auto"
             }
           },
-          data.documentation?.files?.map((file, i) => /* @__PURE__ */ import_react.default.createElement(
+          data.documentation?.files?.map((file, i) => /* @__PURE__ */ import_react6.default.createElement(
             "div",
             {
               key: i,
@@ -25057,8 +25765,7 @@ var DefaultStakeholderApp = ({
           ))
         ))
       )
-    ),
-    /* @__PURE__ */ import_react.default.createElement("div", { style: { flex: "1" } }, selectedFile && /* @__PURE__ */ import_react.default.createElement(
+    ), /* @__PURE__ */ import_react6.default.createElement("div", { style: { flex: "1" } }, selectedFile && /* @__PURE__ */ import_react6.default.createElement(
       "div",
       {
         style: {
@@ -25068,11 +25775,11 @@ var DefaultStakeholderApp = ({
           borderRadius: "4px"
         }
       },
-      /* @__PURE__ */ import_react.default.createElement("strong", null, "Selected:"),
+      /* @__PURE__ */ import_react6.default.createElement("strong", null, "Selected:"),
       " ",
       selectedFile
-    ), renderFileContent(), !selectedFile && /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("h3", null, "Configuration"), data.configs?.runtimes ? /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("p", null, "Found ", Object.keys(data.configs.runtimes).length, " runtimes:"), Object.entries(data.configs.runtimes).map(
-      ([key, runtime]) => /* @__PURE__ */ import_react.default.createElement(
+    ), renderFileContent(), !selectedFile && /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("h3", null, "Configuration"), data.configs?.runtimes ? /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement("p", null, "Found ", Object.keys(data.configs.runtimes).length, " runtimes:"), Object.entries(data.configs.runtimes).map(
+      ([key, runtime]) => /* @__PURE__ */ import_react6.default.createElement(
         "div",
         {
           key,
@@ -25082,25 +25789,25 @@ var DefaultStakeholderApp = ({
             borderLeft: "3px solid #007acc"
           }
         },
-        /* @__PURE__ */ import_react.default.createElement("strong", null, key),
+        /* @__PURE__ */ import_react6.default.createElement("strong", null, key),
         " (",
         runtime.runtime,
         ")",
-        /* @__PURE__ */ import_react.default.createElement("div", { style: { marginLeft: "10px" } }, "Tests: ", runtime.tests?.length || 0, runtime.tests?.map((test, i) => {
+        /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginLeft: "10px" } }, "Tests: ", runtime.tests?.length || 0, runtime.tests?.map((test, i) => {
           const testResult = data.allTestResults?.[key]?.[test];
-          return /* @__PURE__ */ import_react.default.createElement("div", { key: i, style: {
+          return /* @__PURE__ */ import_react6.default.createElement("div", { key: i, style: {
             fontSize: "12px",
             marginBottom: "5px",
             padding: "3px",
             backgroundColor: testResult ? testResult.failed ? "#ffebee" : "#e8f5e9" : "#f5f5f5",
             borderRadius: "3px"
-          } }, /* @__PURE__ */ import_react.default.createElement("div", { style: { display: "flex", justifyContent: "space-between" } }, /* @__PURE__ */ import_react.default.createElement("span", null, test), testResult && /* @__PURE__ */ import_react.default.createElement("span", { style: {
+          } }, /* @__PURE__ */ import_react6.default.createElement("div", { style: { display: "flex", justifyContent: "space-between" } }, /* @__PURE__ */ import_react6.default.createElement("span", null, test), testResult && /* @__PURE__ */ import_react6.default.createElement("span", { style: {
             fontWeight: "bold",
             color: testResult.failed ? "#f44336" : "#4caf50"
-          } }, testResult.failed ? "\u274C Failed" : "\u2705 Passed")), testResult && /* @__PURE__ */ import_react.default.createElement("div", { style: { fontSize: "11px", marginTop: "2px" } }, "Tests: ", testResult.runTimeTests || 0, " | Fails: ", testResult.fails || 0, " | Features: ", testResult.features?.length || 0));
+          } }, testResult.failed ? "\u274C Failed" : "\u2705 Passed")), testResult && /* @__PURE__ */ import_react6.default.createElement("div", { style: { fontSize: "11px", marginTop: "2px" } }, "Tests: ", testResult.runTimeTests || 0, " | Fails: ", testResult.fails || 0, " | Features: ", testResult.features?.length || 0));
         }))
       )
-    )) : /* @__PURE__ */ import_react.default.createElement("p", null, "No configuration found"), data.allTestResults && Object.keys(data.allTestResults).length > 0 && /* @__PURE__ */ import_react.default.createElement("div", { style: { marginTop: "30px" } }, /* @__PURE__ */ import_react.default.createElement("h3", null, "Test Results Summary"), Object.entries(data.allTestResults).map(([configKey, tests]) => /* @__PURE__ */ import_react.default.createElement("div", { key: configKey, style: { marginBottom: "20px" } }, /* @__PURE__ */ import_react.default.createElement("h4", null, configKey), Object.entries(tests).map(([testName, testData]) => /* @__PURE__ */ import_react.default.createElement(
+    )) : /* @__PURE__ */ import_react6.default.createElement("p", null, "No configuration found"), data.allTestResults && Object.keys(data.allTestResults).length > 0 && /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginTop: "30px" } }, /* @__PURE__ */ import_react6.default.createElement("h3", null, "Test Results Summary"), Object.entries(data.allTestResults).map(([configKey, tests]) => /* @__PURE__ */ import_react6.default.createElement("div", { key: configKey, style: { marginBottom: "20px" } }, /* @__PURE__ */ import_react6.default.createElement("h4", null, configKey), Object.entries(tests).map(([testName, testData]) => /* @__PURE__ */ import_react6.default.createElement(
       "div",
       {
         key: testName,
@@ -25117,17 +25824,17 @@ var DefaultStakeholderApp = ({
           setSelectedFileContent(testData);
         }
       },
-      /* @__PURE__ */ import_react.default.createElement("div", { style: { display: "flex", justifyContent: "space-between" } }, /* @__PURE__ */ import_react.default.createElement("strong", null, testName), /* @__PURE__ */ import_react.default.createElement("span", { style: {
+      /* @__PURE__ */ import_react6.default.createElement("div", { style: { display: "flex", justifyContent: "space-between" } }, /* @__PURE__ */ import_react6.default.createElement("strong", null, testName), /* @__PURE__ */ import_react6.default.createElement("span", { style: {
         fontWeight: "bold",
         color: testData.failed ? "#f44336" : "#4caf50"
       } }, testData.failed ? "\u274C Failed" : "\u2705 Passed")),
-      /* @__PURE__ */ import_react.default.createElement("div", { style: { fontSize: "14px", marginTop: "5px" } }, /* @__PURE__ */ import_react.default.createElement("div", null, "Total Tests: ", testData.runTimeTests || 0), /* @__PURE__ */ import_react.default.createElement("div", null, "Failures: ", testData.fails || 0), testData.features && /* @__PURE__ */ import_react.default.createElement("div", null, "Features: ", testData.features.length)),
-      testData.features && testData.features.length > 0 && /* @__PURE__ */ import_react.default.createElement("div", { style: { marginTop: "10px" } }, /* @__PURE__ */ import_react.default.createElement("div", { style: { fontSize: "12px", fontWeight: "bold" } }, "Features:"), /* @__PURE__ */ import_react.default.createElement("div", { style: {
+      /* @__PURE__ */ import_react6.default.createElement("div", { style: { fontSize: "14px", marginTop: "5px" } }, /* @__PURE__ */ import_react6.default.createElement("div", null, "Total Tests: ", testData.runTimeTests || 0), /* @__PURE__ */ import_react6.default.createElement("div", null, "Failures: ", testData.fails || 0), testData.features && /* @__PURE__ */ import_react6.default.createElement("div", null, "Features: ", testData.features.length)),
+      testData.features && testData.features.length > 0 && /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginTop: "10px" } }, /* @__PURE__ */ import_react6.default.createElement("div", { style: { fontSize: "12px", fontWeight: "bold" } }, "Features:"), /* @__PURE__ */ import_react6.default.createElement("div", { style: {
         display: "flex",
         flexWrap: "wrap",
         gap: "5px",
         marginTop: "5px"
-      } }, testData.features.slice(0, 3).map((feature, i) => /* @__PURE__ */ import_react.default.createElement(
+      } }, testData.features.slice(0, 3).map((feature, i) => /* @__PURE__ */ import_react6.default.createElement(
         "span",
         {
           key: i,
@@ -25139,13 +25846,13 @@ var DefaultStakeholderApp = ({
           }
         },
         feature
-      )), testData.features.length > 3 && /* @__PURE__ */ import_react.default.createElement("span", { style: {
+      )), testData.features.length > 3 && /* @__PURE__ */ import_react6.default.createElement("span", { style: {
         backgroundColor: "#f5f5f5",
         padding: "2px 6px",
         borderRadius: "10px",
         fontSize: "11px"
       } }, "+", testData.features.length - 3, " more")))
-    )))))))
+    )))))))))
   );
 };
 function renderApp(rootElement, data) {
@@ -25156,7 +25863,7 @@ function renderApp(rootElement, data) {
   }
   const root = import_client.default.createRoot(rootElement);
   root.render(
-    /* @__PURE__ */ import_react.default.createElement(import_react.default.StrictMode, null, /* @__PURE__ */ import_react.default.createElement(DefaultStakeholderApp, { data: appData }))
+    /* @__PURE__ */ import_react6.default.createElement(import_react6.default.StrictMode, null, /* @__PURE__ */ import_react6.default.createElement(DefaultStakeholderApp, { data: appData }))
   );
 }
 var index_default = DefaultStakeholderApp;

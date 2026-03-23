@@ -1,0 +1,50 @@
+[2026-03-23T03:38:51.274Z] [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+[2026-03-23T03:38:51.275Z] [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+[2026-03-23T03:38:51.275Z] [NODE BUILDER] testName:  nodetests
+[2026-03-23T03:38:51.275Z] [NODE BUILDER] Log file: /workspace/testeranto/reports/nodetests/build.log
+[2026-03-23T03:38:51.290Z] [NODE BUILDER] is now bundling:  nodetests
+[2026-03-23T03:38:51.290Z] [NODE BUILDER] Entry points: src/ts/Calculator.test.node.ts
+[2026-03-23T03:38:51.293Z] [NODE BUILDER] Detected native jest test: src/ts/Calculator.test.node.ts
+[2026-03-23T03:38:51.294Z] [NODE BUILDER] Using converter: jest
+[2026-03-23T03:38:51.304Z] [node Builder] Created test logs directory: /workspace/testeranto/reports/nodetests/test-logs
+[2026-03-23T03:38:51.333Z] node > build ended with 0 errors
+[2026-03-23T03:38:51.334Z] [node Builder] Created build log for src/ts/Calculator.test.node.ts at /workspace/testeranto/reports/nodetests/test-logs/Calculator.test.node.build.log
+[2026-03-23T03:38:51.335Z] [node Builder] Processed src/ts/Calculator.test.node.ts: 5 files, hash: 266b682766c9bcf5ab17d1207e4a38b0
+[2026-03-23T03:38:51.336Z] [node Builder] Wrote inputFiles.json for 1 tests to testeranto/bundles/nodetests/inputFiles.json
+[2026-03-23T03:38:51.317Z] INFO: Build started for nodetests
+[2026-03-23T03:38:51.333Z] LOG: node > build ended with 0 errors
+[2026-03-23T03:38:51.339Z] [NODE BUILDER] Process exiting
+[2026-03-23T03:39:33.880Z] [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+[2026-03-23T03:39:33.881Z] [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+[2026-03-23T03:39:33.881Z] [NODE BUILDER] testName:  nodetests
+[2026-03-23T03:39:33.881Z] [NODE BUILDER] Log file: /workspace/testeranto/reports/nodetests/build.log
+[2026-03-23T03:39:33.898Z] [NODE BUILDER] is now bundling:  nodetests
+[2026-03-23T03:39:33.898Z] [NODE BUILDER] Entry points: src/ts/Calculator.test.node.ts
+[2026-03-23T03:39:33.900Z] [NODE BUILDER] Detected native jest test: src/ts/Calculator.test.node.ts
+[2026-03-23T03:39:33.901Z] [NODE BUILDER] Using converter: jest
+[2026-03-23T03:39:33.905Z] [NODE BUILDER] Running in dev mode - starting watch mode
+[2026-03-23T03:39:33.950Z] node > build ended with 0 errors
+[2026-03-23T03:39:33.952Z] [node Builder] Created build log for src/ts/Calculator.test.node.ts at /workspace/testeranto/reports/nodetests/test-logs/Calculator.test.node.build.log
+[2026-03-23T03:39:33.953Z] [node Builder] Processed src/ts/Calculator.test.node.ts: 5 files, hash: 266b682766c9bcf5ab17d1207e4a38b0
+[2026-03-23T03:39:33.955Z] [node Builder] Wrote inputFiles.json for 1 tests to testeranto/bundles/nodetests/inputFiles.json
+[2026-03-23T03:39:33.955Z] [NODE BUILDER] Metafile updated
+[2026-03-23T03:39:33.957Z] [NODE BUILDER] Triggered inputFiles.json update
+[2026-03-23T03:39:33.930Z] INFO: Build started for nodetests
+[2026-03-23T03:39:33.950Z] LOG: node > build ended with 0 errors
+[2026-03-23T03:39:33.961Z] [node Builder] Processed src/ts/Calculator.test.node.ts: 5 files, hash: 266b682766c9bcf5ab17d1207e4a38b0
+[2026-03-23T03:39:33.962Z] [node Builder] Wrote inputFiles.json for 1 tests to testeranto/bundles/nodetests/inputFiles.json
+[2026-03-23T03:39:33.964Z] [NODE BUILDER] Watch mode active - waiting for file changes...
+[2026-03-23T03:39:33.964Z] [NODE BUILDER] Using onEnd plugin for rebuild detection
+[2026-03-23T03:39:33.964Z] [NODE BUILDER] Keeping process alive for continuous watching...
+[2026-03-23T03:39:33.974Z] node > build ended with 0 errors
+[2026-03-23T03:39:33.974Z] [node Builder] Created build log for src/ts/Calculator.test.node.ts at /workspace/testeranto/reports/nodetests/test-logs/Calculator.test.node.build.log
+[2026-03-23T03:39:33.975Z] [node Builder] Processed src/ts/Calculator.test.node.ts: 5 files, hash: 266b682766c9bcf5ab17d1207e4a38b0
+[2026-03-23T03:39:33.977Z] [node Builder] Wrote inputFiles.json for 1 tests to testeranto/bundles/nodetests/inputFiles.json
+[2026-03-23T03:39:33.977Z] [NODE BUILDER] Metafile updated
+[2026-03-23T03:39:33.982Z] [NODE BUILDER] Triggered inputFiles.json update
+[2026-03-23T03:39:33.964Z] INFO: Build started for nodetests
+[2026-03-23T03:40:03.967Z] [NODE BUILDER] Still watching for changes...
+[2026-03-23T03:40:33.972Z] [NODE BUILDER] Still watching for changes...
+[2026-03-23T03:41:03.974Z] [NODE BUILDER] Still watching for changes...
+[2026-03-23T03:41:33.974Z] [NODE BUILDER] Still watching for changes...
+[2026-03-23T03:41:41.508Z] [NODE BUILDER] Process exiting

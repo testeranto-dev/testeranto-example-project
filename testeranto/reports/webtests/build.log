@@ -1,25 +1,41 @@
-[2026-03-20T20:15:47.548Z] [WEB BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
-[2026-03-20T20:15:47.549Z] [WEB BUILDER] nodeConfig:  /workspace/testeranto/runtimes/web/web.ts
-[2026-03-20T20:15:47.549Z] [WEB BUILDER] testName:  webtests
-[2026-03-20T20:15:47.549Z] [WEB BUILDER] Log file: /workspace/testeranto/reports/webtests/build.log
-[2026-03-20T20:15:47.549Z] [WEB BUILDER] CWD: /workspace
-[2026-03-20T20:15:47.570Z] [WEB BUILDER] is now bundling: webtests
-[2026-03-20T20:15:47.570Z] [WEB BUILDER] Entry points: src/ts/Calculator.test.web.ts
-[2026-03-20T20:15:47.570Z] [WEB BUILDER] Running in dev mode - starting watch mode
-[2026-03-20T20:15:47.672Z] web > build ended with 0 errors
-[2026-03-20T20:15:47.678Z] [web Builder] Processed src/ts/Calculator.test.web.ts: 7 files, hash: 8a2adb3622cbc12e9218209408d454c8
-[2026-03-20T20:15:47.679Z] [web Builder] Wrote inputFiles.json for 1 tests to testeranto/bundles/webtests/inputFiles.json
-[2026-03-20T20:15:47.679Z] [WEB BUILDER] Metafile updated
-[2026-03-20T20:15:47.681Z] [WEB BUILDER] Triggered inputFiles.json update at testeranto/bundles/webtests/inputFiles.json
-[2026-03-20T20:15:47.683Z] [web Builder] Processed src/ts/Calculator.test.web.ts: 7 files, hash: 8a2adb3622cbc12e9218209408d454c8
-[2026-03-20T20:15:47.683Z] [web Builder] Wrote inputFiles.json for 1 tests to testeranto/bundles/webtests/inputFiles.json
-[2026-03-20T20:15:47.687Z] Created HTML file: testeranto/bundles/webtests/Calculator_test_web.html
-[2026-03-20T20:15:47.741Z] [WEB BUILDER]: esbuild server listening on 127.0.0.1,172.18.0.3, port 8000, /workspace
-[2026-03-20T20:15:47.745Z] [WEB BUILDER] Watch mode active - waiting for file changes...
-[2026-03-20T20:15:47.745Z] [WEB BUILDER] Using onEnd plugin for rebuild detection
-[2026-03-20T20:15:47.745Z] Chrome is a separate service, not launched in builder
-[2026-03-20T20:15:47.785Z] web > build ended with 0 errors
-[2026-03-20T20:15:47.788Z] [web Builder] Processed src/ts/Calculator.test.web.ts: 7 files, hash: 8a2adb3622cbc12e9218209408d454c8
-[2026-03-20T20:15:47.790Z] [web Builder] Wrote inputFiles.json for 1 tests to testeranto/bundles/webtests/inputFiles.json
-[2026-03-20T20:15:47.790Z] [WEB BUILDER] Metafile updated
-[2026-03-20T20:15:47.791Z] [WEB BUILDER] Triggered inputFiles.json update at testeranto/bundles/webtests/inputFiles.json
+[2026-03-23T03:38:52.944Z] [WEB BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+[2026-03-23T03:38:52.944Z] [WEB BUILDER] nodeConfig:  /workspace/testeranto/runtimes/web/web.ts
+[2026-03-23T03:38:52.944Z] [WEB BUILDER] testName:  webtests
+[2026-03-23T03:38:52.945Z] [WEB BUILDER] Log file: /workspace/testeranto/reports/webtests/build.log
+[2026-03-23T03:38:52.945Z] [WEB BUILDER] CWD: /workspace
+[2026-03-23T03:38:53.055Z] [WEB BUILDER] is now bundling: webtests
+[2026-03-23T03:38:53.056Z] [WEB BUILDER] Entry points: src/ts/Calculator.test.web.ts, src/ts/Calculator.test.web.react.ts
+[2026-03-23T03:38:53.191Z] web > build ended with 0 errors
+[2026-03-23T03:38:53.193Z] [web Builder] Processed src/ts/Calculator.test.web.ts: 7 files, hash: 4d36e2fb087fae6572fdceed2e65c39f
+[2026-03-23T03:38:53.197Z] [web Builder] Processed src/ts/Calculator.test.web.react.ts: 15 files, hash: 8f902b0f792f3bfee1103057682679d8
+[2026-03-23T03:38:53.200Z] [web Builder] Wrote inputFiles.json for 2 tests to testeranto/bundles/webtests/inputFiles.json
+[2026-03-23T03:38:53.200Z] WEB BUILDER: Metafiles have been generated
+[2026-03-23T03:38:53.201Z] [WEB BUILDER] Process exiting
+[2026-03-23T03:39:35.745Z] [WEB BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+[2026-03-23T03:39:35.747Z] [WEB BUILDER] nodeConfig:  /workspace/testeranto/runtimes/web/web.ts
+[2026-03-23T03:39:35.748Z] [WEB BUILDER] testName:  webtests
+[2026-03-23T03:39:35.749Z] [WEB BUILDER] Log file: /workspace/testeranto/reports/webtests/build.log
+[2026-03-23T03:39:35.749Z] [WEB BUILDER] CWD: /workspace
+[2026-03-23T03:39:35.774Z] [WEB BUILDER] is now bundling: webtests
+[2026-03-23T03:39:35.774Z] [WEB BUILDER] Entry points: src/ts/Calculator.test.web.ts, src/ts/Calculator.test.web.react.ts
+[2026-03-23T03:39:35.774Z] [WEB BUILDER] Running in dev mode - starting watch mode
+[2026-03-23T03:39:35.897Z] web > build ended with 0 errors
+[2026-03-23T03:39:35.904Z] [web Builder] Processed src/ts/Calculator.test.web.ts: 7 files, hash: 4d36e2fb087fae6572fdceed2e65c39f
+[2026-03-23T03:39:35.906Z] [web Builder] Processed src/ts/Calculator.test.web.react.ts: 15 files, hash: 8f902b0f792f3bfee1103057682679d8
+[2026-03-23T03:39:35.908Z] [web Builder] Wrote inputFiles.json for 2 tests to testeranto/bundles/webtests/inputFiles.json
+[2026-03-23T03:39:35.908Z] [WEB BUILDER] Metafile updated
+[2026-03-23T03:39:35.913Z] [WEB BUILDER] Triggered inputFiles.json update at testeranto/bundles/webtests/inputFiles.json
+[2026-03-23T03:39:35.915Z] [web Builder] Processed src/ts/Calculator.test.web.ts: 7 files, hash: 4d36e2fb087fae6572fdceed2e65c39f
+[2026-03-23T03:39:35.916Z] [web Builder] Processed src/ts/Calculator.test.web.react.ts: 15 files, hash: 8f902b0f792f3bfee1103057682679d8
+[2026-03-23T03:39:35.917Z] [web Builder] Wrote inputFiles.json for 2 tests to testeranto/bundles/webtests/inputFiles.json
+[2026-03-23T03:39:35.970Z] [WEB BUILDER]: esbuild server listening on 127.0.0.1,172.18.0.3, port 8000, /workspace
+[2026-03-23T03:39:35.972Z] [WEB BUILDER] Watch mode active - waiting for file changes...
+[2026-03-23T03:39:35.972Z] [WEB BUILDER] Using onEnd plugin for rebuild detection
+[2026-03-23T03:39:35.972Z] Chrome is a separate service, not launched in builder
+[2026-03-23T03:39:36.022Z] web > build ended with 0 errors
+[2026-03-23T03:39:36.022Z] [web Builder] Processed src/ts/Calculator.test.web.ts: 7 files, hash: 4d36e2fb087fae6572fdceed2e65c39f
+[2026-03-23T03:39:36.022Z] [web Builder] Processed src/ts/Calculator.test.web.react.ts: 15 files, hash: 8f902b0f792f3bfee1103057682679d8
+[2026-03-23T03:39:36.023Z] [web Builder] Wrote inputFiles.json for 2 tests to testeranto/bundles/webtests/inputFiles.json
+[2026-03-23T03:39:36.023Z] [WEB BUILDER] Metafile updated
+[2026-03-23T03:39:36.024Z] [WEB BUILDER] Triggered inputFiles.json update at testeranto/bundles/webtests/inputFiles.json
+[2026-03-23T03:41:41.424Z] [WEB BUILDER] Process exiting

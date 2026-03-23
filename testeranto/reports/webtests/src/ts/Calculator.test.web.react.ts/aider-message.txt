@@ -1,0 +1,44 @@
+/add /node_modules/react/cjs/react.development.js
+/add /node_modules/react/index.js
+/add /node_modules/scheduler/cjs/scheduler.development.js
+/add /node_modules/scheduler/index.js
+/add /node_modules/react-dom/cjs/react-dom.development.js
+/add /node_modules/react-dom/index.js
+/add /node_modules/react-dom/client.js
+/add /node_modules/testeranto.tiposkripto/dist/module/Web.js
+/add /src/ts/CalculatorReact.tsx
+/add /src/ts/Calculator.ts
+/add /src/ts/Calculator.test.web.react.adapter.ts
+/add /node_modules/chai/index.js
+/add /src/ts/Calculator.test.web.react.implementation.ts
+/add /src/ts/Calculator.test.specification.ts
+/add /src/ts/Calculator.test.web.react.ts
+
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/.DS_Store
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.html
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.js
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.tsx
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/.DS_Store
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/build.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/chrome-service.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/src/.DS_Store
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/src/ts/Calculator.test.web.react.ts/aider-message.txt
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/src/ts/Calculator.test.web.ts/aider-message.txt
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/webtests-src_ts_calculator-test-web-react-ts-bdd.container.exitcode
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/webtests-src_ts_calculator-test-web-react-ts-bdd.container.status
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/webtests-src_ts_calculator-test-web-react-ts-bdd.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/webtests-src_ts_calculator-test-web-ts-bdd.container.exitcode
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/webtests-src_ts_calculator-test-web-ts-bdd.container.status
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/webtests-src_ts_calculator-test-web-ts-bdd.exitcode
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/webtests-src_ts_calculator-test-web-ts-bdd.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/webtests-src_ts_calculator-test-web-ts-check-0.container.exitcode
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/webtests-src_ts_calculator-test-web-ts-check-0.container.status
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/webtests-src_ts_calculator-test-web-ts-check-0.exitcode
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/webtests-src_ts_calculator-test-web-ts-check-0.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/webtests-src_ts_calculator-test-web-ts-check-1.container.exitcode
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/webtests-src_ts_calculator-test-web-ts-check-1.container.status
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/webtests-src_ts_calculator-test-web-ts-check-1.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/webtests/webtests.log
+
+Observe these logs and apply.
+

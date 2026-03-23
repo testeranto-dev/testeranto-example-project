@@ -1,0 +1,4 @@
+=== Log started at 2026-03-23T03:39:31.490Z for service java ===
+
+java-builder  | === Creating proper build.gradle ===
+java-builder  | sh: 49: Syntax error: "&&" unexpected

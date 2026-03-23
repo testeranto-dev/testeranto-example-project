@@ -1,0 +1,4 @@
+=== Log started at 2026-03-23T03:40:36.672Z for service python ===
+
+pythontests-src_python_calculator-unittest-test-py-check-0  | usage: py_compile.py [-h] [-q] filenames [filenames ...]
+pythontests-src_python_calculator-unittest-test-py-check-0  | py_compile.py: error: the following arguments are required: filenames

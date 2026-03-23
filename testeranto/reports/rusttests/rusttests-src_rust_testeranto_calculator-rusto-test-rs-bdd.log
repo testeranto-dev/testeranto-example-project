@@ -1,0 +1,6 @@
+=== Log started at 2026-03-23T03:40:57.393Z for service rust ===
+
+rusttests-src_rust_testeranto_calculator-rusto-test-rs-bdd  | Binary not found: /workspace/testeranto/bundles/rusttests/src_rust_testeranto_Calculator_rusto_test_rs or /workspace/testeranto/bundles/rusttests/src_rust_testeranto_Calculator_rusto_test_rs.exe
+rusttests-src_rust_testeranto_calculator-rusto-test-rs-bdd  | total 0
+rusttests-src_rust_testeranto_calculator-rusto-test-rs-bdd  | drwxr-xr-x    2 root     root            64 Mar 23 03:38 .
+rusttests-src_rust_testeranto_calculator-rusto-test-rs-bdd  | drwxr-xr-x    5 root     root           160 Mar 23 03:38 ..

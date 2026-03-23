@@ -1,6 +1,6 @@
 {
   "src/ts/Calculator.test.web.ts": {
-    "hash": "8a2adb3622cbc12e9218209408d454c8",
+    "hash": "4d36e2fb087fae6572fdceed2e65c39f",
     "files": [
       "/node_modules/testeranto.tiposkripto/dist/module/Web.js",
       "/src/ts/Calculator.ts",
@@ -9,6 +9,26 @@
       "/src/ts/Calculator.test.implementation.ts",
       "/src/ts/Calculator.test.specification.ts",
       "/src/ts/Calculator.test.web.ts"
+    ]
+  },
+  "src/ts/Calculator.test.web.react.ts": {
+    "hash": "8f902b0f792f3bfee1103057682679d8",
+    "files": [
+      "/node_modules/react/cjs/react.development.js",
+      "/node_modules/react/index.js",
+      "/node_modules/scheduler/cjs/scheduler.development.js",
+      "/node_modules/scheduler/index.js",
+      "/node_modules/react-dom/cjs/react-dom.development.js",
+      "/node_modules/react-dom/index.js",
+      "/node_modules/react-dom/client.js",
+      "/node_modules/testeranto.tiposkripto/dist/module/Web.js",
+      "/src/ts/CalculatorReact.tsx",
+      "/src/ts/Calculator.ts",
+      "/src/ts/Calculator.test.web.react.adapter.ts",
+      "/node_modules/chai/index.js",
+      "/src/ts/Calculator.test.web.react.implementation.ts",
+      "/src/ts/Calculator.test.specification.ts",
+      "/src/ts/Calculator.test.web.react.ts"
     ]
   }
 }

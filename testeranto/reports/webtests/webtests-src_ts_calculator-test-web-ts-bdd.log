@@ -1,26 +1,46 @@
-=== Log started at 2026-03-20T20:15:53.831Z for service web ===
+=== Log started at 2026-03-23T03:40:11.074Z for service web ===
 
 webtests-src_ts_calculator-test-web-ts-bdd  | yarn run v1.22.22
 webtests-src_ts_calculator-test-web-ts-bdd  | $ /workspace/node_modules/.bin/tsx /workspace/testeranto/web_hoist.ts testeranto/bundles/webtests/src/ts/Calculator.test.web.mjs '{"ports":[1111],"fs":"testeranto/reports/webtests/src/ts/Calculator.test.web.ts/"}'
 webtests-src_ts_calculator-test-web-ts-bdd  | [CLIENT] Attempt 1/30: Attempting to reach Chrome service at http://chrome-service:3000/json/version...
 webtests-src_ts_calculator-test-web-ts-bdd  | [CLIENT] HTTP Status: 200
 webtests-src_ts_calculator-test-web-ts-bdd  | [CLIENT] Successfully fetched WS URL: ws://chrome-service:3000
-webtests-src_ts_calculator-test-web-ts-bdd  | [hoist] Reading bundle from: testeranto/bundles/webtests/src/ts/Calculator.test.web.mjs
-webtests-src_ts_calculator-test-web-ts-bdd  | [hoist] Bundle size: 168731 characters
 webtests-src_ts_calculator-test-web-ts-bdd  | [hoist] Test resource config: {
 webtests-src_ts_calculator-test-web-ts-bdd  |   ports: [ 1111 ],
 webtests-src_ts_calculator-test-web-ts-bdd  |   fs: 'testeranto/reports/webtests/src/ts/Calculator.test.web.ts/'
 webtests-src_ts_calculator-test-web-ts-bdd  | }
-webtests-src_ts_calculator-test-web-ts-bdd  | [hoist] Navigating to data URL with embedded bundle
-webtests-src_ts_calculator-test-web-ts-bdd  | Browser console [log]: Test resource config injected: [object Object] [{"url":"","lineNumber":11,"columnNumber":14}]
-webtests-src_ts_calculator-test-web-ts-bdd  | Browser console [log]: testResourceConfiguration [object Object] [{"url":"blob:null/06a20d3d-da15-4c68-89d6-6557a3917e33","lineNumber":677,"columnNumber":14}]
-webtests-src_ts_calculator-test-web-ts-bdd  | [hoist] Wrote file: /workspace/testeranto/reports/webtests/src/ts/Calculator.test.web.ts/testeranto/reports/webtests/src/ts/Calculator.test.web.ts/tests.json
-webtests-src_ts_calculator-test-web-ts-bdd  | Browser console [log]: Test bundle loaded successfully from blob [{"url":"","lineNumber":21,"columnNumber":16}]
-webtests-src_ts_calculator-test-web-ts-bdd  | Browser console [log]: Module loaded: [object Module] [{"url":"","lineNumber":30,"columnNumber":18}]
+webtests-src_ts_calculator-test-web-ts-bdd  | [hoist] Reading bundle from: /workspace/testeranto/bundles/webtests/src/ts/Calculator.test.web.mjs
+webtests-src_ts_calculator-test-web-ts-bdd  | [hoist] Bundle size: 194337 characters
+webtests-src_ts_calculator-test-web-ts-bdd  | [hoist] Navigating to data URL
+webtests-src_ts_calculator-test-web-ts-bdd  | Browser console [log]: Test resource config injected: JSHandle@object [{"url":"","lineNumber":12,"columnNumber":14}]
 webtests-src_ts_calculator-test-web-ts-bdd  | [hoist] Successfully navigated to data URL
+webtests-src_ts_calculator-test-web-ts-bdd  | [hoist] Injecting and executing bundle...
+webtests-src_ts_calculator-test-web-ts-bdd  | Browser console [log]: Starting to load bundle from blob URL [{"url":"pptr:evaluate;launchPuppeteer%20(file%3A%2F%2F%2Fworkspace%2Ftesteranto%2Fweb_hoist.ts%3A20%3A330)","lineNumber":0,"columnNumber":132}]
+webtests-src_ts_calculator-test-web-ts-bdd  | Browser console [log]: [WebTiposkripto] testResourceConfig: {"ports":[1111],"fs":"testeranto/reports/webtests/src/ts/Calculator.test.web.ts/"} [{"url":"blob:null/7ddc140b-3f7d-4bfd-8684-9831f860e11c","lineNumber":1249,"columnNumber":12},{"url":"blob:null/7ddc140b-3f7d-4bfd-8684-9831f860e11c","lineNumber":1404,"columnNumber":14},{"url":"blob:null/7ddc140b-3f7d-4bfd-8684-9831f860e11c","lineNumber":5942,"columnNumber":34}]
+webtests-src_ts_calculator-test-web-ts-bdd  | Browser console [error]: JSHandle@error [{"url":"blob:null/7ddc140b-3f7d-4bfd-8684-9831f860e11c","lineNumber":1413,"columnNumber":12},{"url":"blob:null/7ddc140b-3f7d-4bfd-8684-9831f860e11c","lineNumber":5942,"columnNumber":34}]
+webtests-src_ts_calculator-test-web-ts-bdd  | Browser console [log]: Test bundle loaded successfully from blob [{"url":"pptr:evaluate;launchPuppeteer%20(file%3A%2F%2F%2Fworkspace%2Ftesteranto%2Fweb_hoist.ts%3A20%3A330)","lineNumber":0,"columnNumber":312}]
+webtests-src_ts_calculator-test-web-ts-bdd  | Browser console [log]: Module loaded: JSHandle@object [{"url":"pptr:evaluate;launchPuppeteer%20(file%3A%2F%2F%2Fworkspace%2Ftesteranto%2Fweb_hoist.ts%3A20%3A330)","lineNumber":0,"columnNumber":488}]
 webtests-src_ts_calculator-test-web-ts-bdd  | [hoist] Waiting for tests to execute...
-webtests-src_ts_calculator-test-web-ts-bdd  | [hoist] Page title: Test Runner
-webtests-src_ts_calculator-test-web-ts-bdd  | Done in 10.06s.
-[Kwebtests-src_ts_calculator-test-web-ts-bdd exited with code 0
+webtests-src_ts_calculator-test-web-ts-bdd  | Page error in web test: Error [TypeError]: Cannot read properties of undefined (reading 'a simple caclulator')
+webtests-src_ts_calculator-test-web-ts-bdd  |     at specification (blob:null/7ddc140b-3f7d-4bfd-8684-9831f860e11c:5662:34)
+webtests-src_ts_calculator-test-web-ts-bdd  |     at BaseTiposkripto (blob:null/7ddc140b-3f7d-4bfd-8684-9831f860e11c:1051:18)
+webtests-src_ts_calculator-test-web-ts-bdd  |     at WebTiposkripto (blob:null/7ddc140b-3f7d-4bfd-8684-9831f860e11c:1251:5)
+webtests-src_ts_calculator-test-web-ts-bdd  |     at tiposkripto (blob:null/7ddc140b-3f7d-4bfd-8684-9831f860e11c:1405:15)
+webtests-src_ts_calculator-test-web-ts-bdd  |     at <anonymous> (blob:null/7ddc140b-3f7d-4bfd-8684-9831f860e11c:5943:35)
+webtests-src_ts_calculator-test-web-ts-bdd  | node:internal/process/promises:391
+webtests-src_ts_calculator-test-web-ts-bdd  |     triggerUncaughtException(err, true /* fromPromise */);
+webtests-src_ts_calculator-test-web-ts-bdd  |     ^
+webtests-src_ts_calculator-test-web-ts-bdd  | 
+webtests-src_ts_calculator-test-web-ts-bdd  | Error [TypeError]: Cannot read properties of undefined (reading 'a simple caclulator')
+webtests-src_ts_calculator-test-web-ts-bdd  |     at specification (blob:null/7ddc140b-3f7d-4bfd-8684-9831f860e11c:5662:34)
+webtests-src_ts_calculator-test-web-ts-bdd  |     at BaseTiposkripto (blob:null/7ddc140b-3f7d-4bfd-8684-9831f860e11c:1051:18)
+webtests-src_ts_calculator-test-web-ts-bdd  |     at WebTiposkripto (blob:null/7ddc140b-3f7d-4bfd-8684-9831f860e11c:1251:5)
+webtests-src_ts_calculator-test-web-ts-bdd  |     at tiposkripto (blob:null/7ddc140b-3f7d-4bfd-8684-9831f860e11c:1405:15)
+webtests-src_ts_calculator-test-web-ts-bdd  |     at <anonymous> (blob:null/7ddc140b-3f7d-4bfd-8684-9831f860e11c:5943:35)
+webtests-src_ts_calculator-test-web-ts-bdd  | 
+webtests-src_ts_calculator-test-web-ts-bdd  | Node.js v20.19.4
+webtests-src_ts_calculator-test-web-ts-bdd  | error Command failed with exit code 1.
+webtests-src_ts_calculator-test-web-ts-bdd  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+[Kwebtests-src_ts_calculator-test-web-ts-bdd exited with code 1
 
-=== Log ended at 2026-03-20T20:16:03.954Z, process exited with code 0 ===
+=== Log ended at 2026-03-23T03:40:15.119Z, process exited with code 0 ===

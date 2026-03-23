@@ -23,12 +23,12 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 
 // src/server/runtimes/node/native_detection.js
 var native_detection_exports = {};
-var fs9, path8, parse, traverse, generate, types, NodeNativeTestDetection;
+var fs10, path9, parse, traverse, generate, types, NodeNativeTestDetection;
 var init_native_detection = __esm({
   "src/server/runtimes/node/native_detection.js"() {
     "use strict";
-    fs9 = __require("fs");
-    path8 = __require("path");
+    fs10 = __require("fs");
+    path9 = __require("path");
     ({ parse } = __require("@babel/parser"));
     traverse = __require("@babel/traverse").default;
     generate = __require("@babel/generator").default;
@@ -40,7 +40,7 @@ var init_native_detection = __esm({
        * @returns {Object} Detection result
        */
       static detectNativeTest(filePath) {
-        if (!fs9.existsSync(filePath)) {
+        if (!fs10.existsSync(filePath)) {
           return {
             isNativeTest: false,
             frameworkType: null,
@@ -48,10 +48,10 @@ var init_native_detection = __esm({
           };
         }
         try {
-          const content = fs9.readFileSync(filePath, "utf-8");
-          const ext = path8.extname(filePath);
+          const content = fs10.readFileSync(filePath, "utf-8");
+          const ext = path9.extname(filePath);
           const isTypeScript = ext === ".ts" || ext === ".tsx";
-          const filename = path8.basename(filePath);
+          const filename = path9.basename(filePath);
           const isNamedTest = filename.includes(".test.") || filename.includes(".spec.");
           const hasJestImport = content.includes("jest") || content.includes("@jest/");
           const hasMochaImport = content.includes("mocha") || content.includes("@types/mocha");
@@ -122,29 +122,29 @@ var init_native_detection = __esm({
         };
         try {
           traverse(ast, {
-            FunctionDeclaration(path10) {
-              const node = path10.node;
+            FunctionDeclaration(path11) {
+              const node = path11.node;
               if (node.id && node.id.name && node.id.name.startsWith("test")) {
                 result.hasTestFunctions = true;
                 result.testFunctionNames.push(node.id.name);
               }
             },
-            FunctionExpression(path10) {
-              const parent = path10.parent;
+            FunctionExpression(path11) {
+              const parent = path11.parent;
               if (parent.key && parent.key.name && parent.key.name.startsWith("test")) {
                 result.hasTestFunctions = true;
                 result.testFunctionNames.push(parent.key.name);
               }
             },
-            ArrowFunctionExpression(path10) {
-              const parent = path10.parent;
+            ArrowFunctionExpression(path11) {
+              const parent = path11.parent;
               if (parent.key && parent.key.name && parent.key.name.startsWith("test")) {
                 result.hasTestFunctions = true;
                 result.testFunctionNames.push(parent.key.name);
               }
             },
-            CallExpression(path10) {
-              const node = path10.node;
+            CallExpression(path11) {
+              const node = path11.node;
               if (node.callee && node.callee.name) {
                 const calleeName = node.callee.name;
                 if (["describe", "it", "test", "beforeEach", "afterEach", "beforeAll", "afterAll"].includes(calleeName)) {
@@ -152,8 +152,8 @@ var init_native_detection = __esm({
                 }
               }
             },
-            ClassDeclaration(path10) {
-              const node = path10.node;
+            ClassDeclaration(path11) {
+              const node = path11.node;
               if (node.id && node.id.name && (node.id.name.endsWith("Test") || node.id.name.endsWith("Spec"))) {
                 result.hasTestClasses = true;
                 result.testClassNames.push(node.id.name);
@@ -193,8 +193,8 @@ var init_native_detection = __esm({
         };
         try {
           traverse(ast, {
-            CallExpression(path10) {
-              const node = path10.node;
+            CallExpression(path11) {
+              const node = path11.node;
               if (node.callee && node.callee.name === "describe") {
                 const suiteName = node.arguments[0] && node.arguments[0].value;
                 if (suiteName) {
@@ -220,8 +220,8 @@ var init_native_detection = __esm({
                 });
               }
             },
-            ClassDeclaration(path10) {
-              const node = path10.node;
+            ClassDeclaration(path11) {
+              const node = path11.node;
               if (node.id && node.id.name && (node.id.name.endsWith("Test") || node.id.name.endsWith("Spec"))) {
                 const className = node.id.name;
                 const methods = [];
@@ -799,8 +799,8 @@ var esbuild_default = (nodeConfig, testName2, projectConfig, entryPoints2) => {
 };
 
 // src/server/runtimes/node/node.ts
-import * as fs10 from "fs";
-import * as path9 from "path";
+import * as fs11 from "fs";
+import * as path10 from "path";
 
 // src/server/runtimes/node/framework-converters/jest.ts
 import * as path4 from "path";
@@ -1189,21 +1189,142 @@ const adapter = {
   }
 };
 
-// src/server/runtimes/node/framework-converters/generic.ts
+// src/server/runtimes/node/framework-converters/jasmine.ts
 import * as path7 from "path";
 import * as fs8 from "fs";
-var GenericConverter = {
-  name: "generic",
+var JasmineConverter = {
+  name: "jasmine",
   detect(filePath) {
     if (!fs8.existsSync(filePath)) return false;
     const content = fs8.readFileSync(filePath, "utf-8");
-    const filename = path7.basename(filePath);
+    const hasJasmineImport = content.includes("jasmine") || content.includes("@types/jasmine");
+    const hasJasminePatterns = content.includes("describe(") && content.includes("it(") && content.includes("expect(") && !content.includes("jest") && !content.includes("mocha");
+    return hasJasmineImport || hasJasminePatterns;
+  },
+  generateWrapper(entryPointPath, detectionResult, translationResult, filesHash) {
+    const originalTestAbs = path7.resolve(entryPointPath);
+    return `// Jasmine test wrapper generated by testeranto
+// Hash: ${filesHash}
+// Framework: jasmine
+// This file loads and executes Jasmine tests
+
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+console.log('Running Jasmine test: ${originalTestAbs}');
+
+// Jasmine uses describe/it syntax similar to Mocha
+const testModule = await import('${originalTestAbs}');
+
+// Check for Jasmine environment
+if (typeof jasmine !== 'undefined') {
+  console.log('Jasmine environment detected');
+} else if (typeof describe === 'function' && typeof it === 'function') {
+  console.log('describe/it environment available (may be Mocha or Jasmine)');
+} else {
+  console.warn('Jasmine environment not detected. Tests may need manual execution.');
+}
+
+console.log('Jasmine test import completed');
+`;
+  },
+  translateToTesteranto(detectionResult) {
+    return {
+      specification: `// Generated specification for Jasmine tests
+const specification = (Suite, Given, When, Then) => [
+  Suite("Jasmine Tests", {
+    "jasmine-test": Given(
+      ["Jasmine test suite"],
+      [
+        When("run jasmine test", (store) => {
+          // Jasmine test execution
+          return store;
+        })
+      ],
+      [
+        Then("verify jasmine assertions", async (store) => {
+          // Jasmine assertions
+          return store;
+        })
+      ]
+    )
+  })
+];`,
+      implementation: `// Generated implementation for Jasmine tests
+const implementation = {
+  suites: {
+    Default: "Jasmine test suite"
+  },
+  givens: {
+    Default: () => ({ /* Jasmine test context */ })
+  },
+  whens: {
+    runTest: (testName) => (store) => {
+      console.log('Running Jasmine test:', testName);
+      return store;
+    }
+  },
+  thens: {
+    verify: (expected) => (store) => {
+      // Verify Jasmine assertions
+      return store;
+    }
+  }
+};`,
+      adapter: `// Generated adapter for Jasmine tests
+const adapter = {
+  beforeAll: async (input, testResource) => {
+    // Jasmine beforeAll
+    console.log('Jasmine beforeAll');
+    return input;
+  },
+  beforeEach: async (subject, initializer, testResource, initialValues) => {
+    // Jasmine beforeEach
+    console.log('Jasmine beforeEach');
+    return subject;
+  },
+  execute: async (store, actionCB, testResource) => {
+    // Execute Jasmine test action
+    return actionCB(store);
+  },
+  verify: async (store, checkCB, testResource) => {
+    // Verify Jasmine assertions
+    return checkCB(store);
+  },
+  cleanupEach: async (store, key) => {
+    // Jasmine afterEach
+    console.log('Jasmine cleanupEach');
+    return store;
+  },
+  cleanupAll: async (store) => {
+    // Jasmine afterAll
+    console.log('Jasmine cleanupAll');
+    return store;
+  },
+  assert: (x) => !!x
+};`
+    };
+  }
+};
+
+// src/server/runtimes/node/framework-converters/generic.ts
+import * as path8 from "path";
+import * as fs9 from "fs";
+var GenericConverter = {
+  name: "generic",
+  detect(filePath) {
+    if (!fs9.existsSync(filePath)) return false;
+    const content = fs9.readFileSync(filePath, "utf-8");
+    const filename = path8.basename(filePath);
     const isNamedTest = filename.includes(".test.") || filename.includes(".spec.");
     const hasTestPatterns = content.includes("describe(") || content.includes("it(") || content.includes("test(");
     return isNamedTest || hasTestPatterns;
   },
   generateWrapper(entryPointPath, detectionResult, translationResult, filesHash) {
-    const originalTestAbs = path7.resolve(entryPointPath);
+    const originalTestAbs = path8.resolve(entryPointPath);
     const framework = detectionResult.frameworkType || "unknown";
     return `// Generic test wrapper generated by testeranto
 // Hash: ${filesHash}
@@ -1303,8 +1424,8 @@ const adapter = {
 // src/server/runtimes/node/node.ts
 var NodeNativeTestDetection2;
 try {
-  const detectionModulePath = path9.join(__dirname, "native_detection.js");
-  if (fs10.existsSync(detectionModulePath)) {
+  const detectionModulePath = path10.join(__dirname, "native_detection.js");
+  if (fs11.existsSync(detectionModulePath)) {
     NodeNativeTestDetection2 = (init_native_detection(), __toCommonJS(native_detection_exports));
   } else {
     NodeNativeTestDetection2 = class {
@@ -1345,13 +1466,13 @@ var projectConfigPath = process.argv[2];
 var nodeConfigPath = process.argv[3];
 var testName = process.argv[4];
 var entryPoints = process.argv.slice(5);
-var reportDir = path9.join(process.cwd(), "testeranto", "reports", testName);
-if (!fs10.existsSync(reportDir)) {
-  fs10.mkdirSync(reportDir, { recursive: true });
+var reportDir = path10.join(process.cwd(), "testeranto", "reports", testName);
+if (!fs11.existsSync(reportDir)) {
+  fs11.mkdirSync(reportDir, { recursive: true });
   console.log(`[NODE BUILDER] Created report directory: ${reportDir}`);
 }
-var logFilePath = path9.join(reportDir, "build.log");
-var logStream = fs10.createWriteStream(logFilePath, { flags: "a" });
+var logFilePath = path10.join(reportDir, "build.log");
+var logStream = fs11.createWriteStream(logFilePath, { flags: "a" });
 var originalConsoleLog = console.log;
 var originalConsoleError = console.error;
 var originalConsoleWarn = console.warn;
@@ -1408,8 +1529,8 @@ async function startBundling(nodeConfigs, projectConfig, entryPoints2) {
   console.log(`[NODE BUILDER] Entry points: ${entryPoints2.join(", ")}`);
   const entryPointInfo = /* @__PURE__ */ new Map();
   for (const entryPoint of entryPoints2) {
-    const entryPointPath = path9.resolve(entryPoint);
-    if (fs10.existsSync(entryPointPath)) {
+    const entryPointPath = path10.resolve(entryPoint);
+    if (fs11.existsSync(entryPointPath)) {
       const detectionResult = NodeNativeTestDetection2.detectNativeTest(entryPointPath);
       const converter = detectFrameworkWithConverters(entryPointPath);
       const enhancedResult = {
@@ -1442,10 +1563,10 @@ async function startBundling(nodeConfigs, projectConfig, entryPoints2) {
                 console.log(`[NODE BUILDER] Metafile updated`);
                 const inputFilesPath = `testeranto/bundles/${testName}/inputFiles.json`;
                 try {
-                  const fs11 = await import("fs");
-                  if (fs11.existsSync(inputFilesPath)) {
-                    const stats = fs11.statSync(inputFilesPath);
-                    fs11.utimesSync(inputFilesPath, stats.atime, /* @__PURE__ */ new Date());
+                  const fs12 = await import("fs");
+                  if (fs12.existsSync(inputFilesPath)) {
+                    const stats = fs12.statSync(inputFilesPath);
+                    fs12.utimesSync(inputFilesPath, stats.atime, /* @__PURE__ */ new Date());
                     console.log(`[NODE BUILDER] Triggered inputFiles.json update`);
                   } else {
                     console.log(`[NODE BUILDER] inputFiles.json doesn't exist yet at ${inputFilesPath}`);

@@ -4,7 +4,6 @@ import { ITestImplementation } from "testeranto.tiposkripto/CoreTypes";
 import { I, O, M } from "./Calculator.test.types.js";
 import { Calculator } from "./Calculator.js";
 
-
 export const implementation: ITestImplementation<I, O, M> = {
   suites: {
     Default: { description: "Default test suite for Calculator" },

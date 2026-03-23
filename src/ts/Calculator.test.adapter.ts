@@ -2,11 +2,11 @@ import { ITestAdapter } from "testeranto.tiposkripto";
 import { I } from "./Calculator.test.types.js";
 
 export const adapter: ITestAdapter<I> = {
-  beforeAll: async (input, testResource) => {
+  beforeAll: async (input, testResource, artifactory) => {
     console.log("[adapter] beforeAll called with input:", input);
     return input;
   },
-  beforeEach: async (subject, initializer, testResource, initialValues) => {
+  beforeEach: async (subject, initializer, testResource, initialValues, artifactory) => {
     console.log("[adapter] beforeEach called with subject:", subject);
     // The initializer should create and return a Calculator instance
     const calculator = await initializer();
@@ -16,7 +16,7 @@ export const adapter: ITestAdapter<I> = {
     }
     return calculator;
   },
-  andWhen: async (store, whenCB, testResource) => {
+  andWhen: async (store, whenCB, testResource, artifactory) => {
     console.log("[adapter] andWhen called with store:", store);
     if (!store) {
       throw new Error("Store is undefined in andWhen");
@@ -26,7 +26,7 @@ export const adapter: ITestAdapter<I> = {
     // Ensure we always return a valid store
     return updatedStore || store;
   },
-  butThen: async (store, thenCB, testResource) => {
+  butThen: async (store, thenCB, testResource, artifactory) => {
     console.log("[adapter] butThen called with store:", store);
     if (!store) {
       throw new Error("Store is undefined in butThen");
@@ -39,12 +39,15 @@ export const adapter: ITestAdapter<I> = {
     // Return the store itself
     return store;
   },
-  afterEach: async (store, key) => {
+  afterEach: async (store, key, artifactory) => {
     console.log("[adapter] afterEach called with store:", store);
     return store;
   },
-  afterAll: async (store) => {
+  afterAll: async (store, artifactory) => {
     console.log("afterAll called, but skipping web-only storage operations in Node.js");
+
+    artifactory.writeFileSync("fizz", "buzz")
+
     return store;
   },
   assertThis: (actual: string) => {

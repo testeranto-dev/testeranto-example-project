@@ -18,20 +18,13 @@ path = "src/rust/lib.rs"
 name = "calculator_app"
 path = "src/rust/src/bin/main.rs"
 
-# Testeranto test binaries
-[[bin]]
-name = "calculator_testeranto_test"
-path = "src/rust/testeranto/Calculator.rusto.test.rs"
 
-[[bin]]
-name = "calculator_ruga_test"
-path = "src/rust/testeranto/ruga/Calculator.rusto.test.rs"
 
 # Dependencies for the library
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-testeranto_rusto = "0.1.21"
+testeranto_rusto = "0.3.0"
 tokio = { version = "1.0", features = ["full"] }
 async-trait = "0.1"
 

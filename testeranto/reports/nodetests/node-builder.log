@@ -1,0 +1,54 @@
+=== Log started at 2026-03-23T03:39:32.897Z for service node ===
+
+node-builder  | yarn run v1.22.22
+node-builder  | $ /workspace/node_modules/.bin/tsx /workspace/testeranto/node_runtime.ts /workspace/testeranto/testeranto.ts /workspace/testeranto/runtimes/node/node.mjs nodetests src/ts/Calculator.test.node.ts
+node-builder  | [NODE BUILDER] projectConfigPath:  /workspace/testeranto/testeranto.ts
+node-builder  | [NODE BUILDER] nodeConfig:  /workspace/testeranto/runtimes/node/node.mjs
+node-builder  | [NODE BUILDER] testName:  nodetests
+node-builder  | [NODE BUILDER] Log file: /workspace/testeranto/reports/nodetests/build.log
+node-builder  | [NODE BUILDER] is now bundling:  nodetests
+node-builder  | [NODE BUILDER] Entry points: src/ts/Calculator.test.node.ts
+node-builder  | [NODE BUILDER] Detected native jest test: src/ts/Calculator.test.node.ts
+node-builder  | [NODE BUILDER] Using converter: jest
+node-builder  | [NODE BUILDER] Running in dev mode - starting watch mode
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors
+node-builder  | [node Builder] Created build log for src/ts/Calculator.test.node.ts at /workspace/testeranto/reports/nodetests/test-logs/Calculator.test.node.build.log
+node-builder  | [node Builder] Processed src/ts/Calculator.test.node.ts: 5 files, hash: 266b682766c9bcf5ab17d1207e4a38b0
+node-builder  | [node Builder] Wrote inputFiles.json for 1 tests to testeranto/bundles/nodetests/inputFiles.json
+node-builder  | [NODE BUILDER] Metafile updated
+node-builder  | [NODE BUILDER] Triggered inputFiles.json update
+node-builder  | [node Builder] Processed src/ts/Calculator.test.node.ts: 5 files, hash: 266b682766c9bcf5ab17d1207e4a38b0
+node-builder  | [node Builder] Wrote inputFiles.json for 1 tests to testeranto/bundles/nodetests/inputFiles.json
+node-builder  | [NODE BUILDER] Watch mode active - waiting for file changes...
+node-builder  | [NODE BUILDER] Using onEnd plugin for rebuild detection
+node-builder  | [NODE BUILDER] Keeping process alive for continuous watching...
+node-builder  | ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+node-builder  | 
+node-builder  |     src/ts/Calculator.ts:10:21:
+node-builder  |       10 │       const result = eval(this.display);
+node-builder  |          ╵                      ~~~~
+node-builder  | 
+node-builder  |   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+node-builder  | 
+node-builder  | node > build ended with 0 errors
+node-builder  | [node Builder] Created build log for src/ts/Calculator.test.node.ts at /workspace/testeranto/reports/nodetests/test-logs/Calculator.test.node.build.log
+node-builder  | [node Builder] Processed src/ts/Calculator.test.node.ts: 5 files, hash: 266b682766c9bcf5ab17d1207e4a38b0
+node-builder  | [node Builder] Wrote inputFiles.json for 1 tests to testeranto/bundles/nodetests/inputFiles.json
+node-builder  | [NODE BUILDER] Metafile updated
+node-builder  | [NODE BUILDER] Triggered inputFiles.json update
+node-builder  | [NODE BUILDER] Still watching for changes...
+node-builder  | [NODE BUILDER] Still watching for changes...
+node-builder  | [NODE BUILDER] Still watching for changes...
+node-builder  | [NODE BUILDER] Still watching for changes...
+node-builder  | [NODE BUILDER] Process exiting
+[Knode-builder exited with code 1
+
+=== Log ended at 2026-03-23T03:41:42.327Z, process exited with code null ===

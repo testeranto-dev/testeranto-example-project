@@ -1,0 +1,15 @@
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/.DS_Store
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.html
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.js
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.tsx
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/rusttests/rusttests-src_rust_testeranto_calculator-native-test-rs-bdd.container.exitcode
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/rusttests/rusttests-src_rust_testeranto_calculator-native-test-rs-bdd.container.status
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/rusttests/rusttests-src_rust_testeranto_calculator-native-test-rs-bdd.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/rusttests/rusttests-src_rust_testeranto_calculator-rusto-test-rs-bdd.container.exitcode
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/rusttests/rusttests-src_rust_testeranto_calculator-rusto-test-rs-bdd.container.status
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/rusttests/rusttests-src_rust_testeranto_calculator-rusto-test-rs-bdd.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/rusttests/src/rust/testeranto/Calculator.native.test.rs/aider-message.txt
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/rusttests/src/rust/testeranto/Calculator.rusto.test.rs/aider-message.txt
+
+Observe these logs and apply.
+

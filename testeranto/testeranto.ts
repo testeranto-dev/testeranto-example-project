@@ -20,9 +20,8 @@ const config: ITestconfigV2 = {
     javatests: {
       runtime: "java",
       tests: [
-        // "src/java/test/java/com/example/calculator/CalculatorTest.java",
-        // "src/java/test/java/com/example/calculator/CalculatorDvipaTest.java",
-        // "src/java/test/java/com/example/calculator/CalculatorJUnitTest.java", // Standard JUnit test
+        "src/java/test/java/com/example/calculator/CalculatorTest.java",
+        "src/java/test/java/com/example/calculator/CalculatorJUnitTest.java", // Standard JUnit test
       ],
       checks: [
         (x: string[]) => `javac -cp ".:lib/*" ${x.join(" ")}`,
@@ -41,8 +40,8 @@ const config: ITestconfigV2 = {
     rubytests: {
       runtime: "ruby",
       tests: [
-        // "src/ruby/Calculator-test.rb",
-        // "src/ruby/Calculator.rspec.test.rb", // Standard RSpec test
+        "src/ruby/Calculator-test.rb",
+        "src/ruby/Calculator.rspec.test.rb", // Standard RSpec test
       ],
       checks: [
         (x) => `bundle exec rubocop ${x.join(" ")}`,
@@ -61,8 +60,7 @@ const config: ITestconfigV2 = {
     nodetests: {
       runtime: "node",
       tests: [
-        // "src/ts/Calculator.test.node.ts",
-        // "src/ts/Calculator.jest.test.ts", // Standard Jest test
+        "src/ts/Calculator.test.node.ts",
       ],
       checks: [
         (x) => `yarn eslint ${x.join(" ")} `,
@@ -83,6 +81,7 @@ const config: ITestconfigV2 = {
       runtime: "web",
       tests: [
         "src/ts/Calculator.test.web.ts",
+        "src/ts/Calculator.test.web.react.ts",
         // We could add a standard web test framework like Vitest here
       ],
       checks: [
@@ -100,16 +99,15 @@ const config: ITestconfigV2 = {
     pythontests: {
       runtime: "python",
       tests: [
-        // "src/python/Calculator.pitono.test.py",
-        // "src/python/pythonic/Calculator.pitono.test.py",
-        // "src/python/Calculator.unittest.test.py", // Standard unittest test
+        "src/python/Calculator.pitono.test.py",
+        "src/python/Calculator.unittest.test.py", // Standard unittest test
       ],
       checks: [
         // Python syntax check
         (x) => `python -m py_compile ${x.join(" ")}`,
         // Run unittest tests
-        // (x) =>
-        //   `python -m unittest ${x.filter((f) => f.includes("unittest.test")).join(" ")}`,
+        (x) =>
+          `python -m unittest ${x.filter((f) => f.includes("unittest.test")).join(" ")}`,
       ],
       dockerfile: `testeranto/runtimes/python/python.Dockerfile`,
       buildOptions: `testeranto/runtimes/python/python.py`,
@@ -122,16 +120,15 @@ const config: ITestconfigV2 = {
     golangtests: {
       runtime: "golang",
       tests: [
-        // "src/golang/cmd/calculator-test/main.go",
-        // "src/golang/cmd/calculator-native-test/main.go", // Standard Go test
+        "src/golang/cmd/calculator-test/main.go",
+        "src/golang/cmd/calculator-native-test/main.go", // Standard Go test
       ],
       checks: [
-        // (x) => `tree`,
         (x) => `go vet ./...`,
-        // // Run Go tests
-        // (x) =>
-        //   `go test ${x.filter((f) => f.includes("native-test")).join(" ")}`,
-        // golangciLintCommand
+        // Run Go tests
+        (x) =>
+          `go test ${x.filter((f) => f.includes("native-test")).join(" ")}`,
+        golangciLintCommand
       ],
       dockerfile: `testeranto/runtimes/golang/golang.Dockerfile`,
       buildOptions: `testeranto/runtimes/golang/golang.ts`,
@@ -144,9 +141,8 @@ const config: ITestconfigV2 = {
     rusttests: {
       runtime: "rust",
       tests: [
-        // "src/rust/testeranto/Calculator.rusto.test.rs",
-        // "src/rust/testeranto/ruga/Calculator.rusto.test.rs",
-        // "src/rust/testeranto/Calculator.native.test.rs", // Standard Rust test
+        "src/rust/testeranto/Calculator.rusto.test.rs",
+        "src/rust/testeranto/Calculator.native.test.rs", // Standard Rust test
       ],
       checks: [
         // Run Rust tests

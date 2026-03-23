@@ -1,0 +1,12 @@
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/.DS_Store
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.html
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.js
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.tsx
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/javatests/java-builder.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/javatests/javatests-src_java_test_java_com_example_calculator_calculatortest-java-bdd.container.exitcode
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/javatests/javatests-src_java_test_java_com_example_calculator_calculatortest-java-bdd.container.status
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/javatests/javatests-src_java_test_java_com_example_calculator_calculatortest-java-bdd.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/javatests/src/java/test/java/com/example/calculator/CalculatorTest.java/aider-message.txt
+
+Observe these logs and apply.
+

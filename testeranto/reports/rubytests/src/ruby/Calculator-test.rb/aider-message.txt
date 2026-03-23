@@ -1,0 +1,11 @@
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/.DS_Store
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.html
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.js
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.tsx
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/rubytests/rubytests-src_ruby_calculator-test-rb-bdd.container.exitcode
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/rubytests/rubytests-src_ruby_calculator-test-rb-bdd.container.status
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/rubytests/rubytests-src_ruby_calculator-test-rb-bdd.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/rubytests/src/ruby/Calculator-test.rb/aider-message.txt
+
+Observe these logs and apply.
+

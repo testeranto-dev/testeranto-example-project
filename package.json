@@ -18,9 +18,10 @@
     "chai": "^6.2.2",
     "eslint": "^10.0.1",
     "eslint-plugin-import": "^2.32.0",
+    "grafeovidajo": "0.0.10",
     "puppeteer": "^24.37.5",
-    "testeranto": "0.231.0",
-    "testeranto.tiposkripto": "0.2.5",
+    "testeranto": "0.233.7",
+    "testeranto.tiposkripto": "0.3.1",
     "tsx": "^4.21.0",
     "typescript-eslint": "^8.56.1"
   },

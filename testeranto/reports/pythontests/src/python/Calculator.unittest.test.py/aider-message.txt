@@ -1,0 +1,23 @@
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/.DS_Store
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.html
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.js
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/index.tsx
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/pythontests/.DS_Store
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/pythontests/pythontests-src_python_calculator-pitono-test-py-bdd.container.exitcode
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/pythontests/pythontests-src_python_calculator-pitono-test-py-bdd.container.status
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/pythontests/pythontests-src_python_calculator-pitono-test-py-bdd.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/pythontests/pythontests-src_python_calculator-pitono-test-py-check-0.container.exitcode
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/pythontests/pythontests-src_python_calculator-pitono-test-py-check-0.container.status
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/pythontests/pythontests-src_python_calculator-pitono-test-py-check-0.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/pythontests/pythontests-src_python_calculator-pitono-test-py-check-1.container.exitcode
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/pythontests/pythontests-src_python_calculator-pitono-test-py-check-1.container.status
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/pythontests/pythontests-src_python_calculator-pitono-test-py-check-1.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/pythontests/pythontests-src_python_calculator-unittest-test-py-bdd.container.exitcode
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/pythontests/pythontests-src_python_calculator-unittest-test-py-bdd.container.status
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/pythontests/pythontests-src_python_calculator-unittest-test-py-bdd.log
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/pythontests/src/.DS_Store
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/pythontests/src/python/Calculator.pitono.test.py/aider-message.txt
+/read /Users/adam/Code/testeranto-example-project/testeranto/reports/pythontests/src/python/Calculator.unittest.test.py/aider-message.txt
+
+Observe these logs and apply.
+

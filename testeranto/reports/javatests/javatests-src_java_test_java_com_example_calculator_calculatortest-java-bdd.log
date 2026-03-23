@@ -1,0 +1,3 @@
+=== Log started at 2026-03-23T03:39:42.790Z for service java ===
+
+javatests-src_java_test_java_com_example_calculator_calculatortest-java-bdd  | Error: Unable to access jarfile testeranto/bundles/javatests/src/java/test/java/com/example/calculator/CalculatorTest.jar

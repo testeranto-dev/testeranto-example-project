@@ -1,0 +1,7 @@
+[2026-03-23T03:39:33.974Z] Build log for test: src/ts/Calculator.test.node.ts
+Output: testeranto/bundles/nodetests/src/ts/Calculator.test.node.mjs
+Entry point: src/ts/Calculator.test.node.ts
+
+[2026-03-23T03:39:33.964Z] INFO: Build started for nodetests
+
+[2026-03-23T03:39:33.974Z] Build completed for: src/ts/Calculator.test.node.ts
